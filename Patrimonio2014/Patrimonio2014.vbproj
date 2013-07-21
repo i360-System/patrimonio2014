@@ -87,6 +87,12 @@
     <Compile Include="FormMenu\AnagraficaStudio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\ContiCorrenti.Designer.vb">
+      <DependentUpon>ContiCorrenti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\ContiCorrenti.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fornitori.Designer.vb">
       <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
