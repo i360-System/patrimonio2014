@@ -10,8 +10,10 @@
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         'controllo credenziali
-        MainForm.ShowDialog()
+        'se ok
         Me.Hide()
+        MainForm.ShowDialog()
+        Me.Dispose()
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click

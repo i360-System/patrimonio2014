@@ -5,31 +5,74 @@
     ''' </summary>
     ''' <param name="frm">parametri e tabella</param>
     ''' <remarks></remarks>
-    Public Sub Ricerca(ByRef frm As Form)
+    Public Function Ricerca(ByRef frm As Form) As OleDb.OleDbDataReader
 
         Dim index As Integer
-        Dim param(), Tab() As String
+        Dim param(), Tab(), colum() As String
 
         'metodo set pulsanti barra
 
         'Build query
         For Each tb As TextBox In frm.Controls.OfType(Of TextBox)()
             If Not IsNothing(tb) Then
-                param(index) = tb.Name.ToString
+                param(index) = tb.Text
                 Tab(index) = frm.Name.ToString
+                colum(index) = tb.Name.ToString
                 index = index + 1
             End If
         Next
-        If index > 0 Then QuerySelect(param, Tab) 'if >0 call query
+        If index > 0 Then
+            Return QuerySelect(param, Tab, colum) 'if >0 call query
+        End If
+
+
+
+    End Function
+
+    ''' <summary>
+    ''' Metodo di eliminazione di un record su database
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Sub elimina(ByRef frm As Form)
+
+        Dim index As Integer
+        Dim param(), Tab() As String
+
+        'se pulsanti barra
+
+        'Build query
+        For Each tb As TextBox In frm.Controls.OfType(Of TextBox)()
+            If Not IsNothing(tb) Then
+                param(index) = tb.Name.ToString
+                TAB(index) = frm.Name.ToString
+                index = index + 1
+            End If
+        Next
 
     End Sub
 
-    Public Sub elimina()
+    ''' <summary>
+    ''' MEtodo di update su database
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Sub aggiorna(ByRef frm As Form)
+
+        Dim index As Integer
+        Dim param(), Tab() As String
+
+        'set pulsanti barra
+
+        'build query
+        For Each tb As TextBox In frm.Controls.OfType(Of TextBox)()
+            If Not IsNothing(tb) Then
+                param(index) = tb.Name.ToString
+                TAB(index) = frm.Name.ToString
+                index = index + 1
+            End If
+        Next
 
     End Sub
 
-    Public Sub aggiorna()
-
-    End Sub
+    
 
 End Class
