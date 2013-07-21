@@ -81,6 +81,12 @@
     <Compile Include="FormMenu\AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\AnagraficaStudio.Designer.vb">
+      <DependentUpon>AnagraficaStudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\AnagraficaStudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fornitori.Designer.vb">
       <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
