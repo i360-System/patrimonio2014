@@ -1,5 +1,6 @@
 ﻿Public Class Query
     Inherits DBlayer
+
     Dim asterisco = "*"
     ''' <summary>
     ''' Metodo dinamico di cotruzione della query di select
@@ -16,7 +17,7 @@
         If IsNothing(param) Then
             query = query & asterisco
         Else
-
+            'inserisco param
         End If
 
     End Sub
