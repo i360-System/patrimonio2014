@@ -2,12 +2,12 @@
 
     Public Sub populate(ByRef frm As Form, ByVal rd As OleDb.OleDbDataReader)
 
-        For Each Control As TextBox In frm.Controls
-
-            While rd.Read
-                Control.Text = rd.Item(Control.Name.ToString)
-            End While
-
+        For Each ctrl As Control In frm.Controls
+            If (ctrl.GetType() Is GetType(TextBox)) Then
+                While rd.Read
+                    ctrl.Text = rd.Item(ctrl.Name.ToString)
+                End While
+            End If
         Next
 
     End Sub

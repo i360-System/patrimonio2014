@@ -1,5 +1,6 @@
 ﻿Public Class ToolBarComune
     Inherits Query
+
     ''' <summary>
     ''' Metodo di ricerca query
     ''' </summary>
@@ -12,17 +13,22 @@
 
         'metodo set pulsanti barra
 
-        'Build query
-        For Each tb As TextBox In frm.Controls.OfType(Of TextBox)()
-            If Not IsNothing(tb) Then
-                param(index) = tb.Text
-                Tab(index) = frm.Name.ToString
-                colum(index) = tb.Name.ToString
-                index = index + 1
+        For Each tb As TextBox In frm.Controls
+            If (tb.GetType() Is GetType(TextBox)) Then
+                If Not IsNothing(tb) Then
+                    param(index) = tb.Text
+                    Tab(index) = frm.Name.ToString
+                    colum(index) = tb.Name.ToString
+                    index = index + 1
+                End If
             End If
         Next
+
         If index > 0 Then
             Return QuerySelect(param, Tab, colum) 'if >0 call query
+        Else
+            MsgBox(Messaggi.InserireValore)
+            Return Nothing
         End If
 
 
@@ -52,7 +58,7 @@
     End Sub
 
     ''' <summary>
-    ''' MEtodo di update su database
+    ''' Metodo di update su database
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub aggiorna(ByRef frm As Form)
