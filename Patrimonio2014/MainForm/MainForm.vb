@@ -11,4 +11,8 @@
         Dim frm As New Opzioni
         frm.Show()
     End Sub
+
+    Private Sub SpeseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SpeseToolStripMenuItem.Click
+
+    End Sub
 End Class
