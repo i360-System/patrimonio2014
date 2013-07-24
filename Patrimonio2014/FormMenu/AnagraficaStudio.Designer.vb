@@ -352,16 +352,16 @@ Partial Class AnagraficaStudio
         Me.Note2TextBox.Location = New System.Drawing.Point(132, 281)
         Me.Note2TextBox.Name = "Note2TextBox"
         Me.Note2TextBox.Size = New System.Drawing.Size(672, 20)
-        Me.Note2TextBox.TabIndex = 25
+        Me.Note2TextBox.TabIndex = 24
         '
         'AnagraficaStudio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(824, 313)
+        Me.ClientSize = New System.Drawing.Size(824, 331)
         Me.Controls.Add(Me.Note2TextBox)
-        Me.Controls.Add(Note1Label)
         Me.Controls.Add(Me.Note1TextBox)
+        Me.Controls.Add(Note1Label)
         Me.Controls.Add(TipoSocietaLabel)
         Me.Controls.Add(Me.TipoSocietaTextBox)
         Me.Controls.Add(PartitaIvaLabel)
