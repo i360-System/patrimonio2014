@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Anagrafiche
 
     Private Sub AnagraficheBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
