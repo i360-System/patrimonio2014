@@ -15,4 +15,10 @@
     Private Sub SpeseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SpeseToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub AnagraficaStudioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SsToolStripMenuItem.Click
+        'controllo istanza
+        Dim frm As New AnagraficaStudio
+        frm.Show()
+    End Sub
 End Class

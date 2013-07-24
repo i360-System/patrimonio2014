@@ -16,4 +16,8 @@
     Private Sub Denominazione1Label_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
+
+    Private Sub Denominazione1TextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Denominazione1TextBox.TextChanged
+
+    End Sub
 End Class

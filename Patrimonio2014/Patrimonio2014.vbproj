@@ -110,6 +110,12 @@
       <DependentUpon>IMMOBILIDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Infrastracture\DBlayerAC.vb" />
+    <Compile Include="Infrastracture\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastracture\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Infrastracture\Interactive.vb" />
     <Compile Include="Infrastracture\Message.vb" />
     <Compile Include="Infrastracture\Query.vb" />
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Opzioni.resx">
       <DependentUpon>Opzioni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infrastracture\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>
