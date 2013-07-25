@@ -81,10 +81,6 @@ Partial Class MainForm
         Me.FondiAmmortamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AnagrafeDeiCondominiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnitaImmobiliariToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnitaImmobiliareAnagraficaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnitaImmobiliareMillesimiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnitaImmobiliariLettureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UnitaImmobiliariRipartizioneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GeneraSchedeUnitaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GeneraConsumiDalleLettureToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CollegamentoUnitaImmobiliariToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -118,13 +114,13 @@ Partial Class MainForm
         'TerminaToolStripMenuItem
         '
         Me.TerminaToolStripMenuItem.Name = "TerminaToolStripMenuItem"
-        Me.TerminaToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.TerminaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TerminaToolStripMenuItem.Text = "Termina"
         '
         'OpzioniToolStripMenuItem
         '
         Me.OpzioniToolStripMenuItem.Name = "OpzioniToolStripMenuItem"
-        Me.OpzioniToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.OpzioniToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpzioniToolStripMenuItem.Text = "Opzioni"
         '
         'MovimentazioneToolStripMenuItem
@@ -468,34 +464,10 @@ Partial Class MainForm
         '
         'UnitaImmobiliariToolStripMenuItem
         '
-        Me.UnitaImmobiliariToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UnitaImmobiliareAnagraficaToolStripMenuItem, Me.UnitaImmobiliareMillesimiToolStripMenuItem, Me.UnitaImmobiliariLettureToolStripMenuItem, Me.UnitaImmobiliariRipartizioneToolStripMenuItem, Me.GeneraSchedeUnitaToolStripMenuItem, Me.GeneraConsumiDalleLettureToolStripMenuItem, Me.CollegamentoUnitaImmobiliariToolStripMenuItem})
+        Me.UnitaImmobiliariToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GeneraSchedeUnitaToolStripMenuItem, Me.GeneraConsumiDalleLettureToolStripMenuItem, Me.CollegamentoUnitaImmobiliariToolStripMenuItem})
         Me.UnitaImmobiliariToolStripMenuItem.Name = "UnitaImmobiliariToolStripMenuItem"
         Me.UnitaImmobiliariToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.UnitaImmobiliariToolStripMenuItem.Text = "Unita' Immobiliari"
-        '
-        'UnitaImmobiliareAnagraficaToolStripMenuItem
-        '
-        Me.UnitaImmobiliareAnagraficaToolStripMenuItem.Name = "UnitaImmobiliareAnagraficaToolStripMenuItem"
-        Me.UnitaImmobiliareAnagraficaToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
-        Me.UnitaImmobiliareAnagraficaToolStripMenuItem.Text = "Unita' Immobiliare Anagrafica"
-        '
-        'UnitaImmobiliareMillesimiToolStripMenuItem
-        '
-        Me.UnitaImmobiliareMillesimiToolStripMenuItem.Name = "UnitaImmobiliareMillesimiToolStripMenuItem"
-        Me.UnitaImmobiliareMillesimiToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
-        Me.UnitaImmobiliareMillesimiToolStripMenuItem.Text = "Unita' Immobiliare Millesimi"
-        '
-        'UnitaImmobiliariLettureToolStripMenuItem
-        '
-        Me.UnitaImmobiliariLettureToolStripMenuItem.Name = "UnitaImmobiliariLettureToolStripMenuItem"
-        Me.UnitaImmobiliariLettureToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
-        Me.UnitaImmobiliariLettureToolStripMenuItem.Text = "Unita' Immobiliari Letture"
-        '
-        'UnitaImmobiliariRipartizioneToolStripMenuItem
-        '
-        Me.UnitaImmobiliariRipartizioneToolStripMenuItem.Name = "UnitaImmobiliariRipartizioneToolStripMenuItem"
-        Me.UnitaImmobiliariRipartizioneToolStripMenuItem.Size = New System.Drawing.Size(247, 22)
-        Me.UnitaImmobiliariRipartizioneToolStripMenuItem.Text = "Unita' Immobiliari Ripartizione"
         '
         'GeneraSchedeUnitaToolStripMenuItem
         '
@@ -649,10 +621,6 @@ Partial Class MainForm
     Friend WithEvents FondiAmmortamentoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AnagrafeDeiCondominiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UnitaImmobiliariToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UnitaImmobiliareAnagraficaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UnitaImmobiliareMillesimiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UnitaImmobiliariLettureToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UnitaImmobiliariRipartizioneToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GeneraSchedeUnitaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GeneraConsumiDalleLettureToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CollegamentoUnitaImmobiliariToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

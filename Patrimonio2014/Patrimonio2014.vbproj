@@ -116,6 +116,42 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Unita.Designer.vb">
+      <DependentUpon>Unita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Unita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Tabella.Designer.vb">
+      <DependentUpon>Tabella.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Tabella.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiPreventivo.Designer.vb">
+      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiPreventivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiConsuntivo.Designer.vb">
+      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiConsuntivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Immobili.Designer.vb">
+      <DependentUpon>Immobili.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Immobili.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Gruppi.Designer.vb">
+      <DependentUpon>Gruppi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Gruppi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fornitori.Designer.vb">
       <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
@@ -192,6 +228,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Unita.resx">
+      <DependentUpon>Unita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Tabella.resx">
+      <DependentUpon>Tabella.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\PianoContiPreventivo.resx">
+      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\PianoContiConsuntivo.resx">
+      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Immobili.resx">
+      <DependentUpon>Immobili.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Gruppi.resx">
+      <DependentUpon>Gruppi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fornitori.resx">
       <DependentUpon>Fornitori.vb</DependentUpon>
