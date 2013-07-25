@@ -116,6 +116,36 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\X_Fatture.Designer.vb">
+      <DependentUpon>X_Fatture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Fatture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_Causali.Designer.vb">
+      <DependentUpon>X_Causali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Causali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Tributi.Designer.vb">
+      <DependentUpon>W_Tributi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Tributi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Ritenute.Designer.vb">
+      <DependentUpon>W_Ritenute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Ritenute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Emissioni.Designer.vb">
+      <DependentUpon>W_Emissioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Emissioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Z_Consuntivo.Designer.vb">
       <DependentUpon>Z_Consuntivo.vb</DependentUpon>
     </Compile>
@@ -241,6 +271,12 @@
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Causali.resx">
+      <DependentUpon>X_Causali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Emissioni.resx">
+      <DependentUpon>W_Emissioni.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
       <DependentUpon>V_Preventivo.vb</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +306,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Ritenute.resx">
+      <DependentUpon>W_Ritenute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Tributi.resx">
+      <DependentUpon>W_Tributi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Fatture.resx">
+      <DependentUpon>X_Fatture.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Z_Consuntivo.resx">
       <DependentUpon>Z_Consuntivo.vb</DependentUpon>
