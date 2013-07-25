@@ -116,6 +116,18 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Z_Consuntivo.Designer.vb">
+      <DependentUpon>Z_Consuntivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Z_Consuntivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\V_Preventivo.Designer.vb">
+      <DependentUpon>V_Preventivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\V_Preventivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Unita.Designer.vb">
       <DependentUpon>Unita.vb</DependentUpon>
     </Compile>
@@ -229,6 +241,9 @@
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
+      <DependentUpon>V_Preventivo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Unita.resx">
       <DependentUpon>Unita.vb</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Z_Consuntivo.resx">
+      <DependentUpon>Z_Consuntivo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>
