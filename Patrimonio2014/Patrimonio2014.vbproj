@@ -116,6 +116,30 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
+      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Z_TestoSollecito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentoFondi.Designer.vb">
+      <DependentUpon>X_MovimentoFondi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentoFondi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFinanziari.Designer.vb">
+      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFinanziari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiCondomini.Designer.vb">
+      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiCondomini.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\X_Fatture.Designer.vb">
       <DependentUpon>X_Fatture.vb</DependentUpon>
     </Compile>
@@ -270,6 +294,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Z_TestoSollecito.resx">
+      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentoFondi.resx">
+      <DependentUpon>X_MovimentoFondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiFinanziari.resx">
+      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiCondomini.resx">
+      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\X_Causali.resx">
       <DependentUpon>X_Causali.vb</DependentUpon>
