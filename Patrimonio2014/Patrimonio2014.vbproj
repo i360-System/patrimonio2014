@@ -116,6 +116,18 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Y_GestioniUnita.Designer.vb">
+      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Y_GestioniUnita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Y_Gestioni.Designer.vb">
+      <DependentUpon>Y_Gestioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Y_Gestioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
       <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
     </Compile>
@@ -294,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Y_GestioniUnita.resx">
+      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Y_Gestioni.resx">
+      <DependentUpon>Y_Gestioni.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Z_TestoSollecito.resx">
       <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
