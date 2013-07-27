@@ -116,6 +116,12 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\X_Spese.Designer.vb">
+      <DependentUpon>X_Spese.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Spese.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Y_GestioniUnita.Designer.vb">
       <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Spese.resx">
+      <DependentUpon>X_Spese.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Y_GestioniUnita.resx">
       <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
