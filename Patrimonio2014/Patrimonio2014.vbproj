@@ -86,10 +86,10 @@
     <Compile Include="FormMenu\AnagraficaStudio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu\Costanti.Designer.vb">
-      <DependentUpon>Costanti.vb</DependentUpon>
+    <Compile Include="FormMenu\Anagrafiche.Designer.vb">
+      <DependentUpon>Anagrafiche.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu\Costanti.vb">
+    <Compile Include="FormMenu\Anagrafiche.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu\Assemblea.Designer.vb">
@@ -104,6 +104,12 @@
     <Compile Include="FormMenu\ContiFinanziari.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Costanti.Designer.vb">
+      <DependentUpon>Costanti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Costanti.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fabbricati.Designer.vb">
       <DependentUpon>Fabbricati.vb</DependentUpon>
     </Compile>
@@ -116,118 +122,10 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu\X_Spese.Designer.vb">
-      <DependentUpon>X_Spese.vb</DependentUpon>
+    <Compile Include="FormMenu\Fornitori.Designer.vb">
+      <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu\X_Spese.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Y_GestioniUnita.Designer.vb">
-      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Y_GestioniUnita.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Y_Gestioni.Designer.vb">
-      <DependentUpon>Y_Gestioni.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Y_Gestioni.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
-      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Z_TestoSollecito.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\X_MovimentoFondi.Designer.vb">
-      <DependentUpon>X_MovimentoFondi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\X_MovimentoFondi.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\X_MovimentiFinanziari.Designer.vb">
-      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\X_MovimentiFinanziari.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\X_MovimentiCondomini.Designer.vb">
-      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\X_MovimentiCondomini.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\X_Fatture.Designer.vb">
-      <DependentUpon>X_Fatture.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\X_Fatture.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\X_Causali.Designer.vb">
-      <DependentUpon>X_Causali.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\X_Causali.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\W_Tributi.Designer.vb">
-      <DependentUpon>W_Tributi.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\W_Tributi.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\W_Ritenute.Designer.vb">
-      <DependentUpon>W_Ritenute.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\W_Ritenute.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\W_Emissioni.Designer.vb">
-      <DependentUpon>W_Emissioni.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\W_Emissioni.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Z_Consuntivo.Designer.vb">
-      <DependentUpon>Z_Consuntivo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Z_Consuntivo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\V_Preventivo.Designer.vb">
-      <DependentUpon>V_Preventivo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\V_Preventivo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Unita.Designer.vb">
-      <DependentUpon>Unita.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Unita.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Tabella.Designer.vb">
-      <DependentUpon>Tabella.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Tabella.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\PianoContiPreventivo.Designer.vb">
-      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\PianoContiPreventivo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\PianoContiConsuntivo.Designer.vb">
-      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\PianoContiConsuntivo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenu\Immobili.Designer.vb">
-      <DependentUpon>Immobili.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Immobili.vb">
+    <Compile Include="FormMenu\Fornitori.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu\Gruppi.Designer.vb">
@@ -236,10 +134,10 @@
     <Compile Include="FormMenu\Gruppi.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu\Fornitori.Designer.vb">
-      <DependentUpon>Fornitori.vb</DependentUpon>
+    <Compile Include="FormMenu\Immobili.Designer.vb">
+      <DependentUpon>Immobili.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu\Fornitori.vb">
+    <Compile Include="FormMenu\Immobili.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu\Opzioni.Designer.vb">
@@ -248,18 +146,123 @@
     <Compile Include="FormMenu\Opzioni.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\PianoContiConsuntivo.Designer.vb">
+      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiConsuntivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiPreventivo.Designer.vb">
+      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\PianoContiPreventivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Tabella.Designer.vb">
+      <DependentUpon>Tabella.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Tabella.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Unita.Designer.vb">
+      <DependentUpon>Unita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Unita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\V_Preventivo.Designer.vb">
+      <DependentUpon>V_Preventivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\V_Preventivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Emissioni.Designer.vb">
+      <DependentUpon>W_Emissioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Emissioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Ritenute.Designer.vb">
+      <DependentUpon>W_Ritenute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Ritenute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Tributi.Designer.vb">
+      <DependentUpon>W_Tributi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Tributi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_Causali.Designer.vb">
+      <DependentUpon>X_Causali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Causali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_Fatture.Designer.vb">
+      <DependentUpon>X_Fatture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Fatture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiCondomini.Designer.vb">
+      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiCondomini.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFinanziari.Designer.vb">
+      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFinanziari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentoFondi.Designer.vb">
+      <DependentUpon>X_MovimentoFondi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentoFondi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_Spese.Designer.vb">
+      <DependentUpon>X_Spese.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Spese.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Y_Gestioni.Designer.vb">
+      <DependentUpon>Y_Gestioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Y_Gestioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Y_GestioniUnita.Designer.vb">
+      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Y_GestioniUnita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Z_Consuntivo.Designer.vb">
+      <DependentUpon>Z_Consuntivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Z_Consuntivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
+      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Z_TestoSollecito.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IMMOBILIDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IMMOBILIDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IMMOBILIDataSet.vb">
+      <DependentUpon>IMMOBILIDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Infrastracture\DBlayerAC.vb" />
-    <Compile Include="FormMenu\Anagrafiche.Designer.vb">
-      <DependentUpon>Anagrafiche.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Anagrafiche.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Infrastracture\Interactive.vb" />
     <Compile Include="Infrastracture\Message.vb" />
     <Compile Include="Infrastracture\Query.vb" />
@@ -295,8 +298,8 @@
     <EmbeddedResource Include="FormMenu\AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\AnagraficaStudio.resx">
-      <DependentUpon>AnagraficaStudio.vb</DependentUpon>
+    <EmbeddedResource Include="FormMenu\Anagrafiche.resx">
+      <DependentUpon>Anagrafiche.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Assemblea.resx">
       <DependentUpon>Assemblea.vb</DependentUpon>
@@ -304,71 +307,41 @@
     <EmbeddedResource Include="FormMenu\ContiFinanziari.resx">
       <DependentUpon>ContiFinanziari.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Costanti.resx">
-      <DependentUpon>Costanti.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fabbricati.resx">
       <DependentUpon>Fabbricati.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\X_Spese.resx">
-      <DependentUpon>X_Spese.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Y_GestioniUnita.resx">
-      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Y_Gestioni.resx">
-      <DependentUpon>Y_Gestioni.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Z_TestoSollecito.resx">
-      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\X_MovimentoFondi.resx">
-      <DependentUpon>X_MovimentoFondi.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\X_MovimentiFinanziari.resx">
-      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\X_MovimentiCondomini.resx">
-      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\X_Causali.resx">
-      <DependentUpon>X_Causali.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\W_Emissioni.resx">
-      <DependentUpon>W_Emissioni.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
-      <DependentUpon>V_Preventivo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Unita.resx">
-      <DependentUpon>Unita.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Tabella.resx">
-      <DependentUpon>Tabella.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\PianoContiPreventivo.resx">
-      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\PianoContiConsuntivo.resx">
-      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Immobili.resx">
-      <DependentUpon>Immobili.vb</DependentUpon>
+    <EmbeddedResource Include="FormMenu\Fornitori.resx">
+      <DependentUpon>Fornitori.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Gruppi.resx">
       <DependentUpon>Gruppi.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Fornitori.resx">
-      <DependentUpon>Fornitori.vb</DependentUpon>
+    <EmbeddedResource Include="FormMenu\Immobili.resx">
+      <DependentUpon>Immobili.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Opzioni.resx">
       <DependentUpon>Opzioni.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Anagrafiche.resx">
-      <DependentUpon>Anagrafiche.vb</DependentUpon>
+    <EmbeddedResource Include="FormMenu\PianoContiConsuntivo.resx">
+      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\PianoContiPreventivo.resx">
+      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Tabella.resx">
+      <DependentUpon>Tabella.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Unita.resx">
+      <DependentUpon>Unita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
+      <DependentUpon>V_Preventivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Emissioni.resx">
+      <DependentUpon>W_Emissioni.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\W_Ritenute.resx">
       <DependentUpon>W_Ritenute.vb</DependentUpon>
@@ -376,11 +349,35 @@
     <EmbeddedResource Include="FormMenu\W_Tributi.resx">
       <DependentUpon>W_Tributi.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Causali.resx">
+      <DependentUpon>X_Causali.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\X_Fatture.resx">
       <DependentUpon>X_Fatture.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiCondomini.resx">
+      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiFinanziari.resx">
+      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentoFondi.resx">
+      <DependentUpon>X_MovimentoFondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Spese.resx">
+      <DependentUpon>X_Spese.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Y_Gestioni.resx">
+      <DependentUpon>Y_Gestioni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Y_GestioniUnita.resx">
+      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Z_Consuntivo.resx">
       <DependentUpon>Z_Consuntivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Z_TestoSollecito.resx">
+      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>
