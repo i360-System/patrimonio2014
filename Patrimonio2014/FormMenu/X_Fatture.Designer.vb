@@ -31,12 +31,12 @@ Partial Class X_Fatture
         Me.X_FattureBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.X_FattureTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.X_FattureTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
+        Me.X_FattureDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.X_FattureDettaglioTableAdapter()
         Me.DocumentoTextBox = New System.Windows.Forms.TextBox()
         Me.FornitoreComboBox = New System.Windows.Forms.ComboBox()
         Me.QuantitaTextBox = New System.Windows.Forms.TextBox()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.X_FattureDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.X_FattureDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.X_FattureDettaglioTableAdapter()
         Me.X_FattureDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,6 +54,42 @@ Partial Class X_Fatture
         CType(Me.X_FattureDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.X_FattureDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DocumentoLabel
+        '
+        DocumentoLabel.AutoSize = True
+        DocumentoLabel.Location = New System.Drawing.Point(12, 61)
+        DocumentoLabel.Name = "DocumentoLabel"
+        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
+        DocumentoLabel.TabIndex = 1
+        DocumentoLabel.Text = "Documento:"
+        '
+        'FornitoreLabel
+        '
+        FornitoreLabel.AutoSize = True
+        FornitoreLabel.Location = New System.Drawing.Point(141, 61)
+        FornitoreLabel.Name = "FornitoreLabel"
+        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
+        FornitoreLabel.TabIndex = 2
+        FornitoreLabel.Text = "Fornitore:"
+        '
+        'QuantitaLabel
+        '
+        QuantitaLabel.AutoSize = True
+        QuantitaLabel.Location = New System.Drawing.Point(387, 61)
+        QuantitaLabel.Name = "QuantitaLabel"
+        QuantitaLabel.Size = New System.Drawing.Size(50, 13)
+        QuantitaLabel.TabIndex = 4
+        QuantitaLabel.Text = "Quantita:"
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(443, 61)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 6
+        ImmobileLabel.Text = "Immobile:"
         '
         'IMMOBILIDataSet
         '
@@ -139,14 +175,9 @@ Partial Class X_Fatture
         Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
-        'DocumentoLabel
+        'X_FattureDettaglioTableAdapter
         '
-        DocumentoLabel.AutoSize = True
-        DocumentoLabel.Location = New System.Drawing.Point(12, 61)
-        DocumentoLabel.Name = "DocumentoLabel"
-        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
-        DocumentoLabel.TabIndex = 1
-        DocumentoLabel.Text = "Documento:"
+        Me.X_FattureDettaglioTableAdapter.ClearBeforeFill = True
         '
         'DocumentoTextBox
         '
@@ -155,15 +186,6 @@ Partial Class X_Fatture
         Me.DocumentoTextBox.Name = "DocumentoTextBox"
         Me.DocumentoTextBox.Size = New System.Drawing.Size(120, 20)
         Me.DocumentoTextBox.TabIndex = 2
-        '
-        'FornitoreLabel
-        '
-        FornitoreLabel.AutoSize = True
-        FornitoreLabel.Location = New System.Drawing.Point(141, 61)
-        FornitoreLabel.Name = "FornitoreLabel"
-        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
-        FornitoreLabel.TabIndex = 2
-        FornitoreLabel.Text = "Fornitore:"
         '
         'FornitoreComboBox
         '
@@ -174,15 +196,6 @@ Partial Class X_Fatture
         Me.FornitoreComboBox.Size = New System.Drawing.Size(237, 21)
         Me.FornitoreComboBox.TabIndex = 3
         '
-        'QuantitaLabel
-        '
-        QuantitaLabel.AutoSize = True
-        QuantitaLabel.Location = New System.Drawing.Point(387, 61)
-        QuantitaLabel.Name = "QuantitaLabel"
-        QuantitaLabel.Size = New System.Drawing.Size(50, 13)
-        QuantitaLabel.TabIndex = 4
-        QuantitaLabel.Text = "Quantita:"
-        '
         'QuantitaTextBox
         '
         Me.QuantitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_FattureBindingSource, "Quantita", True))
@@ -190,15 +203,6 @@ Partial Class X_Fatture
         Me.QuantitaTextBox.Name = "QuantitaTextBox"
         Me.QuantitaTextBox.Size = New System.Drawing.Size(47, 20)
         Me.QuantitaTextBox.TabIndex = 5
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(443, 61)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 6
-        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
@@ -214,19 +218,15 @@ Partial Class X_Fatture
         Me.X_FattureDettaglioBindingSource.DataMember = "X_FattureX_FattureDettaglio"
         Me.X_FattureDettaglioBindingSource.DataSource = Me.X_FattureBindingSource
         '
-        'X_FattureDettaglioTableAdapter
-        '
-        Me.X_FattureDettaglioTableAdapter.ClearBeforeFill = True
-        '
         'X_FattureDettaglioDataGridView
         '
         Me.X_FattureDettaglioDataGridView.AutoGenerateColumns = False
         Me.X_FattureDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.X_FattureDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.X_FattureDettaglioDataGridView.DataSource = Me.X_FattureDettaglioBindingSource
-        Me.X_FattureDettaglioDataGridView.Location = New System.Drawing.Point(21, 119)
+        Me.X_FattureDettaglioDataGridView.Location = New System.Drawing.Point(12, 119)
         Me.X_FattureDettaglioDataGridView.Name = "X_FattureDettaglioDataGridView"
-        Me.X_FattureDettaglioDataGridView.Size = New System.Drawing.Size(680, 138)
+        Me.X_FattureDettaglioDataGridView.Size = New System.Drawing.Size(689, 138)
         Me.X_FattureDettaglioDataGridView.TabIndex = 8
         '
         'DataGridViewTextBoxColumn2
