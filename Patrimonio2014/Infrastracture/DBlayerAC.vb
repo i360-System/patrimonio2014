@@ -63,6 +63,11 @@
     'Function ExQuery()
 
     'End Function
+    Public Sub openCon()
+
+        Dim oleDbCn As New OleDb.OleDbConnection()
+
+    End Sub
 
 End Module
 
