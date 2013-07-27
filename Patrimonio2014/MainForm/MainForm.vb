@@ -12,9 +12,14 @@
     End Sub
 
     Private Sub OpzioniToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpzioniToolStripMenuItem.Click
-        'controllo istanza
-        Dim frm As New Opzioni
-        frm.Show()
+        Dim NewMDIChild As New Opzioni
+        'Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        'Display the new form.
+        NewMDIChild.Show()
+        ''controllo istanza
+        'Dim frm As New Opzioni
+        'frm.Show()
     End Sub
 
     Private Sub SpeseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SpeseToolStripMenuItem.Click
