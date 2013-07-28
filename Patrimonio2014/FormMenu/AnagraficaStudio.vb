@@ -10,6 +10,8 @@
     Private Sub AnagraficaStudio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.AnagraficaStudio'. È possibile spostarla o rimuoverla se necessario.
         Me.AnagraficaStudioTableAdapter.Fill(Me.IMMOBILIDataSet.AnagraficaStudio)
+        'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.AnagraficaStudio'. È possibile spostarla o rimuoverla se necessario.
+        Me.AnagraficaStudioTableAdapter.Fill(Me.IMMOBILIDataSet.AnagraficaStudio)
 
     End Sub
 
@@ -17,7 +19,14 @@
 
     End Sub
 
-    Private Sub Denominazione1TextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Denominazione1TextBox.TextChanged
+    Private Sub Denominazione1TextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub AnagraficaStudioBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs) Handles AnagraficaStudioBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.AnagraficaStudioBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)
 
     End Sub
 End Class
