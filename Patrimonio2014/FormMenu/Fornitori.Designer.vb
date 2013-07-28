@@ -100,6 +100,8 @@ Partial Class Fornitori
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.FornitoriBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.FornitoreTextBox = New System.Windows.Forms.TextBox()
+        Me.IMMOBILIDataSet1 = New Patrimonio2014.IMMOBILIDataSet1()
+        Me.FornitoriTableAdapter1 = New Patrimonio2014.IMMOBILIDataSet1TableAdapters.FornitoriTableAdapter()
         FornitoreLabel = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -108,6 +110,7 @@ Partial Class Fornitori
         CType(Me.FornitoriBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FornitoriBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FornitoriBindingNavigator.SuspendLayout()
+        CType(Me.IMMOBILIDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -697,7 +700,7 @@ Partial Class Fornitori
         'FornitoriBindingSource
         '
         Me.FornitoriBindingSource.DataMember = "Fornitori"
-        Me.FornitoriBindingSource.DataSource = Me.IMMOBILIDataSet
+        Me.FornitoriBindingSource.DataSource = Me.IMMOBILIDataSet1
         '
         'FornitoriTableAdapter
         '
@@ -897,9 +900,19 @@ Partial Class Fornitori
         '
         Me.FornitoreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FornitoriBindingSource, "Fornitore", True))
         Me.FornitoreTextBox.Location = New System.Drawing.Point(136, 112)
+        Me.FornitoreTextBox.Multiline = True
         Me.FornitoreTextBox.Name = "FornitoreTextBox"
         Me.FornitoreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FornitoreTextBox.TabIndex = 31
+        '
+        'IMMOBILIDataSet1
+        '
+        Me.IMMOBILIDataSet1.DataSetName = "IMMOBILIDataSet1"
+        Me.IMMOBILIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FornitoriTableAdapter1
+        '
+        Me.FornitoriTableAdapter1.ClearBeforeFill = True
         '
         'Fornitori
         '
@@ -924,6 +937,7 @@ Partial Class Fornitori
         CType(Me.FornitoriBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FornitoriBindingNavigator.ResumeLayout(False)
         Me.FornitoriBindingNavigator.PerformLayout()
+        CType(Me.IMMOBILIDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1003,4 +1017,6 @@ Partial Class Fornitori
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents FornitoriBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents FornitoreTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents IMMOBILIDataSet1 As Patrimonio2014.IMMOBILIDataSet1
+    Friend WithEvents FornitoriTableAdapter1 As Patrimonio2014.IMMOBILIDataSet1TableAdapters.FornitoriTableAdapter
 End Class
