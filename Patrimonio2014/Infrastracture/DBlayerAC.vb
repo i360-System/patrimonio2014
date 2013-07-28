@@ -1,4 +1,5 @@
 ﻿Module DBlayerAC
+    Dim dr As OleDb.OleDbDataReader
 
     ''' <summary>
     ''' Metodo per leggere la string connection memorizzata su db
@@ -29,45 +30,48 @@
     ''' <param name="nomePar"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function ExQuery(ByVal strsql As String, ByVal param() As String, ByVal nomePar As String) As OleDb.OleDbDataReader
+    Public Function ExQuery(ByVal strsql As String, ByVal param() As String, ByRef frm As Form) As OleDb.OleDbDataReader
 
         Try
 
             Dim index As Integer
             initConnectionString()
-            Dim oleDbCn As New OleDb.OleDbConnection(connectionString)
-            Dim dr As OleDb.OleDbDataReader
+            Dim oleDbCn As New OleDb.OleDbConnection(My.Settings.IMMOBILIConnectionString1)
+
 
             Using CMD As New OleDb.OleDbCommand(strsql, oleDbCn)
                 With CMD
                     'Definizione / Assegnazione
-                    For Each par As String In param(index)
-                        .Parameters.Add(nomePar, OleDb.OleDbType.VarChar).Value = param.ToString
+                    For Each par As String In param
+                        ' .Parameters.Add(nomePar(index), OleDb.OleDbType.VarChar).Value = param(index).ToString
+                        .Parameters.Add(param(index).ToString)
                         index = index + 1
                     Next
-                    If oleDbCn.State Then oleDbCn.Open()
+                    If oleDbCn.State = 0 Then oleDbCn.Open()
                     dr = .ExecuteReader()
-                    oleDbCn.Close()
-                    CMD.Dispose() : oleDbCn.Dispose()
-                End With
-            End Using
-            Return dr
 
+                End With
+
+            End Using
+            If Not IsNothing(dr) Then
+                Interactive.populate(frm, dr)
+            Else
+                MsgBox(Message.Messaggi.ValoreNonPresenteRicerca)
+            End If
+
+            oleDbCn.Close()
         Catch ex As Exception
 
             MsgBox(ex.ToString())
 
+            Return Nothing
+
         End Try
 
+
+
     End Function
-    'Function ExQuery()
 
-    'End Function
-    Public Sub openCon()
-
-        Dim oleDbCn As New OleDb.OleDbConnection()
-
-    End Sub
 
 End Module
 

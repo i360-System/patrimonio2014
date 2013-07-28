@@ -8,24 +8,43 @@
     ''' <remarks></remarks>
     Public Function Ricerca(ByRef frm As Form) As OleDb.OleDbDataReader
 
-        Dim index As Integer
+        Dim indexparam As Integer
+        Dim indextab As Integer
+        Dim indexcol As Integer
         Dim param(), Tab(), colum() As String
-
+        ReDim Preserve param(0)
+        ReDim Preserve Tab(0)
+        ReDim Preserve colum(0)
         'metodo set pulsanti barra
 
-        For Each tb As TextBox In frm.Controls
-            If (tb.GetType() Is GetType(TextBox)) Then
-                If Not IsNothing(tb) Then
-                    param(index) = tb.Text
-                    Tab(index) = frm.Name.ToString
-                    colum(index) = tb.Name.ToString
-                    index = index + 1
+        For Each controllo As Object In frm.Controls 'inizia un
+            For Each con In controllo.controls
+
+
+                If TypeOf con Is TextBox Then 'se il controllo è un
+
+                    'aggiungo il nome nel file
+                    If Not con.text = "" Then
+
+
+                        ReDim Preserve param(indexparam) : param(indexparam) = con.ToString
+                        ReDim Preserve colum(indexcol) : colum(indexcol) = con.Name.ToString
+
+                        indexparam = indexparam + 1
+                        indexcol = indexcol + 1
+
+                    End If
+
                 End If
-            End If
+            Next
         Next
 
-        If index > 0 Then
-            Return QuerySelect(param, Tab, colum) 'if >0 call query
+        ReDim Preserve Tab(indextab) : Tab(indextab) = frm.Name.ToString
+
+
+        If indexparam > 0 Then
+
+            Return QuerySelect(param, Tab, colum, frm) 'if >0 call query
         Else
             MsgBox(Messaggi.InserireValore)
             Return Nothing

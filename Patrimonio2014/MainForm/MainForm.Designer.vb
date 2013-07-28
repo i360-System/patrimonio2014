@@ -22,6 +22,16 @@ Partial Class MainForm
     'Non modificarla nell'editor del codice.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Termina")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Opzioni")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("File", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo1")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo2")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo3")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo4")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo5")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo6")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo7")
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TerminaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,6 +102,7 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSulSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSullaLicenzaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -394,20 +405,20 @@ Partial Class MainForm
         'SsToolStripMenuItem
         '
         Me.SsToolStripMenuItem.Name = "SsToolStripMenuItem"
-        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SsToolStripMenuItem.Text = "Studio"
         '
         'FornitoriToolStripMenuItem
         '
         Me.FornitoriToolStripMenuItem.Name = "FornitoriToolStripMenuItem"
-        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FornitoriToolStripMenuItem.Text = "Fornitori"
         '
         'ImmobiliToolStripMenuItem
         '
         Me.ImmobiliToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TabelleMillesimaliToolStripMenuItem, Me.GruppiDiSpesaToolStripMenuItem, Me.VociDelConsuntivoToolStripMenuItem, Me.VociDelPreventivoToolStripMenuItem, Me.ContiFinanziariToolStripMenuItem, Me.AnagraficaCondominioToolStripMenuItem, Me.StrutturaDelCondominioToolStripMenuItem, Me.FondiAmmortamentoToolStripMenuItem, Me.AnagrafeDeiCondominiToolStripMenuItem, Me.UnitaImmobiliariToolStripMenuItem, Me.DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem})
         Me.ImmobiliToolStripMenuItem.Name = "ImmobiliToolStripMenuItem"
-        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ImmobiliToolStripMenuItem.Text = "Immobili"
         '
         'TabelleMillesimaliToolStripMenuItem
@@ -526,6 +537,7 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
         Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.InfoToolStripMenuItem.Text = "Info"
+        Me.InfoToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
         '
         'InformazioniSulSoftwareToolStripMenuItem
         '
@@ -539,11 +551,42 @@ Partial Class MainForm
         Me.InformazioniSullaLicenzaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
         Me.InformazioniSullaLicenzaToolStripMenuItem.Text = "Informazioni sulla licenza"
         '
+        'TreeView1
+        '
+        Me.TreeView1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.TreeView1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TreeView1.Location = New System.Drawing.Point(695, 0)
+        Me.TreeView1.Name = "TreeView1"
+        TreeNode1.Name = "Termina"
+        TreeNode1.Text = "Termina"
+        TreeNode2.Name = "Opzioni"
+        TreeNode2.Text = "Opzioni"
+        TreeNode3.Name = "File"
+        TreeNode3.Text = "File"
+        TreeNode4.Name = "Nodo1"
+        TreeNode4.Text = "Nodo1"
+        TreeNode5.Name = "Nodo2"
+        TreeNode5.Text = "Nodo2"
+        TreeNode6.Name = "Nodo3"
+        TreeNode6.Text = "Nodo3"
+        TreeNode7.Name = "Nodo4"
+        TreeNode7.Text = "Nodo4"
+        TreeNode8.Name = "Nodo5"
+        TreeNode8.Text = "Nodo5"
+        TreeNode9.Name = "Nodo6"
+        TreeNode9.Text = "Nodo6"
+        TreeNode10.Name = "Nodo7"
+        TreeNode10.Text = "Nodo7"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode4, TreeNode5, TreeNode6, TreeNode7, TreeNode8, TreeNode9, TreeNode10})
+        Me.TreeView1.Size = New System.Drawing.Size(120, 636)
+        Me.TreeView1.TabIndex = 3
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(815, 636)
+        Me.Controls.Add(Me.TreeView1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.IsMdiContainer = True
@@ -627,4 +670,5 @@ Partial Class MainForm
     Friend WithEvents GeneraConsumiDalleLettureToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CollegamentoUnitaImmobiliariToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
 End Class
