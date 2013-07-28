@@ -303,6 +303,9 @@
     <EmbeddedResource Include="FormMenu\AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\AnagraficaStudio.resx">
+      <DependentUpon>AnagraficaStudio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.vb</DependentUpon>
     </EmbeddedResource>

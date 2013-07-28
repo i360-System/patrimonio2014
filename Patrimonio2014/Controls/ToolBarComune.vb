@@ -24,7 +24,7 @@
                 If TypeOf con Is TextBox Then 'se il controllo è un
 
                     'aggiungo il nome nel file
-                    If Not con.text = "" Then
+                    If Not con.text = "" And Not (con.name = "") Then
 
 
                         ReDim Preserve param(indexparam) : param(indexparam) = con.ToString
