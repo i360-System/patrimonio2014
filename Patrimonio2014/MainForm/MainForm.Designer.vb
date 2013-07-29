@@ -147,7 +147,7 @@ Partial Class MainForm
         '
         Me.SpeseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivioSpeseToolStripMenuItem, Me.ArchivioFattureToolStripMenuItem, Me.CausaliPerLeSpeseToolStripMenuItem})
         Me.SpeseToolStripMenuItem.Name = "SpeseToolStripMenuItem"
-        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SpeseToolStripMenuItem.Text = "Spese"
         '
         'ArchivioSpeseToolStripMenuItem
@@ -191,7 +191,7 @@ Partial Class MainForm
         '
         Me.SollecitiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SituazioneSollecitiToolStripMenuItem, Me.GeneraSollecitiToolStripMenuItem, Me.TestiPerIlSollecitoToolStripMenuItem, Me.CalcoloDelleMorositaToolStripMenuItem})
         Me.SollecitiToolStripMenuItem.Name = "SollecitiToolStripMenuItem"
-        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SollecitiToolStripMenuItem.Text = "Solleciti"
         '
         'SituazioneSollecitiToolStripMenuItem
@@ -405,20 +405,20 @@ Partial Class MainForm
         'SsToolStripMenuItem
         '
         Me.SsToolStripMenuItem.Name = "SsToolStripMenuItem"
-        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.SsToolStripMenuItem.Text = "Studio"
         '
         'FornitoriToolStripMenuItem
         '
         Me.FornitoriToolStripMenuItem.Name = "FornitoriToolStripMenuItem"
-        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.FornitoriToolStripMenuItem.Text = "Fornitori"
         '
         'ImmobiliToolStripMenuItem
         '
         Me.ImmobiliToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TabelleMillesimaliToolStripMenuItem, Me.GruppiDiSpesaToolStripMenuItem, Me.VociDelConsuntivoToolStripMenuItem, Me.VociDelPreventivoToolStripMenuItem, Me.ContiFinanziariToolStripMenuItem, Me.AnagraficaCondominioToolStripMenuItem, Me.StrutturaDelCondominioToolStripMenuItem, Me.FondiAmmortamentoToolStripMenuItem, Me.AnagrafeDeiCondominiToolStripMenuItem, Me.UnitaImmobiliariToolStripMenuItem, Me.DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem})
         Me.ImmobiliToolStripMenuItem.Name = "ImmobiliToolStripMenuItem"
-        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ImmobiliToolStripMenuItem.Text = "Immobili"
         '
         'TabelleMillesimaliToolStripMenuItem

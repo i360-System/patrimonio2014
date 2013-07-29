@@ -110,4 +110,40 @@
         NewMDIChild.Show()
 
     End Sub
+
+    Private Sub ArchivioRitenutePerDichiarazioniToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioRitenutePerDichiarazioniToolStripMenuItem.Click
+        Dim NewMDIChild As New W_Ritenute
+        'Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        'Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub TabelleCodiciTributoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TabelleCodiciTributoToolStripMenuItem.Click
+        Dim NewMDIChild As New W_Tributi
+        'Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        'Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub CausaliPerLeSpeseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CausaliPerLeSpeseToolStripMenuItem.Click
+        Dim NewMDIChild As New X_Causali
+        'Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        'Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub TestiPerIlSollecitoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TestiPerIlSollecitoToolStripMenuItem.Click
+        Dim NewMDIChild As New Z_TestoSollecito
+        'Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        'Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
 End Class
