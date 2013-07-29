@@ -30,7 +30,7 @@
     ''' <param name="nomePar"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function ExQuery(ByVal strsql As String, ByVal param() As String, ByRef frm As Form) As OleDb.OleDbDataReader
+    Public Function ExQuery(ByVal strsql As String, ByVal param() As String, ByVal nomePar As List(Of String), ByRef frm As Form) As OleDb.OleDbDataReader
 
         Try
 
@@ -43,8 +43,8 @@
                 With CMD
                     'Definizione / Assegnazione
                     For Each par As String In param
-                        ' .Parameters.Add(nomePar(index), OleDb.OleDbType.VarChar).Value = param(index).ToString
-                        .Parameters.Add(param(index).ToString)
+                        .Parameters.Add(nomePar(index), OleDb.OleDbType.VarChar).Value = param(index).ToString
+                        '.Parameters.Add(param(index))
                         index = index + 1
                     Next
                     If oleDbCn.State = 0 Then oleDbCn.Open()

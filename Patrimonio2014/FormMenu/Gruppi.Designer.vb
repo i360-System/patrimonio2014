@@ -29,10 +29,10 @@ Partial Class Gruppi
         Me.GruppiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GruppiTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.GruppiTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
+        Me.GruppiDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.GruppiDettaglioTableAdapter()
         Me.TabellaTextBox = New System.Windows.Forms.TextBox()
         Me.DenominazioneTextBox = New System.Windows.Forms.TextBox()
         Me.GruppiDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GruppiDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.GruppiDettaglioTableAdapter()
         Me.GruppiDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,6 +47,24 @@ Partial Class Gruppi
         CType(Me.GruppiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GruppiDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'TabellaLabel
+        '
+        TabellaLabel.AutoSize = True
+        TabellaLabel.Location = New System.Drawing.Point(12, 50)
+        TabellaLabel.Name = "TabellaLabel"
+        TabellaLabel.Size = New System.Drawing.Size(45, 13)
+        TabellaLabel.TabIndex = 1
+        TabellaLabel.Text = "Tabella:"
+        '
+        'DenominazioneLabel
+        '
+        DenominazioneLabel.AutoSize = True
+        DenominazioneLabel.Location = New System.Drawing.Point(72, 50)
+        DenominazioneLabel.Name = "DenominazioneLabel"
+        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
+        DenominazioneLabel.TabIndex = 2
+        DenominazioneLabel.Text = "Denominazione:"
         '
         'IMMOBILIDataSet
         '
@@ -132,14 +150,9 @@ Partial Class Gruppi
         Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
-        'TabellaLabel
+        'GruppiDettaglioTableAdapter
         '
-        TabellaLabel.AutoSize = True
-        TabellaLabel.Location = New System.Drawing.Point(12, 50)
-        TabellaLabel.Name = "TabellaLabel"
-        TabellaLabel.Size = New System.Drawing.Size(45, 13)
-        TabellaLabel.TabIndex = 1
-        TabellaLabel.Text = "Tabella:"
+        Me.GruppiDettaglioTableAdapter.ClearBeforeFill = True
         '
         'TabellaTextBox
         '
@@ -148,15 +161,6 @@ Partial Class Gruppi
         Me.TabellaTextBox.Name = "TabellaTextBox"
         Me.TabellaTextBox.Size = New System.Drawing.Size(51, 20)
         Me.TabellaTextBox.TabIndex = 2
-        '
-        'DenominazioneLabel
-        '
-        DenominazioneLabel.AutoSize = True
-        DenominazioneLabel.Location = New System.Drawing.Point(72, 50)
-        DenominazioneLabel.Name = "DenominazioneLabel"
-        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
-        DenominazioneLabel.TabIndex = 2
-        DenominazioneLabel.Text = "Denominazione:"
         '
         'DenominazioneTextBox
         '
@@ -170,10 +174,6 @@ Partial Class Gruppi
         '
         Me.GruppiDettaglioBindingSource.DataMember = "GruppiDettaglio"
         Me.GruppiDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet
-        '
-        'GruppiDettaglioTableAdapter
-        '
-        Me.GruppiDettaglioTableAdapter.ClearBeforeFill = True
         '
         'GruppiDettaglioDataGridView
         '

@@ -42,13 +42,13 @@
 
                     If indParam > 0 Then strSql = strSql & sintassiSQL.an
                     strSql = strSql & c.ToString & sintassiSQL.ug
-                    'nomePar.Add(sintassiSQL.parameters & c.ToString)
+                    nomePar.Add(sintassiSQL.at & c.ToString)
                     strSql = strSql & sintassiSQL.parameters
                     indParam = indParam + 1
 
                 Next
 
-                Return DBlayerAC.ExQuery(strSql, param, frm)
+                Return DBlayerAC.ExQuery(strSql, param, nomePar, frm)
 
             End If
 
