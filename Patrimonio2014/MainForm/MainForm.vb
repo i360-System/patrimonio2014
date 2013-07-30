@@ -146,4 +146,13 @@
         NewMDIChild.Show()
 
     End Sub
+
+    Private Sub StrutturaDelCondominioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles StrutturaDelCondominioToolStripMenuItem.Click
+        Dim NewMDIChild As New Fabbricati
+        'Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        'Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
 End Class
