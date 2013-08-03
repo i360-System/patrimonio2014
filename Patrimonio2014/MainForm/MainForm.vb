@@ -1,4 +1,5 @@
 ﻿Public Class MainForm
+    Public istform As List(Of Form)
 
     Private Sub FornitoriToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FornitoriToolStripMenuItem.Click
         Dim NewMDIChild As New Fornitori
@@ -34,9 +35,7 @@
         frm.Show()
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-    End Sub
 
     Public Sub New()
 
@@ -47,8 +46,57 @@
 
     End Sub
 
-   
-    Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
-        MsgBox(TreeView1.SelectedNode.Name.ToString)
+    Private Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect
+        'MsgBox(TreeView1.SelectedNode.ToString)
+        Dim name As String
+        Select Case TreeView1.SelectedNode.Text.ToString
+            Case "Informazioni sul software"
+                name = TreeView1.SelectedNode.Text.ToString
+                If Me.Contains(AboutBox1) Then
+                    Dim NewMDIChild As New AboutBox1
+                    'Set the Parent Form of the Child window.
+                    NewMDIChild.MdiParent = Me
+                    'Display the new form.
+                    NewMDIChild.Show()
+                    ''controllo istanza
+                    'Dim frm As New Opzioni
+                    'frm.Show()
+                End If
+            Case "AnagraficaStudio"
+                name = TreeView1.SelectedNode.Text.ToString
+                If Me.Contains(AnagraficaStudio) Then
+                    Dim NewMDIChild As New AnagraficaStudio
+                    'Set the Parent Form of the Child window.
+                    NewMDIChild.MdiParent = Me
+                    'Display the new form.
+                    NewMDIChild.Show()
+                    ''controllo istanza
+                    'Dim frm As New Opzioni
+                    'frm.Show()
+                End If
+
+            Case "Fornitori"
+                name = TreeView1.SelectedNode.Text.ToString
+                If Me.cont(name) Then
+                    Dim NewMDIChild As New Fornitori
+                    'Set the Parent Form of the Child window.
+                    NewMDIChild.MdiParent = Me
+                    'Display the new form.
+                    NewMDIChild.Show()
+                    ''controllo istanza
+                    'Dim frm As New Opzioni
+                    'frm.Show()
+                End If
+                'Case
+                'Case
+                'Case
+                'Case
+                'Case
+                'Case
+                'Case
+                'Case
+                'Case
+                'Case
+        End Select
     End Sub
 End Class

@@ -25,13 +25,19 @@ Partial Class MainForm
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Termina")
         Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Opzioni")
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("File", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo1")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo2")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo3")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo4")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo5")
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo6")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo7")
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Movimentazione")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Preventivi")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Avvisi")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Convocazioni")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Consuntivi")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo3")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Fornitori")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Nodo5")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Archivi", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10, TreeNode11})
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ritenute d'acconto")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Informazioni sul software")
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Informazioni sulla licenza")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Info", New System.Windows.Forms.TreeNode() {TreeNode14, TreeNode15})
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TerminaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -127,13 +133,13 @@ Partial Class MainForm
         'TerminaToolStripMenuItem
         '
         Me.TerminaToolStripMenuItem.Name = "TerminaToolStripMenuItem"
-        Me.TerminaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TerminaToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.TerminaToolStripMenuItem.Text = "Termina"
         '
         'OpzioniToolStripMenuItem
         '
         Me.OpzioniToolStripMenuItem.Name = "OpzioniToolStripMenuItem"
-        Me.OpzioniToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpzioniToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.OpzioniToolStripMenuItem.Text = "Opzioni"
         '
         'MovimentazioneToolStripMenuItem
@@ -147,7 +153,7 @@ Partial Class MainForm
         '
         Me.SpeseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivioSpeseToolStripMenuItem, Me.ArchivioFattureToolStripMenuItem, Me.CausaliPerLeSpeseToolStripMenuItem})
         Me.SpeseToolStripMenuItem.Name = "SpeseToolStripMenuItem"
-        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.SpeseToolStripMenuItem.Text = "Spese"
         '
         'ArchivioSpeseToolStripMenuItem
@@ -172,7 +178,7 @@ Partial Class MainForm
         '
         Me.IncassiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IncassiDaMAvToolStripMenuItem, Me.IncassiDaCartaceoToolStripMenuItem})
         Me.IncassiToolStripMenuItem.Name = "IncassiToolStripMenuItem"
-        Me.IncassiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IncassiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.IncassiToolStripMenuItem.Text = "Incassi"
         '
         'IncassiDaMAvToolStripMenuItem
@@ -191,7 +197,7 @@ Partial Class MainForm
         '
         Me.SollecitiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SituazioneSollecitiToolStripMenuItem, Me.GeneraSollecitiToolStripMenuItem, Me.TestiPerIlSollecitoToolStripMenuItem, Me.CalcoloDelleMorositaToolStripMenuItem})
         Me.SollecitiToolStripMenuItem.Name = "SollecitiToolStripMenuItem"
-        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.SollecitiToolStripMenuItem.Text = "Solleciti"
         '
         'SituazioneSollecitiToolStripMenuItem
@@ -222,7 +228,7 @@ Partial Class MainForm
         '
         Me.MovimentiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimentiDeiCondominiToolStripMenuItem, Me.MovimentiDeiContiFinanziariToolStripMenuItem, Me.MovimentiDeiFondiToolStripMenuItem})
         Me.MovimentiToolStripMenuItem.Name = "MovimentiToolStripMenuItem"
-        Me.MovimentiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MovimentiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.MovimentiToolStripMenuItem.Text = "Movimenti"
         '
         'MovimentiDeiCondominiToolStripMenuItem
@@ -563,21 +569,33 @@ Partial Class MainForm
         TreeNode2.Text = "Opzioni"
         TreeNode3.Name = "File"
         TreeNode3.Text = "File"
-        TreeNode4.Name = "Nodo1"
-        TreeNode4.Text = "Nodo1"
-        TreeNode5.Name = "Nodo2"
-        TreeNode5.Text = "Nodo2"
-        TreeNode6.Name = "Nodo3"
-        TreeNode6.Text = "Nodo3"
-        TreeNode7.Name = "Nodo4"
-        TreeNode7.Text = "Nodo4"
-        TreeNode8.Name = "Nodo5"
-        TreeNode8.Text = "Nodo5"
-        TreeNode9.Name = "Nodo6"
-        TreeNode9.Text = "Nodo6"
-        TreeNode10.Name = "Nodo7"
-        TreeNode10.Text = "Nodo7"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode4, TreeNode5, TreeNode6, TreeNode7, TreeNode8, TreeNode9, TreeNode10})
+        TreeNode4.Name = "Movimentazione"
+        TreeNode4.Text = "Movimentazione"
+        TreeNode5.Name = "Preventivi"
+        TreeNode5.Text = "Preventivi"
+        TreeNode6.Name = "Avvisi"
+        TreeNode6.Text = "Avvisi"
+        TreeNode7.Name = "Convocazioni"
+        TreeNode7.Text = "Convocazioni"
+        TreeNode8.Name = "Consuntivi"
+        TreeNode8.Text = "Consuntivi"
+        TreeNode9.Name = "Nodo3"
+        TreeNode9.Text = "Nodo3"
+        TreeNode10.Name = "Fornitori"
+        TreeNode10.Text = "Fornitori"
+        TreeNode11.Name = "Nodo5"
+        TreeNode11.Text = "Nodo5"
+        TreeNode12.Name = "Archivi"
+        TreeNode12.Text = "Archivi"
+        TreeNode13.Name = "Ritenute d'acconto"
+        TreeNode13.Text = "Ritenute d'acconto"
+        TreeNode14.Name = "Informazioni sul software"
+        TreeNode14.Text = "Informazioni sul software"
+        TreeNode15.Name = "Informazioni sulla licenza"
+        TreeNode15.Text = "Informazioni sulla licenza"
+        TreeNode16.Name = "Info"
+        TreeNode16.Text = "Info"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode4, TreeNode5, TreeNode6, TreeNode7, TreeNode8, TreeNode12, TreeNode13, TreeNode16})
         Me.TreeView1.Size = New System.Drawing.Size(120, 636)
         Me.TreeView1.TabIndex = 3
         '
