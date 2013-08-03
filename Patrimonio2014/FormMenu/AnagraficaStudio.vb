@@ -23,7 +23,7 @@
 
     End Sub
 
-    Private Sub AnagraficaStudioBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs) Handles AnagraficaStudioBindingNavigatorSaveItem.Click
+    Private Sub AnagraficaStudioBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnagraficaStudioBindingNavigatorSaveItem.Click
         Me.Validate()
         Me.AnagraficaStudioBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)
