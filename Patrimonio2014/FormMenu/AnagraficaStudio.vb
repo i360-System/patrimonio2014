@@ -24,9 +24,15 @@
     End Sub
 
     Private Sub AnagraficaStudioBindingNavigatorSaveItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnagraficaStudioBindingNavigatorSaveItem.Click
+
         Me.Validate()
         Me.AnagraficaStudioBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)
+        Try
+            Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)
+        Catch ex As Exception
+
+        End Try
+
 
     End Sub
 End Class

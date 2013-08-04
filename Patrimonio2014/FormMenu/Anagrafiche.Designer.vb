@@ -40,24 +40,24 @@ Partial Class Anagrafiche
         Dim LuogoNascitaLabel As System.Windows.Forms.Label
         Dim ProvinciaNascitaLabel As System.Windows.Forms.Label
         Dim DataNascitaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Anagrafiche))
         Dim TelefonoLabel1 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Anagrafiche))
         Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet()
         Me.AnagraficheBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AnagraficheTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.AnagraficheTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
         Me.AnagraficheBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.AnagraficheBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Immobile = New System.Windows.Forms.ComboBox()
         Me.Anagrafica = New System.Windows.Forms.TextBox()
@@ -78,6 +78,8 @@ Partial Class Anagrafiche
         Me.LuogoNascita = New System.Windows.Forms.TextBox()
         Me.ProvinciaNascita = New System.Windows.Forms.TextBox()
         Me.DataNascita = New System.Windows.Forms.DateTimePicker()
+        Me.ZTestoSollecitoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Z_TestoSollecitoTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.Z_TestoSollecitoTableAdapter()
         ImmobileLabel = New System.Windows.Forms.Label()
         AnagraficaLabel = New System.Windows.Forms.Label()
         TitoloLabel = New System.Windows.Forms.Label()
@@ -100,6 +102,7 @@ Partial Class Anagrafiche
         CType(Me.AnagraficheBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnagraficheBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AnagraficheBindingNavigator.SuspendLayout()
+        CType(Me.ZTestoSollecitoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImmobileLabel
@@ -255,6 +258,15 @@ Partial Class Anagrafiche
         DataNascitaLabel.TabIndex = 35
         DataNascitaLabel.Text = "Data Nascita:"
         '
+        'TelefonoLabel1
+        '
+        TelefonoLabel1.AutoSize = True
+        TelefonoLabel1.Location = New System.Drawing.Point(144, 284)
+        TelefonoLabel1.Name = "TelefonoLabel1"
+        TelefonoLabel1.Size = New System.Drawing.Size(52, 13)
+        TelefonoLabel1.TabIndex = 46
+        TelefonoLabel1.Text = "Telefono:"
+        '
         'IMMOBILIDataSet
         '
         Me.IMMOBILIDataSet.DataSetName = "IMMOBILIDataSet"
@@ -357,6 +369,31 @@ Partial Class Anagrafiche
         Me.AnagraficheBindingNavigator.TabIndex = 37
         Me.AnagraficheBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -389,16 +426,9 @@ Partial Class Anagrafiche
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -421,26 +451,8 @@ Partial Class Anagrafiche
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'AnagraficheBindingNavigatorSaveItem
         '
@@ -523,15 +535,6 @@ Partial Class Anagrafiche
         Me.Provincia.Size = New System.Drawing.Size(51, 20)
         Me.Provincia.TabIndex = 46
         '
-        'TelefonoLabel1
-        '
-        TelefonoLabel1.AutoSize = True
-        TelefonoLabel1.Location = New System.Drawing.Point(144, 284)
-        TelefonoLabel1.Name = "TelefonoLabel1"
-        TelefonoLabel1.Size = New System.Drawing.Size(52, 13)
-        TelefonoLabel1.TabIndex = 46
-        TelefonoLabel1.Text = "Telefono:"
-        '
         'Telefono
         '
         Me.Telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Telefono", True))
@@ -574,12 +577,16 @@ Partial Class Anagrafiche
         '
         'AnagraficaCollegata
         '
+        Me.AnagraficaCollegata.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AnagraficheBindingSource, "AnagraficaCollegata", True))
         Me.AnagraficaCollegata.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "AnagraficaCollegata", True))
+        Me.AnagraficaCollegata.DataSource = Me.AnagraficheBindingSource
+        Me.AnagraficaCollegata.DisplayMember = "AnagraficaCollegata"
         Me.AnagraficaCollegata.FormattingEnabled = True
         Me.AnagraficaCollegata.Location = New System.Drawing.Point(343, 374)
         Me.AnagraficaCollegata.Name = "AnagraficaCollegata"
         Me.AnagraficaCollegata.Size = New System.Drawing.Size(172, 21)
         Me.AnagraficaCollegata.TabIndex = 52
+        Me.AnagraficaCollegata.ValueMember = "AnagraficaCollegata"
         '
         'CodiceFiscale
         '
@@ -608,10 +615,20 @@ Partial Class Anagrafiche
         'DataNascita
         '
         Me.DataNascita.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.AnagraficheBindingSource, "DataNascita", True))
+        Me.DataNascita.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataNascita.Location = New System.Drawing.Point(466, 411)
         Me.DataNascita.Name = "DataNascita"
         Me.DataNascita.Size = New System.Drawing.Size(200, 20)
         Me.DataNascita.TabIndex = 56
+        '
+        'ZTestoSollecitoBindingSource
+        '
+        Me.ZTestoSollecitoBindingSource.DataMember = "Z_TestoSollecito"
+        Me.ZTestoSollecitoBindingSource.DataSource = Me.IMMOBILIDataSet
+        '
+        'Z_TestoSollecitoTableAdapter
+        '
+        Me.Z_TestoSollecitoTableAdapter.ClearBeforeFill = True
         '
         'Anagrafiche
         '
@@ -663,6 +680,7 @@ Partial Class Anagrafiche
         CType(Me.AnagraficheBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AnagraficheBindingNavigator.ResumeLayout(False)
         Me.AnagraficheBindingNavigator.PerformLayout()
+        CType(Me.ZTestoSollecitoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -703,4 +721,6 @@ Partial Class Anagrafiche
     Friend WithEvents LuogoNascita As System.Windows.Forms.TextBox
     Friend WithEvents ProvinciaNascita As System.Windows.Forms.TextBox
     Friend WithEvents DataNascita As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ZTestoSollecitoBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Z_TestoSollecitoTableAdapter As Patrimonio2014.IMMOBILIDataSetTableAdapters.Z_TestoSollecitoTableAdapter
 End Class

@@ -11,7 +11,7 @@
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.Immobili'. È possibile spostarla o rimuoverla se necessario.
         Me.ImmobiliTableAdapter.Fill(Me.IMMOBILIDataSet.Immobili)
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.Immobili'. È possibile spostarla o rimuoverla se necessario.
-        Me.ImmobiliTableAdapter.Fill(Me.IMMOBILIDataSet.Immobili)
+        'Me.ImmobiliTableAdapter.Fill(Me.IMMOBILIDataSet.Immobili)
 
     End Sub
 

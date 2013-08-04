@@ -82,7 +82,7 @@
 
             Case "Fornitori"
                 name = TreeView1.SelectedNode.Text.ToString
-                If Me.cont(name) Then
+                If Me.Contains(Fornitori) Then
                     Dim NewMDIChild As New Fornitori
                     'Set the Parent Form of the Child window.
                     NewMDIChild.MdiParent = Me
