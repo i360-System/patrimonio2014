@@ -24,7 +24,7 @@
 
     End Sub
 
-    Private Sub AnagraficaCollegata_Layout(sender As Object, e As System.Windows.Forms.LayoutEventArgs) Handles AnagraficaCollegata.Layout
+    Private Sub AnagraficaCollegata_Layout(sender As Object, e As System.Windows.Forms.LayoutEventArgs)
 
     End Sub
 End Class

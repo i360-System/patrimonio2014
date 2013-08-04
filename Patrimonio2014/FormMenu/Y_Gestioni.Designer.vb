@@ -42,6 +42,7 @@ Partial Class Y_Gestioni
         Me.Y_GestioniBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Y_GestioniTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.Y_GestioniTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
+        Me.Y_GestioniDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.Y_GestioniDettaglioTableAdapter()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.GestioneComboBox = New System.Windows.Forms.ComboBox()
         Me.Descrizione1TextBox = New System.Windows.Forms.TextBox()
@@ -59,7 +60,6 @@ Partial Class Y_Gestioni
         Me.GestioneCollegataTextBox = New System.Windows.Forms.TextBox()
         Me.PreventivoConfermatoTextBox = New System.Windows.Forms.TextBox()
         Me.Y_GestioniDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Y_GestioniDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.Y_GestioniDettaglioTableAdapter()
         Me.Y_GestioniDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -86,6 +86,141 @@ Partial Class Y_Gestioni
         CType(Me.Y_GestioniDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Y_GestioniDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(12, 59)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 1
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(396, 59)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 2
+        GestioneLabel.Text = "Gestione:"
+        '
+        'Descrizione1Label
+        '
+        Descrizione1Label.AutoSize = True
+        Descrizione1Label.Location = New System.Drawing.Point(12, 99)
+        Descrizione1Label.Name = "Descrizione1Label"
+        Descrizione1Label.Size = New System.Drawing.Size(65, 13)
+        Descrizione1Label.TabIndex = 4
+        Descrizione1Label.Text = "Descrizione:"
+        '
+        'TipoLabel
+        '
+        TipoLabel.AutoSize = True
+        TipoLabel.Location = New System.Drawing.Point(396, 99)
+        TipoLabel.Name = "TipoLabel"
+        TipoLabel.Size = New System.Drawing.Size(31, 13)
+        TipoLabel.TabIndex = 7
+        TipoLabel.Text = "Tipo:"
+        '
+        'DataInizioLabel
+        '
+        DataInizioLabel.AutoSize = True
+        DataInizioLabel.Location = New System.Drawing.Point(444, 99)
+        DataInizioLabel.Name = "DataInizioLabel"
+        DataInizioLabel.Size = New System.Drawing.Size(60, 13)
+        DataInizioLabel.TabIndex = 9
+        DataInizioLabel.Text = "Data Inizio:"
+        '
+        'DataTermineLabel
+        '
+        DataTermineLabel.AutoSize = True
+        DataTermineLabel.Location = New System.Drawing.Point(554, 99)
+        DataTermineLabel.Name = "DataTermineLabel"
+        DataTermineLabel.Size = New System.Drawing.Size(74, 13)
+        DataTermineLabel.TabIndex = 11
+        DataTermineLabel.Text = "Data Termine:"
+        '
+        'TabellaLabel
+        '
+        TabellaLabel.AutoSize = True
+        TabellaLabel.Location = New System.Drawing.Point(653, 99)
+        TabellaLabel.Name = "TabellaLabel"
+        TabellaLabel.Size = New System.Drawing.Size(48, 13)
+        TabellaLabel.TabIndex = 13
+        TabellaLabel.Text = "Costanti:"
+        '
+        'ImportoMinimoLabel
+        '
+        ImportoMinimoLabel.AutoSize = True
+        ImportoMinimoLabel.Location = New System.Drawing.Point(12, 190)
+        ImportoMinimoLabel.Name = "ImportoMinimoLabel"
+        ImportoMinimoLabel.Size = New System.Drawing.Size(81, 13)
+        ImportoMinimoLabel.TabIndex = 15
+        ImportoMinimoLabel.Text = "Importo Minimo:"
+        '
+        'ImportoMassimoLabel
+        '
+        ImportoMassimoLabel.AutoSize = True
+        ImportoMassimoLabel.Location = New System.Drawing.Point(121, 190)
+        ImportoMassimoLabel.Name = "ImportoMassimoLabel"
+        ImportoMassimoLabel.Size = New System.Drawing.Size(89, 13)
+        ImportoMassimoLabel.TabIndex = 17
+        ImportoMassimoLabel.Text = "Importo Massimo:"
+        '
+        'StoricoLabel
+        '
+        StoricoLabel.AutoSize = True
+        StoricoLabel.Location = New System.Drawing.Point(230, 190)
+        StoricoLabel.Name = "StoricoLabel"
+        StoricoLabel.Size = New System.Drawing.Size(43, 13)
+        StoricoLabel.TabIndex = 19
+        StoricoLabel.Text = "Storico:"
+        '
+        'GruppoAccontoLabel
+        '
+        GruppoAccontoLabel.AutoSize = True
+        GruppoAccontoLabel.Location = New System.Drawing.Point(284, 190)
+        GruppoAccontoLabel.Name = "GruppoAccontoLabel"
+        GruppoAccontoLabel.Size = New System.Drawing.Size(88, 13)
+        GruppoAccontoLabel.TabIndex = 21
+        GruppoAccontoLabel.Text = "Gruppo Acconto:"
+        '
+        'PercentoAccontoLabel
+        '
+        PercentoAccontoLabel.AutoSize = True
+        PercentoAccontoLabel.Location = New System.Drawing.Point(378, 190)
+        PercentoAccontoLabel.Name = "PercentoAccontoLabel"
+        PercentoAccontoLabel.Size = New System.Drawing.Size(61, 13)
+        PercentoAccontoLabel.TabIndex = 23
+        PercentoAccontoLabel.Text = "% Acconto:"
+        '
+        'GestioneSuccessivaLabel
+        '
+        GestioneSuccessivaLabel.AutoSize = True
+        GestioneSuccessivaLabel.Location = New System.Drawing.Point(445, 190)
+        GestioneSuccessivaLabel.Name = "GestioneSuccessivaLabel"
+        GestioneSuccessivaLabel.Size = New System.Drawing.Size(110, 13)
+        GestioneSuccessivaLabel.TabIndex = 25
+        GestioneSuccessivaLabel.Text = "Gestione Successiva:"
+        '
+        'GestioneCollegataLabel
+        '
+        GestioneCollegataLabel.AutoSize = True
+        GestioneCollegataLabel.Location = New System.Drawing.Point(561, 190)
+        GestioneCollegataLabel.Name = "GestioneCollegataLabel"
+        GestioneCollegataLabel.Size = New System.Drawing.Size(99, 13)
+        GestioneCollegataLabel.TabIndex = 27
+        GestioneCollegataLabel.Text = "Gestione Collegata:"
+        '
+        'PreventivoConfermatoLabel
+        '
+        PreventivoConfermatoLabel.AutoSize = True
+        PreventivoConfermatoLabel.Location = New System.Drawing.Point(666, 190)
+        PreventivoConfermatoLabel.Name = "PreventivoConfermatoLabel"
+        PreventivoConfermatoLabel.Size = New System.Drawing.Size(118, 13)
+        PreventivoConfermatoLabel.TabIndex = 29
+        PreventivoConfermatoLabel.Text = "Preventivo Confermato:"
         '
         'IMMOBILIDataSet
         '
@@ -171,14 +306,9 @@ Partial Class Y_Gestioni
         Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
-        'ImmobileLabel
+        'Y_GestioniDettaglioTableAdapter
         '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(12, 59)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 1
-        ImmobileLabel.Text = "Immobile:"
+        Me.Y_GestioniDettaglioTableAdapter.ClearBeforeFill = True
         '
         'ImmobileComboBox
         '
@@ -189,32 +319,14 @@ Partial Class Y_Gestioni
         Me.ImmobileComboBox.Size = New System.Drawing.Size(368, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(396, 59)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 2
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "Gestione", True))
         Me.GestioneComboBox.FormattingEnabled = True
         Me.GestioneComboBox.Location = New System.Drawing.Point(399, 75)
         Me.GestioneComboBox.Name = "GestioneComboBox"
-        Me.GestioneComboBox.Size = New System.Drawing.Size(347, 21)
+        Me.GestioneComboBox.Size = New System.Drawing.Size(385, 21)
         Me.GestioneComboBox.TabIndex = 3
-        '
-        'Descrizione1Label
-        '
-        Descrizione1Label.AutoSize = True
-        Descrizione1Label.Location = New System.Drawing.Point(12, 99)
-        Descrizione1Label.Name = "Descrizione1Label"
-        Descrizione1Label.Size = New System.Drawing.Size(65, 13)
-        Descrizione1Label.TabIndex = 4
-        Descrizione1Label.Text = "Descrizione:"
         '
         'Descrizione1TextBox
         '
@@ -232,15 +344,6 @@ Partial Class Y_Gestioni
         Me.Descrizione2TextBox.Size = New System.Drawing.Size(368, 20)
         Me.Descrizione2TextBox.TabIndex = 7
         '
-        'TipoLabel
-        '
-        TipoLabel.AutoSize = True
-        TipoLabel.Location = New System.Drawing.Point(396, 99)
-        TipoLabel.Name = "TipoLabel"
-        TipoLabel.Size = New System.Drawing.Size(31, 13)
-        TipoLabel.TabIndex = 7
-        TipoLabel.Text = "Tipo:"
-        '
         'TipoTextBox
         '
         Me.TipoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "Tipo", True))
@@ -249,66 +352,32 @@ Partial Class Y_Gestioni
         Me.TipoTextBox.Size = New System.Drawing.Size(39, 20)
         Me.TipoTextBox.TabIndex = 8
         '
-        'DataInizioLabel
-        '
-        DataInizioLabel.AutoSize = True
-        DataInizioLabel.Location = New System.Drawing.Point(444, 99)
-        DataInizioLabel.Name = "DataInizioLabel"
-        DataInizioLabel.Size = New System.Drawing.Size(60, 13)
-        DataInizioLabel.TabIndex = 9
-        DataInizioLabel.Text = "Data Inizio:"
-        '
         'DataInizioDateTimePicker
         '
         Me.DataInizioDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Y_GestioniBindingSource, "DataInizio", True))
+        Me.DataInizioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataInizioDateTimePicker.Location = New System.Drawing.Point(447, 115)
         Me.DataInizioDateTimePicker.Name = "DataInizioDateTimePicker"
-        Me.DataInizioDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataInizioDateTimePicker.Size = New System.Drawing.Size(101, 20)
         Me.DataInizioDateTimePicker.TabIndex = 10
-        '
-        'DataTermineLabel
-        '
-        DataTermineLabel.AutoSize = True
-        DataTermineLabel.Location = New System.Drawing.Point(444, 141)
-        DataTermineLabel.Name = "DataTermineLabel"
-        DataTermineLabel.Size = New System.Drawing.Size(74, 13)
-        DataTermineLabel.TabIndex = 11
-        DataTermineLabel.Text = "Data Termine:"
         '
         'DataTermineDateTimePicker
         '
         Me.DataTermineDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.Y_GestioniBindingSource, "DataTermine", True))
-        Me.DataTermineDateTimePicker.Location = New System.Drawing.Point(447, 157)
+        Me.DataTermineDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DataTermineDateTimePicker.Location = New System.Drawing.Point(554, 115)
         Me.DataTermineDateTimePicker.Name = "DataTermineDateTimePicker"
-        Me.DataTermineDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataTermineDateTimePicker.Size = New System.Drawing.Size(97, 20)
         Me.DataTermineDateTimePicker.TabIndex = 12
-        '
-        'TabellaLabel
-        '
-        TabellaLabel.AutoSize = True
-        TabellaLabel.Location = New System.Drawing.Point(653, 141)
-        TabellaLabel.Name = "TabellaLabel"
-        TabellaLabel.Size = New System.Drawing.Size(48, 13)
-        TabellaLabel.TabIndex = 13
-        TabellaLabel.Text = "Costanti:"
         '
         'TabellaComboBox
         '
         Me.TabellaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "Tabella", True))
         Me.TabellaComboBox.FormattingEnabled = True
-        Me.TabellaComboBox.Location = New System.Drawing.Point(656, 156)
+        Me.TabellaComboBox.Location = New System.Drawing.Point(656, 114)
         Me.TabellaComboBox.Name = "TabellaComboBox"
-        Me.TabellaComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.TabellaComboBox.Size = New System.Drawing.Size(128, 21)
         Me.TabellaComboBox.TabIndex = 14
-        '
-        'ImportoMinimoLabel
-        '
-        ImportoMinimoLabel.AutoSize = True
-        ImportoMinimoLabel.Location = New System.Drawing.Point(12, 190)
-        ImportoMinimoLabel.Name = "ImportoMinimoLabel"
-        ImportoMinimoLabel.Size = New System.Drawing.Size(81, 13)
-        ImportoMinimoLabel.TabIndex = 15
-        ImportoMinimoLabel.Text = "Importo Minimo:"
         '
         'ImportoMinimoTextBox
         '
@@ -318,15 +387,6 @@ Partial Class Y_Gestioni
         Me.ImportoMinimoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImportoMinimoTextBox.TabIndex = 16
         '
-        'ImportoMassimoLabel
-        '
-        ImportoMassimoLabel.AutoSize = True
-        ImportoMassimoLabel.Location = New System.Drawing.Point(121, 190)
-        ImportoMassimoLabel.Name = "ImportoMassimoLabel"
-        ImportoMassimoLabel.Size = New System.Drawing.Size(89, 13)
-        ImportoMassimoLabel.TabIndex = 17
-        ImportoMassimoLabel.Text = "Importo Massimo:"
-        '
         'ImportoMassimoTextBox
         '
         Me.ImportoMassimoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "ImportoMassimo", True))
@@ -334,15 +394,6 @@ Partial Class Y_Gestioni
         Me.ImportoMassimoTextBox.Name = "ImportoMassimoTextBox"
         Me.ImportoMassimoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImportoMassimoTextBox.TabIndex = 18
-        '
-        'StoricoLabel
-        '
-        StoricoLabel.AutoSize = True
-        StoricoLabel.Location = New System.Drawing.Point(230, 190)
-        StoricoLabel.Name = "StoricoLabel"
-        StoricoLabel.Size = New System.Drawing.Size(43, 13)
-        StoricoLabel.TabIndex = 19
-        StoricoLabel.Text = "Storico:"
         '
         'StoricoTextBox
         '
@@ -352,15 +403,6 @@ Partial Class Y_Gestioni
         Me.StoricoTextBox.Size = New System.Drawing.Size(30, 20)
         Me.StoricoTextBox.TabIndex = 20
         '
-        'GruppoAccontoLabel
-        '
-        GruppoAccontoLabel.AutoSize = True
-        GruppoAccontoLabel.Location = New System.Drawing.Point(284, 190)
-        GruppoAccontoLabel.Name = "GruppoAccontoLabel"
-        GruppoAccontoLabel.Size = New System.Drawing.Size(88, 13)
-        GruppoAccontoLabel.TabIndex = 21
-        GruppoAccontoLabel.Text = "Gruppo Acconto:"
-        '
         'GruppoAccontoTextBox
         '
         Me.GruppoAccontoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "GruppoAcconto", True))
@@ -368,15 +410,6 @@ Partial Class Y_Gestioni
         Me.GruppoAccontoTextBox.Name = "GruppoAccontoTextBox"
         Me.GruppoAccontoTextBox.Size = New System.Drawing.Size(36, 20)
         Me.GruppoAccontoTextBox.TabIndex = 22
-        '
-        'PercentoAccontoLabel
-        '
-        PercentoAccontoLabel.AutoSize = True
-        PercentoAccontoLabel.Location = New System.Drawing.Point(378, 190)
-        PercentoAccontoLabel.Name = "PercentoAccontoLabel"
-        PercentoAccontoLabel.Size = New System.Drawing.Size(61, 13)
-        PercentoAccontoLabel.TabIndex = 23
-        PercentoAccontoLabel.Text = "% Acconto:"
         '
         'PercentoAccontoTextBox
         '
@@ -386,15 +419,6 @@ Partial Class Y_Gestioni
         Me.PercentoAccontoTextBox.Size = New System.Drawing.Size(58, 20)
         Me.PercentoAccontoTextBox.TabIndex = 24
         '
-        'GestioneSuccessivaLabel
-        '
-        GestioneSuccessivaLabel.AutoSize = True
-        GestioneSuccessivaLabel.Location = New System.Drawing.Point(445, 190)
-        GestioneSuccessivaLabel.Name = "GestioneSuccessivaLabel"
-        GestioneSuccessivaLabel.Size = New System.Drawing.Size(110, 13)
-        GestioneSuccessivaLabel.TabIndex = 25
-        GestioneSuccessivaLabel.Text = "Gestione Successiva:"
-        '
         'GestioneSuccessivaTextBox
         '
         Me.GestioneSuccessivaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "GestioneSuccessiva", True))
@@ -403,15 +427,6 @@ Partial Class Y_Gestioni
         Me.GestioneSuccessivaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.GestioneSuccessivaTextBox.TabIndex = 26
         '
-        'GestioneCollegataLabel
-        '
-        GestioneCollegataLabel.AutoSize = True
-        GestioneCollegataLabel.Location = New System.Drawing.Point(561, 190)
-        GestioneCollegataLabel.Name = "GestioneCollegataLabel"
-        GestioneCollegataLabel.Size = New System.Drawing.Size(99, 13)
-        GestioneCollegataLabel.TabIndex = 27
-        GestioneCollegataLabel.Text = "Gestione Collegata:"
-        '
         'GestioneCollegataTextBox
         '
         Me.GestioneCollegataTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniBindingSource, "GestioneCollegata", True))
@@ -419,15 +434,6 @@ Partial Class Y_Gestioni
         Me.GestioneCollegataTextBox.Name = "GestioneCollegataTextBox"
         Me.GestioneCollegataTextBox.Size = New System.Drawing.Size(100, 20)
         Me.GestioneCollegataTextBox.TabIndex = 28
-        '
-        'PreventivoConfermatoLabel
-        '
-        PreventivoConfermatoLabel.AutoSize = True
-        PreventivoConfermatoLabel.Location = New System.Drawing.Point(666, 190)
-        PreventivoConfermatoLabel.Name = "PreventivoConfermatoLabel"
-        PreventivoConfermatoLabel.Size = New System.Drawing.Size(118, 13)
-        PreventivoConfermatoLabel.TabIndex = 29
-        PreventivoConfermatoLabel.Text = "Preventivo Confermato:"
         '
         'PreventivoConfermatoTextBox
         '
@@ -441,10 +447,6 @@ Partial Class Y_Gestioni
         '
         Me.Y_GestioniDettaglioBindingSource.DataMember = "Y_GestioniDettaglio"
         Me.Y_GestioniDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet
-        '
-        'Y_GestioniDettaglioTableAdapter
-        '
-        Me.Y_GestioniDettaglioTableAdapter.ClearBeforeFill = True
         '
         'Y_GestioniDettaglioDataGridView
         '

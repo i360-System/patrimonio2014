@@ -343,6 +343,15 @@ Partial Class X_Spese
         TrattamentoLabel.TabIndex = 30
         TrattamentoLabel.Text = "Codice:"
         '
+        'FatturaSaldataLabel
+        '
+        FatturaSaldataLabel.AutoSize = True
+        FatturaSaldataLabel.Location = New System.Drawing.Point(429, 225)
+        FatturaSaldataLabel.Name = "FatturaSaldataLabel"
+        FatturaSaldataLabel.Size = New System.Drawing.Size(64, 13)
+        FatturaSaldataLabel.TabIndex = 31
+        FatturaSaldataLabel.Text = "Pagamento:"
+        '
         'IMMOBILIDataSet
         '
         Me.IMMOBILIDataSet.DataSetName = "IMMOBILIDataSet"
@@ -534,9 +543,10 @@ Partial Class X_Spese
         'DataDocumentoDateTimePicker
         '
         Me.DataDocumentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.X_SpeseBindingSource, "DataDocumento", True))
+        Me.DataDocumentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataDocumentoDateTimePicker.Location = New System.Drawing.Point(562, 201)
         Me.DataDocumentoDateTimePicker.Name = "DataDocumentoDateTimePicker"
-        Me.DataDocumentoDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataDocumentoDateTimePicker.Size = New System.Drawing.Size(100, 20)
         Me.DataDocumentoDateTimePicker.TabIndex = 25
         '
         'GroupBox1
@@ -600,9 +610,10 @@ Partial Class X_Spese
         'DataPagamentoDateTimePicker
         '
         Me.DataPagamentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.X_SpeseBindingSource, "DataPagamento", True))
+        Me.DataPagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataPagamentoDateTimePicker.Location = New System.Drawing.Point(339, 117)
         Me.DataPagamentoDateTimePicker.Name = "DataPagamentoDateTimePicker"
-        Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(100, 20)
         Me.DataPagamentoDateTimePicker.TabIndex = 19
         '
         'NettoTextBox
@@ -677,15 +688,6 @@ Partial Class X_Spese
         'X_SpeseDescrizioniTableAdapter
         '
         Me.X_SpeseDescrizioniTableAdapter.ClearBeforeFill = True
-        '
-        'FatturaSaldataLabel
-        '
-        FatturaSaldataLabel.AutoSize = True
-        FatturaSaldataLabel.Location = New System.Drawing.Point(429, 225)
-        FatturaSaldataLabel.Name = "FatturaSaldataLabel"
-        FatturaSaldataLabel.Size = New System.Drawing.Size(64, 13)
-        FatturaSaldataLabel.TabIndex = 31
-        FatturaSaldataLabel.Text = "Pagamento:"
         '
         'FatturaSaldataComboBox
         '

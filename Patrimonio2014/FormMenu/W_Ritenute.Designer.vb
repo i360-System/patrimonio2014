@@ -42,22 +42,31 @@ Partial Class W_Ritenute
         Dim AnnoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(W_Ritenute))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet()
+        Me.AnnoTextBox = New System.Windows.Forms.TextBox()
         Me.W_RitenuteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet()
+        Me.DataPagamentoDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.NettoTextBox = New System.Windows.Forms.TextBox()
+        Me.RitenutaTextBox = New System.Windows.Forms.TextBox()
+        Me.ImponibileTextBox = New System.Windows.Forms.TextBox()
+        Me.IvaTextBox = New System.Windows.Forms.TextBox()
+        Me.PrevidenzaTextBox = New System.Windows.Forms.TextBox()
+        Me.EsenteTextBox = New System.Windows.Forms.TextBox()
+        Me.CompensoTextBox = New System.Windows.Forms.TextBox()
         Me.W_RitenuteTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.W_RitenuteTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
         Me.W_RitenuteBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.W_RitenuteBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ProgressivoTextBox = New System.Windows.Forms.TextBox()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
@@ -66,15 +75,6 @@ Partial Class W_Ritenute
         Me.FornitoreComboBox = New System.Windows.Forms.ComboBox()
         Me.TributoTextBox = New System.Windows.Forms.TextBox()
         Me.CausaleTextBox = New System.Windows.Forms.TextBox()
-        Me.CompensoTextBox = New System.Windows.Forms.TextBox()
-        Me.EsenteTextBox = New System.Windows.Forms.TextBox()
-        Me.PrevidenzaTextBox = New System.Windows.Forms.TextBox()
-        Me.IvaTextBox = New System.Windows.Forms.TextBox()
-        Me.ImponibileTextBox = New System.Windows.Forms.TextBox()
-        Me.RitenutaTextBox = New System.Windows.Forms.TextBox()
-        Me.NettoTextBox = New System.Windows.Forms.TextBox()
-        Me.DataPagamentoDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.AnnoTextBox = New System.Windows.Forms.TextBox()
         Me.TrattamentoComboBox = New System.Windows.Forms.ComboBox()
         ProgressivoLabel = New System.Windows.Forms.Label()
         ImmobileLabel = New System.Windows.Forms.Label()
@@ -94,8 +94,8 @@ Partial Class W_Ritenute
         DataPagamentoLabel = New System.Windows.Forms.Label()
         AnnoLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.W_RitenuteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.W_RitenuteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.W_RitenuteBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
@@ -247,7 +247,7 @@ Partial Class W_Ritenute
         'AnnoLabel
         '
         AnnoLabel.AutoSize = True
-        AnnoLabel.Location = New System.Drawing.Point(215, 65)
+        AnnoLabel.Location = New System.Drawing.Point(129, 65)
         AnnoLabel.Name = "AnnoLabel"
         AnnoLabel.Size = New System.Drawing.Size(35, 13)
         AnnoLabel.TabIndex = 16
@@ -280,15 +280,88 @@ Partial Class W_Ritenute
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Importi e Ritenute"
         '
-        'IMMOBILIDataSet
+        'AnnoTextBox
         '
-        Me.IMMOBILIDataSet.DataSetName = "IMMOBILIDataSet"
-        Me.IMMOBILIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.AnnoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Anno", True))
+        Me.AnnoTextBox.Location = New System.Drawing.Point(132, 81)
+        Me.AnnoTextBox.Name = "AnnoTextBox"
+        Me.AnnoTextBox.Size = New System.Drawing.Size(46, 20)
+        Me.AnnoTextBox.TabIndex = 26
         '
         'W_RitenuteBindingSource
         '
         Me.W_RitenuteBindingSource.DataMember = "W_Ritenute"
         Me.W_RitenuteBindingSource.DataSource = Me.IMMOBILIDataSet
+        '
+        'IMMOBILIDataSet
+        '
+        Me.IMMOBILIDataSet.DataSetName = "IMMOBILIDataSet"
+        Me.IMMOBILIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataPagamentoDateTimePicker
+        '
+        Me.DataPagamentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.W_RitenuteBindingSource, "DataPagamento", True))
+        Me.DataPagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DataPagamentoDateTimePicker.Location = New System.Drawing.Point(6, 81)
+        Me.DataPagamentoDateTimePicker.Name = "DataPagamentoDateTimePicker"
+        Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(99, 20)
+        Me.DataPagamentoDateTimePicker.TabIndex = 25
+        '
+        'NettoTextBox
+        '
+        Me.NettoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Netto", True))
+        Me.NettoTextBox.Location = New System.Drawing.Point(536, 32)
+        Me.NettoTextBox.Name = "NettoTextBox"
+        Me.NettoTextBox.Size = New System.Drawing.Size(90, 20)
+        Me.NettoTextBox.TabIndex = 24
+        '
+        'RitenutaTextBox
+        '
+        Me.RitenutaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Ritenuta", True))
+        Me.RitenutaTextBox.Location = New System.Drawing.Point(450, 32)
+        Me.RitenutaTextBox.Name = "RitenutaTextBox"
+        Me.RitenutaTextBox.Size = New System.Drawing.Size(80, 20)
+        Me.RitenutaTextBox.TabIndex = 23
+        '
+        'ImponibileTextBox
+        '
+        Me.ImponibileTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Imponibile", True))
+        Me.ImponibileTextBox.Location = New System.Drawing.Point(361, 32)
+        Me.ImponibileTextBox.Name = "ImponibileTextBox"
+        Me.ImponibileTextBox.Size = New System.Drawing.Size(83, 20)
+        Me.ImponibileTextBox.TabIndex = 22
+        '
+        'IvaTextBox
+        '
+        Me.IvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Iva", True))
+        Me.IvaTextBox.Location = New System.Drawing.Point(270, 32)
+        Me.IvaTextBox.Name = "IvaTextBox"
+        Me.IvaTextBox.Size = New System.Drawing.Size(85, 20)
+        Me.IvaTextBox.TabIndex = 21
+        '
+        'PrevidenzaTextBox
+        '
+        Me.PrevidenzaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Previdenza", True))
+        Me.PrevidenzaTextBox.Location = New System.Drawing.Point(184, 32)
+        Me.PrevidenzaTextBox.Name = "PrevidenzaTextBox"
+        Me.PrevidenzaTextBox.Size = New System.Drawing.Size(80, 20)
+        Me.PrevidenzaTextBox.TabIndex = 20
+        '
+        'EsenteTextBox
+        '
+        Me.EsenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Esente", True))
+        Me.EsenteTextBox.Location = New System.Drawing.Point(94, 32)
+        Me.EsenteTextBox.Name = "EsenteTextBox"
+        Me.EsenteTextBox.Size = New System.Drawing.Size(84, 20)
+        Me.EsenteTextBox.TabIndex = 19
+        '
+        'CompensoTextBox
+        '
+        Me.CompensoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Compenso", True))
+        Me.CompensoTextBox.Location = New System.Drawing.Point(9, 32)
+        Me.CompensoTextBox.Name = "CompensoTextBox"
+        Me.CompensoTextBox.Size = New System.Drawing.Size(79, 20)
+        Me.CompensoTextBox.TabIndex = 18
         '
         'W_RitenuteTableAdapter
         '
@@ -382,6 +455,31 @@ Partial Class W_Ritenute
         Me.W_RitenuteBindingNavigator.TabIndex = 17
         Me.W_RitenuteBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -414,17 +512,10 @@ Partial Class W_Ritenute
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 15)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -432,7 +523,7 @@ Partial Class W_Ritenute
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -441,38 +532,20 @@ Partial Class W_Ritenute
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'W_RitenuteBindingNavigatorSaveItem
         '
         Me.W_RitenuteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.W_RitenuteBindingNavigatorSaveItem.Image = CType(resources.GetObject("W_RitenuteBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.W_RitenuteBindingNavigatorSaveItem.Name = "W_RitenuteBindingNavigatorSaveItem"
-        Me.W_RitenuteBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.W_RitenuteBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.W_RitenuteBindingNavigatorSaveItem.Text = "Salva dati"
         '
         'ProgressivoTextBox
@@ -503,9 +576,10 @@ Partial Class W_Ritenute
         'DataDocumentoDateTimePicker
         '
         Me.DataDocumentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.W_RitenuteBindingSource, "DataDocumento", True))
+        Me.DataDocumentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataDocumentoDateTimePicker.Location = New System.Drawing.Point(511, 75)
         Me.DataDocumentoDateTimePicker.Name = "DataDocumentoDateTimePicker"
-        Me.DataDocumentoDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataDocumentoDateTimePicker.Size = New System.Drawing.Size(100, 20)
         Me.DataDocumentoDateTimePicker.TabIndex = 21
         '
         'FornitoreComboBox
@@ -532,78 +606,6 @@ Partial Class W_Ritenute
         Me.CausaleTextBox.Name = "CausaleTextBox"
         Me.CausaleTextBox.Size = New System.Drawing.Size(210, 20)
         Me.CausaleTextBox.TabIndex = 25
-        '
-        'CompensoTextBox
-        '
-        Me.CompensoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Compenso", True))
-        Me.CompensoTextBox.Location = New System.Drawing.Point(9, 32)
-        Me.CompensoTextBox.Name = "CompensoTextBox"
-        Me.CompensoTextBox.Size = New System.Drawing.Size(79, 20)
-        Me.CompensoTextBox.TabIndex = 18
-        '
-        'EsenteTextBox
-        '
-        Me.EsenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Esente", True))
-        Me.EsenteTextBox.Location = New System.Drawing.Point(94, 32)
-        Me.EsenteTextBox.Name = "EsenteTextBox"
-        Me.EsenteTextBox.Size = New System.Drawing.Size(84, 20)
-        Me.EsenteTextBox.TabIndex = 19
-        '
-        'PrevidenzaTextBox
-        '
-        Me.PrevidenzaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Previdenza", True))
-        Me.PrevidenzaTextBox.Location = New System.Drawing.Point(184, 32)
-        Me.PrevidenzaTextBox.Name = "PrevidenzaTextBox"
-        Me.PrevidenzaTextBox.Size = New System.Drawing.Size(80, 20)
-        Me.PrevidenzaTextBox.TabIndex = 20
-        '
-        'IvaTextBox
-        '
-        Me.IvaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Iva", True))
-        Me.IvaTextBox.Location = New System.Drawing.Point(270, 32)
-        Me.IvaTextBox.Name = "IvaTextBox"
-        Me.IvaTextBox.Size = New System.Drawing.Size(85, 20)
-        Me.IvaTextBox.TabIndex = 21
-        '
-        'ImponibileTextBox
-        '
-        Me.ImponibileTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Imponibile", True))
-        Me.ImponibileTextBox.Location = New System.Drawing.Point(361, 32)
-        Me.ImponibileTextBox.Name = "ImponibileTextBox"
-        Me.ImponibileTextBox.Size = New System.Drawing.Size(83, 20)
-        Me.ImponibileTextBox.TabIndex = 22
-        '
-        'RitenutaTextBox
-        '
-        Me.RitenutaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Ritenuta", True))
-        Me.RitenutaTextBox.Location = New System.Drawing.Point(450, 32)
-        Me.RitenutaTextBox.Name = "RitenutaTextBox"
-        Me.RitenutaTextBox.Size = New System.Drawing.Size(80, 20)
-        Me.RitenutaTextBox.TabIndex = 23
-        '
-        'NettoTextBox
-        '
-        Me.NettoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Netto", True))
-        Me.NettoTextBox.Location = New System.Drawing.Point(536, 32)
-        Me.NettoTextBox.Name = "NettoTextBox"
-        Me.NettoTextBox.Size = New System.Drawing.Size(90, 20)
-        Me.NettoTextBox.TabIndex = 24
-        '
-        'DataPagamentoDateTimePicker
-        '
-        Me.DataPagamentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.W_RitenuteBindingSource, "DataPagamento", True))
-        Me.DataPagamentoDateTimePicker.Location = New System.Drawing.Point(6, 81)
-        Me.DataPagamentoDateTimePicker.Name = "DataPagamentoDateTimePicker"
-        Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.DataPagamentoDateTimePicker.TabIndex = 25
-        '
-        'AnnoTextBox
-        '
-        Me.AnnoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Anno", True))
-        Me.AnnoTextBox.Location = New System.Drawing.Point(218, 81)
-        Me.AnnoTextBox.Name = "AnnoTextBox"
-        Me.AnnoTextBox.Size = New System.Drawing.Size(46, 20)
-        Me.AnnoTextBox.TabIndex = 26
         '
         'TrattamentoComboBox
         '
@@ -641,8 +643,8 @@ Partial Class W_Ritenute
         Me.Text = "Archivio Ritenute"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.W_RitenuteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.W_RitenuteBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.W_RitenuteBindingNavigator.ResumeLayout(False)
         Me.W_RitenuteBindingNavigator.PerformLayout()

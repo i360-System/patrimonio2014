@@ -73,13 +73,13 @@ Partial Class Anagrafiche
         Me.SiglaLista1 = New System.Windows.Forms.TextBox()
         Me.SiglaLista2 = New System.Windows.Forms.TextBox()
         Me.SiglaRaccomandate = New System.Windows.Forms.TextBox()
-        Me.AnagraficaCollegata = New System.Windows.Forms.ComboBox()
         Me.CodiceFiscale = New System.Windows.Forms.TextBox()
         Me.LuogoNascita = New System.Windows.Forms.TextBox()
         Me.ProvinciaNascita = New System.Windows.Forms.TextBox()
         Me.DataNascita = New System.Windows.Forms.DateTimePicker()
         Me.ZTestoSollecitoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Z_TestoSollecitoTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.Z_TestoSollecitoTableAdapter()
+        Me.AnagraficaCollegataTextBox = New System.Windows.Forms.TextBox()
         ImmobileLabel = New System.Windows.Forms.Label()
         AnagraficaLabel = New System.Windows.Forms.Label()
         TitoloLabel = New System.Windows.Forms.Label()
@@ -108,7 +108,7 @@ Partial Class Anagrafiche
         'ImmobileLabel
         '
         ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(41, 72)
+        ImmobileLabel.Location = New System.Drawing.Point(107, 73)
         ImmobileLabel.Name = "ImmobileLabel"
         ImmobileLabel.Size = New System.Drawing.Size(51, 13)
         ImmobileLabel.TabIndex = 1
@@ -117,7 +117,7 @@ Partial Class Anagrafiche
         'AnagraficaLabel
         '
         AnagraficaLabel.AutoSize = True
-        AnagraficaLabel.Location = New System.Drawing.Point(447, 72)
+        AnagraficaLabel.Location = New System.Drawing.Point(475, 73)
         AnagraficaLabel.Name = "AnagraficaLabel"
         AnagraficaLabel.Size = New System.Drawing.Size(61, 13)
         AnagraficaLabel.TabIndex = 2
@@ -126,7 +126,7 @@ Partial Class Anagrafiche
         'TitoloLabel
         '
         TitoloLabel.AutoSize = True
-        TitoloLabel.Location = New System.Drawing.Point(41, 121)
+        TitoloLabel.Location = New System.Drawing.Point(12, 121)
         TitoloLabel.Name = "TitoloLabel"
         TitoloLabel.Size = New System.Drawing.Size(36, 13)
         TitoloLabel.TabIndex = 4
@@ -135,7 +135,7 @@ Partial Class Anagrafiche
         'Nominativo1Label
         '
         Nominativo1Label.AutoSize = True
-        Nominativo1Label.Location = New System.Drawing.Point(149, 121)
+        Nominativo1Label.Location = New System.Drawing.Point(106, 121)
         Nominativo1Label.Name = "Nominativo1Label"
         Nominativo1Label.Size = New System.Drawing.Size(63, 13)
         Nominativo1Label.TabIndex = 6
@@ -144,7 +144,7 @@ Partial Class Anagrafiche
         'IndirizzoLabel
         '
         IndirizzoLabel.AutoSize = True
-        IndirizzoLabel.Location = New System.Drawing.Point(149, 186)
+        IndirizzoLabel.Location = New System.Drawing.Point(106, 186)
         IndirizzoLabel.Name = "IndirizzoLabel"
         IndirizzoLabel.Size = New System.Drawing.Size(48, 13)
         IndirizzoLabel.TabIndex = 9
@@ -153,7 +153,7 @@ Partial Class Anagrafiche
         'CapLabel
         '
         CapLabel.AutoSize = True
-        CapLabel.Location = New System.Drawing.Point(41, 225)
+        CapLabel.Location = New System.Drawing.Point(19, 225)
         CapLabel.Name = "CapLabel"
         CapLabel.Size = New System.Drawing.Size(29, 13)
         CapLabel.TabIndex = 11
@@ -162,7 +162,7 @@ Partial Class Anagrafiche
         'LocalitaLabel
         '
         LocalitaLabel.AutoSize = True
-        LocalitaLabel.Location = New System.Drawing.Point(149, 225)
+        LocalitaLabel.Location = New System.Drawing.Point(106, 225)
         LocalitaLabel.Name = "LocalitaLabel"
         LocalitaLabel.Size = New System.Drawing.Size(47, 13)
         LocalitaLabel.TabIndex = 13
@@ -171,7 +171,7 @@ Partial Class Anagrafiche
         'ProvinciaLabel
         '
         ProvinciaLabel.AutoSize = True
-        ProvinciaLabel.Location = New System.Drawing.Point(529, 225)
+        ProvinciaLabel.Location = New System.Drawing.Point(475, 225)
         ProvinciaLabel.Name = "ProvinciaLabel"
         ProvinciaLabel.Size = New System.Drawing.Size(54, 13)
         ProvinciaLabel.TabIndex = 15
@@ -180,7 +180,7 @@ Partial Class Anagrafiche
         'NoteLabel
         '
         NoteLabel.AutoSize = True
-        NoteLabel.Location = New System.Drawing.Point(144, 320)
+        NoteLabel.Location = New System.Drawing.Point(106, 320)
         NoteLabel.Name = "NoteLabel"
         NoteLabel.Size = New System.Drawing.Size(33, 13)
         NoteLabel.TabIndex = 19
@@ -189,7 +189,7 @@ Partial Class Anagrafiche
         'SiglaLista1Label
         '
         SiglaLista1Label.AutoSize = True
-        SiglaLista1Label.Location = New System.Drawing.Point(55, 359)
+        SiglaLista1Label.Location = New System.Drawing.Point(107, 359)
         SiglaLista1Label.Name = "SiglaLista1Label"
         SiglaLista1Label.Size = New System.Drawing.Size(64, 13)
         SiglaLista1Label.TabIndex = 21
@@ -198,7 +198,7 @@ Partial Class Anagrafiche
         'SiglaLista2Label
         '
         SiglaLista2Label.AutoSize = True
-        SiglaLista2Label.Location = New System.Drawing.Point(144, 359)
+        SiglaLista2Label.Location = New System.Drawing.Point(198, 359)
         SiglaLista2Label.Name = "SiglaLista2Label"
         SiglaLista2Label.Size = New System.Drawing.Size(64, 13)
         SiglaLista2Label.TabIndex = 23
@@ -207,7 +207,7 @@ Partial Class Anagrafiche
         'SiglaRaccomandateLabel
         '
         SiglaRaccomandateLabel.AutoSize = True
-        SiglaRaccomandateLabel.Location = New System.Drawing.Point(225, 359)
+        SiglaRaccomandateLabel.Location = New System.Drawing.Point(268, 360)
         SiglaRaccomandateLabel.Name = "SiglaRaccomandateLabel"
         SiglaRaccomandateLabel.Size = New System.Drawing.Size(109, 13)
         SiglaRaccomandateLabel.TabIndex = 25
@@ -216,7 +216,7 @@ Partial Class Anagrafiche
         'AnagraficaCollegataLabel
         '
         AnagraficaCollegataLabel.AutoSize = True
-        AnagraficaCollegataLabel.Location = New System.Drawing.Point(340, 359)
+        AnagraficaCollegataLabel.Location = New System.Drawing.Point(374, 360)
         AnagraficaCollegataLabel.Name = "AnagraficaCollegataLabel"
         AnagraficaCollegataLabel.Size = New System.Drawing.Size(77, 13)
         AnagraficaCollegataLabel.TabIndex = 27
@@ -225,7 +225,7 @@ Partial Class Anagrafiche
         'CodiceFiscaleLabel
         '
         CodiceFiscaleLabel.AutoSize = True
-        CodiceFiscaleLabel.Location = New System.Drawing.Point(529, 359)
+        CodiceFiscaleLabel.Location = New System.Drawing.Point(480, 359)
         CodiceFiscaleLabel.Name = "CodiceFiscaleLabel"
         CodiceFiscaleLabel.Size = New System.Drawing.Size(79, 13)
         CodiceFiscaleLabel.TabIndex = 29
@@ -234,7 +234,7 @@ Partial Class Anagrafiche
         'LuogoNascitaLabel
         '
         LuogoNascitaLabel.AutoSize = True
-        LuogoNascitaLabel.Location = New System.Drawing.Point(55, 398)
+        LuogoNascitaLabel.Location = New System.Drawing.Point(107, 399)
         LuogoNascitaLabel.Name = "LuogoNascitaLabel"
         LuogoNascitaLabel.Size = New System.Drawing.Size(79, 13)
         LuogoNascitaLabel.TabIndex = 31
@@ -243,7 +243,7 @@ Partial Class Anagrafiche
         'ProvinciaNascitaLabel
         '
         ProvinciaNascitaLabel.AutoSize = True
-        ProvinciaNascitaLabel.Location = New System.Drawing.Point(340, 398)
+        ProvinciaNascitaLabel.Location = New System.Drawing.Point(374, 399)
         ProvinciaNascitaLabel.Name = "ProvinciaNascitaLabel"
         ProvinciaNascitaLabel.Size = New System.Drawing.Size(93, 13)
         ProvinciaNascitaLabel.TabIndex = 33
@@ -252,7 +252,7 @@ Partial Class Anagrafiche
         'DataNascitaLabel
         '
         DataNascitaLabel.AutoSize = True
-        DataNascitaLabel.Location = New System.Drawing.Point(463, 398)
+        DataNascitaLabel.Location = New System.Drawing.Point(480, 398)
         DataNascitaLabel.Name = "DataNascitaLabel"
         DataNascitaLabel.Size = New System.Drawing.Size(72, 13)
         DataNascitaLabel.TabIndex = 35
@@ -261,7 +261,7 @@ Partial Class Anagrafiche
         'TelefonoLabel1
         '
         TelefonoLabel1.AutoSize = True
-        TelefonoLabel1.Location = New System.Drawing.Point(144, 284)
+        TelefonoLabel1.Location = New System.Drawing.Point(106, 281)
         TelefonoLabel1.Name = "TelefonoLabel1"
         TelefonoLabel1.Size = New System.Drawing.Size(52, 13)
         TelefonoLabel1.TabIndex = 46
@@ -365,7 +365,7 @@ Partial Class Anagrafiche
         Me.AnagraficheBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.AnagraficheBindingNavigator.Name = "AnagraficheBindingNavigator"
         Me.AnagraficheBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.AnagraficheBindingNavigator.Size = New System.Drawing.Size(776, 25)
+        Me.AnagraficheBindingNavigator.Size = New System.Drawing.Size(717, 25)
         Me.AnagraficheBindingNavigator.TabIndex = 37
         Me.AnagraficheBindingNavigator.Text = "BindingNavigator1"
         '
@@ -466,15 +466,15 @@ Partial Class Anagrafiche
         '
         Me.Immobile.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Immobile", True))
         Me.Immobile.FormattingEnabled = True
-        Me.Immobile.Location = New System.Drawing.Point(44, 88)
+        Me.Immobile.Location = New System.Drawing.Point(109, 89)
         Me.Immobile.Name = "Immobile"
-        Me.Immobile.Size = New System.Drawing.Size(389, 21)
+        Me.Immobile.Size = New System.Drawing.Size(362, 21)
         Me.Immobile.TabIndex = 38
         '
         'Anagrafica
         '
         Me.Anagrafica.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Anagrafica", True))
-        Me.Anagrafica.Location = New System.Drawing.Point(450, 89)
+        Me.Anagrafica.Location = New System.Drawing.Point(478, 89)
         Me.Anagrafica.Name = "Anagrafica"
         Me.Anagrafica.Size = New System.Drawing.Size(65, 20)
         Me.Anagrafica.TabIndex = 39
@@ -482,7 +482,7 @@ Partial Class Anagrafiche
         'Titolo
         '
         Me.Titolo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Titolo", True))
-        Me.Titolo.Location = New System.Drawing.Point(46, 137)
+        Me.Titolo.Location = New System.Drawing.Point(15, 137)
         Me.Titolo.Name = "Titolo"
         Me.Titolo.Size = New System.Drawing.Size(88, 20)
         Me.Titolo.TabIndex = 40
@@ -490,7 +490,7 @@ Partial Class Anagrafiche
         'Nominativo1
         '
         Me.Nominativo1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Nominativo1", True))
-        Me.Nominativo1.Location = New System.Drawing.Point(152, 137)
+        Me.Nominativo1.Location = New System.Drawing.Point(109, 137)
         Me.Nominativo1.Name = "Nominativo1"
         Me.Nominativo1.Size = New System.Drawing.Size(363, 20)
         Me.Nominativo1.TabIndex = 41
@@ -498,7 +498,7 @@ Partial Class Anagrafiche
         'Nominativo2
         '
         Me.Nominativo2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Nominativo2", True))
-        Me.Nominativo2.Location = New System.Drawing.Point(152, 163)
+        Me.Nominativo2.Location = New System.Drawing.Point(109, 163)
         Me.Nominativo2.Name = "Nominativo2"
         Me.Nominativo2.Size = New System.Drawing.Size(363, 20)
         Me.Nominativo2.TabIndex = 42
@@ -506,7 +506,7 @@ Partial Class Anagrafiche
         'Indirizzo
         '
         Me.Indirizzo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Indirizzo", True))
-        Me.Indirizzo.Location = New System.Drawing.Point(152, 202)
+        Me.Indirizzo.Location = New System.Drawing.Point(109, 202)
         Me.Indirizzo.Name = "Indirizzo"
         Me.Indirizzo.Size = New System.Drawing.Size(363, 20)
         Me.Indirizzo.TabIndex = 43
@@ -514,7 +514,7 @@ Partial Class Anagrafiche
         'Cap
         '
         Me.Cap.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Cap", True))
-        Me.Cap.Location = New System.Drawing.Point(46, 241)
+        Me.Cap.Location = New System.Drawing.Point(15, 241)
         Me.Cap.Name = "Cap"
         Me.Cap.Size = New System.Drawing.Size(88, 20)
         Me.Cap.TabIndex = 44
@@ -522,7 +522,7 @@ Partial Class Anagrafiche
         'Localita
         '
         Me.Localita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Localita", True))
-        Me.Localita.Location = New System.Drawing.Point(152, 241)
+        Me.Localita.Location = New System.Drawing.Point(109, 241)
         Me.Localita.Name = "Localita"
         Me.Localita.Size = New System.Drawing.Size(363, 20)
         Me.Localita.TabIndex = 45
@@ -530,7 +530,7 @@ Partial Class Anagrafiche
         'Provincia
         '
         Me.Provincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Provincia", True))
-        Me.Provincia.Location = New System.Drawing.Point(532, 241)
+        Me.Provincia.Location = New System.Drawing.Point(478, 241)
         Me.Provincia.Name = "Provincia"
         Me.Provincia.Size = New System.Drawing.Size(51, 20)
         Me.Provincia.TabIndex = 46
@@ -538,7 +538,7 @@ Partial Class Anagrafiche
         'Telefono
         '
         Me.Telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Telefono", True))
-        Me.Telefono.Location = New System.Drawing.Point(147, 300)
+        Me.Telefono.Location = New System.Drawing.Point(109, 297)
         Me.Telefono.Name = "Telefono"
         Me.Telefono.Size = New System.Drawing.Size(368, 20)
         Me.Telefono.TabIndex = 47
@@ -546,7 +546,7 @@ Partial Class Anagrafiche
         'Note
         '
         Me.Note.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "Note", True))
-        Me.Note.Location = New System.Drawing.Point(147, 336)
+        Me.Note.Location = New System.Drawing.Point(109, 336)
         Me.Note.Name = "Note"
         Me.Note.Size = New System.Drawing.Size(368, 20)
         Me.Note.TabIndex = 48
@@ -554,7 +554,7 @@ Partial Class Anagrafiche
         'SiglaLista1
         '
         Me.SiglaLista1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "SiglaLista1", True))
-        Me.SiglaLista1.Location = New System.Drawing.Point(58, 375)
+        Me.SiglaLista1.Location = New System.Drawing.Point(110, 375)
         Me.SiglaLista1.Name = "SiglaLista1"
         Me.SiglaLista1.Size = New System.Drawing.Size(61, 20)
         Me.SiglaLista1.TabIndex = 49
@@ -562,7 +562,7 @@ Partial Class Anagrafiche
         'SiglaLista2
         '
         Me.SiglaLista2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "SiglaLista2", True))
-        Me.SiglaLista2.Location = New System.Drawing.Point(147, 375)
+        Me.SiglaLista2.Location = New System.Drawing.Point(204, 375)
         Me.SiglaLista2.Name = "SiglaLista2"
         Me.SiglaLista2.Size = New System.Drawing.Size(61, 20)
         Me.SiglaLista2.TabIndex = 50
@@ -570,44 +570,31 @@ Partial Class Anagrafiche
         'SiglaRaccomandate
         '
         Me.SiglaRaccomandate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "SiglaRaccomandate", True))
-        Me.SiglaRaccomandate.Location = New System.Drawing.Point(228, 375)
+        Me.SiglaRaccomandate.Location = New System.Drawing.Point(271, 376)
         Me.SiglaRaccomandate.Name = "SiglaRaccomandate"
         Me.SiglaRaccomandate.Size = New System.Drawing.Size(100, 20)
         Me.SiglaRaccomandate.TabIndex = 51
         '
-        'AnagraficaCollegata
-        '
-        Me.AnagraficaCollegata.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.AnagraficheBindingSource, "AnagraficaCollegata", True))
-        Me.AnagraficaCollegata.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "AnagraficaCollegata", True))
-        Me.AnagraficaCollegata.DataSource = Me.AnagraficheBindingSource
-        Me.AnagraficaCollegata.DisplayMember = "AnagraficaCollegata"
-        Me.AnagraficaCollegata.FormattingEnabled = True
-        Me.AnagraficaCollegata.Location = New System.Drawing.Point(343, 374)
-        Me.AnagraficaCollegata.Name = "AnagraficaCollegata"
-        Me.AnagraficaCollegata.Size = New System.Drawing.Size(172, 21)
-        Me.AnagraficaCollegata.TabIndex = 52
-        Me.AnagraficaCollegata.ValueMember = "AnagraficaCollegata"
-        '
         'CodiceFiscale
         '
         Me.CodiceFiscale.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "CodiceFiscale", True))
-        Me.CodiceFiscale.Location = New System.Drawing.Point(532, 375)
+        Me.CodiceFiscale.Location = New System.Drawing.Point(483, 376)
         Me.CodiceFiscale.Name = "CodiceFiscale"
-        Me.CodiceFiscale.Size = New System.Drawing.Size(219, 20)
+        Me.CodiceFiscale.Size = New System.Drawing.Size(214, 20)
         Me.CodiceFiscale.TabIndex = 53
         '
         'LuogoNascita
         '
         Me.LuogoNascita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "LuogoNascita", True))
-        Me.LuogoNascita.Location = New System.Drawing.Point(58, 414)
+        Me.LuogoNascita.Location = New System.Drawing.Point(110, 415)
         Me.LuogoNascita.Name = "LuogoNascita"
-        Me.LuogoNascita.Size = New System.Drawing.Size(270, 20)
+        Me.LuogoNascita.Size = New System.Drawing.Size(258, 20)
         Me.LuogoNascita.TabIndex = 54
         '
         'ProvinciaNascita
         '
         Me.ProvinciaNascita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "ProvinciaNascita", True))
-        Me.ProvinciaNascita.Location = New System.Drawing.Point(343, 414)
+        Me.ProvinciaNascita.Location = New System.Drawing.Point(377, 414)
         Me.ProvinciaNascita.Name = "ProvinciaNascita"
         Me.ProvinciaNascita.Size = New System.Drawing.Size(90, 20)
         Me.ProvinciaNascita.TabIndex = 55
@@ -616,9 +603,9 @@ Partial Class Anagrafiche
         '
         Me.DataNascita.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.AnagraficheBindingSource, "DataNascita", True))
         Me.DataNascita.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DataNascita.Location = New System.Drawing.Point(466, 411)
+        Me.DataNascita.Location = New System.Drawing.Point(483, 415)
         Me.DataNascita.Name = "DataNascita"
-        Me.DataNascita.Size = New System.Drawing.Size(200, 20)
+        Me.DataNascita.Size = New System.Drawing.Size(120, 20)
         Me.DataNascita.TabIndex = 56
         '
         'ZTestoSollecitoBindingSource
@@ -630,16 +617,24 @@ Partial Class Anagrafiche
         '
         Me.Z_TestoSollecitoTableAdapter.ClearBeforeFill = True
         '
+        'AnagraficaCollegataTextBox
+        '
+        Me.AnagraficaCollegataTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficheBindingSource, "AnagraficaCollegata", True))
+        Me.AnagraficaCollegataTextBox.Location = New System.Drawing.Point(377, 376)
+        Me.AnagraficaCollegataTextBox.Name = "AnagraficaCollegataTextBox"
+        Me.AnagraficaCollegataTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AnagraficaCollegataTextBox.TabIndex = 57
+        '
         'Anagrafiche
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(776, 464)
+        Me.ClientSize = New System.Drawing.Size(717, 464)
+        Me.Controls.Add(Me.AnagraficaCollegataTextBox)
         Me.Controls.Add(Me.DataNascita)
         Me.Controls.Add(Me.ProvinciaNascita)
         Me.Controls.Add(Me.LuogoNascita)
         Me.Controls.Add(Me.CodiceFiscale)
-        Me.Controls.Add(Me.AnagraficaCollegata)
         Me.Controls.Add(Me.SiglaRaccomandate)
         Me.Controls.Add(Me.SiglaLista2)
         Me.Controls.Add(Me.SiglaLista1)
@@ -716,11 +711,11 @@ Partial Class Anagrafiche
     Friend WithEvents SiglaLista1 As System.Windows.Forms.TextBox
     Friend WithEvents SiglaLista2 As System.Windows.Forms.TextBox
     Friend WithEvents SiglaRaccomandate As System.Windows.Forms.TextBox
-    Friend WithEvents AnagraficaCollegata As System.Windows.Forms.ComboBox
     Friend WithEvents CodiceFiscale As System.Windows.Forms.TextBox
     Friend WithEvents LuogoNascita As System.Windows.Forms.TextBox
     Friend WithEvents ProvinciaNascita As System.Windows.Forms.TextBox
     Friend WithEvents DataNascita As System.Windows.Forms.DateTimePicker
     Friend WithEvents ZTestoSollecitoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Z_TestoSollecitoTableAdapter As Patrimonio2014.IMMOBILIDataSetTableAdapters.Z_TestoSollecitoTableAdapter
+    Friend WithEvents AnagraficaCollegataTextBox As System.Windows.Forms.TextBox
 End Class

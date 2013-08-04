@@ -43,15 +43,17 @@ Partial Class AnagraficaStudio
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.AnagraficaStudioBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.AnagraficaStudioBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.Studio = New System.Windows.Forms.TextBox()
         Me.Denominazione1 = New System.Windows.Forms.TextBox()
         Me.Denominazione2 = New System.Windows.Forms.TextBox()
@@ -65,8 +67,6 @@ Partial Class AnagraficaStudio
         Me.Localita = New System.Windows.Forms.TextBox()
         Me.CodiceFiscale = New System.Windows.Forms.TextBox()
         Me.PartitaIva = New System.Windows.Forms.TextBox()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         StudioLabel = New System.Windows.Forms.Label()
         Denominazione1Label = New System.Windows.Forms.Label()
         IndirizzoLabel = New System.Windows.Forms.Label()
@@ -87,7 +87,7 @@ Partial Class AnagraficaStudio
         'StudioLabel
         '
         StudioLabel.AutoSize = True
-        StudioLabel.Location = New System.Drawing.Point(37, 45)
+        StudioLabel.Location = New System.Drawing.Point(12, 45)
         StudioLabel.Name = "StudioLabel"
         StudioLabel.Size = New System.Drawing.Size(40, 13)
         StudioLabel.TabIndex = 1
@@ -96,7 +96,7 @@ Partial Class AnagraficaStudio
         'Denominazione1Label
         '
         Denominazione1Label.AutoSize = True
-        Denominazione1Label.Location = New System.Drawing.Point(129, 45)
+        Denominazione1Label.Location = New System.Drawing.Point(80, 45)
         Denominazione1Label.Name = "Denominazione1Label"
         Denominazione1Label.Size = New System.Drawing.Size(83, 13)
         Denominazione1Label.TabIndex = 3
@@ -106,7 +106,7 @@ Partial Class AnagraficaStudio
         'IndirizzoLabel
         '
         IndirizzoLabel.AutoSize = True
-        IndirizzoLabel.Location = New System.Drawing.Point(128, 110)
+        IndirizzoLabel.Location = New System.Drawing.Point(80, 110)
         IndirizzoLabel.Name = "IndirizzoLabel"
         IndirizzoLabel.Size = New System.Drawing.Size(48, 13)
         IndirizzoLabel.TabIndex = 6
@@ -115,7 +115,7 @@ Partial Class AnagraficaStudio
         'CapLabel
         '
         CapLabel.AutoSize = True
-        CapLabel.Location = New System.Drawing.Point(45, 149)
+        CapLabel.Location = New System.Drawing.Point(12, 149)
         CapLabel.Name = "CapLabel"
         CapLabel.Size = New System.Drawing.Size(29, 13)
         CapLabel.TabIndex = 8
@@ -124,7 +124,7 @@ Partial Class AnagraficaStudio
         'LocalitaLabel
         '
         LocalitaLabel.AutoSize = True
-        LocalitaLabel.Location = New System.Drawing.Point(129, 149)
+        LocalitaLabel.Location = New System.Drawing.Point(81, 149)
         LocalitaLabel.Name = "LocalitaLabel"
         LocalitaLabel.Size = New System.Drawing.Size(47, 13)
         LocalitaLabel.TabIndex = 10
@@ -133,7 +133,7 @@ Partial Class AnagraficaStudio
         'ProvinciaLabel
         '
         ProvinciaLabel.AutoSize = True
-        ProvinciaLabel.Location = New System.Drawing.Point(445, 149)
+        ProvinciaLabel.Location = New System.Drawing.Point(388, 149)
         ProvinciaLabel.Name = "ProvinciaLabel"
         ProvinciaLabel.Size = New System.Drawing.Size(54, 13)
         ProvinciaLabel.TabIndex = 12
@@ -142,7 +142,7 @@ Partial Class AnagraficaStudio
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(45, 198)
+        TelefonoLabel.Location = New System.Drawing.Point(12, 198)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(52, 13)
         TelefonoLabel.TabIndex = 14
@@ -151,7 +151,7 @@ Partial Class AnagraficaStudio
         'CodiceFiscaleLabel
         '
         CodiceFiscaleLabel.AutoSize = True
-        CodiceFiscaleLabel.Location = New System.Drawing.Point(445, 198)
+        CodiceFiscaleLabel.Location = New System.Drawing.Point(391, 198)
         CodiceFiscaleLabel.Name = "CodiceFiscaleLabel"
         CodiceFiscaleLabel.Size = New System.Drawing.Size(79, 13)
         CodiceFiscaleLabel.TabIndex = 16
@@ -160,7 +160,7 @@ Partial Class AnagraficaStudio
         'PartitaIvaLabel
         '
         PartitaIvaLabel.AutoSize = True
-        PartitaIvaLabel.Location = New System.Drawing.Point(662, 198)
+        PartitaIvaLabel.Location = New System.Drawing.Point(594, 198)
         PartitaIvaLabel.Name = "PartitaIvaLabel"
         PartitaIvaLabel.Size = New System.Drawing.Size(58, 13)
         PartitaIvaLabel.TabIndex = 18
@@ -169,7 +169,7 @@ Partial Class AnagraficaStudio
         'TipoSocietaLabel
         '
         TipoSocietaLabel.AutoSize = True
-        TipoSocietaLabel.Location = New System.Drawing.Point(45, 237)
+        TipoSocietaLabel.Location = New System.Drawing.Point(12, 237)
         TipoSocietaLabel.Name = "TipoSocietaLabel"
         TipoSocietaLabel.Size = New System.Drawing.Size(70, 13)
         TipoSocietaLabel.TabIndex = 20
@@ -178,7 +178,7 @@ Partial Class AnagraficaStudio
         'Note1Label
         '
         Note1Label.AutoSize = True
-        Note1Label.Location = New System.Drawing.Point(129, 237)
+        Note1Label.Location = New System.Drawing.Point(81, 237)
         Note1Label.Name = "Note1Label"
         Note1Label.Size = New System.Drawing.Size(33, 13)
         Note1Label.TabIndex = 22
@@ -282,7 +282,7 @@ Partial Class AnagraficaStudio
         Me.AnagraficaStudioBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.AnagraficaStudioBindingNavigator.Name = "AnagraficaStudioBindingNavigator"
         Me.AnagraficaStudioBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.AnagraficaStudioBindingNavigator.Size = New System.Drawing.Size(846, 38)
+        Me.AnagraficaStudioBindingNavigator.Size = New System.Drawing.Size(747, 38)
         Me.AnagraficaStudioBindingNavigator.TabIndex = 25
         Me.AnagraficaStudioBindingNavigator.Text = "BindingNavigator1"
         '
@@ -313,6 +313,28 @@ Partial Class AnagraficaStudio
         Me.BindingNavigatorDeleteItem.Text = "&Elimina"
         Me.BindingNavigatorDeleteItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BindingNavigatorDeleteItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(49, 35)
+        Me.ToolStripButton1.Text = "&Ricerca"
+        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'AnagraficaStudioBindingNavigatorSaveItem
+        '
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Image = CType(resources.GetObject("AnagraficaStudioBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Name = "AnagraficaStudioBindingNavigatorSaveItem"
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Size = New System.Drawing.Size(38, 35)
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Text = "&Salva"
+        Me.AnagraficaStudioBindingNavigatorSaveItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -345,11 +367,6 @@ Partial Class AnagraficaStudio
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 38)
-        '
         'BindingNavigatorMoveNextItem
         '
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
@@ -368,131 +385,10 @@ Partial Class AnagraficaStudio
         Me.BindingNavigatorMoveLastItem.Text = "&Ultimo"
         Me.BindingNavigatorMoveLastItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'BindingNavigatorSeparator2
+        'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 38)
-        '
-        'AnagraficaStudioBindingNavigatorSaveItem
-        '
-        Me.AnagraficaStudioBindingNavigatorSaveItem.Image = CType(resources.GetObject("AnagraficaStudioBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.AnagraficaStudioBindingNavigatorSaveItem.Name = "AnagraficaStudioBindingNavigatorSaveItem"
-        Me.AnagraficaStudioBindingNavigatorSaveItem.Size = New System.Drawing.Size(38, 35)
-        Me.AnagraficaStudioBindingNavigatorSaveItem.Text = "&Salva"
-        Me.AnagraficaStudioBindingNavigatorSaveItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'Studio
-        '
-        Me.Studio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Studio", True))
-        Me.Studio.Location = New System.Drawing.Point(40, 61)
-        Me.Studio.Name = "Studio"
-        Me.Studio.Size = New System.Drawing.Size(75, 20)
-        Me.Studio.TabIndex = 26
-        '
-        'Denominazione1
-        '
-        Me.Denominazione1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Denominazione1", True))
-        Me.Denominazione1.Location = New System.Drawing.Point(132, 61)
-        Me.Denominazione1.Name = "Denominazione1"
-        Me.Denominazione1.Size = New System.Drawing.Size(302, 20)
-        Me.Denominazione1.TabIndex = 27
-        '
-        'Denominazione2
-        '
-        Me.Denominazione2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Denominazione2", True))
-        Me.Denominazione2.Location = New System.Drawing.Point(132, 89)
-        Me.Denominazione2.Name = "Denominazione2"
-        Me.Denominazione2.Size = New System.Drawing.Size(302, 20)
-        Me.Denominazione2.TabIndex = 28
-        '
-        'Indirizzo
-        '
-        Me.Indirizzo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Indirizzo", True))
-        Me.Indirizzo.Location = New System.Drawing.Point(132, 126)
-        Me.Indirizzo.Name = "Indirizzo"
-        Me.Indirizzo.Size = New System.Drawing.Size(302, 20)
-        Me.Indirizzo.TabIndex = 29
-        '
-        'Cap
-        '
-        Me.Cap.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Cap", True))
-        Me.Cap.Location = New System.Drawing.Point(48, 165)
-        Me.Cap.Name = "Cap"
-        Me.Cap.Size = New System.Drawing.Size(67, 20)
-        Me.Cap.TabIndex = 30
-        '
-        'Provincia
-        '
-        Me.Provincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Provincia", True))
-        Me.Provincia.Location = New System.Drawing.Point(448, 165)
-        Me.Provincia.Name = "Provincia"
-        Me.Provincia.Size = New System.Drawing.Size(51, 20)
-        Me.Provincia.TabIndex = 31
-        '
-        'Telefono
-        '
-        Me.Telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Telefono", True))
-        Me.Telefono.Location = New System.Drawing.Point(48, 214)
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.Size = New System.Drawing.Size(386, 20)
-        Me.Telefono.TabIndex = 32
-        '
-        'TipoSocieta
-        '
-        Me.TipoSocieta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "TipoSocieta", True))
-        Me.TipoSocieta.Location = New System.Drawing.Point(48, 255)
-        Me.TipoSocieta.Name = "TipoSocieta"
-        Me.TipoSocieta.Size = New System.Drawing.Size(67, 20)
-        Me.TipoSocieta.TabIndex = 33
-        '
-        'Note1
-        '
-        Me.Note1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Note1", True))
-        Me.Note1.Location = New System.Drawing.Point(132, 256)
-        Me.Note1.Name = "Note1"
-        Me.Note1.Size = New System.Drawing.Size(672, 20)
-        Me.Note1.TabIndex = 34
-        '
-        'Note2
-        '
-        Me.Note2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Note2", True))
-        Me.Note2.Location = New System.Drawing.Point(132, 282)
-        Me.Note2.Name = "Note2"
-        Me.Note2.Size = New System.Drawing.Size(672, 20)
-        Me.Note2.TabIndex = 35
-        '
-        'Localita
-        '
-        Me.Localita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Localita", True))
-        Me.Localita.Location = New System.Drawing.Point(132, 165)
-        Me.Localita.Name = "Localita"
-        Me.Localita.Size = New System.Drawing.Size(302, 20)
-        Me.Localita.TabIndex = 36
-        '
-        'CodiceFiscale
-        '
-        Me.CodiceFiscale.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "CodiceFiscale", True))
-        Me.CodiceFiscale.Location = New System.Drawing.Point(448, 214)
-        Me.CodiceFiscale.Name = "CodiceFiscale"
-        Me.CodiceFiscale.Size = New System.Drawing.Size(194, 20)
-        Me.CodiceFiscale.TabIndex = 37
-        '
-        'PartitaIva
-        '
-        Me.PartitaIva.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "PartitaIva", True))
-        Me.PartitaIva.Location = New System.Drawing.Point(665, 214)
-        Me.PartitaIva.Name = "PartitaIva"
-        Me.PartitaIva.Size = New System.Drawing.Size(139, 20)
-        Me.PartitaIva.TabIndex = 38
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(49, 35)
-        Me.ToolStripButton1.Text = "&Ricerca"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 38)
         '
         'ToolStripButton2
         '
@@ -503,11 +399,115 @@ Partial Class AnagraficaStudio
         Me.ToolStripButton2.Text = "Sta&mpa"
         Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'Studio
+        '
+        Me.Studio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Studio", True))
+        Me.Studio.Location = New System.Drawing.Point(12, 61)
+        Me.Studio.Name = "Studio"
+        Me.Studio.Size = New System.Drawing.Size(65, 20)
+        Me.Studio.TabIndex = 26
+        '
+        'Denominazione1
+        '
+        Me.Denominazione1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Denominazione1", True))
+        Me.Denominazione1.Location = New System.Drawing.Point(83, 61)
+        Me.Denominazione1.Name = "Denominazione1"
+        Me.Denominazione1.Size = New System.Drawing.Size(302, 20)
+        Me.Denominazione1.TabIndex = 27
+        '
+        'Denominazione2
+        '
+        Me.Denominazione2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Denominazione2", True))
+        Me.Denominazione2.Location = New System.Drawing.Point(83, 87)
+        Me.Denominazione2.Name = "Denominazione2"
+        Me.Denominazione2.Size = New System.Drawing.Size(302, 20)
+        Me.Denominazione2.TabIndex = 28
+        '
+        'Indirizzo
+        '
+        Me.Indirizzo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Indirizzo", True))
+        Me.Indirizzo.Location = New System.Drawing.Point(83, 126)
+        Me.Indirizzo.Name = "Indirizzo"
+        Me.Indirizzo.Size = New System.Drawing.Size(302, 20)
+        Me.Indirizzo.TabIndex = 29
+        '
+        'Cap
+        '
+        Me.Cap.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Cap", True))
+        Me.Cap.Location = New System.Drawing.Point(15, 165)
+        Me.Cap.Name = "Cap"
+        Me.Cap.Size = New System.Drawing.Size(62, 20)
+        Me.Cap.TabIndex = 30
+        '
+        'Provincia
+        '
+        Me.Provincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Provincia", True))
+        Me.Provincia.Location = New System.Drawing.Point(391, 165)
+        Me.Provincia.Name = "Provincia"
+        Me.Provincia.Size = New System.Drawing.Size(51, 20)
+        Me.Provincia.TabIndex = 31
+        '
+        'Telefono
+        '
+        Me.Telefono.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Telefono", True))
+        Me.Telefono.Location = New System.Drawing.Point(15, 214)
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.Size = New System.Drawing.Size(373, 20)
+        Me.Telefono.TabIndex = 32
+        '
+        'TipoSocieta
+        '
+        Me.TipoSocieta.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "TipoSocieta", True))
+        Me.TipoSocieta.Location = New System.Drawing.Point(15, 253)
+        Me.TipoSocieta.Name = "TipoSocieta"
+        Me.TipoSocieta.Size = New System.Drawing.Size(62, 20)
+        Me.TipoSocieta.TabIndex = 33
+        '
+        'Note1
+        '
+        Me.Note1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Note1", True))
+        Me.Note1.Location = New System.Drawing.Point(84, 253)
+        Me.Note1.Name = "Note1"
+        Me.Note1.Size = New System.Drawing.Size(649, 20)
+        Me.Note1.TabIndex = 34
+        '
+        'Note2
+        '
+        Me.Note2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Note2", True))
+        Me.Note2.Location = New System.Drawing.Point(83, 279)
+        Me.Note2.Name = "Note2"
+        Me.Note2.Size = New System.Drawing.Size(650, 20)
+        Me.Note2.TabIndex = 35
+        '
+        'Localita
+        '
+        Me.Localita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "Localita", True))
+        Me.Localita.Location = New System.Drawing.Point(83, 165)
+        Me.Localita.Name = "Localita"
+        Me.Localita.Size = New System.Drawing.Size(302, 20)
+        Me.Localita.TabIndex = 36
+        '
+        'CodiceFiscale
+        '
+        Me.CodiceFiscale.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "CodiceFiscale", True))
+        Me.CodiceFiscale.Location = New System.Drawing.Point(394, 214)
+        Me.CodiceFiscale.Name = "CodiceFiscale"
+        Me.CodiceFiscale.Size = New System.Drawing.Size(194, 20)
+        Me.CodiceFiscale.TabIndex = 37
+        '
+        'PartitaIva
+        '
+        Me.PartitaIva.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AnagraficaStudioBindingSource, "PartitaIva", True))
+        Me.PartitaIva.Location = New System.Drawing.Point(594, 214)
+        Me.PartitaIva.Name = "PartitaIva"
+        Me.PartitaIva.Size = New System.Drawing.Size(139, 20)
+        Me.PartitaIva.TabIndex = 38
+        '
         'AnagraficaStudio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(846, 338)
+        Me.ClientSize = New System.Drawing.Size(747, 338)
         Me.Controls.Add(Me.PartitaIva)
         Me.Controls.Add(Me.CodiceFiscale)
         Me.Controls.Add(Me.Localita)

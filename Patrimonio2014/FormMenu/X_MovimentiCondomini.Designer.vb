@@ -73,6 +73,132 @@ Partial Class X_MovimentiCondomini
         CType(Me.X_MovimentiCondominiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'ProgressivoLabel
+        '
+        ProgressivoLabel.AutoSize = True
+        ProgressivoLabel.Location = New System.Drawing.Point(12, 65)
+        ProgressivoLabel.Name = "ProgressivoLabel"
+        ProgressivoLabel.Size = New System.Drawing.Size(65, 13)
+        ProgressivoLabel.TabIndex = 1
+        ProgressivoLabel.Text = "Progressivo:"
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(128, 64)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 2
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(420, 65)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 4
+        GestioneLabel.Text = "Gestione:"
+        '
+        'AnagraficaLabel
+        '
+        AnagraficaLabel.AutoSize = True
+        AnagraficaLabel.Location = New System.Drawing.Point(128, 105)
+        AnagraficaLabel.Name = "AnagraficaLabel"
+        AnagraficaLabel.Size = New System.Drawing.Size(61, 13)
+        AnagraficaLabel.TabIndex = 6
+        AnagraficaLabel.Text = "Anagrafica:"
+        '
+        'UnitaLabel
+        '
+        UnitaLabel.AutoSize = True
+        UnitaLabel.Location = New System.Drawing.Point(420, 105)
+        UnitaLabel.Name = "UnitaLabel"
+        UnitaLabel.Size = New System.Drawing.Size(35, 13)
+        UnitaLabel.TabIndex = 8
+        UnitaLabel.Text = "Unita:"
+        '
+        'RataLabel
+        '
+        RataLabel.AutoSize = True
+        RataLabel.Location = New System.Drawing.Point(12, 153)
+        RataLabel.Name = "RataLabel"
+        RataLabel.Size = New System.Drawing.Size(33, 13)
+        RataLabel.TabIndex = 10
+        RataLabel.Text = "Rata:"
+        '
+        'OperazioneLabel
+        '
+        OperazioneLabel.AutoSize = True
+        OperazioneLabel.Location = New System.Drawing.Point(62, 153)
+        OperazioneLabel.Name = "OperazioneLabel"
+        OperazioneLabel.Size = New System.Drawing.Size(64, 13)
+        OperazioneLabel.TabIndex = 12
+        OperazioneLabel.Text = "Operazione:"
+        '
+        'DescrizioneLabel
+        '
+        DescrizioneLabel.AutoSize = True
+        DescrizioneLabel.Location = New System.Drawing.Point(128, 153)
+        DescrizioneLabel.Name = "DescrizioneLabel"
+        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
+        DescrizioneLabel.TabIndex = 14
+        DescrizioneLabel.Text = "Descrizione:"
+        '
+        'DataOperazioneLabel
+        '
+        DataOperazioneLabel.AutoSize = True
+        DataOperazioneLabel.Location = New System.Drawing.Point(420, 153)
+        DataOperazioneLabel.Name = "DataOperazioneLabel"
+        DataOperazioneLabel.Size = New System.Drawing.Size(90, 13)
+        DataOperazioneLabel.TabIndex = 16
+        DataOperazioneLabel.Text = "Data Operazione:"
+        '
+        'ImportoLabel
+        '
+        ImportoLabel.AutoSize = True
+        ImportoLabel.Location = New System.Drawing.Point(523, 153)
+        ImportoLabel.Name = "ImportoLabel"
+        ImportoLabel.Size = New System.Drawing.Size(45, 13)
+        ImportoLabel.TabIndex = 18
+        ImportoLabel.Text = "Importo:"
+        '
+        'DataRiferimentoLabel
+        '
+        DataRiferimentoLabel.AutoSize = True
+        DataRiferimentoLabel.Location = New System.Drawing.Point(623, 153)
+        DataRiferimentoLabel.Name = "DataRiferimentoLabel"
+        DataRiferimentoLabel.Size = New System.Drawing.Size(89, 13)
+        DataRiferimentoLabel.TabIndex = 20
+        DataRiferimentoLabel.Text = "Data Riferimento:"
+        '
+        'RiferimentoContoFinanziarioLabel
+        '
+        RiferimentoContoFinanziarioLabel.AutoSize = True
+        RiferimentoContoFinanziarioLabel.Location = New System.Drawing.Point(128, 204)
+        RiferimentoContoFinanziarioLabel.Name = "RiferimentoContoFinanziarioLabel"
+        RiferimentoContoFinanziarioLabel.Size = New System.Drawing.Size(147, 13)
+        RiferimentoContoFinanziarioLabel.TabIndex = 22
+        RiferimentoContoFinanziarioLabel.Text = "Riferimento Conto Finanziario:"
+        '
+        'RiferimentoContoAnticipiLabel
+        '
+        RiferimentoContoAnticipiLabel.AutoSize = True
+        RiferimentoContoAnticipiLabel.Location = New System.Drawing.Point(423, 204)
+        RiferimentoContoAnticipiLabel.Name = "RiferimentoContoAnticipiLabel"
+        RiferimentoContoAnticipiLabel.Size = New System.Drawing.Size(131, 13)
+        RiferimentoContoAnticipiLabel.TabIndex = 24
+        RiferimentoContoAnticipiLabel.Text = "Riferimento Conto Anticipi:"
+        '
+        'ContoLabel
+        '
+        ContoLabel.AutoSize = True
+        ContoLabel.Location = New System.Drawing.Point(627, 204)
+        ContoLabel.Name = "ContoLabel"
+        ContoLabel.Size = New System.Drawing.Size(38, 13)
+        ContoLabel.TabIndex = 26
+        ContoLabel.Text = "Conto:"
+        '
         'IMMOBILIDataSet
         '
         Me.IMMOBILIDataSet.DataSetName = "IMMOBILIDataSet"
@@ -157,15 +283,6 @@ Partial Class X_MovimentiCondomini
         Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
-        'ProgressivoLabel
-        '
-        ProgressivoLabel.AutoSize = True
-        ProgressivoLabel.Location = New System.Drawing.Point(12, 65)
-        ProgressivoLabel.Name = "ProgressivoLabel"
-        ProgressivoLabel.Size = New System.Drawing.Size(65, 13)
-        ProgressivoLabel.TabIndex = 1
-        ProgressivoLabel.Text = "Progressivo:"
-        '
         'ProgressivoTextBox
         '
         Me.ProgressivoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "Progressivo", True))
@@ -173,15 +290,6 @@ Partial Class X_MovimentiCondomini
         Me.ProgressivoTextBox.Name = "ProgressivoTextBox"
         Me.ProgressivoTextBox.Size = New System.Drawing.Size(73, 20)
         Me.ProgressivoTextBox.TabIndex = 2
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(128, 64)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 2
-        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
@@ -192,15 +300,6 @@ Partial Class X_MovimentiCondomini
         Me.ImmobileComboBox.Size = New System.Drawing.Size(286, 21)
         Me.ImmobileComboBox.TabIndex = 3
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(420, 65)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 4
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "Gestione", True))
@@ -209,15 +308,6 @@ Partial Class X_MovimentiCondomini
         Me.GestioneComboBox.Name = "GestioneComboBox"
         Me.GestioneComboBox.Size = New System.Drawing.Size(301, 21)
         Me.GestioneComboBox.TabIndex = 5
-        '
-        'AnagraficaLabel
-        '
-        AnagraficaLabel.AutoSize = True
-        AnagraficaLabel.Location = New System.Drawing.Point(128, 105)
-        AnagraficaLabel.Name = "AnagraficaLabel"
-        AnagraficaLabel.Size = New System.Drawing.Size(61, 13)
-        AnagraficaLabel.TabIndex = 6
-        AnagraficaLabel.Text = "Anagrafica:"
         '
         'AnagraficaComboBox
         '
@@ -228,15 +318,6 @@ Partial Class X_MovimentiCondomini
         Me.AnagraficaComboBox.Size = New System.Drawing.Size(286, 21)
         Me.AnagraficaComboBox.TabIndex = 7
         '
-        'UnitaLabel
-        '
-        UnitaLabel.AutoSize = True
-        UnitaLabel.Location = New System.Drawing.Point(420, 105)
-        UnitaLabel.Name = "UnitaLabel"
-        UnitaLabel.Size = New System.Drawing.Size(35, 13)
-        UnitaLabel.TabIndex = 8
-        UnitaLabel.Text = "Unita:"
-        '
         'UnitaComboBox
         '
         Me.UnitaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "Unita", True))
@@ -246,15 +327,6 @@ Partial Class X_MovimentiCondomini
         Me.UnitaComboBox.Size = New System.Drawing.Size(301, 21)
         Me.UnitaComboBox.TabIndex = 9
         '
-        'RataLabel
-        '
-        RataLabel.AutoSize = True
-        RataLabel.Location = New System.Drawing.Point(12, 153)
-        RataLabel.Name = "RataLabel"
-        RataLabel.Size = New System.Drawing.Size(33, 13)
-        RataLabel.TabIndex = 10
-        RataLabel.Text = "Rata:"
-        '
         'RataTextBox
         '
         Me.RataTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "Rata", True))
@@ -262,15 +334,6 @@ Partial Class X_MovimentiCondomini
         Me.RataTextBox.Name = "RataTextBox"
         Me.RataTextBox.Size = New System.Drawing.Size(41, 20)
         Me.RataTextBox.TabIndex = 11
-        '
-        'OperazioneLabel
-        '
-        OperazioneLabel.AutoSize = True
-        OperazioneLabel.Location = New System.Drawing.Point(62, 153)
-        OperazioneLabel.Name = "OperazioneLabel"
-        OperazioneLabel.Size = New System.Drawing.Size(64, 13)
-        OperazioneLabel.TabIndex = 12
-        OperazioneLabel.Text = "Operazione:"
         '
         'OperazioneTextBox
         '
@@ -280,15 +343,6 @@ Partial Class X_MovimentiCondomini
         Me.OperazioneTextBox.Size = New System.Drawing.Size(46, 20)
         Me.OperazioneTextBox.TabIndex = 13
         '
-        'DescrizioneLabel
-        '
-        DescrizioneLabel.AutoSize = True
-        DescrizioneLabel.Location = New System.Drawing.Point(128, 153)
-        DescrizioneLabel.Name = "DescrizioneLabel"
-        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
-        DescrizioneLabel.TabIndex = 14
-        DescrizioneLabel.Text = "Descrizione:"
-        '
         'DescrizioneTextBox
         '
         Me.DescrizioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "Descrizione", True))
@@ -297,83 +351,40 @@ Partial Class X_MovimentiCondomini
         Me.DescrizioneTextBox.Size = New System.Drawing.Size(286, 20)
         Me.DescrizioneTextBox.TabIndex = 15
         '
-        'DataOperazioneLabel
-        '
-        DataOperazioneLabel.AutoSize = True
-        DataOperazioneLabel.Location = New System.Drawing.Point(430, 153)
-        DataOperazioneLabel.Name = "DataOperazioneLabel"
-        DataOperazioneLabel.Size = New System.Drawing.Size(90, 13)
-        DataOperazioneLabel.TabIndex = 16
-        DataOperazioneLabel.Text = "Data Operazione:"
-        '
         'DataOperazioneDateTimePicker
         '
         Me.DataOperazioneDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.X_MovimentiCondominiBindingSource, "DataOperazione", True))
+        Me.DataOperazioneDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataOperazioneDateTimePicker.Location = New System.Drawing.Point(423, 169)
         Me.DataOperazioneDateTimePicker.Name = "DataOperazioneDateTimePicker"
-        Me.DataOperazioneDateTimePicker.Size = New System.Drawing.Size(196, 20)
+        Me.DataOperazioneDateTimePicker.Size = New System.Drawing.Size(97, 20)
         Me.DataOperazioneDateTimePicker.TabIndex = 17
-        '
-        'ImportoLabel
-        '
-        ImportoLabel.AutoSize = True
-        ImportoLabel.Location = New System.Drawing.Point(627, 153)
-        ImportoLabel.Name = "ImportoLabel"
-        ImportoLabel.Size = New System.Drawing.Size(45, 13)
-        ImportoLabel.TabIndex = 18
-        ImportoLabel.Text = "Importo:"
         '
         'ImportoTextBox
         '
         Me.ImportoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "Importo", True))
-        Me.ImportoTextBox.Location = New System.Drawing.Point(630, 169)
+        Me.ImportoTextBox.Location = New System.Drawing.Point(526, 169)
         Me.ImportoTextBox.Name = "ImportoTextBox"
         Me.ImportoTextBox.Size = New System.Drawing.Size(94, 20)
         Me.ImportoTextBox.TabIndex = 19
         '
-        'DataRiferimentoLabel
-        '
-        DataRiferimentoLabel.AutoSize = True
-        DataRiferimentoLabel.Location = New System.Drawing.Point(12, 204)
-        DataRiferimentoLabel.Name = "DataRiferimentoLabel"
-        DataRiferimentoLabel.Size = New System.Drawing.Size(89, 13)
-        DataRiferimentoLabel.TabIndex = 20
-        DataRiferimentoLabel.Text = "Data Riferimento:"
-        '
         'DataRiferimentoDateTimePicker
         '
         Me.DataRiferimentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.X_MovimentiCondominiBindingSource, "DataRiferimento", True))
-        Me.DataRiferimentoDateTimePicker.Location = New System.Drawing.Point(15, 220)
+        Me.DataRiferimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DataRiferimentoDateTimePicker.Location = New System.Drawing.Point(626, 169)
         Me.DataRiferimentoDateTimePicker.Name = "DataRiferimentoDateTimePicker"
-        Me.DataRiferimentoDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataRiferimentoDateTimePicker.Size = New System.Drawing.Size(96, 20)
         Me.DataRiferimentoDateTimePicker.TabIndex = 21
-        '
-        'RiferimentoContoFinanziarioLabel
-        '
-        RiferimentoContoFinanziarioLabel.AutoSize = True
-        RiferimentoContoFinanziarioLabel.Location = New System.Drawing.Point(221, 204)
-        RiferimentoContoFinanziarioLabel.Name = "RiferimentoContoFinanziarioLabel"
-        RiferimentoContoFinanziarioLabel.Size = New System.Drawing.Size(147, 13)
-        RiferimentoContoFinanziarioLabel.TabIndex = 22
-        RiferimentoContoFinanziarioLabel.Text = "Riferimento Conto Finanziario:"
         '
         'RiferimentoContoFinanziarioComboBox
         '
         Me.RiferimentoContoFinanziarioComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiCondominiBindingSource, "RiferimentoContoFinanziario", True))
         Me.RiferimentoContoFinanziarioComboBox.FormattingEnabled = True
-        Me.RiferimentoContoFinanziarioComboBox.Location = New System.Drawing.Point(224, 219)
+        Me.RiferimentoContoFinanziarioComboBox.Location = New System.Drawing.Point(131, 219)
         Me.RiferimentoContoFinanziarioComboBox.Name = "RiferimentoContoFinanziarioComboBox"
         Me.RiferimentoContoFinanziarioComboBox.Size = New System.Drawing.Size(193, 21)
         Me.RiferimentoContoFinanziarioComboBox.TabIndex = 23
-        '
-        'RiferimentoContoAnticipiLabel
-        '
-        RiferimentoContoAnticipiLabel.AutoSize = True
-        RiferimentoContoAnticipiLabel.Location = New System.Drawing.Point(423, 204)
-        RiferimentoContoAnticipiLabel.Name = "RiferimentoContoAnticipiLabel"
-        RiferimentoContoAnticipiLabel.Size = New System.Drawing.Size(131, 13)
-        RiferimentoContoAnticipiLabel.TabIndex = 24
-        RiferimentoContoAnticipiLabel.Text = "Riferimento Conto Anticipi:"
         '
         'RiferimentoContoAnticipiComboBox
         '
@@ -383,15 +394,6 @@ Partial Class X_MovimentiCondomini
         Me.RiferimentoContoAnticipiComboBox.Name = "RiferimentoContoAnticipiComboBox"
         Me.RiferimentoContoAnticipiComboBox.Size = New System.Drawing.Size(196, 21)
         Me.RiferimentoContoAnticipiComboBox.TabIndex = 25
-        '
-        'ContoLabel
-        '
-        ContoLabel.AutoSize = True
-        ContoLabel.Location = New System.Drawing.Point(627, 204)
-        ContoLabel.Name = "ContoLabel"
-        ContoLabel.Size = New System.Drawing.Size(38, 13)
-        ContoLabel.TabIndex = 26
-        ContoLabel.Text = "Conto:"
         '
         'ContoComboBox
         '

@@ -43,6 +43,7 @@ Partial Class W_Emissioni
         Me.W_EmissioniBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.W_EmissioniTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.W_EmissioniTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
+        Me.W_EmissioniDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.W_EmissioniDettaglioTableAdapter()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.ProgressivoTextBox = New System.Windows.Forms.TextBox()
         Me.AnagraficaComboBox = New System.Windows.Forms.ComboBox()
@@ -60,7 +61,6 @@ Partial Class W_Emissioni
         Me.ContoComboBox = New System.Windows.Forms.ComboBox()
         Me.DataPagamentoDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.W_EmissioniDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.W_EmissioniDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.W_EmissioniDettaglioTableAdapter()
         Me.W_EmissioniDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -88,6 +88,150 @@ Partial Class W_Emissioni
         CType(Me.W_EmissioniDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.W_EmissioniDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(12, 71)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 1
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'ProgressivoLabel
+        '
+        ProgressivoLabel.AutoSize = True
+        ProgressivoLabel.Location = New System.Drawing.Point(287, 71)
+        ProgressivoLabel.Name = "ProgressivoLabel"
+        ProgressivoLabel.Size = New System.Drawing.Size(65, 13)
+        ProgressivoLabel.TabIndex = 2
+        ProgressivoLabel.Text = "Progressivo:"
+        '
+        'AnagraficaLabel
+        '
+        AnagraficaLabel.AutoSize = True
+        AnagraficaLabel.Location = New System.Drawing.Point(375, 71)
+        AnagraficaLabel.Name = "AnagraficaLabel"
+        AnagraficaLabel.Size = New System.Drawing.Size(61, 13)
+        AnagraficaLabel.TabIndex = 4
+        AnagraficaLabel.Text = "Anagrafica:"
+        '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(12, 111)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 6
+        GestioneLabel.Text = "Gestione:"
+        '
+        'NumeroRataLabel
+        '
+        NumeroRataLabel.AutoSize = True
+        NumeroRataLabel.Location = New System.Drawing.Point(291, 111)
+        NumeroRataLabel.Name = "NumeroRataLabel"
+        NumeroRataLabel.Size = New System.Drawing.Size(61, 13)
+        NumeroRataLabel.TabIndex = 8
+        NumeroRataLabel.Text = "Num. Rata:"
+        '
+        'DataScadenzaLabel
+        '
+        DataScadenzaLabel.AutoSize = True
+        DataScadenzaLabel.Location = New System.Drawing.Point(375, 112)
+        DataScadenzaLabel.Name = "DataScadenzaLabel"
+        DataScadenzaLabel.Size = New System.Drawing.Size(84, 13)
+        DataScadenzaLabel.TabIndex = 10
+        DataScadenzaLabel.Text = "Data Scadenza:"
+        '
+        'ImportoRataLabel
+        '
+        ImportoRataLabel.AutoSize = True
+        ImportoRataLabel.Location = New System.Drawing.Point(598, 112)
+        ImportoRataLabel.Name = "ImportoRataLabel"
+        ImportoRataLabel.Size = New System.Drawing.Size(71, 13)
+        ImportoRataLabel.TabIndex = 12
+        ImportoRataLabel.Text = "Importo Rata:"
+        '
+        'SpeseAvvisoLabel
+        '
+        SpeseAvvisoLabel.AutoSize = True
+        SpeseAvvisoLabel.Location = New System.Drawing.Point(598, 151)
+        SpeseAvvisoLabel.Name = "SpeseAvvisoLabel"
+        SpeseAvvisoLabel.Size = New System.Drawing.Size(75, 13)
+        SpeseAvvisoLabel.TabIndex = 14
+        SpeseAvvisoLabel.Text = "Spese Avviso:"
+        '
+        'SpeseStornoLabel
+        '
+        SpeseStornoLabel.AutoSize = True
+        SpeseStornoLabel.Location = New System.Drawing.Point(599, 190)
+        SpeseStornoLabel.Name = "SpeseStornoLabel"
+        SpeseStornoLabel.Size = New System.Drawing.Size(74, 13)
+        SpeseStornoLabel.TabIndex = 16
+        SpeseStornoLabel.Text = "Spese Storno:"
+        '
+        'SaldoEsercizioPrecedenteLabel
+        '
+        SaldoEsercizioPrecedenteLabel.AutoSize = True
+        SaldoEsercizioPrecedenteLabel.Location = New System.Drawing.Point(598, 229)
+        SaldoEsercizioPrecedenteLabel.Name = "SaldoEsercizioPrecedenteLabel"
+        SaldoEsercizioPrecedenteLabel.Size = New System.Drawing.Size(99, 13)
+        SaldoEsercizioPrecedenteLabel.TabIndex = 18
+        SaldoEsercizioPrecedenteLabel.Text = "Sdo Eserc. Preced."
+        '
+        'RataPreventivoLabel
+        '
+        RataPreventivoLabel.AutoSize = True
+        RataPreventivoLabel.Location = New System.Drawing.Point(598, 268)
+        RataPreventivoLabel.Name = "RataPreventivoLabel"
+        RataPreventivoLabel.Size = New System.Drawing.Size(87, 13)
+        RataPreventivoLabel.TabIndex = 20
+        RataPreventivoLabel.Text = "Rata Preventivo:"
+        '
+        'RateAddebitateLabel
+        '
+        RateAddebitateLabel.AutoSize = True
+        RateAddebitateLabel.Location = New System.Drawing.Point(598, 307)
+        RateAddebitateLabel.Name = "RateAddebitateLabel"
+        RateAddebitateLabel.Size = New System.Drawing.Size(87, 13)
+        RateAddebitateLabel.TabIndex = 22
+        RateAddebitateLabel.Text = "Rate Addebitate:"
+        '
+        'VersamentiLabel
+        '
+        VersamentiLabel.AutoSize = True
+        VersamentiLabel.Location = New System.Drawing.Point(601, 346)
+        VersamentiLabel.Name = "VersamentiLabel"
+        VersamentiLabel.Size = New System.Drawing.Size(62, 13)
+        VersamentiLabel.TabIndex = 24
+        VersamentiLabel.Text = "Versamenti:"
+        '
+        'FondoLabel
+        '
+        FondoLabel.AutoSize = True
+        FondoLabel.Location = New System.Drawing.Point(601, 385)
+        FondoLabel.Name = "FondoLabel"
+        FondoLabel.Size = New System.Drawing.Size(40, 13)
+        FondoLabel.TabIndex = 26
+        FondoLabel.Text = "Fondo:"
+        '
+        'ContoLabel
+        '
+        ContoLabel.AutoSize = True
+        ContoLabel.Location = New System.Drawing.Point(12, 151)
+        ContoLabel.Name = "ContoLabel"
+        ContoLabel.Size = New System.Drawing.Size(38, 13)
+        ContoLabel.TabIndex = 28
+        ContoLabel.Text = "Conto:"
+        '
+        'DataPagamentoLabel
+        '
+        DataPagamentoLabel.AutoSize = True
+        DataPagamentoLabel.Location = New System.Drawing.Point(375, 151)
+        DataPagamentoLabel.Name = "DataPagamentoLabel"
+        DataPagamentoLabel.Size = New System.Drawing.Size(90, 13)
+        DataPagamentoLabel.TabIndex = 30
+        DataPagamentoLabel.Text = "Data Pagamento:"
         '
         'IMMOBILIDataSet
         '
@@ -173,14 +317,9 @@ Partial Class W_Emissioni
         Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
-        'ImmobileLabel
+        'W_EmissioniDettaglioTableAdapter
         '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(12, 71)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 1
-        ImmobileLabel.Text = "Immobile:"
+        Me.W_EmissioniDettaglioTableAdapter.ClearBeforeFill = True
         '
         'ImmobileComboBox
         '
@@ -191,15 +330,6 @@ Partial Class W_Emissioni
         Me.ImmobileComboBox.Size = New System.Drawing.Size(269, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'ProgressivoLabel
-        '
-        ProgressivoLabel.AutoSize = True
-        ProgressivoLabel.Location = New System.Drawing.Point(287, 71)
-        ProgressivoLabel.Name = "ProgressivoLabel"
-        ProgressivoLabel.Size = New System.Drawing.Size(65, 13)
-        ProgressivoLabel.TabIndex = 2
-        ProgressivoLabel.Text = "Progressivo:"
-        '
         'ProgressivoTextBox
         '
         Me.ProgressivoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "Progressivo", True))
@@ -207,15 +337,6 @@ Partial Class W_Emissioni
         Me.ProgressivoTextBox.Name = "ProgressivoTextBox"
         Me.ProgressivoTextBox.Size = New System.Drawing.Size(79, 20)
         Me.ProgressivoTextBox.TabIndex = 3
-        '
-        'AnagraficaLabel
-        '
-        AnagraficaLabel.AutoSize = True
-        AnagraficaLabel.Location = New System.Drawing.Point(375, 71)
-        AnagraficaLabel.Name = "AnagraficaLabel"
-        AnagraficaLabel.Size = New System.Drawing.Size(61, 13)
-        AnagraficaLabel.TabIndex = 4
-        AnagraficaLabel.Text = "Anagrafica:"
         '
         'AnagraficaComboBox
         '
@@ -226,15 +347,6 @@ Partial Class W_Emissioni
         Me.AnagraficaComboBox.Size = New System.Drawing.Size(258, 21)
         Me.AnagraficaComboBox.TabIndex = 5
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(12, 111)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 6
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "Gestione", True))
@@ -244,15 +356,6 @@ Partial Class W_Emissioni
         Me.GestioneComboBox.Size = New System.Drawing.Size(269, 21)
         Me.GestioneComboBox.TabIndex = 7
         '
-        'NumeroRataLabel
-        '
-        NumeroRataLabel.AutoSize = True
-        NumeroRataLabel.Location = New System.Drawing.Point(291, 111)
-        NumeroRataLabel.Name = "NumeroRataLabel"
-        NumeroRataLabel.Size = New System.Drawing.Size(61, 13)
-        NumeroRataLabel.TabIndex = 8
-        NumeroRataLabel.Text = "Num. Rata:"
-        '
         'NumeroRataTextBox
         '
         Me.NumeroRataTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "NumeroRata", True))
@@ -261,31 +364,14 @@ Partial Class W_Emissioni
         Me.NumeroRataTextBox.Size = New System.Drawing.Size(79, 20)
         Me.NumeroRataTextBox.TabIndex = 9
         '
-        'DataScadenzaLabel
-        '
-        DataScadenzaLabel.AutoSize = True
-        DataScadenzaLabel.Location = New System.Drawing.Point(375, 112)
-        DataScadenzaLabel.Name = "DataScadenzaLabel"
-        DataScadenzaLabel.Size = New System.Drawing.Size(84, 13)
-        DataScadenzaLabel.TabIndex = 10
-        DataScadenzaLabel.Text = "Data Scadenza:"
-        '
         'DataScadenzaDateTimePicker
         '
         Me.DataScadenzaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.W_EmissioniBindingSource, "DataScadenza", True))
+        Me.DataScadenzaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataScadenzaDateTimePicker.Location = New System.Drawing.Point(378, 128)
         Me.DataScadenzaDateTimePicker.Name = "DataScadenzaDateTimePicker"
-        Me.DataScadenzaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataScadenzaDateTimePicker.Size = New System.Drawing.Size(97, 20)
         Me.DataScadenzaDateTimePicker.TabIndex = 11
-        '
-        'ImportoRataLabel
-        '
-        ImportoRataLabel.AutoSize = True
-        ImportoRataLabel.Location = New System.Drawing.Point(598, 112)
-        ImportoRataLabel.Name = "ImportoRataLabel"
-        ImportoRataLabel.Size = New System.Drawing.Size(71, 13)
-        ImportoRataLabel.TabIndex = 12
-        ImportoRataLabel.Text = "Importo Rata:"
         '
         'ImportoRataTextBox
         '
@@ -295,15 +381,6 @@ Partial Class W_Emissioni
         Me.ImportoRataTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImportoRataTextBox.TabIndex = 13
         '
-        'SpeseAvvisoLabel
-        '
-        SpeseAvvisoLabel.AutoSize = True
-        SpeseAvvisoLabel.Location = New System.Drawing.Point(598, 151)
-        SpeseAvvisoLabel.Name = "SpeseAvvisoLabel"
-        SpeseAvvisoLabel.Size = New System.Drawing.Size(75, 13)
-        SpeseAvvisoLabel.TabIndex = 14
-        SpeseAvvisoLabel.Text = "Spese Avviso:"
-        '
         'SpeseAvvisoTextBox
         '
         Me.SpeseAvvisoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "SpeseAvviso", True))
@@ -311,15 +388,6 @@ Partial Class W_Emissioni
         Me.SpeseAvvisoTextBox.Name = "SpeseAvvisoTextBox"
         Me.SpeseAvvisoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SpeseAvvisoTextBox.TabIndex = 15
-        '
-        'SpeseStornoLabel
-        '
-        SpeseStornoLabel.AutoSize = True
-        SpeseStornoLabel.Location = New System.Drawing.Point(599, 190)
-        SpeseStornoLabel.Name = "SpeseStornoLabel"
-        SpeseStornoLabel.Size = New System.Drawing.Size(74, 13)
-        SpeseStornoLabel.TabIndex = 16
-        SpeseStornoLabel.Text = "Spese Storno:"
         '
         'SpeseStornoTextBox
         '
@@ -329,15 +397,6 @@ Partial Class W_Emissioni
         Me.SpeseStornoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SpeseStornoTextBox.TabIndex = 17
         '
-        'SaldoEsercizioPrecedenteLabel
-        '
-        SaldoEsercizioPrecedenteLabel.AutoSize = True
-        SaldoEsercizioPrecedenteLabel.Location = New System.Drawing.Point(598, 229)
-        SaldoEsercizioPrecedenteLabel.Name = "SaldoEsercizioPrecedenteLabel"
-        SaldoEsercizioPrecedenteLabel.Size = New System.Drawing.Size(99, 13)
-        SaldoEsercizioPrecedenteLabel.TabIndex = 18
-        SaldoEsercizioPrecedenteLabel.Text = "Sdo Eserc. Preced."
-        '
         'SaldoEsercizioPrecedenteTextBox
         '
         Me.SaldoEsercizioPrecedenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "SaldoEsercizioPrecedente", True))
@@ -345,15 +404,6 @@ Partial Class W_Emissioni
         Me.SaldoEsercizioPrecedenteTextBox.Name = "SaldoEsercizioPrecedenteTextBox"
         Me.SaldoEsercizioPrecedenteTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SaldoEsercizioPrecedenteTextBox.TabIndex = 19
-        '
-        'RataPreventivoLabel
-        '
-        RataPreventivoLabel.AutoSize = True
-        RataPreventivoLabel.Location = New System.Drawing.Point(598, 268)
-        RataPreventivoLabel.Name = "RataPreventivoLabel"
-        RataPreventivoLabel.Size = New System.Drawing.Size(87, 13)
-        RataPreventivoLabel.TabIndex = 20
-        RataPreventivoLabel.Text = "Rata Preventivo:"
         '
         'RataPreventivoTextBox
         '
@@ -363,15 +413,6 @@ Partial Class W_Emissioni
         Me.RataPreventivoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.RataPreventivoTextBox.TabIndex = 21
         '
-        'RateAddebitateLabel
-        '
-        RateAddebitateLabel.AutoSize = True
-        RateAddebitateLabel.Location = New System.Drawing.Point(598, 307)
-        RateAddebitateLabel.Name = "RateAddebitateLabel"
-        RateAddebitateLabel.Size = New System.Drawing.Size(87, 13)
-        RateAddebitateLabel.TabIndex = 22
-        RateAddebitateLabel.Text = "Rate Addebitate:"
-        '
         'RateAddebitateTextBox
         '
         Me.RateAddebitateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "RateAddebitate", True))
@@ -379,15 +420,6 @@ Partial Class W_Emissioni
         Me.RateAddebitateTextBox.Name = "RateAddebitateTextBox"
         Me.RateAddebitateTextBox.Size = New System.Drawing.Size(100, 20)
         Me.RateAddebitateTextBox.TabIndex = 23
-        '
-        'VersamentiLabel
-        '
-        VersamentiLabel.AutoSize = True
-        VersamentiLabel.Location = New System.Drawing.Point(601, 346)
-        VersamentiLabel.Name = "VersamentiLabel"
-        VersamentiLabel.Size = New System.Drawing.Size(62, 13)
-        VersamentiLabel.TabIndex = 24
-        VersamentiLabel.Text = "Versamenti:"
         '
         'VersamentiTextBox
         '
@@ -397,15 +429,6 @@ Partial Class W_Emissioni
         Me.VersamentiTextBox.Size = New System.Drawing.Size(100, 20)
         Me.VersamentiTextBox.TabIndex = 25
         '
-        'FondoLabel
-        '
-        FondoLabel.AutoSize = True
-        FondoLabel.Location = New System.Drawing.Point(601, 385)
-        FondoLabel.Name = "FondoLabel"
-        FondoLabel.Size = New System.Drawing.Size(40, 13)
-        FondoLabel.TabIndex = 26
-        FondoLabel.Text = "Fondo:"
-        '
         'FondoTextBox
         '
         Me.FondoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_EmissioniBindingSource, "Fondo", True))
@@ -413,15 +436,6 @@ Partial Class W_Emissioni
         Me.FondoTextBox.Name = "FondoTextBox"
         Me.FondoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FondoTextBox.TabIndex = 27
-        '
-        'ContoLabel
-        '
-        ContoLabel.AutoSize = True
-        ContoLabel.Location = New System.Drawing.Point(12, 151)
-        ContoLabel.Name = "ContoLabel"
-        ContoLabel.Size = New System.Drawing.Size(38, 13)
-        ContoLabel.TabIndex = 28
-        ContoLabel.Text = "Conto:"
         '
         'ContoComboBox
         '
@@ -432,31 +446,19 @@ Partial Class W_Emissioni
         Me.ContoComboBox.Size = New System.Drawing.Size(272, 21)
         Me.ContoComboBox.TabIndex = 29
         '
-        'DataPagamentoLabel
-        '
-        DataPagamentoLabel.AutoSize = True
-        DataPagamentoLabel.Location = New System.Drawing.Point(375, 151)
-        DataPagamentoLabel.Name = "DataPagamentoLabel"
-        DataPagamentoLabel.Size = New System.Drawing.Size(90, 13)
-        DataPagamentoLabel.TabIndex = 30
-        DataPagamentoLabel.Text = "Data Pagamento:"
-        '
         'DataPagamentoDateTimePicker
         '
         Me.DataPagamentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.W_EmissioniBindingSource, "DataPagamento", True))
+        Me.DataPagamentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DataPagamentoDateTimePicker.Location = New System.Drawing.Point(378, 163)
         Me.DataPagamentoDateTimePicker.Name = "DataPagamentoDateTimePicker"
-        Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(97, 20)
         Me.DataPagamentoDateTimePicker.TabIndex = 31
         '
         'W_EmissioniDettaglioBindingSource
         '
         Me.W_EmissioniDettaglioBindingSource.DataMember = "W_EmissioniDettaglio"
         Me.W_EmissioniDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet
-        '
-        'W_EmissioniDettaglioTableAdapter
-        '
-        Me.W_EmissioniDettaglioTableAdapter.ClearBeforeFill = True
         '
         'W_EmissioniDettaglioDataGridView
         '
