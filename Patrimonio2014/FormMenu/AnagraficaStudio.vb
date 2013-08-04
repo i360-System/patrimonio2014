@@ -29,4 +29,8 @@
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)
 
     End Sub
+
+    Private Sub BindingNavigatorMoveNextItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BindingNavigatorMoveNextItem.Click
+
+    End Sub
 End Class
