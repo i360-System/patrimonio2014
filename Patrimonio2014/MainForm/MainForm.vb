@@ -105,7 +105,7 @@
         End Select
     End Sub
 
-    Private Sub AnagrafeDeiCondominiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AnagrafeDeiCondominiToolStripMenuItem.Click
+    Private Sub AnagrafeDeiCondominiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnagrafeDeiCondominiToolStripMenuItem.Click
         Dim NewMDIChild As New Anagrafiche
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -114,7 +114,7 @@
 
     End Sub
 
-    Private Sub ArchivioDelleConvocazioniToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioDelleConvocazioniToolStripMenuItem.Click
+    Private Sub ArchivioDelleConvocazioniToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArchivioDelleConvocazioniToolStripMenuItem.Click
         Dim NewMDIChild As New Assemblea
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -123,7 +123,7 @@
 
     End Sub
 
-    Private Sub GruppiDiSpesaToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles GruppiDiSpesaToolStripMenuItem.Click
+    Private Sub GruppiDiSpesaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GruppiDiSpesaToolStripMenuItem.Click
         Dim NewMDIChild As New Gruppi
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -132,7 +132,7 @@
 
     End Sub
 
-    Private Sub ContiFinanziariToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ContiFinanziariToolStripMenuItem.Click
+    Private Sub ContiFinanziariToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ContiFinanziariToolStripMenuItem.Click
         Dim NewMDIChild As New ContiFinanziari
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -141,7 +141,7 @@
 
     End Sub
 
-    Private Sub FondiAmmortamentoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles FondiAmmortamentoToolStripMenuItem.Click
+    Private Sub FondiAmmortamentoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FondiAmmortamentoToolStripMenuItem.Click
         Dim NewMDIChild As New Fondi
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -150,7 +150,7 @@
 
     End Sub
 
-    Private Sub AnagraficaCondominioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles AnagraficaCondominioToolStripMenuItem.Click
+    Private Sub AnagraficaCondominioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnagraficaCondominioToolStripMenuItem.Click
         Dim NewMDIChild As New Immobili
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -159,7 +159,7 @@
 
     End Sub
 
-    Private Sub ArchivioRitenutePerDichiarazioniToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioRitenutePerDichiarazioniToolStripMenuItem.Click
+    Private Sub ArchivioRitenutePerDichiarazioniToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArchivioRitenutePerDichiarazioniToolStripMenuItem.Click
         Dim NewMDIChild As New W_Ritenute
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -168,7 +168,7 @@
 
     End Sub
 
-    Private Sub TabelleCodiciTributoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TabelleCodiciTributoToolStripMenuItem.Click
+    Private Sub TabelleCodiciTributoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabelleCodiciTributoToolStripMenuItem.Click
         Dim NewMDIChild As New W_Tributi
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -177,7 +177,7 @@
 
     End Sub
 
-    Private Sub CausaliPerLeSpeseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CausaliPerLeSpeseToolStripMenuItem.Click
+    Private Sub CausaliPerLeSpeseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CausaliPerLeSpeseToolStripMenuItem.Click
         Dim NewMDIChild As New X_Causali
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -186,7 +186,7 @@
 
     End Sub
 
-    Private Sub TestiPerIlSollecitoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TestiPerIlSollecitoToolStripMenuItem.Click
+    Private Sub TestiPerIlSollecitoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TestiPerIlSollecitoToolStripMenuItem.Click
         Dim NewMDIChild As New Z_TestoSollecito
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
@@ -195,7 +195,7 @@
 
     End Sub
 
-    Private Sub StrutturaDelCondominioToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles StrutturaDelCondominioToolStripMenuItem.Click
+    Private Sub StrutturaDelCondominioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StrutturaDelCondominioToolStripMenuItem.Click
         Dim NewMDIChild As New Fabbricati
         'Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
