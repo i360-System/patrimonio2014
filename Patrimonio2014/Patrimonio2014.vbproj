@@ -267,6 +267,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IMMOBILIDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IMMOBILIDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMMOBILIDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Infrastracture\DBlayerAC.vb" />
     <Compile Include="Infrastracture\Interactive.vb" />
     <Compile Include="Infrastracture\Message.vb" />
@@ -423,6 +428,17 @@
     </None>
     <None Include="IMMOBILIDataSet1.xss">
       <DependentUpon>IMMOBILIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="IMMOBILIDataSet2.xsc">
+      <DependentUpon>IMMOBILIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="IMMOBILIDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IMMOBILIDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IMMOBILIDataSet2.xss">
+      <DependentUpon>IMMOBILIDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
