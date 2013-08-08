@@ -24,6 +24,7 @@ Public Class AnagraficaStudio
 
             'Me.AnagraficaStudioTableAdapter.Fill(Me.IMMOBILIDataSet.AnagraficaStudio)
             'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.AnagraficaStudio'. È possibile spostarla o rimuoverla se necessario.
+        'Me.AnagraficaStudioTableAdapter.Fill(Me.IMMOBILIDataSet.AnagraficaStudio)
 
             'edy
             Me.AnagraficaStudioTableAdapter1.Fill(Me.IMMOBILIDataSet1.AnagraficaStudio)

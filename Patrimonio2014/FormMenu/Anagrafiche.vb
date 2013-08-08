@@ -13,7 +13,7 @@
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.Anagrafiche'. È possibile spostarla o rimuoverla se necessario.
         Me.AnagraficheTableAdapter.Fill(Me.IMMOBILIDataSet.Anagrafiche)
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet.Anagrafiche'. È possibile spostarla o rimuoverla se necessario.
-        Me.AnagraficheTableAdapter.Fill(Me.IMMOBILIDataSet.Anagrafiche)
+        'Me.AnagraficheTableAdapter.Fill(Me.IMMOBILIDataSet.Anagrafiche)
 
     End Sub
 
