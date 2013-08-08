@@ -48,62 +48,64 @@
         InitializeComponent()
 
         ' Aggiungere le eventuali istruzioni di inizializzazione dopo la chiamata a InitializeComponent().
+        'Dim c As New CustomControl1
+        'ToolStripContainer1.RightToolStripPanel.Controls.Clear()
 
     End Sub
 
-    Private Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect
-        'MsgBox(TreeView1.SelectedNode.ToString)
-        Dim name As String
-        Select Case TreeView1.SelectedNode.Text.ToString
-            Case "Informazioni sul software"
-                name = TreeView1.SelectedNode.Text.ToString
-                If Me.Contains(AboutBox1) Then
-                    Dim NewMDIChild As New AboutBox1
-                    'Set the Parent Form of the Child window.
-                    NewMDIChild.MdiParent = Me
-                    'Display the new form.
-                    NewMDIChild.Show()
-                    ''controllo istanza
-                    'Dim frm As New Opzioni
-                    'frm.Show()
-                End If
-            Case "AnagraficaStudio"
-                name = TreeView1.SelectedNode.Text.ToString
-                If Me.Contains(AnagraficaStudio) Then
-                    Dim NewMDIChild As New AnagraficaStudio
-                    'Set the Parent Form of the Child window.
-                    NewMDIChild.MdiParent = Me
-                    'Display the new form.
-                    NewMDIChild.Show()
-                    ''controllo istanza
-                    'Dim frm As New Opzioni
-                    'frm.Show()
-                End If
+    'Private Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs)
+    '    'MsgBox(TreeView1.SelectedNode.ToString)
+    '    Dim name As String
+    '    Select Case TreeView1.SelectedNode.Text.ToString
+    '        Case "Informazioni sul software"
+    '            name = TreeView1.SelectedNode.Text.ToString
+    '            If Me.Contains(AboutBox1) Then
+    '                Dim NewMDIChild As New AboutBox1
+    '                'Set the Parent Form of the Child window.
+    '                NewMDIChild.MdiParent = Me
+    '                'Display the new form.
+    '                NewMDIChild.Show()
+    '                ''controllo istanza
+    '                'Dim frm As New Opzioni
+    '                'frm.Show()
+    '            End If
+    '        Case "AnagraficaStudio"
+    '            name = TreeView1.SelectedNode.Text.ToString
+    '            If Me.Contains(AnagraficaStudio) Then
+    '                Dim NewMDIChild As New AnagraficaStudio
+    '                'Set the Parent Form of the Child window.
+    '                NewMDIChild.MdiParent = Me
+    '                'Display the new form.
+    '                NewMDIChild.Show()
+    '                ''controllo istanza
+    '                'Dim frm As New Opzioni
+    '                'frm.Show()
+    '            End If
 
-            Case "Fornitori"
-                name = TreeView1.SelectedNode.Text.ToString
-                If Me.Contains(Fornitori) Then
-                    Dim NewMDIChild As New Fornitori
-                    'Set the Parent Form of the Child window.
-                    NewMDIChild.MdiParent = Me
-                    'Display the new form.
-                    NewMDIChild.Show()
-                    ''controllo istanza
-                    'Dim frm As New Opzioni
-                    'frm.Show()
-                End If
-                'Case
-                'Case
-                'Case
-                'Case
-                'Case
-                'Case
-                'Case
-                'Case
-                'Case
-                'Case
-        End Select
-    End Sub
+    '        Case "Fornitori"
+    '            name = TreeView1.SelectedNode.Text.ToString
+    '            If Me.Contains(Fornitori) Then
+    '                Dim NewMDIChild As New Fornitori
+    '                'Set the Parent Form of the Child window.
+    '                NewMDIChild.MdiParent = Me
+    '                'Display the new form.
+    '                NewMDIChild.Show()
+    '                ''controllo istanza
+    '                'Dim frm As New Opzioni
+    '                'frm.Show()
+    '            End If
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '            'Case
+    '    End Select
+    'End Sub
 
     Private Sub AnagrafeDeiCondominiToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnagrafeDeiCondominiToolStripMenuItem.Click
         Dim NewMDIChild As New Anagrafiche

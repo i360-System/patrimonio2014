@@ -1,5 +1,5 @@
 ﻿Public Class ToolBarComune
-    Inherits Query
+
 
     ''' <summary>
     ''' Metodo di ricerca query

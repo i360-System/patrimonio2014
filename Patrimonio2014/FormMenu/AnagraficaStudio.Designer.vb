@@ -37,6 +37,7 @@ Partial Class AnagraficaStudio
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnagraficaStudio))
         Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet()
         Me.AnagraficaStudioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IMMOBILIDataSet1 = New Patrimonio2014.IMMOBILIDataSet1()
         Me.AnagraficaStudioTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.AnagraficaStudioTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
         Me.AnagraficaStudioBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
@@ -67,6 +68,7 @@ Partial Class AnagraficaStudio
         Me.Localita = New System.Windows.Forms.TextBox()
         Me.CodiceFiscale = New System.Windows.Forms.TextBox()
         Me.PartitaIva = New System.Windows.Forms.TextBox()
+        Me.AnagraficaStudioTableAdapter1 = New Patrimonio2014.IMMOBILIDataSet1TableAdapters.AnagraficaStudioTableAdapter()
         StudioLabel = New System.Windows.Forms.Label()
         Denominazione1Label = New System.Windows.Forms.Label()
         IndirizzoLabel = New System.Windows.Forms.Label()
@@ -80,6 +82,7 @@ Partial Class AnagraficaStudio
         Note1Label = New System.Windows.Forms.Label()
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnagraficaStudioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IMMOBILIDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnagraficaStudioBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AnagraficaStudioBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
@@ -192,7 +195,12 @@ Partial Class AnagraficaStudio
         'AnagraficaStudioBindingSource
         '
         Me.AnagraficaStudioBindingSource.DataMember = "AnagraficaStudio"
-        Me.AnagraficaStudioBindingSource.DataSource = Me.IMMOBILIDataSet
+        Me.AnagraficaStudioBindingSource.DataSource = Me.IMMOBILIDataSet1
+        '
+        'IMMOBILIDataSet1
+        '
+        Me.IMMOBILIDataSet1.DataSetName = "IMMOBILIDataSet1"
+        Me.IMMOBILIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AnagraficaStudioTableAdapter
         '
@@ -503,6 +511,10 @@ Partial Class AnagraficaStudio
         Me.PartitaIva.Size = New System.Drawing.Size(139, 20)
         Me.PartitaIva.TabIndex = 38
         '
+        'AnagraficaStudioTableAdapter1
+        '
+        Me.AnagraficaStudioTableAdapter1.ClearBeforeFill = True
+        '
         'AnagraficaStudio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -537,6 +549,7 @@ Partial Class AnagraficaStudio
         Me.Text = "Anagrafica Studio"
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnagraficaStudioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IMMOBILIDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnagraficaStudioBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AnagraficaStudioBindingNavigator.ResumeLayout(False)
         Me.AnagraficaStudioBindingNavigator.PerformLayout()
@@ -576,4 +589,6 @@ Partial Class AnagraficaStudio
     Friend WithEvents PartitaIva As System.Windows.Forms.TextBox
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents IMMOBILIDataSet1 As Patrimonio2014.IMMOBILIDataSet1
+    Friend WithEvents AnagraficaStudioTableAdapter1 As Patrimonio2014.IMMOBILIDataSet1TableAdapters.AnagraficaStudioTableAdapter
 End Class
