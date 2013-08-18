@@ -330,6 +330,9 @@
     <EmbeddedResource Include="FormMenu\ContiFinanziari.resx">
       <DependentUpon>ContiFinanziari.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Costanti.resx">
+      <DependentUpon>Costanti.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fabbricati.resx">
       <DependentUpon>Fabbricati.vb</DependentUpon>
     </EmbeddedResource>

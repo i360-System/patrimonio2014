@@ -37,29 +37,31 @@ Partial Class ContiFinanziari
         Me.ContiFinanziariBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ContiFinanziariTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.ContiFinanziariTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
-        Me.ContiFinanziariBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.Immobile = New System.Windows.Forms.TextBox()
+        Me.Conto = New System.Windows.Forms.TextBox()
+        Me.Banca = New System.Windows.Forms.TextBox()
+        Me.Agenzia = New System.Windows.Forms.TextBox()
+        Me.Indirizzo = New System.Windows.Forms.TextBox()
+        Me.Localita = New System.Windows.Forms.TextBox()
+        Me.Intestatario1 = New System.Windows.Forms.TextBox()
+        Me.Intestatario2 = New System.Windows.Forms.TextBox()
+        Me.ContoCorrente = New System.Windows.Forms.TextBox()
+        Me.IBAN = New System.Windows.Forms.TextBox()
+        Me.AnagraficaStudioBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.AnagraficaStudioBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.ContiFinanziariBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.ImmobileTextBox = New System.Windows.Forms.TextBox()
-        Me.ContoTextBox = New System.Windows.Forms.TextBox()
-        Me.BancaTextBox = New System.Windows.Forms.TextBox()
-        Me.AgenziaTextBox = New System.Windows.Forms.TextBox()
-        Me.IndirizzoTextBox = New System.Windows.Forms.TextBox()
-        Me.LocalitaTextBox = New System.Windows.Forms.TextBox()
-        Me.Intestatario1TextBox = New System.Windows.Forms.TextBox()
-        Me.Intestatario2TextBox = New System.Windows.Forms.TextBox()
-        Me.ContoCorrenteTextBox = New System.Windows.Forms.TextBox()
-        Me.IBANTextBox = New System.Windows.Forms.TextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         ImmobileLabel = New System.Windows.Forms.Label()
         ContoLabel = New System.Windows.Forms.Label()
         BancaLabel = New System.Windows.Forms.Label()
@@ -71,8 +73,8 @@ Partial Class ContiFinanziari
         IBANLabel = New System.Windows.Forms.Label()
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ContiFinanziariBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ContiFinanziariBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContiFinanziariBindingNavigator.SuspendLayout()
+        CType(Me.AnagraficaStudioBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.AnagraficaStudioBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
         'ImmobileLabel
@@ -240,213 +242,232 @@ Partial Class ContiFinanziari
         Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
-        'ContiFinanziariBindingNavigator
+        'Immobile
         '
-        Me.ContiFinanziariBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
-        Me.ContiFinanziariBindingNavigator.BindingSource = Me.ContiFinanziariBindingSource
-        Me.ContiFinanziariBindingNavigator.CountItem = Me.BindingNavigatorCountItem
-        Me.ContiFinanziariBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.ContiFinanziariBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ContiFinanziariBindingNavigatorSaveItem})
-        Me.ContiFinanziariBindingNavigator.Location = New System.Drawing.Point(0, 0)
-        Me.ContiFinanziariBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.ContiFinanziariBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.ContiFinanziariBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.ContiFinanziariBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.ContiFinanziariBindingNavigator.Name = "ContiFinanziariBindingNavigator"
-        Me.ContiFinanziariBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.ContiFinanziariBindingNavigator.Size = New System.Drawing.Size(718, 25)
-        Me.ContiFinanziariBindingNavigator.TabIndex = 19
-        Me.ContiFinanziariBindingNavigator.Text = "BindingNavigator1"
+        Me.Immobile.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Immobile", True))
+        Me.Immobile.Location = New System.Drawing.Point(24, 65)
+        Me.Immobile.Name = "Immobile"
+        Me.Immobile.Size = New System.Drawing.Size(48, 20)
+        Me.Immobile.TabIndex = 20
         '
-        'BindingNavigatorMoveFirstItem
+        'Conto
         '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Sposta in prima posizione"
+        Me.Conto.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Conto", True))
+        Me.Conto.Location = New System.Drawing.Point(96, 65)
+        Me.Conto.Name = "Conto"
+        Me.Conto.Size = New System.Drawing.Size(49, 20)
+        Me.Conto.TabIndex = 21
         '
-        'BindingNavigatorMovePreviousItem
+        'Banca
         '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Sposta indietro"
+        Me.Banca.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Banca", True))
+        Me.Banca.Location = New System.Drawing.Point(167, 68)
+        Me.Banca.Name = "Banca"
+        Me.Banca.Size = New System.Drawing.Size(322, 20)
+        Me.Banca.TabIndex = 22
         '
-        'BindingNavigatorSeparator
+        'Agenzia
         '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.Agenzia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Agenzia", True))
+        Me.Agenzia.Location = New System.Drawing.Point(167, 104)
+        Me.Agenzia.Name = "Agenzia"
+        Me.Agenzia.Size = New System.Drawing.Size(322, 20)
+        Me.Agenzia.TabIndex = 23
         '
-        'BindingNavigatorPositionItem
+        'Indirizzo
         '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Posizione"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
+        Me.Indirizzo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Indirizzo", True))
+        Me.Indirizzo.Location = New System.Drawing.Point(167, 145)
+        Me.Indirizzo.Name = "Indirizzo"
+        Me.Indirizzo.Size = New System.Drawing.Size(322, 20)
+        Me.Indirizzo.TabIndex = 24
+        '
+        'Localita
+        '
+        Me.Localita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Localita", True))
+        Me.Localita.Location = New System.Drawing.Point(167, 184)
+        Me.Localita.Name = "Localita"
+        Me.Localita.Size = New System.Drawing.Size(322, 20)
+        Me.Localita.TabIndex = 25
+        '
+        'Intestatario1
+        '
+        Me.Intestatario1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Intestatario1", True))
+        Me.Intestatario1.Location = New System.Drawing.Point(167, 234)
+        Me.Intestatario1.Name = "Intestatario1"
+        Me.Intestatario1.Size = New System.Drawing.Size(322, 20)
+        Me.Intestatario1.TabIndex = 26
+        '
+        'Intestatario2
+        '
+        Me.Intestatario2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Intestatario2", True))
+        Me.Intestatario2.Location = New System.Drawing.Point(167, 260)
+        Me.Intestatario2.Name = "Intestatario2"
+        Me.Intestatario2.Size = New System.Drawing.Size(322, 20)
+        Me.Intestatario2.TabIndex = 27
+        '
+        'ContoCorrente
+        '
+        Me.ContoCorrente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "ContoCorrente", True))
+        Me.ContoCorrente.Location = New System.Drawing.Point(167, 313)
+        Me.ContoCorrente.Name = "ContoCorrente"
+        Me.ContoCorrente.Size = New System.Drawing.Size(177, 20)
+        Me.ContoCorrente.TabIndex = 28
+        '
+        'IBAN
+        '
+        Me.IBAN.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "IBAN", True))
+        Me.IBAN.Location = New System.Drawing.Point(167, 352)
+        Me.IBAN.Name = "IBAN"
+        Me.IBAN.Size = New System.Drawing.Size(277, 20)
+        Me.IBAN.TabIndex = 29
+        '
+        'AnagraficaStudioBindingNavigator
+        '
+        Me.AnagraficaStudioBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.AnagraficaStudioBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.AnagraficaStudioBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.AnagraficaStudioBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.AnagraficaStudioBindingNavigatorSaveItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator1, Me.ToolStripButton2})
+        Me.AnagraficaStudioBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.AnagraficaStudioBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.AnagraficaStudioBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.AnagraficaStudioBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.AnagraficaStudioBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.AnagraficaStudioBindingNavigator.Name = "AnagraficaStudioBindingNavigator"
+        Me.AnagraficaStudioBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.AnagraficaStudioBindingNavigator.Size = New System.Drawing.Size(718, 38)
+        Me.AnagraficaStudioBindingNavigator.TabIndex = 30
+        Me.AnagraficaStudioBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(47, 35)
+        Me.BindingNavigatorAddNewItem.Text = "&Nuovo"
+        Me.BindingNavigatorAddNewItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 15)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 35)
         Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
         '
         'BindingNavigatorDeleteItem
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(50, 35)
+        Me.BindingNavigatorDeleteItem.Text = "&Elimina"
+        Me.BindingNavigatorDeleteItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BindingNavigatorDeleteItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ContiFinanziariBindingNavigatorSaveItem
+        'ToolStripButton1
         '
-        Me.ContiFinanziariBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ContiFinanziariBindingNavigatorSaveItem.Image = CType(resources.GetObject("ContiFinanziariBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.ContiFinanziariBindingNavigatorSaveItem.Name = "ContiFinanziariBindingNavigatorSaveItem"
-        Me.ContiFinanziariBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.ContiFinanziariBindingNavigatorSaveItem.Text = "Salva dati"
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(49, 35)
+        Me.ToolStripButton1.Text = "&Ricerca"
+        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ImmobileTextBox
+        'AnagraficaStudioBindingNavigatorSaveItem
         '
-        Me.ImmobileTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Immobile", True))
-        Me.ImmobileTextBox.Location = New System.Drawing.Point(24, 65)
-        Me.ImmobileTextBox.Name = "ImmobileTextBox"
-        Me.ImmobileTextBox.Size = New System.Drawing.Size(48, 20)
-        Me.ImmobileTextBox.TabIndex = 20
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Image = CType(resources.GetObject("AnagraficaStudioBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Name = "AnagraficaStudioBindingNavigatorSaveItem"
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Size = New System.Drawing.Size(38, 35)
+        Me.AnagraficaStudioBindingNavigatorSaveItem.Text = "&Salva"
+        Me.AnagraficaStudioBindingNavigatorSaveItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ContoTextBox
+        'BindingNavigatorSeparator2
         '
-        Me.ContoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Conto", True))
-        Me.ContoTextBox.Location = New System.Drawing.Point(96, 65)
-        Me.ContoTextBox.Name = "ContoTextBox"
-        Me.ContoTextBox.Size = New System.Drawing.Size(49, 20)
-        Me.ContoTextBox.TabIndex = 21
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 38)
         '
-        'BancaTextBox
+        'BindingNavigatorMoveFirstItem
         '
-        Me.BancaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Banca", True))
-        Me.BancaTextBox.Location = New System.Drawing.Point(167, 68)
-        Me.BancaTextBox.Name = "BancaTextBox"
-        Me.BancaTextBox.Size = New System.Drawing.Size(322, 20)
-        Me.BancaTextBox.TabIndex = 22
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(43, 35)
+        Me.BindingNavigatorMoveFirstItem.Text = "&Primo"
+        Me.BindingNavigatorMoveFirstItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'AgenziaTextBox
+        'BindingNavigatorMovePreviousItem
         '
-        Me.AgenziaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Agenzia", True))
-        Me.AgenziaTextBox.Location = New System.Drawing.Point(167, 104)
-        Me.AgenziaTextBox.Name = "AgenziaTextBox"
-        Me.AgenziaTextBox.Size = New System.Drawing.Size(322, 20)
-        Me.AgenziaTextBox.TabIndex = 23
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(52, 35)
+        Me.BindingNavigatorMovePreviousItem.Text = "&Indietro"
+        Me.BindingNavigatorMovePreviousItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'IndirizzoTextBox
+        'BindingNavigatorSeparator
         '
-        Me.IndirizzoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Indirizzo", True))
-        Me.IndirizzoTextBox.Location = New System.Drawing.Point(167, 145)
-        Me.IndirizzoTextBox.Name = "IndirizzoTextBox"
-        Me.IndirizzoTextBox.Size = New System.Drawing.Size(322, 20)
-        Me.IndirizzoTextBox.TabIndex = 24
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 38)
         '
-        'LocalitaTextBox
+        'BindingNavigatorPositionItem
         '
-        Me.LocalitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Localita", True))
-        Me.LocalitaTextBox.Location = New System.Drawing.Point(167, 184)
-        Me.LocalitaTextBox.Name = "LocalitaTextBox"
-        Me.LocalitaTextBox.Size = New System.Drawing.Size(322, 20)
-        Me.LocalitaTextBox.TabIndex = 25
+        Me.BindingNavigatorPositionItem.AccessibleName = "Posizione"
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 38)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'Intestatario1TextBox
+        'BindingNavigatorMoveNextItem
         '
-        Me.Intestatario1TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Intestatario1", True))
-        Me.Intestatario1TextBox.Location = New System.Drawing.Point(167, 234)
-        Me.Intestatario1TextBox.Name = "Intestatario1TextBox"
-        Me.Intestatario1TextBox.Size = New System.Drawing.Size(322, 20)
-        Me.Intestatario1TextBox.TabIndex = 26
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(45, 35)
+        Me.BindingNavigatorMoveNextItem.Text = "&Avanti"
+        Me.BindingNavigatorMoveNextItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'Intestatario2TextBox
+        'BindingNavigatorMoveLastItem
         '
-        Me.Intestatario2TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Intestatario2", True))
-        Me.Intestatario2TextBox.Location = New System.Drawing.Point(167, 260)
-        Me.Intestatario2TextBox.Name = "Intestatario2TextBox"
-        Me.Intestatario2TextBox.Size = New System.Drawing.Size(322, 20)
-        Me.Intestatario2TextBox.TabIndex = 27
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(47, 35)
+        Me.BindingNavigatorMoveLastItem.Text = "&Ultimo"
+        Me.BindingNavigatorMoveLastItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ContoCorrenteTextBox
+        'BindingNavigatorSeparator1
         '
-        Me.ContoCorrenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "ContoCorrente", True))
-        Me.ContoCorrenteTextBox.Location = New System.Drawing.Point(167, 313)
-        Me.ContoCorrenteTextBox.Name = "ContoCorrenteTextBox"
-        Me.ContoCorrenteTextBox.Size = New System.Drawing.Size(177, 20)
-        Me.ContoCorrenteTextBox.TabIndex = 28
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 38)
         '
-        'IBANTextBox
+        'ToolStripButton2
         '
-        Me.IBANTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "IBAN", True))
-        Me.IBANTextBox.Location = New System.Drawing.Point(167, 352)
-        Me.IBANTextBox.Name = "IBANTextBox"
-        Me.IBANTextBox.Size = New System.Drawing.Size(277, 20)
-        Me.IBANTextBox.TabIndex = 29
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(51, 35)
+        Me.ToolStripButton2.Text = "Sta&mpa"
+        Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ContiFinanziari
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(718, 398)
-        Me.Controls.Add(Me.IBANTextBox)
-        Me.Controls.Add(Me.ContoCorrenteTextBox)
-        Me.Controls.Add(Me.Intestatario2TextBox)
-        Me.Controls.Add(Me.Intestatario1TextBox)
-        Me.Controls.Add(Me.LocalitaTextBox)
-        Me.Controls.Add(Me.IndirizzoTextBox)
-        Me.Controls.Add(Me.AgenziaTextBox)
-        Me.Controls.Add(Me.BancaTextBox)
-        Me.Controls.Add(Me.ContoTextBox)
-        Me.Controls.Add(Me.ImmobileTextBox)
-        Me.Controls.Add(Me.ContiFinanziariBindingNavigator)
+        Me.Controls.Add(Me.AnagraficaStudioBindingNavigator)
+        Me.Controls.Add(Me.IBAN)
+        Me.Controls.Add(Me.ContoCorrente)
+        Me.Controls.Add(Me.Intestatario2)
+        Me.Controls.Add(Me.Intestatario1)
+        Me.Controls.Add(Me.Localita)
+        Me.Controls.Add(Me.Indirizzo)
+        Me.Controls.Add(Me.Agenzia)
+        Me.Controls.Add(Me.Banca)
+        Me.Controls.Add(Me.Conto)
+        Me.Controls.Add(Me.Immobile)
         Me.Controls.Add(IBANLabel)
         Me.Controls.Add(ContoCorrenteLabel)
         Me.Controls.Add(Intestatario1Label)
@@ -460,9 +481,9 @@ Partial Class ContiFinanziari
         Me.Text = "Conti Finanziari"
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ContiFinanziariBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ContiFinanziariBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContiFinanziariBindingNavigator.ResumeLayout(False)
-        Me.ContiFinanziariBindingNavigator.PerformLayout()
+        CType(Me.AnagraficaStudioBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.AnagraficaStudioBindingNavigator.ResumeLayout(False)
+        Me.AnagraficaStudioBindingNavigator.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -471,27 +492,29 @@ Partial Class ContiFinanziari
     Friend WithEvents ContiFinanziariBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ContiFinanziariTableAdapter As Patrimonio2014.IMMOBILIDataSetTableAdapters.ContiFinanziariTableAdapter
     Friend WithEvents TableAdapterManager As Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents ContiFinanziariBindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents Immobile As System.Windows.Forms.TextBox
+    Friend WithEvents Conto As System.Windows.Forms.TextBox
+    Friend WithEvents Banca As System.Windows.Forms.TextBox
+    Friend WithEvents Agenzia As System.Windows.Forms.TextBox
+    Friend WithEvents Indirizzo As System.Windows.Forms.TextBox
+    Friend WithEvents Localita As System.Windows.Forms.TextBox
+    Friend WithEvents Intestatario1 As System.Windows.Forms.TextBox
+    Friend WithEvents Intestatario2 As System.Windows.Forms.TextBox
+    Friend WithEvents ContoCorrente As System.Windows.Forms.TextBox
+    Friend WithEvents IBAN As System.Windows.Forms.TextBox
+    Friend WithEvents AnagraficaStudioBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents AnagraficaStudioBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BindingNavigatorMoveFirstItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorMovePreviousItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BindingNavigatorPositionItem As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BindingNavigatorMoveNextItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ContiFinanziariBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ImmobileTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ContoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents BancaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents AgenziaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents IndirizzoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents LocalitaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Intestatario1TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Intestatario2TextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ContoCorrenteTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents IBANTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
 End Class

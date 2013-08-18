@@ -15,7 +15,7 @@
 
     End Sub
 
-    Private Sub ContiFinanziariBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs) Handles ContiFinanziariBindingNavigatorSaveItem.Click
+    Private Sub ContiFinanziariBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs)
         Me.Validate()
         Me.ContiFinanziariBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)

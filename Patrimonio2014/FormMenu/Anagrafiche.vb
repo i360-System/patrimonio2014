@@ -17,7 +17,7 @@
 
     End Sub
 
-    Private Sub AnagraficheBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs) Handles AnagraficheBindingNavigatorSaveItem.Click
+    Private Sub AnagraficheBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs)
         Me.Validate()
         Me.AnagraficheBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)

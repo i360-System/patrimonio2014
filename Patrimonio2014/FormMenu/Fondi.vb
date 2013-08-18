@@ -15,7 +15,7 @@
 
     End Sub
 
-    Private Sub FondiBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs) Handles FondiBindingNavigatorSaveItem.Click
+    Private Sub FondiBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs)
         Me.Validate()
         Me.FondiBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)

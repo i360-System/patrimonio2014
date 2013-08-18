@@ -17,7 +17,7 @@
 
     End Sub
 
-    Private Sub FabbricatiBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs) Handles FabbricatiBindingNavigatorSaveItem.Click
+    Private Sub FabbricatiBindingNavigatorSaveItem_Click_1(sender As System.Object, e As System.EventArgs)
         Me.Validate()
         Me.FabbricatiBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)

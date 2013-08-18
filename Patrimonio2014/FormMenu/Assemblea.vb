@@ -23,7 +23,7 @@
 
     End Sub
 
-    Private Sub AssembleaBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles AssembleaBindingNavigatorSaveItem.Click
+    Private Sub AssembleaBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs)
         Me.Validate()
         Me.AssembleaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.IMMOBILIDataSet)
