@@ -52,41 +52,41 @@ Partial Class Immobili
         Me.ImmobiliTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.ImmobiliTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSetTableAdapters.TableAdapterManager()
         Me.ImmobiliBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ImmobiliBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.ImmobileTextBox = New System.Windows.Forms.TextBox()
-        Me.DenominazioneTextBox = New System.Windows.Forms.TextBox()
-        Me.IndirizzoTextBox = New System.Windows.Forms.TextBox()
-        Me.CapTextBox = New System.Windows.Forms.TextBox()
-        Me.LocalitaTextBox = New System.Windows.Forms.TextBox()
-        Me.ProvinciaTextBox = New System.Windows.Forms.TextBox()
-        Me.CodiceFiscaleTextBox = New System.Windows.Forms.TextBox()
-        Me.GruppoSpesaComboBox = New System.Windows.Forms.ComboBox()
-        Me.PdcPreventivoComboBox = New System.Windows.Forms.ComboBox()
-        Me.PdcConsuntivoComboBox = New System.Windows.Forms.ComboBox()
-        Me.ContoBancaComboBox = New System.Windows.Forms.ComboBox()
-        Me.ContoCassaComboBox = New System.Windows.Forms.ComboBox()
-        Me.ContoAnticipiComboBox = New System.Windows.Forms.ComboBox()
-        Me.ModuloCorrispondenzaTextBox = New System.Windows.Forms.TextBox()
-        Me.PercentoInteressiTextBox = New System.Windows.Forms.TextBox()
-        Me.GiorniScadenzaAvvisoTextBox = New System.Windows.Forms.TextBox()
-        Me.ArrotondamentoRateTextBox = New System.Windows.Forms.TextBox()
-        Me.SpeseIncassoTextBox = New System.Windows.Forms.TextBox()
-        Me.SaldoSuAvvisoTextBox = New System.Windows.Forms.TextBox()
-        Me.RiportiSuAvvisoTextBox = New System.Windows.Forms.TextBox()
-        Me.GruppoMillesimiTextBox = New System.Windows.Forms.TextBox()
-        Me.NoteTextBox = New System.Windows.Forms.TextBox()
-        Me.StudioComboBox = New System.Windows.Forms.ComboBox()
+        Me.Immobile = New System.Windows.Forms.TextBox()
+        Me.Denominazione = New System.Windows.Forms.TextBox()
+        Me.Indirizzo = New System.Windows.Forms.TextBox()
+        Me.Cap = New System.Windows.Forms.TextBox()
+        Me.Localita = New System.Windows.Forms.TextBox()
+        Me.Provincia = New System.Windows.Forms.TextBox()
+        Me.CodiceFiscale = New System.Windows.Forms.TextBox()
+        Me.GruppoSpesa = New System.Windows.Forms.ComboBox()
+        Me.PdcPreventivo = New System.Windows.Forms.ComboBox()
+        Me.PdcConsuntivo = New System.Windows.Forms.ComboBox()
+        Me.ContoBanca = New System.Windows.Forms.ComboBox()
+        Me.ContoCassa = New System.Windows.Forms.ComboBox()
+        Me.ContoAnticipi = New System.Windows.Forms.ComboBox()
+        Me.ModuloCorrispondenza = New System.Windows.Forms.TextBox()
+        Me.PercentoInteressi = New System.Windows.Forms.TextBox()
+        Me.GiorniScadenzaAvviso = New System.Windows.Forms.TextBox()
+        Me.ArrotondamentoRate = New System.Windows.Forms.TextBox()
+        Me.SpeseIncasso = New System.Windows.Forms.TextBox()
+        Me.SaldoSuAvviso = New System.Windows.Forms.TextBox()
+        Me.RiportiSuAvviso = New System.Windows.Forms.TextBox()
+        Me.GruppoMillesimi = New System.Windows.Forms.TextBox()
+        Me.Note = New System.Windows.Forms.TextBox()
+        Me.Studio = New System.Windows.Forms.ComboBox()
         ImmobileLabel = New System.Windows.Forms.Label()
         DenominazioneLabel = New System.Windows.Forms.Label()
         IndirizzoLabel = New System.Windows.Forms.Label()
@@ -425,6 +425,31 @@ Partial Class Immobili
         Me.ImmobiliBindingNavigator.TabIndex = 46
         Me.ImmobiliBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -457,17 +482,10 @@ Partial Class Immobili
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 15)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -475,7 +493,7 @@ Partial Class Immobili
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -484,259 +502,241 @@ Partial Class Immobili
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ImmobiliBindingNavigatorSaveItem
         '
         Me.ImmobiliBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.ImmobiliBindingNavigatorSaveItem.Image = CType(resources.GetObject("ImmobiliBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.ImmobiliBindingNavigatorSaveItem.Name = "ImmobiliBindingNavigatorSaveItem"
-        Me.ImmobiliBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.ImmobiliBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.ImmobiliBindingNavigatorSaveItem.Text = "Salva dati"
         '
-        'ImmobileTextBox
+        'Immobile
         '
-        Me.ImmobileTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Immobile", True))
-        Me.ImmobileTextBox.Location = New System.Drawing.Point(23, 80)
-        Me.ImmobileTextBox.Name = "ImmobileTextBox"
-        Me.ImmobileTextBox.Size = New System.Drawing.Size(48, 20)
-        Me.ImmobileTextBox.TabIndex = 47
+        Me.Immobile.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Immobile", True))
+        Me.Immobile.Location = New System.Drawing.Point(23, 80)
+        Me.Immobile.Name = "Immobile"
+        Me.Immobile.Size = New System.Drawing.Size(48, 20)
+        Me.Immobile.TabIndex = 47
         '
-        'DenominazioneTextBox
+        'Denominazione
         '
-        Me.DenominazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Denominazione", True))
-        Me.DenominazioneTextBox.Location = New System.Drawing.Point(93, 80)
-        Me.DenominazioneTextBox.Name = "DenominazioneTextBox"
-        Me.DenominazioneTextBox.Size = New System.Drawing.Size(215, 20)
-        Me.DenominazioneTextBox.TabIndex = 48
+        Me.Denominazione.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Denominazione", True))
+        Me.Denominazione.Location = New System.Drawing.Point(93, 80)
+        Me.Denominazione.Name = "Denominazione"
+        Me.Denominazione.Size = New System.Drawing.Size(215, 20)
+        Me.Denominazione.TabIndex = 48
         '
-        'IndirizzoTextBox
+        'Indirizzo
         '
-        Me.IndirizzoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Indirizzo", True))
-        Me.IndirizzoTextBox.Location = New System.Drawing.Point(93, 118)
-        Me.IndirizzoTextBox.Name = "IndirizzoTextBox"
-        Me.IndirizzoTextBox.Size = New System.Drawing.Size(215, 20)
-        Me.IndirizzoTextBox.TabIndex = 49
+        Me.Indirizzo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Indirizzo", True))
+        Me.Indirizzo.Location = New System.Drawing.Point(93, 118)
+        Me.Indirizzo.Name = "Indirizzo"
+        Me.Indirizzo.Size = New System.Drawing.Size(215, 20)
+        Me.Indirizzo.TabIndex = 49
         '
-        'CapTextBox
+        'Cap
         '
-        Me.CapTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Cap", True))
-        Me.CapTextBox.Location = New System.Drawing.Point(23, 157)
-        Me.CapTextBox.Name = "CapTextBox"
-        Me.CapTextBox.Size = New System.Drawing.Size(48, 20)
-        Me.CapTextBox.TabIndex = 50
+        Me.Cap.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Cap", True))
+        Me.Cap.Location = New System.Drawing.Point(23, 157)
+        Me.Cap.Name = "Cap"
+        Me.Cap.Size = New System.Drawing.Size(48, 20)
+        Me.Cap.TabIndex = 50
         '
-        'LocalitaTextBox
+        'Localita
         '
-        Me.LocalitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Localita", True))
-        Me.LocalitaTextBox.Location = New System.Drawing.Point(93, 157)
-        Me.LocalitaTextBox.Name = "LocalitaTextBox"
-        Me.LocalitaTextBox.Size = New System.Drawing.Size(215, 20)
-        Me.LocalitaTextBox.TabIndex = 51
+        Me.Localita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Localita", True))
+        Me.Localita.Location = New System.Drawing.Point(93, 157)
+        Me.Localita.Name = "Localita"
+        Me.Localita.Size = New System.Drawing.Size(215, 20)
+        Me.Localita.TabIndex = 51
         '
-        'ProvinciaTextBox
+        'Provincia
         '
-        Me.ProvinciaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Provincia", True))
-        Me.ProvinciaTextBox.Location = New System.Drawing.Point(326, 157)
-        Me.ProvinciaTextBox.Name = "ProvinciaTextBox"
-        Me.ProvinciaTextBox.Size = New System.Drawing.Size(51, 20)
-        Me.ProvinciaTextBox.TabIndex = 52
+        Me.Provincia.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Provincia", True))
+        Me.Provincia.Location = New System.Drawing.Point(326, 157)
+        Me.Provincia.Name = "Provincia"
+        Me.Provincia.Size = New System.Drawing.Size(51, 20)
+        Me.Provincia.TabIndex = 52
         '
-        'CodiceFiscaleTextBox
+        'CodiceFiscale
         '
-        Me.CodiceFiscaleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "CodiceFiscale", True))
-        Me.CodiceFiscaleTextBox.Location = New System.Drawing.Point(326, 80)
-        Me.CodiceFiscaleTextBox.Name = "CodiceFiscaleTextBox"
-        Me.CodiceFiscaleTextBox.Size = New System.Drawing.Size(198, 20)
-        Me.CodiceFiscaleTextBox.TabIndex = 53
+        Me.CodiceFiscale.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "CodiceFiscale", True))
+        Me.CodiceFiscale.Location = New System.Drawing.Point(326, 80)
+        Me.CodiceFiscale.Name = "CodiceFiscale"
+        Me.CodiceFiscale.Size = New System.Drawing.Size(198, 20)
+        Me.CodiceFiscale.TabIndex = 53
         '
-        'GruppoSpesaComboBox
+        'GruppoSpesa
         '
-        Me.GruppoSpesaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "GruppoSpesa", True))
-        Me.GruppoSpesaComboBox.FormattingEnabled = True
-        Me.GruppoSpesaComboBox.Location = New System.Drawing.Point(93, 207)
-        Me.GruppoSpesaComboBox.Name = "GruppoSpesaComboBox"
-        Me.GruppoSpesaComboBox.Size = New System.Drawing.Size(215, 21)
-        Me.GruppoSpesaComboBox.TabIndex = 54
+        Me.GruppoSpesa.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "GruppoSpesa", True))
+        Me.GruppoSpesa.FormattingEnabled = True
+        Me.GruppoSpesa.Location = New System.Drawing.Point(93, 207)
+        Me.GruppoSpesa.Name = "GruppoSpesa"
+        Me.GruppoSpesa.Size = New System.Drawing.Size(215, 21)
+        Me.GruppoSpesa.TabIndex = 54
         '
-        'PdcPreventivoComboBox
+        'PdcPreventivo
         '
-        Me.PdcPreventivoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "PdcPreventivo", True))
-        Me.PdcPreventivoComboBox.FormattingEnabled = True
-        Me.PdcPreventivoComboBox.Location = New System.Drawing.Point(322, 207)
-        Me.PdcPreventivoComboBox.Name = "PdcPreventivoComboBox"
-        Me.PdcPreventivoComboBox.Size = New System.Drawing.Size(202, 21)
-        Me.PdcPreventivoComboBox.TabIndex = 55
+        Me.PdcPreventivo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "PdcPreventivo", True))
+        Me.PdcPreventivo.FormattingEnabled = True
+        Me.PdcPreventivo.Location = New System.Drawing.Point(322, 207)
+        Me.PdcPreventivo.Name = "PdcPreventivo"
+        Me.PdcPreventivo.Size = New System.Drawing.Size(202, 21)
+        Me.PdcPreventivo.TabIndex = 55
         '
-        'PdcConsuntivoComboBox
+        'PdcConsuntivo
         '
-        Me.PdcConsuntivoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "PdcConsuntivo", True))
-        Me.PdcConsuntivoComboBox.FormattingEnabled = True
-        Me.PdcConsuntivoComboBox.Location = New System.Drawing.Point(542, 207)
-        Me.PdcConsuntivoComboBox.Name = "PdcConsuntivoComboBox"
-        Me.PdcConsuntivoComboBox.Size = New System.Drawing.Size(202, 21)
-        Me.PdcConsuntivoComboBox.TabIndex = 56
+        Me.PdcConsuntivo.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "PdcConsuntivo", True))
+        Me.PdcConsuntivo.FormattingEnabled = True
+        Me.PdcConsuntivo.Location = New System.Drawing.Point(542, 207)
+        Me.PdcConsuntivo.Name = "PdcConsuntivo"
+        Me.PdcConsuntivo.Size = New System.Drawing.Size(202, 21)
+        Me.PdcConsuntivo.TabIndex = 56
         '
-        'ContoBancaComboBox
+        'ContoBanca
         '
-        Me.ContoBancaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ContoBanca", True))
-        Me.ContoBancaComboBox.FormattingEnabled = True
-        Me.ContoBancaComboBox.Location = New System.Drawing.Point(93, 247)
-        Me.ContoBancaComboBox.Name = "ContoBancaComboBox"
-        Me.ContoBancaComboBox.Size = New System.Drawing.Size(215, 21)
-        Me.ContoBancaComboBox.TabIndex = 57
+        Me.ContoBanca.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ContoBanca", True))
+        Me.ContoBanca.FormattingEnabled = True
+        Me.ContoBanca.Location = New System.Drawing.Point(93, 247)
+        Me.ContoBanca.Name = "ContoBanca"
+        Me.ContoBanca.Size = New System.Drawing.Size(215, 21)
+        Me.ContoBanca.TabIndex = 57
         '
-        'ContoCassaComboBox
+        'ContoCassa
         '
-        Me.ContoCassaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ContoCassa", True))
-        Me.ContoCassaComboBox.FormattingEnabled = True
-        Me.ContoCassaComboBox.Location = New System.Drawing.Point(322, 247)
-        Me.ContoCassaComboBox.Name = "ContoCassaComboBox"
-        Me.ContoCassaComboBox.Size = New System.Drawing.Size(202, 21)
-        Me.ContoCassaComboBox.TabIndex = 58
+        Me.ContoCassa.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ContoCassa", True))
+        Me.ContoCassa.FormattingEnabled = True
+        Me.ContoCassa.Location = New System.Drawing.Point(322, 247)
+        Me.ContoCassa.Name = "ContoCassa"
+        Me.ContoCassa.Size = New System.Drawing.Size(202, 21)
+        Me.ContoCassa.TabIndex = 58
         '
-        'ContoAnticipiComboBox
+        'ContoAnticipi
         '
-        Me.ContoAnticipiComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ContoAnticipi", True))
-        Me.ContoAnticipiComboBox.FormattingEnabled = True
-        Me.ContoAnticipiComboBox.Location = New System.Drawing.Point(542, 247)
-        Me.ContoAnticipiComboBox.Name = "ContoAnticipiComboBox"
-        Me.ContoAnticipiComboBox.Size = New System.Drawing.Size(202, 21)
-        Me.ContoAnticipiComboBox.TabIndex = 59
+        Me.ContoAnticipi.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ContoAnticipi", True))
+        Me.ContoAnticipi.FormattingEnabled = True
+        Me.ContoAnticipi.Location = New System.Drawing.Point(542, 247)
+        Me.ContoAnticipi.Name = "ContoAnticipi"
+        Me.ContoAnticipi.Size = New System.Drawing.Size(202, 21)
+        Me.ContoAnticipi.TabIndex = 59
         '
-        'ModuloCorrispondenzaTextBox
+        'ModuloCorrispondenza
         '
-        Me.ModuloCorrispondenzaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ModuloCorrispondenza", True))
-        Me.ModuloCorrispondenzaTextBox.Location = New System.Drawing.Point(93, 298)
-        Me.ModuloCorrispondenzaTextBox.Name = "ModuloCorrispondenzaTextBox"
-        Me.ModuloCorrispondenzaTextBox.Size = New System.Drawing.Size(215, 20)
-        Me.ModuloCorrispondenzaTextBox.TabIndex = 60
+        Me.ModuloCorrispondenza.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ModuloCorrispondenza", True))
+        Me.ModuloCorrispondenza.Location = New System.Drawing.Point(93, 298)
+        Me.ModuloCorrispondenza.Name = "ModuloCorrispondenza"
+        Me.ModuloCorrispondenza.Size = New System.Drawing.Size(215, 20)
+        Me.ModuloCorrispondenza.TabIndex = 60
         '
-        'PercentoInteressiTextBox
+        'PercentoInteressi
         '
-        Me.PercentoInteressiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "PercentoInteressi", True))
-        Me.PercentoInteressiTextBox.Location = New System.Drawing.Point(326, 298)
-        Me.PercentoInteressiTextBox.Name = "PercentoInteressiTextBox"
-        Me.PercentoInteressiTextBox.Size = New System.Drawing.Size(92, 20)
-        Me.PercentoInteressiTextBox.TabIndex = 61
+        Me.PercentoInteressi.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "PercentoInteressi", True))
+        Me.PercentoInteressi.Location = New System.Drawing.Point(326, 298)
+        Me.PercentoInteressi.Name = "PercentoInteressi"
+        Me.PercentoInteressi.Size = New System.Drawing.Size(92, 20)
+        Me.PercentoInteressi.TabIndex = 61
         '
-        'GiorniScadenzaAvvisoTextBox
+        'GiorniScadenzaAvviso
         '
-        Me.GiorniScadenzaAvvisoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "GiorniScadenzaAvviso", True))
-        Me.GiorniScadenzaAvvisoTextBox.Location = New System.Drawing.Point(427, 298)
-        Me.GiorniScadenzaAvvisoTextBox.Name = "GiorniScadenzaAvvisoTextBox"
-        Me.GiorniScadenzaAvvisoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.GiorniScadenzaAvvisoTextBox.TabIndex = 62
+        Me.GiorniScadenzaAvviso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "GiorniScadenzaAvviso", True))
+        Me.GiorniScadenzaAvviso.Location = New System.Drawing.Point(427, 298)
+        Me.GiorniScadenzaAvviso.Name = "GiorniScadenzaAvviso"
+        Me.GiorniScadenzaAvviso.Size = New System.Drawing.Size(100, 20)
+        Me.GiorniScadenzaAvviso.TabIndex = 62
         '
-        'ArrotondamentoRateTextBox
+        'ArrotondamentoRate
         '
-        Me.ArrotondamentoRateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ArrotondamentoRate", True))
-        Me.ArrotondamentoRateTextBox.Location = New System.Drawing.Point(542, 298)
-        Me.ArrotondamentoRateTextBox.Name = "ArrotondamentoRateTextBox"
-        Me.ArrotondamentoRateTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ArrotondamentoRateTextBox.TabIndex = 63
+        Me.ArrotondamentoRate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "ArrotondamentoRate", True))
+        Me.ArrotondamentoRate.Location = New System.Drawing.Point(542, 298)
+        Me.ArrotondamentoRate.Name = "ArrotondamentoRate"
+        Me.ArrotondamentoRate.Size = New System.Drawing.Size(100, 20)
+        Me.ArrotondamentoRate.TabIndex = 63
         '
-        'SpeseIncassoTextBox
+        'SpeseIncasso
         '
-        Me.SpeseIncassoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "SpeseIncasso", True))
-        Me.SpeseIncassoTextBox.Location = New System.Drawing.Point(659, 298)
-        Me.SpeseIncassoTextBox.Name = "SpeseIncassoTextBox"
-        Me.SpeseIncassoTextBox.Size = New System.Drawing.Size(85, 20)
-        Me.SpeseIncassoTextBox.TabIndex = 64
+        Me.SpeseIncasso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "SpeseIncasso", True))
+        Me.SpeseIncasso.Location = New System.Drawing.Point(659, 298)
+        Me.SpeseIncasso.Name = "SpeseIncasso"
+        Me.SpeseIncasso.Size = New System.Drawing.Size(85, 20)
+        Me.SpeseIncasso.TabIndex = 64
         '
-        'SaldoSuAvvisoTextBox
+        'SaldoSuAvviso
         '
-        Me.SaldoSuAvvisoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "SaldoSuAvviso", True))
-        Me.SaldoSuAvvisoTextBox.Location = New System.Drawing.Point(93, 337)
-        Me.SaldoSuAvvisoTextBox.Name = "SaldoSuAvvisoTextBox"
-        Me.SaldoSuAvvisoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.SaldoSuAvvisoTextBox.TabIndex = 65
+        Me.SaldoSuAvviso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "SaldoSuAvviso", True))
+        Me.SaldoSuAvviso.Location = New System.Drawing.Point(93, 337)
+        Me.SaldoSuAvviso.Name = "SaldoSuAvviso"
+        Me.SaldoSuAvviso.Size = New System.Drawing.Size(100, 20)
+        Me.SaldoSuAvviso.TabIndex = 65
         '
-        'RiportiSuAvvisoTextBox
+        'RiportiSuAvviso
         '
-        Me.RiportiSuAvvisoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "RiportiSuAvviso", True))
-        Me.RiportiSuAvvisoTextBox.Location = New System.Drawing.Point(214, 337)
-        Me.RiportiSuAvvisoTextBox.Name = "RiportiSuAvvisoTextBox"
-        Me.RiportiSuAvvisoTextBox.Size = New System.Drawing.Size(94, 20)
-        Me.RiportiSuAvvisoTextBox.TabIndex = 66
+        Me.RiportiSuAvviso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "RiportiSuAvviso", True))
+        Me.RiportiSuAvviso.Location = New System.Drawing.Point(214, 337)
+        Me.RiportiSuAvviso.Name = "RiportiSuAvviso"
+        Me.RiportiSuAvviso.Size = New System.Drawing.Size(94, 20)
+        Me.RiportiSuAvviso.TabIndex = 66
         '
-        'GruppoMillesimiTextBox
+        'GruppoMillesimi
         '
-        Me.GruppoMillesimiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "GruppoMillesimi", True))
-        Me.GruppoMillesimiTextBox.Location = New System.Drawing.Point(326, 337)
-        Me.GruppoMillesimiTextBox.Name = "GruppoMillesimiTextBox"
-        Me.GruppoMillesimiTextBox.Size = New System.Drawing.Size(92, 20)
-        Me.GruppoMillesimiTextBox.TabIndex = 67
+        Me.GruppoMillesimi.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "GruppoMillesimi", True))
+        Me.GruppoMillesimi.Location = New System.Drawing.Point(326, 337)
+        Me.GruppoMillesimi.Name = "GruppoMillesimi"
+        Me.GruppoMillesimi.Size = New System.Drawing.Size(92, 20)
+        Me.GruppoMillesimi.TabIndex = 67
         '
-        'NoteTextBox
+        'Note
         '
-        Me.NoteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Note", True))
-        Me.NoteTextBox.Location = New System.Drawing.Point(93, 396)
-        Me.NoteTextBox.Name = "NoteTextBox"
-        Me.NoteTextBox.Size = New System.Drawing.Size(651, 20)
-        Me.NoteTextBox.TabIndex = 68
+        Me.Note.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Note", True))
+        Me.Note.Location = New System.Drawing.Point(93, 396)
+        Me.Note.Name = "Note"
+        Me.Note.Size = New System.Drawing.Size(651, 20)
+        Me.Note.TabIndex = 68
         '
-        'StudioComboBox
+        'Studio
         '
-        Me.StudioComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Studio", True))
-        Me.StudioComboBox.FormattingEnabled = True
-        Me.StudioComboBox.Location = New System.Drawing.Point(542, 80)
-        Me.StudioComboBox.Name = "StudioComboBox"
-        Me.StudioComboBox.Size = New System.Drawing.Size(202, 21)
-        Me.StudioComboBox.TabIndex = 69
+        Me.Studio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ImmobiliBindingSource, "Studio", True))
+        Me.Studio.FormattingEnabled = True
+        Me.Studio.Location = New System.Drawing.Point(542, 80)
+        Me.Studio.Name = "Studio"
+        Me.Studio.Size = New System.Drawing.Size(202, 21)
+        Me.Studio.TabIndex = 69
         '
         'Immobili
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(873, 445)
-        Me.Controls.Add(Me.StudioComboBox)
-        Me.Controls.Add(Me.NoteTextBox)
-        Me.Controls.Add(Me.GruppoMillesimiTextBox)
-        Me.Controls.Add(Me.RiportiSuAvvisoTextBox)
-        Me.Controls.Add(Me.SaldoSuAvvisoTextBox)
-        Me.Controls.Add(Me.SpeseIncassoTextBox)
-        Me.Controls.Add(Me.ArrotondamentoRateTextBox)
-        Me.Controls.Add(Me.GiorniScadenzaAvvisoTextBox)
-        Me.Controls.Add(Me.PercentoInteressiTextBox)
-        Me.Controls.Add(Me.ModuloCorrispondenzaTextBox)
-        Me.Controls.Add(Me.ContoAnticipiComboBox)
-        Me.Controls.Add(Me.ContoCassaComboBox)
-        Me.Controls.Add(Me.ContoBancaComboBox)
-        Me.Controls.Add(Me.PdcConsuntivoComboBox)
-        Me.Controls.Add(Me.PdcPreventivoComboBox)
-        Me.Controls.Add(Me.GruppoSpesaComboBox)
-        Me.Controls.Add(Me.CodiceFiscaleTextBox)
-        Me.Controls.Add(Me.ProvinciaTextBox)
-        Me.Controls.Add(Me.LocalitaTextBox)
-        Me.Controls.Add(Me.CapTextBox)
-        Me.Controls.Add(Me.IndirizzoTextBox)
-        Me.Controls.Add(Me.DenominazioneTextBox)
-        Me.Controls.Add(Me.ImmobileTextBox)
+        Me.Controls.Add(Me.Studio)
+        Me.Controls.Add(Me.Note)
+        Me.Controls.Add(Me.GruppoMillesimi)
+        Me.Controls.Add(Me.RiportiSuAvviso)
+        Me.Controls.Add(Me.SaldoSuAvviso)
+        Me.Controls.Add(Me.SpeseIncasso)
+        Me.Controls.Add(Me.ArrotondamentoRate)
+        Me.Controls.Add(Me.GiorniScadenzaAvviso)
+        Me.Controls.Add(Me.PercentoInteressi)
+        Me.Controls.Add(Me.ModuloCorrispondenza)
+        Me.Controls.Add(Me.ContoAnticipi)
+        Me.Controls.Add(Me.ContoCassa)
+        Me.Controls.Add(Me.ContoBanca)
+        Me.Controls.Add(Me.PdcConsuntivo)
+        Me.Controls.Add(Me.PdcPreventivo)
+        Me.Controls.Add(Me.GruppoSpesa)
+        Me.Controls.Add(Me.CodiceFiscale)
+        Me.Controls.Add(Me.Provincia)
+        Me.Controls.Add(Me.Localita)
+        Me.Controls.Add(Me.Cap)
+        Me.Controls.Add(Me.Indirizzo)
+        Me.Controls.Add(Me.Denominazione)
+        Me.Controls.Add(Me.Immobile)
         Me.Controls.Add(Me.ImmobiliBindingNavigator)
         Me.Controls.Add(NoteLabel)
         Me.Controls.Add(StudioLabel)
@@ -789,27 +789,27 @@ Partial Class Immobili
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ImmobiliBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ImmobileTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DenominazioneTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents IndirizzoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CapTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents LocalitaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ProvinciaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CodiceFiscaleTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GruppoSpesaComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents PdcPreventivoComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents PdcConsuntivoComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents ContoBancaComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents ContoCassaComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents ContoAnticipiComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents ModuloCorrispondenzaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PercentoInteressiTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GiorniScadenzaAvvisoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ArrotondamentoRateTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents SpeseIncassoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents SaldoSuAvvisoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents RiportiSuAvvisoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents GruppoMillesimiTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents NoteTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StudioComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Immobile As System.Windows.Forms.TextBox
+    Friend WithEvents Denominazione As System.Windows.Forms.TextBox
+    Friend WithEvents Indirizzo As System.Windows.Forms.TextBox
+    Friend WithEvents Cap As System.Windows.Forms.TextBox
+    Friend WithEvents Localita As System.Windows.Forms.TextBox
+    Friend WithEvents Provincia As System.Windows.Forms.TextBox
+    Friend WithEvents CodiceFiscale As System.Windows.Forms.TextBox
+    Friend WithEvents GruppoSpesa As System.Windows.Forms.ComboBox
+    Friend WithEvents PdcPreventivo As System.Windows.Forms.ComboBox
+    Friend WithEvents PdcConsuntivo As System.Windows.Forms.ComboBox
+    Friend WithEvents ContoBanca As System.Windows.Forms.ComboBox
+    Friend WithEvents ContoCassa As System.Windows.Forms.ComboBox
+    Friend WithEvents ContoAnticipi As System.Windows.Forms.ComboBox
+    Friend WithEvents ModuloCorrispondenza As System.Windows.Forms.TextBox
+    Friend WithEvents PercentoInteressi As System.Windows.Forms.TextBox
+    Friend WithEvents GiorniScadenzaAvviso As System.Windows.Forms.TextBox
+    Friend WithEvents ArrotondamentoRate As System.Windows.Forms.TextBox
+    Friend WithEvents SpeseIncasso As System.Windows.Forms.TextBox
+    Friend WithEvents SaldoSuAvviso As System.Windows.Forms.TextBox
+    Friend WithEvents RiportiSuAvviso As System.Windows.Forms.TextBox
+    Friend WithEvents GruppoMillesimi As System.Windows.Forms.TextBox
+    Friend WithEvents Note As System.Windows.Forms.TextBox
+    Friend WithEvents Studio As System.Windows.Forms.ComboBox
 End Class

@@ -27,7 +27,6 @@ Partial Class Fabbricati
         Dim FabbricatoLabel As System.Windows.Forms.Label
         Dim DescrizioneLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fabbricati))
-        Me.ScaleTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.ScaleTableAdapter()
         Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet()
         Me.FabbricatiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FabbricatiTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.FabbricatiTableAdapter()
@@ -35,8 +34,6 @@ Partial Class Fabbricati
         Me.Fabbricato = New System.Windows.Forms.TextBox()
         Me.Immobile = New System.Windows.Forms.TextBox()
         Me.Descrizione = New System.Windows.Forms.TextBox()
-        Me.ScaleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ScaleDataGridView = New System.Windows.Forms.DataGridView()
         Me.AnagraficaStudioBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -52,6 +49,11 @@ Partial Class Fabbricati
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
+        Me.FabbricatiDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FabbricatiDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter()
+        Me.TableAdapterManager1 = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
+        Me.FabbricatiDettaglio = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         ImmobileLabel = New System.Windows.Forms.Label()
@@ -59,10 +61,11 @@ Partial Class Fabbricati
         DescrizioneLabel = New System.Windows.Forms.Label()
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FabbricatiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ScaleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ScaleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnagraficaStudioBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AnagraficaStudioBindingNavigator.SuspendLayout()
+        CType(Me.IMMOBILIDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FabbricatiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FabbricatiDettaglio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImmobileLabel
@@ -91,10 +94,6 @@ Partial Class Fabbricati
         DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
         DescrizioneLabel.TabIndex = 4
         DescrizioneLabel.Text = "Descrizione:"
-        '
-        'ScaleTableAdapter
-        '
-        Me.ScaleTableAdapter.ClearBeforeFill = True
         '
         'IMMOBILIDataSet
         '
@@ -131,7 +130,7 @@ Partial Class Fabbricati
         Me.TableAdapterManager.PianoContiConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoTableAdapter = Nothing
-        Me.TableAdapterManager.ScaleTableAdapter = Me.ScaleTableAdapter
+        Me.TableAdapterManager.ScaleTableAdapter = Nothing
         Me.TableAdapterManager.TabellaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.TabellaTableAdapter = Nothing
         Me.TableAdapterManager.UnitaDettaglioAnagraficaTableAdapter = Nothing
@@ -203,22 +202,6 @@ Partial Class Fabbricati
         Me.Descrizione.Name = "Descrizione"
         Me.Descrizione.Size = New System.Drawing.Size(357, 20)
         Me.Descrizione.TabIndex = 10
-        '
-        'ScaleBindingSource
-        '
-        Me.ScaleBindingSource.DataMember = "Scale"
-        Me.ScaleBindingSource.DataSource = Me.IMMOBILIDataSet
-        '
-        'ScaleDataGridView
-        '
-        Me.ScaleDataGridView.AutoGenerateColumns = False
-        Me.ScaleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ScaleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.ScaleDataGridView.DataSource = Me.ScaleBindingSource
-        Me.ScaleDataGridView.Location = New System.Drawing.Point(20, 168)
-        Me.ScaleDataGridView.Name = "ScaleDataGridView"
-        Me.ScaleDataGridView.Size = New System.Drawing.Size(447, 220)
-        Me.ScaleDataGridView.TabIndex = 10
         '
         'AnagraficaStudioBindingNavigator
         '
@@ -350,6 +333,82 @@ Partial Class Fabbricati
         Me.ToolStripButton2.Text = "Sta&mpa"
         Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'IMMOBILIDataSet2
+        '
+        Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
+        Me.IMMOBILIDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FabbricatiDettaglioBindingSource
+        '
+        Me.FabbricatiDettaglioBindingSource.DataMember = "FabbricatiDettaglio"
+        Me.FabbricatiDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
+        '
+        'FabbricatiDettaglioTableAdapter
+        '
+        Me.FabbricatiDettaglioTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.AnagraficaStudioTableAdapter = Nothing
+        Me.TableAdapterManager1.AnagraficheTableAdapter = Nothing
+        Me.TableAdapterManager1.AssembleaDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.AssembleaTableAdapter = Nothing
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.ContiFinanziariTableAdapter = Nothing
+        Me.TableAdapterManager1.CostantiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.CostantiTableAdapter = Nothing
+        Me.TableAdapterManager1.FabbricatiDettaglioTableAdapter = Me.FabbricatiDettaglioTableAdapter
+        Me.TableAdapterManager1.FabbricatiTableAdapter = Nothing
+        Me.TableAdapterManager1.FondiTableAdapter = Nothing
+        Me.TableAdapterManager1.FornitoriTableAdapter = Nothing
+        Me.TableAdapterManager1.GruppiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.GruppiTableAdapter = Nothing
+        Me.TableAdapterManager1.ImmobiliTableAdapter = Nothing
+        Me.TableAdapterManager1.PianoContiConsuntivoDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.PianoContiConsuntivoTableAdapter = Nothing
+        Me.TableAdapterManager1.PianoContiPreventivoDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.PianoContiPreventivoTableAdapter = Nothing
+        Me.TableAdapterManager1.TabellaDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.TabellaTableAdapter = Nothing
+        Me.TableAdapterManager1.UnitaDettaglioAnagraficaTableAdapter = Nothing
+        Me.TableAdapterManager1.UnitaDettaglioLettureTableAdapter = Nothing
+        Me.TableAdapterManager1.UnitaDettaglioMillesimiTableAdapter = Nothing
+        Me.TableAdapterManager1.UnitaDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.UnitaTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.V_PreventivoDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.V_PreventivoTableAdapter = Nothing
+        Me.TableAdapterManager1.W_EmissioniDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.W_EmissioniTableAdapter = Nothing
+        Me.TableAdapterManager1.W_RitenuteTableAdapter = Nothing
+        Me.TableAdapterManager1.W_TributiTableAdapter = Nothing
+        Me.TableAdapterManager1.X_CausaliTableAdapter = Nothing
+        Me.TableAdapterManager1.X_FattureDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.X_FattureTableAdapter = Nothing
+        Me.TableAdapterManager1.X_MovimentiCondominiTableAdapter = Nothing
+        Me.TableAdapterManager1.X_MovimentiFinanziariTableAdapter = Nothing
+        Me.TableAdapterManager1.X_MovimentiFondiTableAdapter = Nothing
+        Me.TableAdapterManager1.X_SpeseDescrizioniTableAdapter = Nothing
+        Me.TableAdapterManager1.X_SpeseTableAdapter = Nothing
+        Me.TableAdapterManager1.Y_GestioniDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.Y_GestioniTableAdapter = Nothing
+        Me.TableAdapterManager1.Y_GestioniUnitaDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.Y_GestioniUnitaTableAdapter = Nothing
+        Me.TableAdapterManager1.Z_ConsuntivoDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager1.Z_ConsuntivoTableAdapter = Nothing
+        Me.TableAdapterManager1.Z_TestoSollecitoTableAdapter = Nothing
+        '
+        'FabbricatiDettaglio
+        '
+        Me.FabbricatiDettaglio.AutoGenerateColumns = False
+        Me.FabbricatiDettaglio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.FabbricatiDettaglio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.FabbricatiDettaglio.DataSource = Me.FabbricatiDettaglioBindingSource
+        Me.FabbricatiDettaglio.Location = New System.Drawing.Point(25, 171)
+        Me.FabbricatiDettaglio.Name = "FabbricatiDettaglio"
+        Me.FabbricatiDettaglio.Size = New System.Drawing.Size(513, 220)
+        Me.FabbricatiDettaglio.TabIndex = 26
+        '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Scala"
@@ -361,15 +420,15 @@ Partial Class Fabbricati
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Descrizione"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Descrizione"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 250
+        Me.DataGridViewTextBoxColumn4.Width = 200
         '
         'Fabbricati
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(584, 415)
+        Me.Controls.Add(Me.FabbricatiDettaglio)
         Me.Controls.Add(Me.AnagraficaStudioBindingNavigator)
-        Me.Controls.Add(Me.ScaleDataGridView)
         Me.Controls.Add(Me.Descrizione)
         Me.Controls.Add(Me.Immobile)
         Me.Controls.Add(Me.Fabbricato)
@@ -380,16 +439,16 @@ Partial Class Fabbricati
         Me.Text = "Struttura Fabbricato"
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FabbricatiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ScaleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ScaleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnagraficaStudioBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AnagraficaStudioBindingNavigator.ResumeLayout(False)
         Me.AnagraficaStudioBindingNavigator.PerformLayout()
+        CType(Me.IMMOBILIDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FabbricatiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FabbricatiDettaglio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ScaleTableAdapter As Patrimonio2014.IMMOBILIDataSetTableAdapters.ScaleTableAdapter
     Friend WithEvents IMMOBILIDataSet As Patrimonio2014.IMMOBILIDataSet
     Friend WithEvents FabbricatiBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents FabbricatiTableAdapter As Patrimonio2014.IMMOBILIDataSetTableAdapters.FabbricatiTableAdapter
@@ -397,8 +456,6 @@ Partial Class Fabbricati
     Friend WithEvents Fabbricato As System.Windows.Forms.TextBox
     Friend WithEvents Immobile As System.Windows.Forms.TextBox
     Friend WithEvents Descrizione As System.Windows.Forms.TextBox
-    Friend WithEvents ScaleBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ScaleDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents AnagraficaStudioBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -414,6 +471,11 @@ Partial Class Fabbricati
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents IMMOBILIDataSet2 As Patrimonio2014.IMMOBILIDataSet2
+    Friend WithEvents FabbricatiDettaglioBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents FabbricatiDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter
+    Friend WithEvents TableAdapterManager1 As Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager
+    Friend WithEvents FabbricatiDettaglio As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
