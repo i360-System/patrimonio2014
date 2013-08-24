@@ -43,7 +43,7 @@ Partial Class Fornitori
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Fornitore = New System.Windows.Forms.TextBox()
         Me.FornitoriBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IMMOBILIDataSet1 = New Patrimonio2014.IMMOBILIDataSet1()
+        Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -85,10 +85,10 @@ Partial Class Fornitori
         Me.Agenzia = New System.Windows.Forms.TextBox()
         Me.Banca = New System.Windows.Forms.TextBox()
         Me.conto = New System.Windows.Forms.TextBox()
-        Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet()
-        Me.FornitoriTableAdapter = New Patrimonio2014.IMMOBILIDataSetTableAdapters.FornitoriTableAdapter()
-        Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet1TableAdapters.TableAdapterManager()
-        Me.FornitoriTableAdapter1 = New Patrimonio2014.IMMOBILIDataSet1TableAdapters.FornitoriTableAdapter()
+        Me.IMMOBILIDataSet = New Patrimonio2014.IMMOBILIDataSet2()
+        Me.FornitoriTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FornitoriTableAdapter()
+        Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
+        Me.FornitoriTableAdapter1 = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FornitoriTableAdapter()
         Me.FornitoriBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -106,7 +106,7 @@ Partial Class Fornitori
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.FornitoriBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IMMOBILIDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IMMOBILIDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FornitoriBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -337,12 +337,12 @@ Partial Class Fornitori
         'FornitoriBindingSource
         '
         Me.FornitoriBindingSource.DataMember = "Fornitori"
-        Me.FornitoriBindingSource.DataSource = Me.IMMOBILIDataSet1
+        Me.FornitoriBindingSource.DataSource = Me.IMMOBILIDataSet2
         '
         'IMMOBILIDataSet1
         '
-        Me.IMMOBILIDataSet1.DataSetName = "IMMOBILIDataSet1"
-        Me.IMMOBILIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
+        Me.IMMOBILIDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label13
         '
@@ -739,19 +739,19 @@ Partial Class Fornitori
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
         Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.Errori_di_conversioneTableAdapter = Nothing
+        'Me.TableAdapterManager.Errori_di_conversioneTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Me.FornitoriTableAdapter1
         Me.TableAdapterManager.GruppiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.GruppiTableAdapter = Nothing
         Me.TableAdapterManager.ImmobiliTableAdapter = Nothing
-        Me.TableAdapterManager.OperatoriTableAdapter = Nothing
+        'Me.TableAdapterManager.OperatoriTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiConsuntivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoTableAdapter = Nothing
-        Me.TableAdapterManager.ScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.TabellaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.TabellaTableAdapter = Nothing
         Me.TableAdapterManager.UnitaDettaglioAnagraficaTableAdapter = Nothing
@@ -759,9 +759,9 @@ Partial Class Fornitori
         Me.TableAdapterManager.UnitaDettaglioMillesimiTableAdapter = Nothing
         Me.TableAdapterManager.UnitaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.UnitaTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Patrimonio2014.IMMOBILIDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.V_ConsuntivoDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.V_ConsuntivoTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        'Me.TableAdapterManager.V_ConsuntivoDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.V_ConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.V_PreventivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.V_PreventivoTableAdapter = Nothing
         Me.TableAdapterManager.W_EmissioniDettaglioTableAdapter = Nothing
@@ -780,25 +780,25 @@ Partial Class Fornitori
         Me.TableAdapterManager.Y_GestioniTableAdapter = Nothing
         Me.TableAdapterManager.Y_GestioniUnitaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.Y_GestioniUnitaTableAdapter = Nothing
-        Me.TableAdapterManager.Z_AvvisiDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.Z_AvvisiTableAdapter = Nothing
-        Me.TableAdapterManager.Z_BilancioTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_AvvisiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_AvvisiTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_BilancioTableAdapter = Nothing
         Me.TableAdapterManager.Z_ConsuntivoDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.Z_ConsuntivoRipartoDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.Z_ConsuntivoRipartoTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_ConsuntivoRipartoDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_ConsuntivoRipartoTableAdapter = Nothing
         Me.TableAdapterManager.Z_ConsuntivoTableAdapter = Nothing
-        Me.TableAdapterManager.Z_ConvocazioniDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.Z_ConvocazioniTableAdapter = Nothing
-        Me.TableAdapterManager.Z_EmissioniTableAdapter = Nothing
-        Me.TableAdapterManager.Z_EtichetteTableAdapter = Nothing
-        Me.TableAdapterManager.Z_InteressiTableAdapter = Nothing
-        Me.TableAdapterManager.Z_PreventivoRipartoDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.Z_PreventivoRipartoTableAdapter = Nothing
-        Me.TableAdapterManager.Z_RaffrontoTableAdapter = Nothing
-        Me.TableAdapterManager.Z_SaldoTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_ConvocazioniDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_ConvocazioniTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_EmissioniTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_EtichetteTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_InteressiTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_PreventivoRipartoDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_PreventivoRipartoTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_RaffrontoTableAdapter = Nothing
+        'Me.TableAdapterManager.Z_SaldoTableAdapter = Nothing
         Me.TableAdapterManager.Z_TestoSollecitoTableAdapter = Nothing
-        Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
+        'Me.TableAdapterManager.ZZ_RipartoDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.ZZ_RipartoTableAdapter = Nothing
         '
         'FornitoriTableAdapter1
         '
@@ -932,7 +932,7 @@ Partial Class Fornitori
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.FornitoriBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IMMOBILIDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IMMOBILIDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.IMMOBILIDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1000,10 +1000,10 @@ Partial Class Fornitori
     Friend WithEvents Banca As System.Windows.Forms.TextBox
     Friend WithEvents conto As System.Windows.Forms.TextBox
     Public WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents IMMOBILIDataSet As Patrimonio2014.IMMOBILIDataSet
+    Friend WithEvents IMMOBILIDataSet As Patrimonio2014.IMMOBILIDataSet2
     Friend WithEvents FornitoriBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents FornitoriTableAdapter As Patrimonio2014.IMMOBILIDataSetTableAdapters.FornitoriTableAdapter
-    Friend WithEvents TableAdapterManager As Patrimonio2014.IMMOBILIDataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents FornitoriTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FornitoriTableAdapter
+    Friend WithEvents TableAdapterManager As Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager
     Friend WithEvents FornitoriBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents BindingNavigatorAddNewItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
@@ -1018,6 +1018,6 @@ Partial Class Fornitori
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents FornitoriBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents Fornitore As System.Windows.Forms.TextBox
-    Friend WithEvents IMMOBILIDataSet1 As Patrimonio2014.IMMOBILIDataSet1
-    Friend WithEvents FornitoriTableAdapter1 As Patrimonio2014.IMMOBILIDataSet1TableAdapters.FornitoriTableAdapter
+    Friend WithEvents IMMOBILIDataSet2 As Patrimonio2014.IMMOBILIDataSet2
+    Friend WithEvents FornitoriTableAdapter1 As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FornitoriTableAdapter
 End Class

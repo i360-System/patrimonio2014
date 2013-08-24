@@ -205,4 +205,8 @@
         NewMDIChild.Show()
 
     End Sub
+
+    Private Sub ArchivioSpeseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioSpeseToolStripMenuItem.Click
+
+    End Sub
 End Class

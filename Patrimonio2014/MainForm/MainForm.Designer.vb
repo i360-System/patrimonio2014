@@ -136,7 +136,7 @@ Partial Class MainForm
         '
         Me.SpeseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivioSpeseToolStripMenuItem, Me.ArchivioFattureToolStripMenuItem, Me.CausaliPerLeSpeseToolStripMenuItem})
         Me.SpeseToolStripMenuItem.Name = "SpeseToolStripMenuItem"
-        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SpeseToolStripMenuItem.Text = "Spese"
         '
         'ArchivioSpeseToolStripMenuItem
@@ -161,7 +161,7 @@ Partial Class MainForm
         '
         Me.IncassiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IncassiDaMAvToolStripMenuItem, Me.IncassiDaCartaceoToolStripMenuItem})
         Me.IncassiToolStripMenuItem.Name = "IncassiToolStripMenuItem"
-        Me.IncassiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.IncassiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.IncassiToolStripMenuItem.Text = "Incassi"
         '
         'IncassiDaMAvToolStripMenuItem
@@ -180,7 +180,7 @@ Partial Class MainForm
         '
         Me.SollecitiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SituazioneSollecitiToolStripMenuItem, Me.GeneraSollecitiToolStripMenuItem, Me.TestiPerIlSollecitoToolStripMenuItem, Me.CalcoloDelleMorositaToolStripMenuItem})
         Me.SollecitiToolStripMenuItem.Name = "SollecitiToolStripMenuItem"
-        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SollecitiToolStripMenuItem.Text = "Solleciti"
         '
         'SituazioneSollecitiToolStripMenuItem
@@ -211,7 +211,7 @@ Partial Class MainForm
         '
         Me.MovimentiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimentiDeiCondominiToolStripMenuItem, Me.MovimentiDeiContiFinanziariToolStripMenuItem, Me.MovimentiDeiFondiToolStripMenuItem})
         Me.MovimentiToolStripMenuItem.Name = "MovimentiToolStripMenuItem"
-        Me.MovimentiToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.MovimentiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MovimentiToolStripMenuItem.Text = "Movimenti"
         '
         'MovimentiDeiCondominiToolStripMenuItem
