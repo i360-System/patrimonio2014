@@ -751,7 +751,7 @@ Partial Class Fornitori
         Me.TableAdapterManager.PianoContiConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
         Me.TableAdapterManager.TabellaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.TabellaTableAdapter = Nothing
         Me.TableAdapterManager.UnitaDettaglioAnagraficaTableAdapter = Nothing
