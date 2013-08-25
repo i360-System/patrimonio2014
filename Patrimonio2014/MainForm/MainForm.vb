@@ -117,11 +117,11 @@
     End Sub
 
     Private Sub ArchivioDelleConvocazioniToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArchivioDelleConvocazioniToolStripMenuItem.Click
-        'Dim NewMDIChild As New Assemblea
+        Dim NewMDIChild As New Assemblea
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 

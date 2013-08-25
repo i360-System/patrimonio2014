@@ -105,6 +105,12 @@
     <Compile Include="FormMenu\Anagrafiche.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Assemblea.Designer.vb">
+      <DependentUpon>Assemblea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Assemblea.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fornitori.Designer.vb">
       <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Anagrafiche.resx">
       <DependentUpon>Anagrafiche.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Assemblea.resx">
+      <DependentUpon>Assemblea.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Cassa.resx">
       <DependentUpon>Cassa.vb</DependentUpon>
