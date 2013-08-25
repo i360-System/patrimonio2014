@@ -92,6 +92,7 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSulSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSullaLicenzaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GiornaleDiCassaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -127,7 +128,7 @@ Partial Class MainForm
         '
         'MovimentazioneToolStripMenuItem
         '
-        Me.MovimentazioneToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpeseToolStripMenuItem, Me.IncassiToolStripMenuItem, Me.SollecitiToolStripMenuItem, Me.MovimentiToolStripMenuItem})
+        Me.MovimentazioneToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpeseToolStripMenuItem, Me.IncassiToolStripMenuItem, Me.SollecitiToolStripMenuItem, Me.MovimentiToolStripMenuItem, Me.GiornaleDiCassaToolStripMenuItem})
         Me.MovimentazioneToolStripMenuItem.Name = "MovimentazioneToolStripMenuItem"
         Me.MovimentazioneToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.MovimentazioneToolStripMenuItem.Text = "Movimentazione"
@@ -136,7 +137,7 @@ Partial Class MainForm
         '
         Me.SpeseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivioSpeseToolStripMenuItem, Me.ArchivioFattureToolStripMenuItem, Me.CausaliPerLeSpeseToolStripMenuItem})
         Me.SpeseToolStripMenuItem.Name = "SpeseToolStripMenuItem"
-        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SpeseToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SpeseToolStripMenuItem.Text = "Spese"
         '
         'ArchivioSpeseToolStripMenuItem
@@ -161,7 +162,7 @@ Partial Class MainForm
         '
         Me.IncassiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IncassiDaMAvToolStripMenuItem, Me.IncassiDaCartaceoToolStripMenuItem})
         Me.IncassiToolStripMenuItem.Name = "IncassiToolStripMenuItem"
-        Me.IncassiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IncassiToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.IncassiToolStripMenuItem.Text = "Incassi"
         '
         'IncassiDaMAvToolStripMenuItem
@@ -180,7 +181,7 @@ Partial Class MainForm
         '
         Me.SollecitiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SituazioneSollecitiToolStripMenuItem, Me.GeneraSollecitiToolStripMenuItem, Me.TestiPerIlSollecitoToolStripMenuItem, Me.CalcoloDelleMorositaToolStripMenuItem})
         Me.SollecitiToolStripMenuItem.Name = "SollecitiToolStripMenuItem"
-        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SollecitiToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.SollecitiToolStripMenuItem.Text = "Solleciti"
         '
         'SituazioneSollecitiToolStripMenuItem
@@ -211,7 +212,7 @@ Partial Class MainForm
         '
         Me.MovimentiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimentiDeiCondominiToolStripMenuItem, Me.MovimentiDeiContiFinanziariToolStripMenuItem, Me.MovimentiDeiFondiToolStripMenuItem})
         Me.MovimentiToolStripMenuItem.Name = "MovimentiToolStripMenuItem"
-        Me.MovimentiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MovimentiToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.MovimentiToolStripMenuItem.Text = "Movimenti"
         '
         'MovimentiDeiCondominiToolStripMenuItem
@@ -540,6 +541,12 @@ Partial Class MainForm
         Me.InformazioniSullaLicenzaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
         Me.InformazioniSullaLicenzaToolStripMenuItem.Text = "Informazioni sulla licenza"
         '
+        'GiornaleDiCassaToolStripMenuItem
+        '
+        Me.GiornaleDiCassaToolStripMenuItem.Name = "GiornaleDiCassaToolStripMenuItem"
+        Me.GiornaleDiCassaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.GiornaleDiCassaToolStripMenuItem.Text = "Giornale di Cassa"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -628,4 +635,5 @@ Partial Class MainForm
     Friend WithEvents GeneraConsumiDalleLettureToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CollegamentoUnitaImmobiliariToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GiornaleDiCassaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

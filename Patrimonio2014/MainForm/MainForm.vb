@@ -209,4 +209,22 @@
     Private Sub ArchivioSpeseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioSpeseToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub GiornaleDiCassaToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles GiornaleDiCassaToolStripMenuItem.Click
+        Dim NewMDIChild As New Cassa
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub MovimentiDeiContiFinanziariToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MovimentiDeiContiFinanziariToolStripMenuItem.Click
+        Dim NewMDIChild As New ContiFinanziari
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
 End Class

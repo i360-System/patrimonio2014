@@ -111,6 +111,12 @@
     <Compile Include="FormMenu\Assemblea.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\ContiFinanziari.Designer.vb">
+      <DependentUpon>ContiFinanziari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\ContiFinanziari.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fornitori.Designer.vb">
       <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Cassa.resx">
       <DependentUpon>Cassa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\ContiFinanziari.resx">
+      <DependentUpon>ContiFinanziari.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fornitori.resx">
       <DependentUpon>Fornitori.vb</DependentUpon>
