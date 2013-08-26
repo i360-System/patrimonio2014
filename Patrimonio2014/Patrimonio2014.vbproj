@@ -135,6 +135,12 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\V_Preventivo.Designer.vb">
+      <DependentUpon>V_Preventivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\V_Preventivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Unita.Designer.vb">
       <DependentUpon>Unita.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Unita.resx">
       <DependentUpon>Unita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
+      <DependentUpon>V_Preventivo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>

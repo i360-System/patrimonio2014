@@ -280,4 +280,13 @@
         NewMDIChild.Show()
 
     End Sub
+
+    Private Sub ArchivioDeiPreventiviEStampeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioDeiPreventiviEStampeToolStripMenuItem.Click
+        Dim NewMDIChild As New V_Preventivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
 End Class
