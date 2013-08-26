@@ -153,11 +153,11 @@
     End Sub
 
     Private Sub AnagraficaCondominioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnagraficaCondominioToolStripMenuItem.Click
-        'Dim NewMDIChild As New Immobili
+        Dim NewMDIChild As New Immobili
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -230,6 +230,50 @@
 
     Private Sub CostantiPerAvvisiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CostantiPerAvvisiToolStripMenuItem.Click
         Dim NewMDIChild As New Costanti
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub ImmobiliToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ImmobiliToolStripMenuItem.Click
+    
+    End Sub
+
+    Private Sub VociDelConsuntivoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VociDelConsuntivoToolStripMenuItem.Click
+        Dim NewMDIChild As New PianoContiConsuntivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub VociDelPreventivoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VociDelPreventivoToolStripMenuItem.Click
+        Dim NewMDIChild As New PianoContiPreventivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub TabelleMillesimaliToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TabelleMillesimaliToolStripMenuItem.Click
+        Dim NewMDIChild As New Tabella
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub UnitaImmobiliariToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UnitaImmobiliariToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub UnitaImmobiliariToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles UnitaImmobiliariToolStripMenuItem1.Click
+        Dim NewMDIChild As New Unita
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.

@@ -93,6 +93,7 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSulSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSullaLicenzaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnitaImmobiliariToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -401,20 +402,20 @@ Partial Class MainForm
         'SsToolStripMenuItem
         '
         Me.SsToolStripMenuItem.Name = "SsToolStripMenuItem"
-        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SsToolStripMenuItem.Text = "Studio"
         '
         'FornitoriToolStripMenuItem
         '
         Me.FornitoriToolStripMenuItem.Name = "FornitoriToolStripMenuItem"
-        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FornitoriToolStripMenuItem.Text = "Fornitori"
         '
         'ImmobiliToolStripMenuItem
         '
         Me.ImmobiliToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TabelleMillesimaliToolStripMenuItem, Me.GruppiDiSpesaToolStripMenuItem, Me.VociDelConsuntivoToolStripMenuItem, Me.VociDelPreventivoToolStripMenuItem, Me.ContiFinanziariToolStripMenuItem, Me.AnagraficaCondominioToolStripMenuItem, Me.StrutturaDelCondominioToolStripMenuItem, Me.FondiAmmortamentoToolStripMenuItem, Me.AnagrafeDeiCondominiToolStripMenuItem, Me.UnitaImmobiliariToolStripMenuItem, Me.DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem})
         Me.ImmobiliToolStripMenuItem.Name = "ImmobiliToolStripMenuItem"
-        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ImmobiliToolStripMenuItem.Text = "Immobili"
         '
         'TabelleMillesimaliToolStripMenuItem
@@ -473,7 +474,7 @@ Partial Class MainForm
         '
         'UnitaImmobiliariToolStripMenuItem
         '
-        Me.UnitaImmobiliariToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GeneraSchedeUnitaToolStripMenuItem, Me.GeneraConsumiDalleLettureToolStripMenuItem, Me.CollegamentoUnitaImmobiliariToolStripMenuItem})
+        Me.UnitaImmobiliariToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GeneraSchedeUnitaToolStripMenuItem, Me.GeneraConsumiDalleLettureToolStripMenuItem, Me.CollegamentoUnitaImmobiliariToolStripMenuItem, Me.UnitaImmobiliariToolStripMenuItem1})
         Me.UnitaImmobiliariToolStripMenuItem.Name = "UnitaImmobiliariToolStripMenuItem"
         Me.UnitaImmobiliariToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.UnitaImmobiliariToolStripMenuItem.Text = "Unita' Immobiliari"
@@ -546,6 +547,12 @@ Partial Class MainForm
         Me.InformazioniSullaLicenzaToolStripMenuItem.Name = "InformazioniSullaLicenzaToolStripMenuItem"
         Me.InformazioniSullaLicenzaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
         Me.InformazioniSullaLicenzaToolStripMenuItem.Text = "Informazioni sulla licenza"
+        '
+        'UnitaImmobiliariToolStripMenuItem1
+        '
+        Me.UnitaImmobiliariToolStripMenuItem1.Name = "UnitaImmobiliariToolStripMenuItem1"
+        Me.UnitaImmobiliariToolStripMenuItem1.Size = New System.Drawing.Size(247, 22)
+        Me.UnitaImmobiliariToolStripMenuItem1.Text = "Unita' Immobiliari"
         '
         'MainForm
         '
@@ -636,4 +643,5 @@ Partial Class MainForm
     Friend WithEvents CollegamentoUnitaImmobiliariToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GiornaleDiCassaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UnitaImmobiliariToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class
