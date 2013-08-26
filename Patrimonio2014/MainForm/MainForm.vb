@@ -126,11 +126,11 @@
     End Sub
 
     Private Sub GruppiDiSpesaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GruppiDiSpesaToolStripMenuItem.Click
-        'Dim NewMDIChild As New Gruppi
+        Dim NewMDIChild As New Gruppi
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -144,11 +144,11 @@
     End Sub
 
     Private Sub FondiAmmortamentoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FondiAmmortamentoToolStripMenuItem.Click
-        'Dim NewMDIChild As New Fondi
+        Dim NewMDIChild As New Fondi
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -198,11 +198,11 @@
     End Sub
 
     Private Sub StrutturaDelCondominioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StrutturaDelCondominioToolStripMenuItem.Click
-        'Dim NewMDIChild As New Fabbricati
+        Dim NewMDIChild As New Fabbricati
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -221,6 +221,15 @@
 
     Private Sub MovimentiDeiContiFinanziariToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MovimentiDeiContiFinanziariToolStripMenuItem.Click
         Dim NewMDIChild As New ContiFinanziari
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub CostantiPerAvvisiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CostantiPerAvvisiToolStripMenuItem.Click
+        Dim NewMDIChild As New Costanti
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.

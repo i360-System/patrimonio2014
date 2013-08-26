@@ -43,6 +43,7 @@ Partial Class MainForm
         Me.MovimentiDeiCondominiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimentiDeiContiFinanziariToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimentiDeiFondiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GiornaleDiCassaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreventiviToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestioniToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArchivioDelleGestioniToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,7 +93,6 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSulSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSullaLicenzaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GiornaleDiCassaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -232,6 +232,12 @@ Partial Class MainForm
         Me.MovimentiDeiFondiToolStripMenuItem.Name = "MovimentiDeiFondiToolStripMenuItem"
         Me.MovimentiDeiFondiToolStripMenuItem.Size = New System.Drawing.Size(236, 22)
         Me.MovimentiDeiFondiToolStripMenuItem.Text = "Movimenti dei Fondi"
+        '
+        'GiornaleDiCassaToolStripMenuItem
+        '
+        Me.GiornaleDiCassaToolStripMenuItem.Name = "GiornaleDiCassaToolStripMenuItem"
+        Me.GiornaleDiCassaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.GiornaleDiCassaToolStripMenuItem.Text = "Giornale di Cassa"
         '
         'PreventiviToolStripMenuItem
         '
@@ -540,12 +546,6 @@ Partial Class MainForm
         Me.InformazioniSullaLicenzaToolStripMenuItem.Name = "InformazioniSullaLicenzaToolStripMenuItem"
         Me.InformazioniSullaLicenzaToolStripMenuItem.Size = New System.Drawing.Size(207, 22)
         Me.InformazioniSullaLicenzaToolStripMenuItem.Text = "Informazioni sulla licenza"
-        '
-        'GiornaleDiCassaToolStripMenuItem
-        '
-        Me.GiornaleDiCassaToolStripMenuItem.Name = "GiornaleDiCassaToolStripMenuItem"
-        Me.GiornaleDiCassaToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.GiornaleDiCassaToolStripMenuItem.Text = "Giornale di Cassa"
         '
         'MainForm
         '

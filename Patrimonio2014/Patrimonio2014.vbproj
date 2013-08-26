@@ -117,6 +117,30 @@
     <Compile Include="FormMenu\ContiFinanziari.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Costanti.Designer.vb">
+      <DependentUpon>Costanti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Costanti.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Fabbricati.Designer.vb">
+      <DependentUpon>Fabbricati.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Fabbricati.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Fondi.Designer.vb">
+      <DependentUpon>Fondi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Fondi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Gruppi.Designer.vb">
+      <DependentUpon>Gruppi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Gruppi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\Fornitori.Designer.vb">
       <DependentUpon>Fornitori.vb</DependentUpon>
     </Compile>
@@ -188,8 +212,20 @@
     <EmbeddedResource Include="FormMenu\ContiFinanziari.resx">
       <DependentUpon>ContiFinanziari.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Costanti.resx">
+      <DependentUpon>Costanti.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Fabbricati.resx">
+      <DependentUpon>Fabbricati.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Fondi.resx">
+      <DependentUpon>Fondi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fornitori.resx">
       <DependentUpon>Fornitori.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Gruppi.resx">
+      <DependentUpon>Gruppi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Opzioni.resx">
       <DependentUpon>Opzioni.vb</DependentUpon>
