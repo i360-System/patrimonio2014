@@ -135,6 +135,30 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\X_MovimentiFondi.Designer.vb">
+      <DependentUpon>X_MovimentiFondi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFondi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFinanziari.Designer.vb">
+      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiFinanziari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiCondomini.Designer.vb">
+      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_MovimentiCondomini.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_Fatture.Designer.vb">
+      <DependentUpon>X_Fatture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Fatture.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\X_Causali.Designer.vb">
       <DependentUpon>X_Causali.vb</DependentUpon>
     </Compile>
@@ -319,6 +343,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\X_Causali.resx">
       <DependentUpon>X_Causali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Fatture.resx">
+      <DependentUpon>X_Fatture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiCondomini.resx">
+      <DependentUpon>X_MovimentiCondomini.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiFinanziari.resx">
+      <DependentUpon>X_MovimentiFinanziari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_MovimentiFondi.resx">
+      <DependentUpon>X_MovimentiFondi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>

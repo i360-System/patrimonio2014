@@ -135,11 +135,11 @@
     End Sub
 
     Private Sub ContiFinanziariToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ContiFinanziariToolStripMenuItem.Click
-        'Dim NewMDIChild As New ContiFinanziari
+        Dim NewMDIChild As New ContiFinanziari
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -220,7 +220,7 @@
     End Sub
 
     Private Sub MovimentiDeiContiFinanziariToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MovimentiDeiContiFinanziariToolStripMenuItem.Click
-        Dim NewMDIChild As New ContiFinanziari
+        Dim NewMDIChild As New X_MovimentiFinanziari
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.
@@ -292,6 +292,33 @@
 
     Private Sub ArchivioDegliAvvisiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioDegliAvvisiToolStripMenuItem.Click
         Dim NewMDIChild As New W_Emissioni
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub ArchivioFattureToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioFattureToolStripMenuItem.Click
+        Dim NewMDIChild As New X_Fatture
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub MovimentiDeiCondominiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MovimentiDeiCondominiToolStripMenuItem.Click
+        Dim NewMDIChild As New X_MovimentiCondomini
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub MovimentiDeiFondiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MovimentiDeiFondiToolStripMenuItem.Click
+        Dim NewMDIChild As New X_MovimentiFondi
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.
