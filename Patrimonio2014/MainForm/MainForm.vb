@@ -162,29 +162,29 @@
     End Sub
 
     Private Sub ArchivioRitenutePerDichiarazioniToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArchivioRitenutePerDichiarazioniToolStripMenuItem.Click
-        'Dim NewMDIChild As New W_Ritenute
+        Dim NewMDIChild As New W_Ritenute
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
     Private Sub TabelleCodiciTributoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabelleCodiciTributoToolStripMenuItem.Click
-        'Dim NewMDIChild As New W_Tributi
+        Dim NewMDIChild As New W_Tributi
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
     Private Sub CausaliPerLeSpeseToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CausaliPerLeSpeseToolStripMenuItem.Click
-        'Dim NewMDIChild As New X_Causali
+        Dim NewMDIChild As New X_Causali
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -283,6 +283,15 @@
 
     Private Sub ArchivioDeiPreventiviEStampeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioDeiPreventiviEStampeToolStripMenuItem.Click
         Dim NewMDIChild As New V_Preventivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub ArchivioDegliAvvisiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioDegliAvvisiToolStripMenuItem.Click
+        Dim NewMDIChild As New W_Emissioni
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.

@@ -135,6 +135,30 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\X_Causali.Designer.vb">
+      <DependentUpon>X_Causali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Causali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Tributi.Designer.vb">
+      <DependentUpon>W_Tributi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Tributi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Ritenute.Designer.vb">
+      <DependentUpon>W_Ritenute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Ritenute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\W_Emissioni.Designer.vb">
+      <DependentUpon>W_Emissioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\W_Emissioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\V_Preventivo.Designer.vb">
       <DependentUpon>V_Preventivo.vb</DependentUpon>
     </Compile>
@@ -283,6 +307,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
       <DependentUpon>V_Preventivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Emissioni.resx">
+      <DependentUpon>W_Emissioni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Ritenute.resx">
+      <DependentUpon>W_Ritenute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\W_Tributi.resx">
+      <DependentUpon>W_Tributi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Causali.resx">
+      <DependentUpon>X_Causali.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>
