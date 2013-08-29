@@ -135,6 +135,36 @@
     <Compile Include="FormMenu\Fondi.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
+      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Z_TestoSollecito.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Z_Consuntivo.Designer.vb">
+      <DependentUpon>Z_Consuntivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Z_Consuntivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Y_GestioniUnita.Designer.vb">
+      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Y_GestioniUnita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Y_Gestioni.Designer.vb">
+      <DependentUpon>Y_Gestioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Y_Gestioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\X_Spese.Designer.vb">
+      <DependentUpon>X_Spese.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\X_Spese.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMenu\X_MovimentiFondi.Designer.vb">
       <DependentUpon>X_MovimentiFondi.vb</DependentUpon>
     </Compile>
@@ -355,6 +385,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\X_MovimentiFondi.resx">
       <DependentUpon>X_MovimentiFondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\X_Spese.resx">
+      <DependentUpon>X_Spese.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Y_Gestioni.resx">
+      <DependentUpon>Y_Gestioni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Y_GestioniUnita.resx">
+      <DependentUpon>Y_GestioniUnita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Z_Consuntivo.resx">
+      <DependentUpon>Z_Consuntivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Z_TestoSollecito.resx">
+      <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>

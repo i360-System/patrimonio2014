@@ -189,11 +189,11 @@
     End Sub
 
     Private Sub TestiPerIlSollecitoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TestiPerIlSollecitoToolStripMenuItem.Click
-        'Dim NewMDIChild As New Z_TestoSollecito
+        Dim NewMDIChild As New Z_TestoSollecito
         ''Set the Parent Form of the Child window.
-        'NewMDIChild.MdiParent = Me
+        NewMDIChild.MdiParent = Me
         ''Display the new form.
-        'NewMDIChild.Show()
+        NewMDIChild.Show()
 
     End Sub
 
@@ -207,6 +207,11 @@
     End Sub
 
     Private Sub ArchivioSpeseToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioSpeseToolStripMenuItem.Click
+        Dim NewMDIChild As New X_Spese
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
 
     End Sub
 
@@ -237,9 +242,6 @@
 
     End Sub
 
-    Private Sub ImmobiliToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ImmobiliToolStripMenuItem.Click
-    
-    End Sub
 
     Private Sub VociDelConsuntivoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VociDelConsuntivoToolStripMenuItem.Click
         Dim NewMDIChild As New PianoContiConsuntivo
@@ -268,9 +270,6 @@
 
     End Sub
 
-    Private Sub UnitaImmobiliariToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles UnitaImmobiliariToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub UnitaImmobiliariToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles UnitaImmobiliariToolStripMenuItem1.Click
         Dim NewMDIChild As New Unita
@@ -319,6 +318,33 @@
 
     Private Sub MovimentiDeiFondiToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles MovimentiDeiFondiToolStripMenuItem.Click
         Dim NewMDIChild As New X_MovimentiFondi
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub ArchivioDelleGestioniToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles ArchivioDelleGestioniToolStripMenuItem.Click
+        Dim NewMDIChild As New Y_Gestioni
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub StoricoGestioniUnitaToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles StoricoGestioniUnitaToolStripMenuItem.Click
+        Dim NewMDIChild As New Y_GestioniUnita
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub TotaliDelConsuntivoEStampeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TotaliDelConsuntivoEStampeToolStripMenuItem.Click
+        Dim NewMDIChild As New Z_Consuntivo
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.
