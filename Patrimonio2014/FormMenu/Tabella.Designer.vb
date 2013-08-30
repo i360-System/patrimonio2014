@@ -24,8 +24,8 @@ Partial Class Tabella
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim TabellaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Tabella))
         Dim DescrizioneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Tabella))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.TabellaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabellaTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TabellaTableAdapter()
@@ -69,6 +69,15 @@ Partial Class Tabella
         TabellaLabel.Size = New System.Drawing.Size(45, 13)
         TabellaLabel.TabIndex = 1
         TabellaLabel.Text = "Tabella:"
+        '
+        'DescrizioneLabel
+        '
+        DescrizioneLabel.AutoSize = True
+        DescrizioneLabel.Location = New System.Drawing.Point(63, 41)
+        DescrizioneLabel.Name = "DescrizioneLabel"
+        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
+        DescrizioneLabel.TabIndex = 3
+        DescrizioneLabel.Text = "Descrizione:"
         '
         'IMMOBILIDataSet2
         '
@@ -254,15 +263,6 @@ Partial Class Tabella
         Me.TabellaTextBox.Name = "TabellaTextBox"
         Me.TabellaTextBox.Size = New System.Drawing.Size(42, 20)
         Me.TabellaTextBox.TabIndex = 2
-        '
-        'DescrizioneLabel
-        '
-        DescrizioneLabel.AutoSize = True
-        DescrizioneLabel.Location = New System.Drawing.Point(63, 41)
-        DescrizioneLabel.Name = "DescrizioneLabel"
-        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
-        DescrizioneLabel.TabIndex = 3
-        DescrizioneLabel.Text = "Descrizione:"
         '
         'DescrizioneTextBox
         '

@@ -23,29 +23,30 @@ Partial Class Assemblea
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Assemblea))
         Dim ImmobileLabel As System.Windows.Forms.Label
         Dim GestioneLabel As System.Windows.Forms.Label
         Dim TotaleMillesimiLabel As System.Windows.Forms.Label
         Dim TotalePersoneLabel As System.Windows.Forms.Label
         Dim _1VotazioneLabel As System.Windows.Forms.Label
         Dim _1RisultatoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Assemblea))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.AssembleaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AssembleaTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
+        Me.AssembleaDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaDettaglioTableAdapter()
         Me.AssembleaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.AssembleaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.GestioneComboBox = New System.Windows.Forms.ComboBox()
@@ -70,7 +71,6 @@ Partial Class Assemblea
         Me._9VotazioneTextBox = New System.Windows.Forms.TextBox()
         Me._9RisultatoTextBox = New System.Windows.Forms.TextBox()
         Me.AssembleaDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AssembleaDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaDettaglioTableAdapter()
         Me.AssembleaDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -100,6 +100,60 @@ Partial Class Assemblea
         CType(Me.AssembleaDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AssembleaDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(9, 50)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 1
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(317, 50)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 3
+        GestioneLabel.Text = "Gestione:"
+        '
+        'TotaleMillesimiLabel
+        '
+        TotaleMillesimiLabel.AutoSize = True
+        TotaleMillesimiLabel.Location = New System.Drawing.Point(596, 51)
+        TotaleMillesimiLabel.Name = "TotaleMillesimiLabel"
+        TotaleMillesimiLabel.Size = New System.Drawing.Size(81, 13)
+        TotaleMillesimiLabel.TabIndex = 5
+        TotaleMillesimiLabel.Text = "Totale Millesimi:"
+        '
+        'TotalePersoneLabel
+        '
+        TotalePersoneLabel.AutoSize = True
+        TotalePersoneLabel.Location = New System.Drawing.Point(700, 51)
+        TotalePersoneLabel.Name = "TotalePersoneLabel"
+        TotalePersoneLabel.Size = New System.Drawing.Size(82, 13)
+        TotalePersoneLabel.TabIndex = 7
+        TotalePersoneLabel.Text = "Totale Persone:"
+        '
+        '_1VotazioneLabel
+        '
+        _1VotazioneLabel.AutoSize = True
+        _1VotazioneLabel.Location = New System.Drawing.Point(12, 105)
+        _1VotazioneLabel.Name = "_1VotazioneLabel"
+        _1VotazioneLabel.Size = New System.Drawing.Size(57, 13)
+        _1VotazioneLabel.TabIndex = 9
+        _1VotazioneLabel.Text = "Votazione:"
+        '
+        '_1RisultatoLabel
+        '
+        _1RisultatoLabel.AutoSize = True
+        _1RisultatoLabel.Location = New System.Drawing.Point(206, 105)
+        _1RisultatoLabel.Name = "_1RisultatoLabel"
+        _1RisultatoLabel.Size = New System.Drawing.Size(51, 13)
+        _1RisultatoLabel.TabIndex = 11
+        _1RisultatoLabel.Text = "Risultato:"
         '
         'IMMOBILIDataSet2
         '
@@ -167,6 +221,10 @@ Partial Class Assemblea
         Me.TableAdapterManager.Z_ConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.Z_TestoSollecitoTableAdapter = Nothing
         '
+        'AssembleaDettaglioTableAdapter
+        '
+        Me.AssembleaDettaglioTableAdapter.ClearBeforeFill = True
+        '
         'AssembleaBindingNavigator
         '
         Me.AssembleaBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -184,6 +242,31 @@ Partial Class Assemblea
         Me.AssembleaBindingNavigator.Size = New System.Drawing.Size(920, 25)
         Me.AssembleaBindingNavigator.TabIndex = 0
         Me.AssembleaBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -217,17 +300,10 @@ Partial Class Assemblea
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 15)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -235,7 +311,7 @@ Partial Class Assemblea
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -244,66 +320,30 @@ Partial Class Assemblea
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'AssembleaBindingNavigatorSaveItem
         '
         Me.AssembleaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.AssembleaBindingNavigatorSaveItem.Image = CType(resources.GetObject("AssembleaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.AssembleaBindingNavigatorSaveItem.Name = "AssembleaBindingNavigatorSaveItem"
-        Me.AssembleaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.AssembleaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.AssembleaBindingNavigatorSaveItem.Text = "Salva dati"
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(9, 50)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 1
-        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
         Me.ImmobileComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "Immobile", True))
         Me.ImmobileComboBox.FormattingEnabled = True
-        Me.ImmobileComboBox.Location = New System.Drawing.Point(12, 66)
+        Me.ImmobileComboBox.Location = New System.Drawing.Point(15, 66)
         Me.ImmobileComboBox.Name = "ImmobileComboBox"
-        Me.ImmobileComboBox.Size = New System.Drawing.Size(291, 21)
+        Me.ImmobileComboBox.Size = New System.Drawing.Size(288, 21)
         Me.ImmobileComboBox.TabIndex = 2
-        '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(317, 50)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 3
-        GestioneLabel.Text = "Gestione:"
         '
         'GestioneComboBox
         '
@@ -314,15 +354,6 @@ Partial Class Assemblea
         Me.GestioneComboBox.Size = New System.Drawing.Size(270, 21)
         Me.GestioneComboBox.TabIndex = 4
         '
-        'TotaleMillesimiLabel
-        '
-        TotaleMillesimiLabel.AutoSize = True
-        TotaleMillesimiLabel.Location = New System.Drawing.Point(596, 51)
-        TotaleMillesimiLabel.Name = "TotaleMillesimiLabel"
-        TotaleMillesimiLabel.Size = New System.Drawing.Size(81, 13)
-        TotaleMillesimiLabel.TabIndex = 5
-        TotaleMillesimiLabel.Text = "Totale Millesimi:"
-        '
         'TotaleMillesimiTextBox
         '
         Me.TotaleMillesimiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "TotaleMillesimi", True))
@@ -330,15 +361,6 @@ Partial Class Assemblea
         Me.TotaleMillesimiTextBox.Name = "TotaleMillesimiTextBox"
         Me.TotaleMillesimiTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TotaleMillesimiTextBox.TabIndex = 6
-        '
-        'TotalePersoneLabel
-        '
-        TotalePersoneLabel.AutoSize = True
-        TotalePersoneLabel.Location = New System.Drawing.Point(700, 51)
-        TotalePersoneLabel.Name = "TotalePersoneLabel"
-        TotalePersoneLabel.Size = New System.Drawing.Size(82, 13)
-        TotalePersoneLabel.TabIndex = 7
-        TotalePersoneLabel.Text = "Totale Persone:"
         '
         'TotalePersoneTextBox
         '
@@ -348,31 +370,13 @@ Partial Class Assemblea
         Me.TotalePersoneTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TotalePersoneTextBox.TabIndex = 8
         '
-        '_1VotazioneLabel
-        '
-        _1VotazioneLabel.AutoSize = True
-        _1VotazioneLabel.Location = New System.Drawing.Point(12, 105)
-        _1VotazioneLabel.Name = "_1VotazioneLabel"
-        _1VotazioneLabel.Size = New System.Drawing.Size(57, 13)
-        _1VotazioneLabel.TabIndex = 9
-        _1VotazioneLabel.Text = "Votazione:"
-        '
         '_1VotazioneTextBox
         '
         Me._1VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "1Votazione", True))
-        Me._1VotazioneTextBox.Location = New System.Drawing.Point(12, 121)
+        Me._1VotazioneTextBox.Location = New System.Drawing.Point(15, 121)
         Me._1VotazioneTextBox.Name = "_1VotazioneTextBox"
-        Me._1VotazioneTextBox.Size = New System.Drawing.Size(185, 20)
+        Me._1VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._1VotazioneTextBox.TabIndex = 10
-        '
-        '_1RisultatoLabel
-        '
-        _1RisultatoLabel.AutoSize = True
-        _1RisultatoLabel.Location = New System.Drawing.Point(206, 105)
-        _1RisultatoLabel.Name = "_1RisultatoLabel"
-        _1RisultatoLabel.Size = New System.Drawing.Size(51, 13)
-        _1RisultatoLabel.TabIndex = 11
-        _1RisultatoLabel.Text = "Risultato:"
         '
         '_1RisultatoTextBox
         '
@@ -514,10 +518,6 @@ Partial Class Assemblea
         '
         Me.AssembleaDettaglioBindingSource.DataMember = "AssembleaDettaglio"
         Me.AssembleaDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
-        '
-        'AssembleaDettaglioTableAdapter
-        '
-        Me.AssembleaDettaglioTableAdapter.ClearBeforeFill = True
         '
         'AssembleaDettaglioDataGridView
         '
