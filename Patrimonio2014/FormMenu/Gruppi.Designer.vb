@@ -24,8 +24,8 @@ Partial Class Gruppi
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim TabellaLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Gruppi))
         Dim DenominazioneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Gruppi))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.GruppiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GruppiTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.GruppiTableAdapter()
@@ -73,6 +73,15 @@ Partial Class Gruppi
         TabellaLabel.TabIndex = 1
         TabellaLabel.Text = "Tabella:"
         '
+        'DenominazioneLabel
+        '
+        DenominazioneLabel.AutoSize = True
+        DenominazioneLabel.Location = New System.Drawing.Point(83, 53)
+        DenominazioneLabel.Name = "DenominazioneLabel"
+        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
+        DenominazioneLabel.TabIndex = 3
+        DenominazioneLabel.Text = "Denominazione:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -96,9 +105,9 @@ Partial Class Gruppi
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -258,15 +267,6 @@ Partial Class Gruppi
         Me.TabellaTextBox.Size = New System.Drawing.Size(52, 20)
         Me.TabellaTextBox.TabIndex = 2
         '
-        'DenominazioneLabel
-        '
-        DenominazioneLabel.AutoSize = True
-        DenominazioneLabel.Location = New System.Drawing.Point(83, 53)
-        DenominazioneLabel.Name = "DenominazioneLabel"
-        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
-        DenominazioneLabel.TabIndex = 3
-        DenominazioneLabel.Text = "Denominazione:"
-        '
         'DenominazioneTextBox
         '
         Me.DenominazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.GruppiBindingSource, "Denominazione", True))
@@ -277,8 +277,8 @@ Partial Class Gruppi
         '
         'GruppiDettaglioBindingSource
         '
-        Me.GruppiDettaglioBindingSource.DataMember = "GruppiDettaglio"
-        Me.GruppiDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
+        Me.GruppiDettaglioBindingSource.DataMember = "GruppiGruppiDettaglio"
+        Me.GruppiDettaglioBindingSource.DataSource = Me.GruppiBindingSource
         '
         'GruppiDettaglioTableAdapter
         '
@@ -290,15 +290,14 @@ Partial Class Gruppi
         Me.GruppiDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GruppiDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.GruppiDettaglioDataGridView.DataSource = Me.GruppiDettaglioBindingSource
-        Me.GruppiDettaglioDataGridView.Location = New System.Drawing.Point(17, 117)
+        Me.GruppiDettaglioDataGridView.Location = New System.Drawing.Point(21, 115)
         Me.GruppiDettaglioDataGridView.Name = "GruppiDettaglioDataGridView"
-        Me.GruppiDettaglioDataGridView.Size = New System.Drawing.Size(647, 220)
+        Me.GruppiDettaglioDataGridView.Size = New System.Drawing.Size(641, 220)
         Me.GruppiDettaglioDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "Gruppo"
-        Me.DataGridViewTextBoxColumn2.FillWeight = 50.0!
         Me.DataGridViewTextBoxColumn2.HeaderText = "Gruppo"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 50
@@ -306,7 +305,6 @@ Partial Class Gruppi
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "UnitaMisura"
-        Me.DataGridViewTextBoxColumn3.FillWeight = 60.0!
         Me.DataGridViewTextBoxColumn3.HeaderText = "UnitaMisura"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 70
@@ -316,27 +314,28 @@ Partial Class Gruppi
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Descrizione1"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Descrizione1"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 120
+        Me.DataGridViewTextBoxColumn4.Width = 150
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "Descrizione2"
         Me.DataGridViewTextBoxColumn5.HeaderText = "Descrizione2"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 120
+        Me.DataGridViewTextBoxColumn5.Width = 150
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "Descrizione3"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Descrizione3"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 120
+        Me.DataGridViewTextBoxColumn6.Width = 150
         '
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "Puntatore"
         Me.DataGridViewTextBoxColumn7.HeaderText = "Puntatore"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Width = 80
         '
         'Gruppi
         '

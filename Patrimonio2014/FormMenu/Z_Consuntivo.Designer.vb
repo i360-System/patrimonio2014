@@ -24,8 +24,8 @@ Partial Class Z_Consuntivo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ImmobileLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Z_Consuntivo))
         Dim GestioneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Z_Consuntivo))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.Z_ConsuntivoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Z_ConsuntivoTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.Z_ConsuntivoTableAdapter()
@@ -75,6 +75,15 @@ Partial Class Z_Consuntivo
         ImmobileLabel.TabIndex = 1
         ImmobileLabel.Text = "Immobile:"
         '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(280, 37)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 3
+        GestioneLabel.Text = "Gestione:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -98,9 +107,9 @@ Partial Class Z_Consuntivo
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -155,7 +164,7 @@ Partial Class Z_Consuntivo
         Me.Z_ConsuntivoBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Z_ConsuntivoBindingNavigator.Name = "Z_ConsuntivoBindingNavigator"
         Me.Z_ConsuntivoBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Z_ConsuntivoBindingNavigator.Size = New System.Drawing.Size(726, 25)
+        Me.Z_ConsuntivoBindingNavigator.Size = New System.Drawing.Size(878, 25)
         Me.Z_ConsuntivoBindingNavigator.TabIndex = 0
         Me.Z_ConsuntivoBindingNavigator.Text = "BindingNavigator1"
         '
@@ -261,15 +270,6 @@ Partial Class Z_Consuntivo
         Me.ImmobileComboBox.Size = New System.Drawing.Size(261, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(280, 37)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 3
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Z_ConsuntivoBindingSource, "Gestione", True))
@@ -281,8 +281,8 @@ Partial Class Z_Consuntivo
         '
         'Z_ConsuntivoDettaglioBindingSource
         '
-        Me.Z_ConsuntivoDettaglioBindingSource.DataMember = "Z_ConsuntivoDettaglio"
-        Me.Z_ConsuntivoDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
+        Me.Z_ConsuntivoDettaglioBindingSource.DataMember = "Z_ConsuntivoZ_ConsuntivoDettaglio"
+        Me.Z_ConsuntivoDettaglioBindingSource.DataSource = Me.Z_ConsuntivoBindingSource
         '
         'Z_ConsuntivoDettaglioTableAdapter
         '
@@ -294,9 +294,9 @@ Partial Class Z_Consuntivo
         Me.Z_ConsuntivoDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Z_ConsuntivoDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10})
         Me.Z_ConsuntivoDettaglioDataGridView.DataSource = Me.Z_ConsuntivoDettaglioBindingSource
-        Me.Z_ConsuntivoDettaglioDataGridView.Location = New System.Drawing.Point(19, 91)
+        Me.Z_ConsuntivoDettaglioDataGridView.Location = New System.Drawing.Point(15, 102)
         Me.Z_ConsuntivoDettaglioDataGridView.Name = "Z_ConsuntivoDettaglioDataGridView"
-        Me.Z_ConsuntivoDettaglioDataGridView.Size = New System.Drawing.Size(695, 220)
+        Me.Z_ConsuntivoDettaglioDataGridView.Size = New System.Drawing.Size(863, 399)
         Me.Z_ConsuntivoDettaglioDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn3
@@ -304,12 +304,14 @@ Partial Class Z_Consuntivo
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Gruppo"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Gruppo"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 50
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Spesa"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Spesa"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 50
         '
         'DataGridViewTextBoxColumn5
         '
@@ -322,6 +324,7 @@ Partial Class Z_Consuntivo
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "Scala"
         Me.DataGridViewTextBoxColumn6.HeaderText = "Scala"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.Width = 50
         '
         'DataGridViewTextBoxColumn7
         '
@@ -334,24 +337,27 @@ Partial Class Z_Consuntivo
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "PianoConti"
         Me.DataGridViewTextBoxColumn8.HeaderText = "PianoConti"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Width = 70
         '
         'DataGridViewTextBoxColumn9
         '
         Me.DataGridViewTextBoxColumn9.DataPropertyName = "DescrizioneGruppo"
         Me.DataGridViewTextBoxColumn9.HeaderText = "DescrizioneGruppo"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 200
         '
         'DataGridViewTextBoxColumn10
         '
         Me.DataGridViewTextBoxColumn10.DataPropertyName = "DescrizioneSpesa"
         Me.DataGridViewTextBoxColumn10.HeaderText = "DescrizioneSpesa"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Width = 200
         '
         'Z_Consuntivo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 331)
+        Me.ClientSize = New System.Drawing.Size(878, 526)
         Me.Controls.Add(Me.Z_ConsuntivoDettaglioDataGridView)
         Me.Controls.Add(GestioneLabel)
         Me.Controls.Add(Me.GestioneComboBox)

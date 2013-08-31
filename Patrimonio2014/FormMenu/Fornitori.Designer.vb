@@ -737,7 +737,7 @@ Partial Class Fornitori
         Me.TableAdapterManager.AssembleaTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
         'Me.TableAdapterManager.Errori_di_conversioneTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
@@ -751,7 +751,7 @@ Partial Class Fornitori
         Me.TableAdapterManager.PianoContiConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.PianoContiPreventivoTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.TabellaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.TabellaTableAdapter = Nothing
         Me.TableAdapterManager.UnitaDettaglioAnagraficaTableAdapter = Nothing

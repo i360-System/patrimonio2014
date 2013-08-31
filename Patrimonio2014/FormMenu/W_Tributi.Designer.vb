@@ -103,9 +103,9 @@ Partial Class W_Tributi
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing

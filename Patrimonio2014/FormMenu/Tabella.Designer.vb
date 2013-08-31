@@ -48,9 +48,7 @@ Partial Class Tabella
         Me.TabellaDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabellaDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TabellaDettaglioTableAdapter()
         Me.TabellaDettaglioDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         TabellaLabel = New System.Windows.Forms.Label()
         DescrizioneLabel = New System.Windows.Forms.Label()
         CType(Me.IMMOBILIDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,9 +100,9 @@ Partial Class Tabella
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -274,8 +272,8 @@ Partial Class Tabella
         '
         'TabellaDettaglioBindingSource
         '
-        Me.TabellaDettaglioBindingSource.DataMember = "TabellaDettaglio"
-        Me.TabellaDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
+        Me.TabellaDettaglioBindingSource.DataMember = "TabellaTabellaDettaglio"
+        Me.TabellaDettaglioBindingSource.DataSource = Me.TabellaBindingSource
         '
         'TabellaDettaglioTableAdapter
         '
@@ -285,19 +283,12 @@ Partial Class Tabella
         '
         Me.TabellaDettaglioDataGridView.AutoGenerateColumns = False
         Me.TabellaDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TabellaDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.TabellaDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3})
         Me.TabellaDettaglioDataGridView.DataSource = Me.TabellaDettaglioBindingSource
         Me.TabellaDettaglioDataGridView.Location = New System.Drawing.Point(15, 95)
         Me.TabellaDettaglioDataGridView.Name = "TabellaDettaglioDataGridView"
         Me.TabellaDettaglioDataGridView.Size = New System.Drawing.Size(524, 220)
         Me.TabellaDettaglioDataGridView.TabIndex = 5
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Numero"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Numero"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 70
         '
         'DataGridViewTextBoxColumn3
         '
@@ -305,12 +296,6 @@ Partial Class Tabella
         Me.DataGridViewTextBoxColumn3.HeaderText = "Descrizione"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.Width = 200
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "UnitaMisura"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "UnitaMisura"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
         'Tabella
         '
@@ -358,7 +343,5 @@ Partial Class Tabella
     Friend WithEvents TabellaDettaglioBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TabellaDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.TabellaDettaglioTableAdapter
     Friend WithEvents TabellaDettaglioDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -123,16 +123,16 @@
     <Compile Include="FormMenu\Costanti.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu\Fabbricati.Designer.vb">
-      <DependentUpon>Fabbricati.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMenu\Fabbricati.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormMenu\Fondi.Designer.vb">
       <DependentUpon>Fondi.vb</DependentUpon>
     </Compile>
     <Compile Include="FormMenu\Fondi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\Fabbricati.Designer.vb">
+      <DependentUpon>Fabbricati.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\Fabbricati.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
@@ -270,6 +270,9 @@
     <Compile Include="IMMOBILIDataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>IMMOBILIDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IMMOBILIDataSet2.vb">
       <DependentUpon>IMMOBILIDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Infrastracture\DBlayerAC.vb" />

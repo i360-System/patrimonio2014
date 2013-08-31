@@ -23,29 +23,30 @@ Partial Class V_Preventivo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(V_Preventivo))
         Dim ImmobileLabel As System.Windows.Forms.Label
         Dim GestioneLabel As System.Windows.Forms.Label
         Dim GruppoLabel As System.Windows.Forms.Label
         Dim SpesaLabel As System.Windows.Forms.Label
         Dim ImportoLabel As System.Windows.Forms.Label
         Dim PianoContiLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(V_Preventivo))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.V_PreventivoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.V_PreventivoTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.V_PreventivoTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
+        Me.V_PreventivoDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.V_PreventivoDettaglioTableAdapter()
         Me.V_PreventivoBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.V_PreventivoBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.GestioneComboBox = New System.Windows.Forms.ComboBox()
@@ -54,7 +55,6 @@ Partial Class V_Preventivo
         Me.ImportoTextBox = New System.Windows.Forms.TextBox()
         Me.PianoContiComboBox = New System.Windows.Forms.ComboBox()
         Me.V_PreventivoDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.V_PreventivoDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.V_PreventivoDettaglioTableAdapter()
         Me.V_PreventivoDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -72,6 +72,61 @@ Partial Class V_Preventivo
         CType(Me.V_PreventivoDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.V_PreventivoDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(12, 37)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 1
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(279, 37)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 3
+        GestioneLabel.Text = "Gestione:"
+        '
+        'GruppoLabel
+        '
+        GruppoLabel.AutoSize = True
+        GruppoLabel.Location = New System.Drawing.Point(12, 77)
+        GruppoLabel.Name = "GruppoLabel"
+        GruppoLabel.Size = New System.Drawing.Size(45, 13)
+        GruppoLabel.TabIndex = 5
+        GruppoLabel.Text = "Gruppo:"
+        AddHandler GruppoLabel.Click, AddressOf Me.GruppoLabel_Click
+        '
+        'SpesaLabel
+        '
+        SpesaLabel.AutoSize = True
+        SpesaLabel.Location = New System.Drawing.Point(279, 77)
+        SpesaLabel.Name = "SpesaLabel"
+        SpesaLabel.Size = New System.Drawing.Size(40, 13)
+        SpesaLabel.TabIndex = 7
+        SpesaLabel.Text = "Spesa:"
+        '
+        'ImportoLabel
+        '
+        ImportoLabel.AutoSize = True
+        ImportoLabel.Location = New System.Drawing.Point(522, 78)
+        ImportoLabel.Name = "ImportoLabel"
+        ImportoLabel.Size = New System.Drawing.Size(45, 13)
+        ImportoLabel.TabIndex = 9
+        ImportoLabel.Text = "Importo:"
+        '
+        'PianoContiLabel
+        '
+        PianoContiLabel.AutoSize = True
+        PianoContiLabel.Location = New System.Drawing.Point(522, 37)
+        PianoContiLabel.Name = "PianoContiLabel"
+        PianoContiLabel.Size = New System.Drawing.Size(64, 13)
+        PianoContiLabel.TabIndex = 11
+        PianoContiLabel.Text = "Piano Conti:"
         '
         'IMMOBILIDataSet2
         '
@@ -96,9 +151,9 @@ Partial Class V_Preventivo
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -139,6 +194,10 @@ Partial Class V_Preventivo
         Me.TableAdapterManager.Z_ConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.Z_TestoSollecitoTableAdapter = Nothing
         '
+        'V_PreventivoDettaglioTableAdapter
+        '
+        Me.V_PreventivoDettaglioTableAdapter.ClearBeforeFill = True
+        '
         'V_PreventivoBindingNavigator
         '
         Me.V_PreventivoBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -156,6 +215,31 @@ Partial Class V_Preventivo
         Me.V_PreventivoBindingNavigator.Size = New System.Drawing.Size(762, 25)
         Me.V_PreventivoBindingNavigator.TabIndex = 0
         Me.V_PreventivoBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -189,17 +273,10 @@ Partial Class V_Preventivo
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 13)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -207,7 +284,7 @@ Partial Class V_Preventivo
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -216,48 +293,21 @@ Partial Class V_Preventivo
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'V_PreventivoBindingNavigatorSaveItem
         '
         Me.V_PreventivoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.V_PreventivoBindingNavigatorSaveItem.Image = CType(resources.GetObject("V_PreventivoBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.V_PreventivoBindingNavigatorSaveItem.Name = "V_PreventivoBindingNavigatorSaveItem"
-        Me.V_PreventivoBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.V_PreventivoBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.V_PreventivoBindingNavigatorSaveItem.Text = "Salva dati"
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(12, 37)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 1
-        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
@@ -268,15 +318,6 @@ Partial Class V_Preventivo
         Me.ImmobileComboBox.Size = New System.Drawing.Size(258, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(279, 37)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 3
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.V_PreventivoBindingSource, "Gestione", True))
@@ -285,16 +326,6 @@ Partial Class V_Preventivo
         Me.GestioneComboBox.Name = "GestioneComboBox"
         Me.GestioneComboBox.Size = New System.Drawing.Size(234, 21)
         Me.GestioneComboBox.TabIndex = 4
-        '
-        'GruppoLabel
-        '
-        GruppoLabel.AutoSize = True
-        GruppoLabel.Location = New System.Drawing.Point(12, 77)
-        GruppoLabel.Name = "GruppoLabel"
-        GruppoLabel.Size = New System.Drawing.Size(45, 13)
-        GruppoLabel.TabIndex = 5
-        GruppoLabel.Text = "Gruppo:"
-        AddHandler GruppoLabel.Click, AddressOf Me.GruppoLabel_Click
         '
         'GruppoComboBox
         '
@@ -305,15 +336,6 @@ Partial Class V_Preventivo
         Me.GruppoComboBox.Size = New System.Drawing.Size(258, 21)
         Me.GruppoComboBox.TabIndex = 6
         '
-        'SpesaLabel
-        '
-        SpesaLabel.AutoSize = True
-        SpesaLabel.Location = New System.Drawing.Point(279, 77)
-        SpesaLabel.Name = "SpesaLabel"
-        SpesaLabel.Size = New System.Drawing.Size(40, 13)
-        SpesaLabel.TabIndex = 7
-        SpesaLabel.Text = "Spesa:"
-        '
         'SpesaComboBox
         '
         Me.SpesaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.V_PreventivoBindingSource, "Spesa", True))
@@ -323,15 +345,6 @@ Partial Class V_Preventivo
         Me.SpesaComboBox.Size = New System.Drawing.Size(234, 21)
         Me.SpesaComboBox.TabIndex = 8
         '
-        'ImportoLabel
-        '
-        ImportoLabel.AutoSize = True
-        ImportoLabel.Location = New System.Drawing.Point(522, 78)
-        ImportoLabel.Name = "ImportoLabel"
-        ImportoLabel.Size = New System.Drawing.Size(45, 13)
-        ImportoLabel.TabIndex = 9
-        ImportoLabel.Text = "Importo:"
-        '
         'ImportoTextBox
         '
         Me.ImportoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.V_PreventivoBindingSource, "Importo", True))
@@ -339,15 +352,6 @@ Partial Class V_Preventivo
         Me.ImportoTextBox.Name = "ImportoTextBox"
         Me.ImportoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImportoTextBox.TabIndex = 10
-        '
-        'PianoContiLabel
-        '
-        PianoContiLabel.AutoSize = True
-        PianoContiLabel.Location = New System.Drawing.Point(522, 37)
-        PianoContiLabel.Name = "PianoContiLabel"
-        PianoContiLabel.Size = New System.Drawing.Size(64, 13)
-        PianoContiLabel.TabIndex = 11
-        PianoContiLabel.Text = "Piano Conti:"
         '
         'PianoContiComboBox
         '
@@ -360,12 +364,8 @@ Partial Class V_Preventivo
         '
         'V_PreventivoDettaglioBindingSource
         '
-        Me.V_PreventivoDettaglioBindingSource.DataMember = "V_PreventivoDettaglio"
-        Me.V_PreventivoDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
-        '
-        'V_PreventivoDettaglioTableAdapter
-        '
-        Me.V_PreventivoDettaglioTableAdapter.ClearBeforeFill = True
+        Me.V_PreventivoDettaglioBindingSource.DataMember = "V_PreventivoV_PreventivoDettaglio"
+        Me.V_PreventivoDettaglioBindingSource.DataSource = Me.V_PreventivoBindingSource
         '
         'V_PreventivoDettaglioDataGridView
         '
@@ -373,9 +373,9 @@ Partial Class V_Preventivo
         Me.V_PreventivoDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.V_PreventivoDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.V_PreventivoDettaglioDataGridView.DataSource = Me.V_PreventivoDettaglioBindingSource
-        Me.V_PreventivoDettaglioDataGridView.Location = New System.Drawing.Point(21, 139)
+        Me.V_PreventivoDettaglioDataGridView.Location = New System.Drawing.Point(18, 130)
         Me.V_PreventivoDettaglioDataGridView.Name = "V_PreventivoDettaglioDataGridView"
-        Me.V_PreventivoDettaglioDataGridView.Size = New System.Drawing.Size(721, 220)
+        Me.V_PreventivoDettaglioDataGridView.Size = New System.Drawing.Size(655, 220)
         Me.V_PreventivoDettaglioDataGridView.TabIndex = 13
         '
         'DataGridViewTextBoxColumn5

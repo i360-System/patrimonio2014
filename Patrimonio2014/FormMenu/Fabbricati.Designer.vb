@@ -24,9 +24,9 @@ Partial Class Fabbricati
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ImmobileLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fabbricati))
         Dim FabbricatoLabel As System.Windows.Forms.Label
         Dim DescrizioneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fabbricati))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.FabbricatiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FabbricatiTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiTableAdapter()
@@ -47,9 +47,11 @@ Partial Class Fabbricati
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.FabbricatoTextBox = New System.Windows.Forms.TextBox()
         Me.DescrizioneTextBox = New System.Windows.Forms.TextBox()
-        Me.FabbricatiDettaglio1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FabbricatiDettaglio1TableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglio1TableAdapter()
-        Me.FabbricatiDettaglio1DataGridView = New System.Windows.Forms.DataGridView()
+        Me.FabbricatiDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FabbricatiDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter()
+        Me.FabbricatiScaleTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiScaleTableAdapter()
+        Me.FabbricatiDettaglioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FabbricatiDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         ImmobileLabel = New System.Windows.Forms.Label()
@@ -59,18 +61,37 @@ Partial Class Fabbricati
         CType(Me.FabbricatiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FabbricatiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FabbricatiBindingNavigator.SuspendLayout()
-        CType(Me.FabbricatiDettaglio1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FabbricatiDettaglio1DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FabbricatiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FabbricatiDettaglioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FabbricatiDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImmobileLabel
         '
         ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(12, 47)
+        ImmobileLabel.Location = New System.Drawing.Point(12, 42)
         ImmobileLabel.Name = "ImmobileLabel"
         ImmobileLabel.Size = New System.Drawing.Size(51, 13)
         ImmobileLabel.TabIndex = 1
         ImmobileLabel.Text = "Immobile:"
+        '
+        'FabbricatoLabel
+        '
+        FabbricatoLabel.AutoSize = True
+        FabbricatoLabel.Location = New System.Drawing.Point(279, 42)
+        FabbricatoLabel.Name = "FabbricatoLabel"
+        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
+        FabbricatoLabel.TabIndex = 3
+        FabbricatoLabel.Text = "Fabbricato:"
+        '
+        'DescrizioneLabel
+        '
+        DescrizioneLabel.AutoSize = True
+        DescrizioneLabel.Location = New System.Drawing.Point(12, 82)
+        DescrizioneLabel.Name = "DescrizioneLabel"
+        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
+        DescrizioneLabel.TabIndex = 5
+        DescrizioneLabel.Text = "Descrizione:"
         '
         'IMMOBILIDataSet2
         '
@@ -95,9 +116,9 @@ Partial Class Fabbricati
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Me.FabbricatiTableAdapter
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -152,7 +173,7 @@ Partial Class Fabbricati
         Me.FabbricatiBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.FabbricatiBindingNavigator.Name = "FabbricatiBindingNavigator"
         Me.FabbricatiBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.FabbricatiBindingNavigator.Size = New System.Drawing.Size(584, 25)
+        Me.FabbricatiBindingNavigator.Size = New System.Drawing.Size(497, 25)
         Me.FabbricatiBindingNavigator.TabIndex = 0
         Me.FabbricatiBindingNavigator.Text = "BindingNavigator1"
         '
@@ -209,7 +230,7 @@ Partial Class Fabbricati
         Me.BindingNavigatorPositionItem.AccessibleName = "Posizione"
         Me.BindingNavigatorPositionItem.AutoSize = False
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 21)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
@@ -253,64 +274,55 @@ Partial Class Fabbricati
         '
         Me.ImmobileComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FabbricatiBindingSource, "Immobile", True))
         Me.ImmobileComboBox.FormattingEnabled = True
-        Me.ImmobileComboBox.Location = New System.Drawing.Point(15, 63)
+        Me.ImmobileComboBox.Location = New System.Drawing.Point(15, 58)
         Me.ImmobileComboBox.Name = "ImmobileComboBox"
-        Me.ImmobileComboBox.Size = New System.Drawing.Size(256, 21)
+        Me.ImmobileComboBox.Size = New System.Drawing.Size(254, 21)
         Me.ImmobileComboBox.TabIndex = 2
-        '
-        'FabbricatoLabel
-        '
-        FabbricatoLabel.AutoSize = True
-        FabbricatoLabel.Location = New System.Drawing.Point(277, 47)
-        FabbricatoLabel.Name = "FabbricatoLabel"
-        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
-        FabbricatoLabel.TabIndex = 3
-        FabbricatoLabel.Text = "Fabbricato:"
         '
         'FabbricatoTextBox
         '
         Me.FabbricatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FabbricatiBindingSource, "Fabbricato", True))
-        Me.FabbricatoTextBox.Location = New System.Drawing.Point(280, 64)
+        Me.FabbricatoTextBox.Location = New System.Drawing.Point(282, 58)
         Me.FabbricatoTextBox.Name = "FabbricatoTextBox"
         Me.FabbricatoTextBox.Size = New System.Drawing.Size(57, 20)
         Me.FabbricatoTextBox.TabIndex = 4
         '
-        'DescrizioneLabel
-        '
-        DescrizioneLabel.AutoSize = True
-        DescrizioneLabel.Location = New System.Drawing.Point(13, 87)
-        DescrizioneLabel.Name = "DescrizioneLabel"
-        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
-        DescrizioneLabel.TabIndex = 5
-        DescrizioneLabel.Text = "Descrizione:"
-        '
         'DescrizioneTextBox
         '
         Me.DescrizioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FabbricatiBindingSource, "Descrizione", True))
-        Me.DescrizioneTextBox.Location = New System.Drawing.Point(16, 103)
+        Me.DescrizioneTextBox.Location = New System.Drawing.Point(15, 98)
         Me.DescrizioneTextBox.Name = "DescrizioneTextBox"
-        Me.DescrizioneTextBox.Size = New System.Drawing.Size(321, 20)
+        Me.DescrizioneTextBox.Size = New System.Drawing.Size(324, 20)
         Me.DescrizioneTextBox.TabIndex = 6
         '
-        'FabbricatiDettaglio1BindingSource
+        'FabbricatiDettaglioBindingSource
         '
-        Me.FabbricatiDettaglio1BindingSource.DataMember = "FabbricatiDettaglio1"
-        Me.FabbricatiDettaglio1BindingSource.DataSource = Me.IMMOBILIDataSet2
+        Me.FabbricatiDettaglioBindingSource.DataMember = "FabbricatiScale"
+        Me.FabbricatiDettaglioBindingSource.DataSource = Me.FabbricatiBindingSource
         '
-        'FabbricatiDettaglio1TableAdapter
+        'FabbricatiDettaglioTableAdapter
         '
-        Me.FabbricatiDettaglio1TableAdapter.ClearBeforeFill = True
+        Me.FabbricatiDettaglioTableAdapter.ClearBeforeFill = True
         '
-        'FabbricatiDettaglio1DataGridView
+        'FabbricatiScaleTableAdapter
         '
-        Me.FabbricatiDettaglio1DataGridView.AutoGenerateColumns = False
-        Me.FabbricatiDettaglio1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.FabbricatiDettaglio1DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.FabbricatiDettaglio1DataGridView.DataSource = Me.FabbricatiDettaglio1BindingSource
-        Me.FabbricatiDettaglio1DataGridView.Location = New System.Drawing.Point(19, 153)
-        Me.FabbricatiDettaglio1DataGridView.Name = "FabbricatiDettaglio1DataGridView"
-        Me.FabbricatiDettaglio1DataGridView.Size = New System.Drawing.Size(534, 220)
-        Me.FabbricatiDettaglio1DataGridView.TabIndex = 7
+        Me.FabbricatiScaleTableAdapter.ClearBeforeFill = True
+        '
+        'FabbricatiDettaglioBindingSource1
+        '
+        Me.FabbricatiDettaglioBindingSource1.DataMember = "FabbricatiDettaglio"
+        Me.FabbricatiDettaglioBindingSource1.DataSource = Me.IMMOBILIDataSet2
+        '
+        'FabbricatiDettaglioDataGridView
+        '
+        Me.FabbricatiDettaglioDataGridView.AutoGenerateColumns = False
+        Me.FabbricatiDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.FabbricatiDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.FabbricatiDettaglioDataGridView.DataSource = Me.FabbricatiDettaglioBindingSource1
+        Me.FabbricatiDettaglioDataGridView.Location = New System.Drawing.Point(26, 162)
+        Me.FabbricatiDettaglioDataGridView.Name = "FabbricatiDettaglioDataGridView"
+        Me.FabbricatiDettaglioDataGridView.Size = New System.Drawing.Size(459, 220)
+        Me.FabbricatiDettaglioDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn3
         '
@@ -329,8 +341,8 @@ Partial Class Fabbricati
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(584, 393)
-        Me.Controls.Add(Me.FabbricatiDettaglio1DataGridView)
+        Me.ClientSize = New System.Drawing.Size(497, 416)
+        Me.Controls.Add(Me.FabbricatiDettaglioDataGridView)
         Me.Controls.Add(DescrizioneLabel)
         Me.Controls.Add(Me.DescrizioneTextBox)
         Me.Controls.Add(FabbricatoLabel)
@@ -345,8 +357,9 @@ Partial Class Fabbricati
         CType(Me.FabbricatiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FabbricatiBindingNavigator.ResumeLayout(False)
         Me.FabbricatiBindingNavigator.PerformLayout()
-        CType(Me.FabbricatiDettaglio1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FabbricatiDettaglio1DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FabbricatiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FabbricatiDettaglioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FabbricatiDettaglioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -371,9 +384,11 @@ Partial Class Fabbricati
     Friend WithEvents ImmobileComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents FabbricatoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DescrizioneTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents FabbricatiDettaglio1BindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents FabbricatiDettaglio1TableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglio1TableAdapter
-    Friend WithEvents FabbricatiDettaglio1DataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents FabbricatiDettaglioBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents FabbricatiDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter
+    Friend WithEvents FabbricatiScaleTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiScaleTableAdapter
+    Friend WithEvents FabbricatiDettaglioBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents FabbricatiDettaglioDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

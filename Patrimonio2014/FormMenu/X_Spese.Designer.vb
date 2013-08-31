@@ -23,7 +23,6 @@ Partial Class X_Spese
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(X_Spese))
         Dim ProgressivoLabel As System.Windows.Forms.Label
         Dim ImmobileLabel As System.Windows.Forms.Label
         Dim GestioneLabel As System.Windows.Forms.Label
@@ -50,22 +49,24 @@ Partial Class X_Spese
         Dim NettoLabel As System.Windows.Forms.Label
         Dim QuadroAcLabel As System.Windows.Forms.Label
         Dim DataPagamentoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(X_Spese))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.X_SpeseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.X_SpeseTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_SpeseTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
+        Me.X_SpeseDescrizioniTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_SpeseDescrizioniTableAdapter()
         Me.X_SpeseBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.X_SpeseBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ProgressivoTextBox = New System.Windows.Forms.TextBox()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
@@ -94,7 +95,6 @@ Partial Class X_Spese
         Me.QuadroAcTextBox = New System.Windows.Forms.TextBox()
         Me.DataPagamentoDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.X_SpeseDescrizioniBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.X_SpeseDescrizioniTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_SpeseDescrizioniTableAdapter()
         Me.X_SpeseDescrizioniDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -132,6 +132,240 @@ Partial Class X_Spese
         CType(Me.X_SpeseDescrizioniDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'ProgressivoLabel
+        '
+        ProgressivoLabel.AutoSize = True
+        ProgressivoLabel.Location = New System.Drawing.Point(12, 43)
+        ProgressivoLabel.Name = "ProgressivoLabel"
+        ProgressivoLabel.Size = New System.Drawing.Size(65, 13)
+        ProgressivoLabel.TabIndex = 1
+        ProgressivoLabel.Text = "Progressivo:"
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(96, 43)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 3
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(363, 43)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 5
+        GestioneLabel.Text = "Gestione:"
+        '
+        'FabbricatoLabel
+        '
+        FabbricatoLabel.AutoSize = True
+        FabbricatoLabel.Location = New System.Drawing.Point(96, 82)
+        FabbricatoLabel.Name = "FabbricatoLabel"
+        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
+        FabbricatoLabel.TabIndex = 7
+        FabbricatoLabel.Text = "Fabbricato:"
+        '
+        'ScalaLabel
+        '
+        ScalaLabel.AutoSize = True
+        ScalaLabel.Location = New System.Drawing.Point(363, 82)
+        ScalaLabel.Name = "ScalaLabel"
+        ScalaLabel.Size = New System.Drawing.Size(37, 13)
+        ScalaLabel.TabIndex = 9
+        ScalaLabel.Text = "Scala:"
+        '
+        'GruppoLabel
+        '
+        GruppoLabel.AutoSize = True
+        GruppoLabel.Location = New System.Drawing.Point(96, 122)
+        GruppoLabel.Name = "GruppoLabel"
+        GruppoLabel.Size = New System.Drawing.Size(45, 13)
+        GruppoLabel.TabIndex = 11
+        GruppoLabel.Text = "Gruppo:"
+        '
+        'SpesaLabel
+        '
+        SpesaLabel.AutoSize = True
+        SpesaLabel.Location = New System.Drawing.Point(96, 162)
+        SpesaLabel.Name = "SpesaLabel"
+        SpesaLabel.Size = New System.Drawing.Size(40, 13)
+        SpesaLabel.TabIndex = 13
+        SpesaLabel.Text = "Spesa:"
+        '
+        'UnitaLabel
+        '
+        UnitaLabel.AutoSize = True
+        UnitaLabel.Location = New System.Drawing.Point(365, 122)
+        UnitaLabel.Name = "UnitaLabel"
+        UnitaLabel.Size = New System.Drawing.Size(35, 13)
+        UnitaLabel.TabIndex = 15
+        UnitaLabel.Text = "Unita:"
+        '
+        'DocumentoLabel
+        '
+        DocumentoLabel.AutoSize = True
+        DocumentoLabel.Location = New System.Drawing.Point(12, 208)
+        DocumentoLabel.Name = "DocumentoLabel"
+        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
+        DocumentoLabel.TabIndex = 17
+        DocumentoLabel.Text = "Documento:"
+        '
+        'FornitoreLabel
+        '
+        FornitoreLabel.AutoSize = True
+        FornitoreLabel.Location = New System.Drawing.Point(96, 208)
+        FornitoreLabel.Name = "FornitoreLabel"
+        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
+        FornitoreLabel.TabIndex = 19
+        FornitoreLabel.Text = "Fornitore:"
+        '
+        'QuantitaLabel
+        '
+        QuantitaLabel.AutoSize = True
+        QuantitaLabel.Location = New System.Drawing.Point(365, 208)
+        QuantitaLabel.Name = "QuantitaLabel"
+        QuantitaLabel.Size = New System.Drawing.Size(50, 13)
+        QuantitaLabel.TabIndex = 21
+        QuantitaLabel.Text = "Quantita:"
+        '
+        'ImportoSpesaLabel
+        '
+        ImportoSpesaLabel.AutoSize = True
+        ImportoSpesaLabel.Location = New System.Drawing.Point(421, 208)
+        ImportoSpesaLabel.Name = "ImportoSpesaLabel"
+        ImportoSpesaLabel.Size = New System.Drawing.Size(78, 13)
+        ImportoSpesaLabel.TabIndex = 23
+        ImportoSpesaLabel.Text = "Importo Spesa:"
+        '
+        'DataDocumentoLabel
+        '
+        DataDocumentoLabel.AutoSize = True
+        DataDocumentoLabel.Location = New System.Drawing.Point(530, 208)
+        DataDocumentoLabel.Name = "DataDocumentoLabel"
+        DataDocumentoLabel.Size = New System.Drawing.Size(91, 13)
+        DataDocumentoLabel.TabIndex = 25
+        DataDocumentoLabel.Text = "Data Documento:"
+        '
+        'FatturaSaldataLabel
+        '
+        FatturaSaldataLabel.AutoSize = True
+        FatturaSaldataLabel.Location = New System.Drawing.Point(632, 208)
+        FatturaSaldataLabel.Name = "FatturaSaldataLabel"
+        FatturaSaldataLabel.Size = New System.Drawing.Size(37, 13)
+        FatturaSaldataLabel.TabIndex = 27
+        FatturaSaldataLabel.Text = "Saldo:"
+        '
+        'TrattamentoLabel
+        '
+        TrattamentoLabel.AutoSize = True
+        TrattamentoLabel.Location = New System.Drawing.Point(96, 247)
+        TrattamentoLabel.Name = "TrattamentoLabel"
+        TrattamentoLabel.Size = New System.Drawing.Size(67, 13)
+        TrattamentoLabel.TabIndex = 29
+        TrattamentoLabel.Text = "Trattamento:"
+        '
+        'CodiceTributoLabel
+        '
+        CodiceTributoLabel.AutoSize = True
+        CodiceTributoLabel.Location = New System.Drawing.Point(12, 287)
+        CodiceTributoLabel.Name = "CodiceTributoLabel"
+        CodiceTributoLabel.Size = New System.Drawing.Size(79, 13)
+        CodiceTributoLabel.TabIndex = 31
+        CodiceTributoLabel.Text = "Codice Tributo:"
+        '
+        'CausaleLabel
+        '
+        CausaleLabel.AutoSize = True
+        CausaleLabel.Location = New System.Drawing.Point(99, 287)
+        CausaleLabel.Name = "CausaleLabel"
+        CausaleLabel.Size = New System.Drawing.Size(48, 13)
+        CausaleLabel.TabIndex = 33
+        CausaleLabel.Text = "Causale:"
+        '
+        'CompensoLabel
+        '
+        CompensoLabel.AutoSize = True
+        CompensoLabel.Location = New System.Drawing.Point(17, 326)
+        CompensoLabel.Name = "CompensoLabel"
+        CompensoLabel.Size = New System.Drawing.Size(60, 13)
+        CompensoLabel.TabIndex = 35
+        CompensoLabel.Text = "Compenso:"
+        '
+        'EsenteLabel
+        '
+        EsenteLabel.AutoSize = True
+        EsenteLabel.Location = New System.Drawing.Point(121, 326)
+        EsenteLabel.Name = "EsenteLabel"
+        EsenteLabel.Size = New System.Drawing.Size(43, 13)
+        EsenteLabel.TabIndex = 37
+        EsenteLabel.Text = "Esente:"
+        '
+        'PrevidenzaLabel
+        '
+        PrevidenzaLabel.AutoSize = True
+        PrevidenzaLabel.Location = New System.Drawing.Point(187, 326)
+        PrevidenzaLabel.Name = "PrevidenzaLabel"
+        PrevidenzaLabel.Size = New System.Drawing.Size(63, 13)
+        PrevidenzaLabel.TabIndex = 39
+        PrevidenzaLabel.Text = "Previdenza:"
+        '
+        'IvaLabel
+        '
+        IvaLabel.AutoSize = True
+        IvaLabel.Location = New System.Drawing.Point(275, 326)
+        IvaLabel.Name = "IvaLabel"
+        IvaLabel.Size = New System.Drawing.Size(25, 13)
+        IvaLabel.TabIndex = 41
+        IvaLabel.Text = "Iva:"
+        '
+        'ImponibileLabel
+        '
+        ImponibileLabel.AutoSize = True
+        ImponibileLabel.Location = New System.Drawing.Point(365, 326)
+        ImponibileLabel.Name = "ImponibileLabel"
+        ImponibileLabel.Size = New System.Drawing.Size(57, 13)
+        ImponibileLabel.TabIndex = 43
+        ImponibileLabel.Text = "Imponibile:"
+        '
+        'RitenutaLabel
+        '
+        RitenutaLabel.AutoSize = True
+        RitenutaLabel.Location = New System.Drawing.Point(454, 326)
+        RitenutaLabel.Name = "RitenutaLabel"
+        RitenutaLabel.Size = New System.Drawing.Size(50, 13)
+        RitenutaLabel.TabIndex = 45
+        RitenutaLabel.Text = "Ritenuta:"
+        '
+        'NettoLabel
+        '
+        NettoLabel.AutoSize = True
+        NettoLabel.Location = New System.Drawing.Point(542, 326)
+        NettoLabel.Name = "NettoLabel"
+        NettoLabel.Size = New System.Drawing.Size(36, 13)
+        NettoLabel.TabIndex = 47
+        NettoLabel.Text = "Netto:"
+        '
+        'QuadroAcLabel
+        '
+        QuadroAcLabel.AutoSize = True
+        QuadroAcLabel.Location = New System.Drawing.Point(675, 208)
+        QuadroAcLabel.Name = "QuadroAcLabel"
+        QuadroAcLabel.Size = New System.Drawing.Size(61, 13)
+        QuadroAcLabel.TabIndex = 49
+        QuadroAcLabel.Text = "Quadro Ac:"
+        '
+        'DataPagamentoLabel
+        '
+        DataPagamentoLabel.AutoSize = True
+        DataPagamentoLabel.Location = New System.Drawing.Point(632, 326)
+        DataPagamentoLabel.Name = "DataPagamentoLabel"
+        DataPagamentoLabel.Size = New System.Drawing.Size(90, 13)
+        DataPagamentoLabel.TabIndex = 51
+        DataPagamentoLabel.Text = "Data Pagamento:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -155,9 +389,9 @@ Partial Class X_Spese
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -198,6 +432,10 @@ Partial Class X_Spese
         Me.TableAdapterManager.Z_ConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.Z_TestoSollecitoTableAdapter = Nothing
         '
+        'X_SpeseDescrizioniTableAdapter
+        '
+        Me.X_SpeseDescrizioniTableAdapter.ClearBeforeFill = True
+        '
         'X_SpeseBindingNavigator
         '
         Me.X_SpeseBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -215,6 +453,31 @@ Partial Class X_Spese
         Me.X_SpeseBindingNavigator.Size = New System.Drawing.Size(756, 25)
         Me.X_SpeseBindingNavigator.TabIndex = 0
         Me.X_SpeseBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -248,17 +511,10 @@ Partial Class X_Spese
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 13)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -266,7 +522,7 @@ Partial Class X_Spese
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -275,48 +531,21 @@ Partial Class X_Spese
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'X_SpeseBindingNavigatorSaveItem
         '
         Me.X_SpeseBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.X_SpeseBindingNavigatorSaveItem.Image = CType(resources.GetObject("X_SpeseBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.X_SpeseBindingNavigatorSaveItem.Name = "X_SpeseBindingNavigatorSaveItem"
-        Me.X_SpeseBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.X_SpeseBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.X_SpeseBindingNavigatorSaveItem.Text = "Salva dati"
-        '
-        'ProgressivoLabel
-        '
-        ProgressivoLabel.AutoSize = True
-        ProgressivoLabel.Location = New System.Drawing.Point(12, 43)
-        ProgressivoLabel.Name = "ProgressivoLabel"
-        ProgressivoLabel.Size = New System.Drawing.Size(65, 13)
-        ProgressivoLabel.TabIndex = 1
-        ProgressivoLabel.Text = "Progressivo:"
         '
         'ProgressivoTextBox
         '
@@ -325,15 +554,6 @@ Partial Class X_Spese
         Me.ProgressivoTextBox.Name = "ProgressivoTextBox"
         Me.ProgressivoTextBox.Size = New System.Drawing.Size(75, 20)
         Me.ProgressivoTextBox.TabIndex = 2
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(96, 43)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 3
-        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
@@ -344,15 +564,6 @@ Partial Class X_Spese
         Me.ImmobileComboBox.Size = New System.Drawing.Size(258, 21)
         Me.ImmobileComboBox.TabIndex = 4
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(363, 43)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 5
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Gestione", True))
@@ -361,15 +572,6 @@ Partial Class X_Spese
         Me.GestioneComboBox.Name = "GestioneComboBox"
         Me.GestioneComboBox.Size = New System.Drawing.Size(260, 21)
         Me.GestioneComboBox.TabIndex = 6
-        '
-        'FabbricatoLabel
-        '
-        FabbricatoLabel.AutoSize = True
-        FabbricatoLabel.Location = New System.Drawing.Point(96, 82)
-        FabbricatoLabel.Name = "FabbricatoLabel"
-        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
-        FabbricatoLabel.TabIndex = 7
-        FabbricatoLabel.Text = "Fabbricato:"
         '
         'FabbricatoComboBox
         '
@@ -380,15 +582,6 @@ Partial Class X_Spese
         Me.FabbricatoComboBox.Size = New System.Drawing.Size(258, 21)
         Me.FabbricatoComboBox.TabIndex = 8
         '
-        'ScalaLabel
-        '
-        ScalaLabel.AutoSize = True
-        ScalaLabel.Location = New System.Drawing.Point(363, 82)
-        ScalaLabel.Name = "ScalaLabel"
-        ScalaLabel.Size = New System.Drawing.Size(37, 13)
-        ScalaLabel.TabIndex = 9
-        ScalaLabel.Text = "Scala:"
-        '
         'ScalaComboBox
         '
         Me.ScalaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Scala", True))
@@ -397,15 +590,6 @@ Partial Class X_Spese
         Me.ScalaComboBox.Name = "ScalaComboBox"
         Me.ScalaComboBox.Size = New System.Drawing.Size(260, 21)
         Me.ScalaComboBox.TabIndex = 10
-        '
-        'GruppoLabel
-        '
-        GruppoLabel.AutoSize = True
-        GruppoLabel.Location = New System.Drawing.Point(96, 122)
-        GruppoLabel.Name = "GruppoLabel"
-        GruppoLabel.Size = New System.Drawing.Size(45, 13)
-        GruppoLabel.TabIndex = 11
-        GruppoLabel.Text = "Gruppo:"
         '
         'GruppoComboBox
         '
@@ -416,15 +600,6 @@ Partial Class X_Spese
         Me.GruppoComboBox.Size = New System.Drawing.Size(258, 21)
         Me.GruppoComboBox.TabIndex = 12
         '
-        'SpesaLabel
-        '
-        SpesaLabel.AutoSize = True
-        SpesaLabel.Location = New System.Drawing.Point(96, 162)
-        SpesaLabel.Name = "SpesaLabel"
-        SpesaLabel.Size = New System.Drawing.Size(40, 13)
-        SpesaLabel.TabIndex = 13
-        SpesaLabel.Text = "Spesa:"
-        '
         'SpesaComboBox
         '
         Me.SpesaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Spesa", True))
@@ -433,15 +608,6 @@ Partial Class X_Spese
         Me.SpesaComboBox.Name = "SpesaComboBox"
         Me.SpesaComboBox.Size = New System.Drawing.Size(258, 21)
         Me.SpesaComboBox.TabIndex = 14
-        '
-        'UnitaLabel
-        '
-        UnitaLabel.AutoSize = True
-        UnitaLabel.Location = New System.Drawing.Point(365, 122)
-        UnitaLabel.Name = "UnitaLabel"
-        UnitaLabel.Size = New System.Drawing.Size(35, 13)
-        UnitaLabel.TabIndex = 15
-        UnitaLabel.Text = "Unita:"
         '
         'UnitaComboBox
         '
@@ -452,15 +618,6 @@ Partial Class X_Spese
         Me.UnitaComboBox.Size = New System.Drawing.Size(258, 21)
         Me.UnitaComboBox.TabIndex = 16
         '
-        'DocumentoLabel
-        '
-        DocumentoLabel.AutoSize = True
-        DocumentoLabel.Location = New System.Drawing.Point(12, 208)
-        DocumentoLabel.Name = "DocumentoLabel"
-        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
-        DocumentoLabel.TabIndex = 17
-        DocumentoLabel.Text = "Documento:"
-        '
         'DocumentoTextBox
         '
         Me.DocumentoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Documento", True))
@@ -468,15 +625,6 @@ Partial Class X_Spese
         Me.DocumentoTextBox.Name = "DocumentoTextBox"
         Me.DocumentoTextBox.Size = New System.Drawing.Size(75, 20)
         Me.DocumentoTextBox.TabIndex = 18
-        '
-        'FornitoreLabel
-        '
-        FornitoreLabel.AutoSize = True
-        FornitoreLabel.Location = New System.Drawing.Point(96, 208)
-        FornitoreLabel.Name = "FornitoreLabel"
-        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
-        FornitoreLabel.TabIndex = 19
-        FornitoreLabel.Text = "Fornitore:"
         '
         'FornitoreComboBox
         '
@@ -487,15 +635,6 @@ Partial Class X_Spese
         Me.FornitoreComboBox.Size = New System.Drawing.Size(258, 21)
         Me.FornitoreComboBox.TabIndex = 20
         '
-        'QuantitaLabel
-        '
-        QuantitaLabel.AutoSize = True
-        QuantitaLabel.Location = New System.Drawing.Point(365, 208)
-        QuantitaLabel.Name = "QuantitaLabel"
-        QuantitaLabel.Size = New System.Drawing.Size(50, 13)
-        QuantitaLabel.TabIndex = 21
-        QuantitaLabel.Text = "Quantita:"
-        '
         'QuantitaTextBox
         '
         Me.QuantitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Quantita", True))
@@ -504,15 +643,6 @@ Partial Class X_Spese
         Me.QuantitaTextBox.Size = New System.Drawing.Size(47, 20)
         Me.QuantitaTextBox.TabIndex = 22
         '
-        'ImportoSpesaLabel
-        '
-        ImportoSpesaLabel.AutoSize = True
-        ImportoSpesaLabel.Location = New System.Drawing.Point(421, 208)
-        ImportoSpesaLabel.Name = "ImportoSpesaLabel"
-        ImportoSpesaLabel.Size = New System.Drawing.Size(78, 13)
-        ImportoSpesaLabel.TabIndex = 23
-        ImportoSpesaLabel.Text = "Importo Spesa:"
-        '
         'ImportoSpesaTextBox
         '
         Me.ImportoSpesaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "ImportoSpesa", True))
@@ -520,15 +650,6 @@ Partial Class X_Spese
         Me.ImportoSpesaTextBox.Name = "ImportoSpesaTextBox"
         Me.ImportoSpesaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImportoSpesaTextBox.TabIndex = 24
-        '
-        'DataDocumentoLabel
-        '
-        DataDocumentoLabel.AutoSize = True
-        DataDocumentoLabel.Location = New System.Drawing.Point(530, 208)
-        DataDocumentoLabel.Name = "DataDocumentoLabel"
-        DataDocumentoLabel.Size = New System.Drawing.Size(91, 13)
-        DataDocumentoLabel.TabIndex = 25
-        DataDocumentoLabel.Text = "Data Documento:"
         '
         'DataDocumentoDateTimePicker
         '
@@ -539,15 +660,6 @@ Partial Class X_Spese
         Me.DataDocumentoDateTimePicker.Size = New System.Drawing.Size(93, 20)
         Me.DataDocumentoDateTimePicker.TabIndex = 26
         '
-        'FatturaSaldataLabel
-        '
-        FatturaSaldataLabel.AutoSize = True
-        FatturaSaldataLabel.Location = New System.Drawing.Point(632, 208)
-        FatturaSaldataLabel.Name = "FatturaSaldataLabel"
-        FatturaSaldataLabel.Size = New System.Drawing.Size(37, 13)
-        FatturaSaldataLabel.TabIndex = 27
-        FatturaSaldataLabel.Text = "Saldo:"
-        '
         'FatturaSaldataTextBox
         '
         Me.FatturaSaldataTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "FatturaSaldata", True))
@@ -555,15 +667,6 @@ Partial Class X_Spese
         Me.FatturaSaldataTextBox.Name = "FatturaSaldataTextBox"
         Me.FatturaSaldataTextBox.Size = New System.Drawing.Size(34, 20)
         Me.FatturaSaldataTextBox.TabIndex = 28
-        '
-        'TrattamentoLabel
-        '
-        TrattamentoLabel.AutoSize = True
-        TrattamentoLabel.Location = New System.Drawing.Point(96, 247)
-        TrattamentoLabel.Name = "TrattamentoLabel"
-        TrattamentoLabel.Size = New System.Drawing.Size(67, 13)
-        TrattamentoLabel.TabIndex = 29
-        TrattamentoLabel.Text = "Trattamento:"
         '
         'TrattamentoComboBox
         '
@@ -574,15 +677,6 @@ Partial Class X_Spese
         Me.TrattamentoComboBox.Size = New System.Drawing.Size(258, 21)
         Me.TrattamentoComboBox.TabIndex = 30
         '
-        'CodiceTributoLabel
-        '
-        CodiceTributoLabel.AutoSize = True
-        CodiceTributoLabel.Location = New System.Drawing.Point(12, 287)
-        CodiceTributoLabel.Name = "CodiceTributoLabel"
-        CodiceTributoLabel.Size = New System.Drawing.Size(79, 13)
-        CodiceTributoLabel.TabIndex = 31
-        CodiceTributoLabel.Text = "Codice Tributo:"
-        '
         'CodiceTributoTextBox
         '
         Me.CodiceTributoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "CodiceTributo", True))
@@ -590,15 +684,6 @@ Partial Class X_Spese
         Me.CodiceTributoTextBox.Name = "CodiceTributoTextBox"
         Me.CodiceTributoTextBox.Size = New System.Drawing.Size(76, 20)
         Me.CodiceTributoTextBox.TabIndex = 32
-        '
-        'CausaleLabel
-        '
-        CausaleLabel.AutoSize = True
-        CausaleLabel.Location = New System.Drawing.Point(99, 287)
-        CausaleLabel.Name = "CausaleLabel"
-        CausaleLabel.Size = New System.Drawing.Size(48, 13)
-        CausaleLabel.TabIndex = 33
-        CausaleLabel.Text = "Causale:"
         '
         'CausaleTextBox
         '
@@ -608,15 +693,6 @@ Partial Class X_Spese
         Me.CausaleTextBox.Size = New System.Drawing.Size(255, 20)
         Me.CausaleTextBox.TabIndex = 34
         '
-        'CompensoLabel
-        '
-        CompensoLabel.AutoSize = True
-        CompensoLabel.Location = New System.Drawing.Point(17, 326)
-        CompensoLabel.Name = "CompensoLabel"
-        CompensoLabel.Size = New System.Drawing.Size(60, 13)
-        CompensoLabel.TabIndex = 35
-        CompensoLabel.Text = "Compenso:"
-        '
         'CompensoTextBox
         '
         Me.CompensoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Compenso", True))
@@ -624,15 +700,6 @@ Partial Class X_Spese
         Me.CompensoTextBox.Name = "CompensoTextBox"
         Me.CompensoTextBox.Size = New System.Drawing.Size(76, 20)
         Me.CompensoTextBox.TabIndex = 36
-        '
-        'EsenteLabel
-        '
-        EsenteLabel.AutoSize = True
-        EsenteLabel.Location = New System.Drawing.Point(121, 326)
-        EsenteLabel.Name = "EsenteLabel"
-        EsenteLabel.Size = New System.Drawing.Size(43, 13)
-        EsenteLabel.TabIndex = 37
-        EsenteLabel.Text = "Esente:"
         '
         'EsenteTextBox
         '
@@ -642,15 +709,6 @@ Partial Class X_Spese
         Me.EsenteTextBox.Size = New System.Drawing.Size(79, 20)
         Me.EsenteTextBox.TabIndex = 38
         '
-        'PrevidenzaLabel
-        '
-        PrevidenzaLabel.AutoSize = True
-        PrevidenzaLabel.Location = New System.Drawing.Point(187, 326)
-        PrevidenzaLabel.Name = "PrevidenzaLabel"
-        PrevidenzaLabel.Size = New System.Drawing.Size(63, 13)
-        PrevidenzaLabel.TabIndex = 39
-        PrevidenzaLabel.Text = "Previdenza:"
-        '
         'PrevidenzaTextBox
         '
         Me.PrevidenzaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Previdenza", True))
@@ -658,15 +716,6 @@ Partial Class X_Spese
         Me.PrevidenzaTextBox.Name = "PrevidenzaTextBox"
         Me.PrevidenzaTextBox.Size = New System.Drawing.Size(79, 20)
         Me.PrevidenzaTextBox.TabIndex = 40
-        '
-        'IvaLabel
-        '
-        IvaLabel.AutoSize = True
-        IvaLabel.Location = New System.Drawing.Point(275, 326)
-        IvaLabel.Name = "IvaLabel"
-        IvaLabel.Size = New System.Drawing.Size(25, 13)
-        IvaLabel.TabIndex = 41
-        IvaLabel.Text = "Iva:"
         '
         'IvaTextBox
         '
@@ -676,15 +725,6 @@ Partial Class X_Spese
         Me.IvaTextBox.Size = New System.Drawing.Size(82, 20)
         Me.IvaTextBox.TabIndex = 42
         '
-        'ImponibileLabel
-        '
-        ImponibileLabel.AutoSize = True
-        ImponibileLabel.Location = New System.Drawing.Point(365, 326)
-        ImponibileLabel.Name = "ImponibileLabel"
-        ImponibileLabel.Size = New System.Drawing.Size(57, 13)
-        ImponibileLabel.TabIndex = 43
-        ImponibileLabel.Text = "Imponibile:"
-        '
         'ImponibileTextBox
         '
         Me.ImponibileTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Imponibile", True))
@@ -692,15 +732,6 @@ Partial Class X_Spese
         Me.ImponibileTextBox.Name = "ImponibileTextBox"
         Me.ImponibileTextBox.Size = New System.Drawing.Size(80, 20)
         Me.ImponibileTextBox.TabIndex = 44
-        '
-        'RitenutaLabel
-        '
-        RitenutaLabel.AutoSize = True
-        RitenutaLabel.Location = New System.Drawing.Point(454, 326)
-        RitenutaLabel.Name = "RitenutaLabel"
-        RitenutaLabel.Size = New System.Drawing.Size(50, 13)
-        RitenutaLabel.TabIndex = 45
-        RitenutaLabel.Text = "Ritenuta:"
         '
         'RitenutaTextBox
         '
@@ -710,15 +741,6 @@ Partial Class X_Spese
         Me.RitenutaTextBox.Size = New System.Drawing.Size(82, 20)
         Me.RitenutaTextBox.TabIndex = 46
         '
-        'NettoLabel
-        '
-        NettoLabel.AutoSize = True
-        NettoLabel.Location = New System.Drawing.Point(542, 326)
-        NettoLabel.Name = "NettoLabel"
-        NettoLabel.Size = New System.Drawing.Size(36, 13)
-        NettoLabel.TabIndex = 47
-        NettoLabel.Text = "Netto:"
-        '
         'NettoTextBox
         '
         Me.NettoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "Netto", True))
@@ -727,15 +749,6 @@ Partial Class X_Spese
         Me.NettoTextBox.Size = New System.Drawing.Size(84, 20)
         Me.NettoTextBox.TabIndex = 48
         '
-        'QuadroAcLabel
-        '
-        QuadroAcLabel.AutoSize = True
-        QuadroAcLabel.Location = New System.Drawing.Point(675, 208)
-        QuadroAcLabel.Name = "QuadroAcLabel"
-        QuadroAcLabel.Size = New System.Drawing.Size(61, 13)
-        QuadroAcLabel.TabIndex = 49
-        QuadroAcLabel.Text = "Quadro Ac:"
-        '
         'QuadroAcTextBox
         '
         Me.QuadroAcTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_SpeseBindingSource, "QuadroAc", True))
@@ -743,15 +756,6 @@ Partial Class X_Spese
         Me.QuadroAcTextBox.Name = "QuadroAcTextBox"
         Me.QuadroAcTextBox.Size = New System.Drawing.Size(58, 20)
         Me.QuadroAcTextBox.TabIndex = 50
-        '
-        'DataPagamentoLabel
-        '
-        DataPagamentoLabel.AutoSize = True
-        DataPagamentoLabel.Location = New System.Drawing.Point(632, 326)
-        DataPagamentoLabel.Name = "DataPagamentoLabel"
-        DataPagamentoLabel.Size = New System.Drawing.Size(90, 13)
-        DataPagamentoLabel.TabIndex = 51
-        DataPagamentoLabel.Text = "Data Pagamento:"
         '
         'DataPagamentoDateTimePicker
         '
@@ -764,12 +768,8 @@ Partial Class X_Spese
         '
         'X_SpeseDescrizioniBindingSource
         '
-        Me.X_SpeseDescrizioniBindingSource.DataMember = "X_SpeseDescrizioni"
-        Me.X_SpeseDescrizioniBindingSource.DataSource = Me.IMMOBILIDataSet2
-        '
-        'X_SpeseDescrizioniTableAdapter
-        '
-        Me.X_SpeseDescrizioniTableAdapter.ClearBeforeFill = True
+        Me.X_SpeseDescrizioniBindingSource.DataMember = "X_SpeseX_SpeseDescrizioni"
+        Me.X_SpeseDescrizioniBindingSource.DataSource = Me.X_SpeseBindingSource
         '
         'X_SpeseDescrizioniDataGridView
         '
@@ -777,9 +777,9 @@ Partial Class X_Spese
         Me.X_SpeseDescrizioniDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.X_SpeseDescrizioniDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.X_SpeseDescrizioniDataGridView.DataSource = Me.X_SpeseDescrizioniBindingSource
-        Me.X_SpeseDescrizioniDataGridView.Location = New System.Drawing.Point(16, 380)
+        Me.X_SpeseDescrizioniDataGridView.Location = New System.Drawing.Point(18, 386)
         Me.X_SpeseDescrizioniDataGridView.Name = "X_SpeseDescrizioniDataGridView"
-        Me.X_SpeseDescrizioniDataGridView.Size = New System.Drawing.Size(432, 124)
+        Me.X_SpeseDescrizioniDataGridView.Size = New System.Drawing.Size(518, 220)
         Me.X_SpeseDescrizioniDataGridView.TabIndex = 53
         '
         'DataGridViewTextBoxColumn2
@@ -794,13 +794,13 @@ Partial Class X_Spese
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Descrizione"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Descrizione"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 300
+        Me.DataGridViewTextBoxColumn3.Width = 240
         '
         'X_Spese
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(756, 518)
+        Me.ClientSize = New System.Drawing.Size(756, 626)
         Me.Controls.Add(Me.X_SpeseDescrizioniDataGridView)
         Me.Controls.Add(DataPagamentoLabel)
         Me.Controls.Add(Me.DataPagamentoDateTimePicker)

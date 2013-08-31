@@ -24,7 +24,6 @@ Partial Class Y_GestioniUnita
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ImmobileLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Y_GestioniUnita))
         Dim GestioneLabel As System.Windows.Forms.Label
         Dim UnitaLabel As System.Windows.Forms.Label
         Dim SaldoGestionePrecedenteLabel As System.Windows.Forms.Label
@@ -35,6 +34,7 @@ Partial Class Y_GestioniUnita
         Dim PreventivoAccontoLabel As System.Windows.Forms.Label
         Dim PreventivoProvvisorioLabel As System.Windows.Forms.Label
         Dim PreventivoSpesePersonaliLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Y_GestioniUnita))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.Y_GestioniUnitaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Y_GestioniUnitaTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.Y_GestioniUnitaTableAdapter()
@@ -66,6 +66,7 @@ Partial Class Y_GestioniUnita
         Me.Y_GestioniUnitaDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Y_GestioniUnitaDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.Y_GestioniUnitaDettaglioTableAdapter()
         Me.Y_GestioniUnitaDettaglioDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         ImmobileLabel = New System.Windows.Forms.Label()
@@ -96,6 +97,96 @@ Partial Class Y_GestioniUnita
         ImmobileLabel.TabIndex = 1
         ImmobileLabel.Text = "Immobile:"
         '
+        'GestioneLabel
+        '
+        GestioneLabel.AutoSize = True
+        GestioneLabel.Location = New System.Drawing.Point(308, 39)
+        GestioneLabel.Name = "GestioneLabel"
+        GestioneLabel.Size = New System.Drawing.Size(52, 13)
+        GestioneLabel.TabIndex = 3
+        GestioneLabel.Text = "Gestione:"
+        '
+        'UnitaLabel
+        '
+        UnitaLabel.AutoSize = True
+        UnitaLabel.Location = New System.Drawing.Point(12, 79)
+        UnitaLabel.Name = "UnitaLabel"
+        UnitaLabel.Size = New System.Drawing.Size(35, 13)
+        UnitaLabel.TabIndex = 5
+        UnitaLabel.Text = "Unita:"
+        '
+        'SaldoGestionePrecedenteLabel
+        '
+        SaldoGestionePrecedenteLabel.AutoSize = True
+        SaldoGestionePrecedenteLabel.Location = New System.Drawing.Point(12, 119)
+        SaldoGestionePrecedenteLabel.Name = "SaldoGestionePrecedenteLabel"
+        SaldoGestionePrecedenteLabel.Size = New System.Drawing.Size(105, 13)
+        SaldoGestionePrecedenteLabel.TabIndex = 7
+        SaldoGestionePrecedenteLabel.Text = "Saldo Gest. Preced.:"
+        '
+        'SpeseAddebitateLabel
+        '
+        SpeseAddebitateLabel.AutoSize = True
+        SpeseAddebitateLabel.Location = New System.Drawing.Point(121, 119)
+        SpeseAddebitateLabel.Name = "SpeseAddebitateLabel"
+        SpeseAddebitateLabel.Size = New System.Drawing.Size(94, 13)
+        SpeseAddebitateLabel.TabIndex = 9
+        SpeseAddebitateLabel.Text = "Spese Addebitate:"
+        '
+        'InteressiLabel
+        '
+        InteressiLabel.AutoSize = True
+        InteressiLabel.Location = New System.Drawing.Point(227, 119)
+        InteressiLabel.Name = "InteressiLabel"
+        InteressiLabel.Size = New System.Drawing.Size(49, 13)
+        InteressiLabel.TabIndex = 11
+        InteressiLabel.Text = "Interessi:"
+        '
+        'SpesePersonaliLabel
+        '
+        SpesePersonaliLabel.AutoSize = True
+        SpesePersonaliLabel.Location = New System.Drawing.Point(336, 119)
+        SpesePersonaliLabel.Name = "SpesePersonaliLabel"
+        SpesePersonaliLabel.Size = New System.Drawing.Size(86, 13)
+        SpesePersonaliLabel.TabIndex = 13
+        SpesePersonaliLabel.Text = "Spese Personali:"
+        '
+        'VersamentiLabel
+        '
+        VersamentiLabel.AutoSize = True
+        VersamentiLabel.Location = New System.Drawing.Point(445, 119)
+        VersamentiLabel.Name = "VersamentiLabel"
+        VersamentiLabel.Size = New System.Drawing.Size(62, 13)
+        VersamentiLabel.TabIndex = 15
+        VersamentiLabel.Text = "Versamenti:"
+        '
+        'PreventivoAccontoLabel
+        '
+        PreventivoAccontoLabel.AutoSize = True
+        PreventivoAccontoLabel.Location = New System.Drawing.Point(15, 158)
+        PreventivoAccontoLabel.Name = "PreventivoAccontoLabel"
+        PreventivoAccontoLabel.Size = New System.Drawing.Size(104, 13)
+        PreventivoAccontoLabel.TabIndex = 17
+        PreventivoAccontoLabel.Text = "Preventivo Acconto:"
+        '
+        'PreventivoProvvisorioLabel
+        '
+        PreventivoProvvisorioLabel.AutoSize = True
+        PreventivoProvvisorioLabel.Location = New System.Drawing.Point(121, 158)
+        PreventivoProvvisorioLabel.Name = "PreventivoProvvisorioLabel"
+        PreventivoProvvisorioLabel.Size = New System.Drawing.Size(90, 13)
+        PreventivoProvvisorioLabel.TabIndex = 19
+        PreventivoProvvisorioLabel.Text = "Prev. Provvisorio:"
+        '
+        'PreventivoSpesePersonaliLabel
+        '
+        PreventivoSpesePersonaliLabel.AutoSize = True
+        PreventivoSpesePersonaliLabel.Location = New System.Drawing.Point(227, 158)
+        PreventivoSpesePersonaliLabel.Name = "PreventivoSpesePersonaliLabel"
+        PreventivoSpesePersonaliLabel.Size = New System.Drawing.Size(107, 13)
+        PreventivoSpesePersonaliLabel.TabIndex = 21
+        PreventivoSpesePersonaliLabel.Text = "Prev. Spese Person.:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -119,9 +210,9 @@ Partial Class Y_GestioniUnita
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -282,15 +373,6 @@ Partial Class Y_GestioniUnita
         Me.ImmobileComboBox.Size = New System.Drawing.Size(287, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'GestioneLabel
-        '
-        GestioneLabel.AutoSize = True
-        GestioneLabel.Location = New System.Drawing.Point(308, 39)
-        GestioneLabel.Name = "GestioneLabel"
-        GestioneLabel.Size = New System.Drawing.Size(52, 13)
-        GestioneLabel.TabIndex = 3
-        GestioneLabel.Text = "Gestione:"
-        '
         'GestioneComboBox
         '
         Me.GestioneComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniUnitaBindingSource, "Gestione", True))
@@ -299,15 +381,6 @@ Partial Class Y_GestioniUnita
         Me.GestioneComboBox.Name = "GestioneComboBox"
         Me.GestioneComboBox.Size = New System.Drawing.Size(265, 21)
         Me.GestioneComboBox.TabIndex = 4
-        '
-        'UnitaLabel
-        '
-        UnitaLabel.AutoSize = True
-        UnitaLabel.Location = New System.Drawing.Point(12, 79)
-        UnitaLabel.Name = "UnitaLabel"
-        UnitaLabel.Size = New System.Drawing.Size(35, 13)
-        UnitaLabel.TabIndex = 5
-        UnitaLabel.Text = "Unita:"
         '
         'UnitaComboBox
         '
@@ -318,15 +391,6 @@ Partial Class Y_GestioniUnita
         Me.UnitaComboBox.Size = New System.Drawing.Size(287, 21)
         Me.UnitaComboBox.TabIndex = 6
         '
-        'SaldoGestionePrecedenteLabel
-        '
-        SaldoGestionePrecedenteLabel.AutoSize = True
-        SaldoGestionePrecedenteLabel.Location = New System.Drawing.Point(12, 119)
-        SaldoGestionePrecedenteLabel.Name = "SaldoGestionePrecedenteLabel"
-        SaldoGestionePrecedenteLabel.Size = New System.Drawing.Size(105, 13)
-        SaldoGestionePrecedenteLabel.TabIndex = 7
-        SaldoGestionePrecedenteLabel.Text = "Saldo Gest. Preced.:"
-        '
         'SaldoGestionePrecedenteTextBox
         '
         Me.SaldoGestionePrecedenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniUnitaBindingSource, "SaldoGestionePrecedente", True))
@@ -334,15 +398,6 @@ Partial Class Y_GestioniUnita
         Me.SaldoGestionePrecedenteTextBox.Name = "SaldoGestionePrecedenteTextBox"
         Me.SaldoGestionePrecedenteTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SaldoGestionePrecedenteTextBox.TabIndex = 8
-        '
-        'SpeseAddebitateLabel
-        '
-        SpeseAddebitateLabel.AutoSize = True
-        SpeseAddebitateLabel.Location = New System.Drawing.Point(121, 119)
-        SpeseAddebitateLabel.Name = "SpeseAddebitateLabel"
-        SpeseAddebitateLabel.Size = New System.Drawing.Size(94, 13)
-        SpeseAddebitateLabel.TabIndex = 9
-        SpeseAddebitateLabel.Text = "Spese Addebitate:"
         '
         'SpeseAddebitateTextBox
         '
@@ -352,15 +407,6 @@ Partial Class Y_GestioniUnita
         Me.SpeseAddebitateTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SpeseAddebitateTextBox.TabIndex = 10
         '
-        'InteressiLabel
-        '
-        InteressiLabel.AutoSize = True
-        InteressiLabel.Location = New System.Drawing.Point(227, 119)
-        InteressiLabel.Name = "InteressiLabel"
-        InteressiLabel.Size = New System.Drawing.Size(49, 13)
-        InteressiLabel.TabIndex = 11
-        InteressiLabel.Text = "Interessi:"
-        '
         'InteressiTextBox
         '
         Me.InteressiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniUnitaBindingSource, "Interessi", True))
@@ -368,15 +414,6 @@ Partial Class Y_GestioniUnita
         Me.InteressiTextBox.Name = "InteressiTextBox"
         Me.InteressiTextBox.Size = New System.Drawing.Size(100, 20)
         Me.InteressiTextBox.TabIndex = 12
-        '
-        'SpesePersonaliLabel
-        '
-        SpesePersonaliLabel.AutoSize = True
-        SpesePersonaliLabel.Location = New System.Drawing.Point(336, 119)
-        SpesePersonaliLabel.Name = "SpesePersonaliLabel"
-        SpesePersonaliLabel.Size = New System.Drawing.Size(86, 13)
-        SpesePersonaliLabel.TabIndex = 13
-        SpesePersonaliLabel.Text = "Spese Personali:"
         '
         'SpesePersonaliTextBox
         '
@@ -386,15 +423,6 @@ Partial Class Y_GestioniUnita
         Me.SpesePersonaliTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SpesePersonaliTextBox.TabIndex = 14
         '
-        'VersamentiLabel
-        '
-        VersamentiLabel.AutoSize = True
-        VersamentiLabel.Location = New System.Drawing.Point(445, 119)
-        VersamentiLabel.Name = "VersamentiLabel"
-        VersamentiLabel.Size = New System.Drawing.Size(62, 13)
-        VersamentiLabel.TabIndex = 15
-        VersamentiLabel.Text = "Versamenti:"
-        '
         'VersamentiTextBox
         '
         Me.VersamentiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniUnitaBindingSource, "Versamenti", True))
@@ -402,15 +430,6 @@ Partial Class Y_GestioniUnita
         Me.VersamentiTextBox.Name = "VersamentiTextBox"
         Me.VersamentiTextBox.Size = New System.Drawing.Size(100, 20)
         Me.VersamentiTextBox.TabIndex = 16
-        '
-        'PreventivoAccontoLabel
-        '
-        PreventivoAccontoLabel.AutoSize = True
-        PreventivoAccontoLabel.Location = New System.Drawing.Point(15, 158)
-        PreventivoAccontoLabel.Name = "PreventivoAccontoLabel"
-        PreventivoAccontoLabel.Size = New System.Drawing.Size(104, 13)
-        PreventivoAccontoLabel.TabIndex = 17
-        PreventivoAccontoLabel.Text = "Preventivo Acconto:"
         '
         'PreventivoAccontoTextBox
         '
@@ -420,15 +439,6 @@ Partial Class Y_GestioniUnita
         Me.PreventivoAccontoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PreventivoAccontoTextBox.TabIndex = 18
         '
-        'PreventivoProvvisorioLabel
-        '
-        PreventivoProvvisorioLabel.AutoSize = True
-        PreventivoProvvisorioLabel.Location = New System.Drawing.Point(121, 158)
-        PreventivoProvvisorioLabel.Name = "PreventivoProvvisorioLabel"
-        PreventivoProvvisorioLabel.Size = New System.Drawing.Size(90, 13)
-        PreventivoProvvisorioLabel.TabIndex = 19
-        PreventivoProvvisorioLabel.Text = "Prev. Provvisorio:"
-        '
         'PreventivoProvvisorioTextBox
         '
         Me.PreventivoProvvisorioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Y_GestioniUnitaBindingSource, "PreventivoProvvisorio", True))
@@ -436,15 +446,6 @@ Partial Class Y_GestioniUnita
         Me.PreventivoProvvisorioTextBox.Name = "PreventivoProvvisorioTextBox"
         Me.PreventivoProvvisorioTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PreventivoProvvisorioTextBox.TabIndex = 20
-        '
-        'PreventivoSpesePersonaliLabel
-        '
-        PreventivoSpesePersonaliLabel.AutoSize = True
-        PreventivoSpesePersonaliLabel.Location = New System.Drawing.Point(227, 158)
-        PreventivoSpesePersonaliLabel.Name = "PreventivoSpesePersonaliLabel"
-        PreventivoSpesePersonaliLabel.Size = New System.Drawing.Size(107, 13)
-        PreventivoSpesePersonaliLabel.TabIndex = 21
-        PreventivoSpesePersonaliLabel.Text = "Prev. Spese Person.:"
         '
         'PreventivoSpesePersonaliTextBox
         '
@@ -456,8 +457,8 @@ Partial Class Y_GestioniUnita
         '
         'Y_GestioniUnitaDettaglioBindingSource
         '
-        Me.Y_GestioniUnitaDettaglioBindingSource.DataMember = "Y_GestioniUnitaDettaglio"
-        Me.Y_GestioniUnitaDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
+        Me.Y_GestioniUnitaDettaglioBindingSource.DataMember = "Y_GestioniUnitaY_GestioniUnitaDettaglio"
+        Me.Y_GestioniUnitaDettaglioBindingSource.DataSource = Me.Y_GestioniUnitaBindingSource
         '
         'Y_GestioniUnitaDettaglioTableAdapter
         '
@@ -467,19 +468,24 @@ Partial Class Y_GestioniUnita
         '
         Me.Y_GestioniUnitaDettaglioDataGridView.AutoGenerateColumns = False
         Me.Y_GestioniUnitaDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Y_GestioniUnitaDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.Y_GestioniUnitaDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.Y_GestioniUnitaDettaglioDataGridView.DataSource = Me.Y_GestioniUnitaDettaglioBindingSource
-        Me.Y_GestioniUnitaDettaglioDataGridView.Location = New System.Drawing.Point(21, 215)
+        Me.Y_GestioniUnitaDettaglioDataGridView.Location = New System.Drawing.Point(17, 210)
         Me.Y_GestioniUnitaDettaglioDataGridView.Name = "Y_GestioniUnitaDettaglioDataGridView"
-        Me.Y_GestioniUnitaDettaglioDataGridView.Size = New System.Drawing.Size(309, 220)
+        Me.Y_GestioniUnitaDettaglioDataGridView.Size = New System.Drawing.Size(608, 220)
         Me.Y_GestioniUnitaDettaglioDataGridView.TabIndex = 23
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Unita"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Unita"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Riga"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Riga"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 50
         '
         'DataGridViewTextBoxColumn5
         '
@@ -560,6 +566,7 @@ Partial Class Y_GestioniUnita
     Friend WithEvents Y_GestioniUnitaDettaglioBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Y_GestioniUnitaDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.Y_GestioniUnitaDettaglioTableAdapter
     Friend WithEvents Y_GestioniUnitaDettaglioDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

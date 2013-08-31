@@ -34,7 +34,6 @@ Partial Class Assemblea
         Me.AssembleaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AssembleaTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
-        Me.AssembleaDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaDettaglioTableAdapter()
         Me.AssembleaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -70,7 +69,8 @@ Partial Class Assemblea
         Me._8RisultatoTextBox = New System.Windows.Forms.TextBox()
         Me._9VotazioneTextBox = New System.Windows.Forms.TextBox()
         Me._9RisultatoTextBox = New System.Windows.Forms.TextBox()
-        Me.AssembleaDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AssembleaDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaDettaglioTableAdapter()
+        Me.AssembleaDettaglioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AssembleaDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -97,7 +97,7 @@ Partial Class Assemblea
         CType(Me.AssembleaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AssembleaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AssembleaBindingNavigator.SuspendLayout()
-        CType(Me.AssembleaDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AssembleaDettaglioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AssembleaDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,7 +122,7 @@ Partial Class Assemblea
         'TotaleMillesimiLabel
         '
         TotaleMillesimiLabel.AutoSize = True
-        TotaleMillesimiLabel.Location = New System.Drawing.Point(596, 51)
+        TotaleMillesimiLabel.Location = New System.Drawing.Point(393, 329)
         TotaleMillesimiLabel.Name = "TotaleMillesimiLabel"
         TotaleMillesimiLabel.Size = New System.Drawing.Size(81, 13)
         TotaleMillesimiLabel.TabIndex = 5
@@ -131,7 +131,7 @@ Partial Class Assemblea
         'TotalePersoneLabel
         '
         TotalePersoneLabel.AutoSize = True
-        TotalePersoneLabel.Location = New System.Drawing.Point(700, 51)
+        TotalePersoneLabel.Location = New System.Drawing.Point(12, 329)
         TotalePersoneLabel.Name = "TotalePersoneLabel"
         TotalePersoneLabel.Size = New System.Drawing.Size(82, 13)
         TotalePersoneLabel.TabIndex = 7
@@ -140,7 +140,7 @@ Partial Class Assemblea
         '_1VotazioneLabel
         '
         _1VotazioneLabel.AutoSize = True
-        _1VotazioneLabel.Location = New System.Drawing.Point(12, 105)
+        _1VotazioneLabel.Location = New System.Drawing.Point(12, 386)
         _1VotazioneLabel.Name = "_1VotazioneLabel"
         _1VotazioneLabel.Size = New System.Drawing.Size(57, 13)
         _1VotazioneLabel.TabIndex = 9
@@ -149,7 +149,7 @@ Partial Class Assemblea
         '_1RisultatoLabel
         '
         _1RisultatoLabel.AutoSize = True
-        _1RisultatoLabel.Location = New System.Drawing.Point(206, 105)
+        _1RisultatoLabel.Location = New System.Drawing.Point(206, 386)
         _1RisultatoLabel.Name = "_1RisultatoLabel"
         _1RisultatoLabel.Size = New System.Drawing.Size(51, 13)
         _1RisultatoLabel.TabIndex = 11
@@ -173,14 +173,14 @@ Partial Class Assemblea
         '
         Me.TableAdapterManager.AnagraficaStudioTableAdapter = Nothing
         Me.TableAdapterManager.AnagraficheTableAdapter = Nothing
-        Me.TableAdapterManager.AssembleaDettaglioTableAdapter = Me.AssembleaDettaglioTableAdapter
+        Me.TableAdapterManager.AssembleaDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.AssembleaTableAdapter = Me.AssembleaTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
+        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -220,10 +220,6 @@ Partial Class Assemblea
         Me.TableAdapterManager.Z_ConsuntivoDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.Z_ConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.Z_TestoSollecitoTableAdapter = Nothing
-        '
-        'AssembleaDettaglioTableAdapter
-        '
-        Me.AssembleaDettaglioTableAdapter.ClearBeforeFill = True
         '
         'AssembleaBindingNavigator
         '
@@ -357,15 +353,15 @@ Partial Class Assemblea
         'TotaleMillesimiTextBox
         '
         Me.TotaleMillesimiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "TotaleMillesimi", True))
-        Me.TotaleMillesimiTextBox.Location = New System.Drawing.Point(596, 67)
+        Me.TotaleMillesimiTextBox.Location = New System.Drawing.Point(397, 345)
         Me.TotaleMillesimiTextBox.Name = "TotaleMillesimiTextBox"
-        Me.TotaleMillesimiTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TotaleMillesimiTextBox.Size = New System.Drawing.Size(77, 20)
         Me.TotaleMillesimiTextBox.TabIndex = 6
         '
         'TotalePersoneTextBox
         '
         Me.TotalePersoneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "TotalePersone", True))
-        Me.TotalePersoneTextBox.Location = New System.Drawing.Point(703, 67)
+        Me.TotalePersoneTextBox.Location = New System.Drawing.Point(15, 345)
         Me.TotalePersoneTextBox.Name = "TotalePersoneTextBox"
         Me.TotalePersoneTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TotalePersoneTextBox.TabIndex = 8
@@ -373,7 +369,7 @@ Partial Class Assemblea
         '_1VotazioneTextBox
         '
         Me._1VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "1Votazione", True))
-        Me._1VotazioneTextBox.Location = New System.Drawing.Point(15, 121)
+        Me._1VotazioneTextBox.Location = New System.Drawing.Point(15, 402)
         Me._1VotazioneTextBox.Name = "_1VotazioneTextBox"
         Me._1VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._1VotazioneTextBox.TabIndex = 10
@@ -381,15 +377,15 @@ Partial Class Assemblea
         '_1RisultatoTextBox
         '
         Me._1RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "1Risultato", True))
-        Me._1RisultatoTextBox.Location = New System.Drawing.Point(209, 121)
+        Me._1RisultatoTextBox.Location = New System.Drawing.Point(209, 402)
         Me._1RisultatoTextBox.Name = "_1RisultatoTextBox"
-        Me._1RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._1RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._1RisultatoTextBox.TabIndex = 12
         '
         '_2VotazioneTextBox
         '
         Me._2VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "2Votazione", True))
-        Me._2VotazioneTextBox.Location = New System.Drawing.Point(15, 147)
+        Me._2VotazioneTextBox.Location = New System.Drawing.Point(15, 428)
         Me._2VotazioneTextBox.Name = "_2VotazioneTextBox"
         Me._2VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._2VotazioneTextBox.TabIndex = 14
@@ -397,15 +393,15 @@ Partial Class Assemblea
         '_2RisultatoTextBox
         '
         Me._2RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "2Risultato", True))
-        Me._2RisultatoTextBox.Location = New System.Drawing.Point(209, 147)
+        Me._2RisultatoTextBox.Location = New System.Drawing.Point(209, 428)
         Me._2RisultatoTextBox.Name = "_2RisultatoTextBox"
-        Me._2RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._2RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._2RisultatoTextBox.TabIndex = 15
         '
         '_3VotazioneTextBox
         '
         Me._3VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "3Votazione", True))
-        Me._3VotazioneTextBox.Location = New System.Drawing.Point(15, 173)
+        Me._3VotazioneTextBox.Location = New System.Drawing.Point(15, 454)
         Me._3VotazioneTextBox.Name = "_3VotazioneTextBox"
         Me._3VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._3VotazioneTextBox.TabIndex = 16
@@ -413,15 +409,15 @@ Partial Class Assemblea
         '_3RisultatoTextBox
         '
         Me._3RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "3Risultato", True))
-        Me._3RisultatoTextBox.Location = New System.Drawing.Point(209, 173)
+        Me._3RisultatoTextBox.Location = New System.Drawing.Point(209, 454)
         Me._3RisultatoTextBox.Name = "_3RisultatoTextBox"
-        Me._3RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._3RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._3RisultatoTextBox.TabIndex = 17
         '
         '_4VotazioneTextBox
         '
         Me._4VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "4Votazione", True))
-        Me._4VotazioneTextBox.Location = New System.Drawing.Point(15, 199)
+        Me._4VotazioneTextBox.Location = New System.Drawing.Point(15, 480)
         Me._4VotazioneTextBox.Name = "_4VotazioneTextBox"
         Me._4VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._4VotazioneTextBox.TabIndex = 18
@@ -429,15 +425,15 @@ Partial Class Assemblea
         '_4RisultatoTextBox
         '
         Me._4RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "4Risultato", True))
-        Me._4RisultatoTextBox.Location = New System.Drawing.Point(209, 199)
+        Me._4RisultatoTextBox.Location = New System.Drawing.Point(209, 480)
         Me._4RisultatoTextBox.Name = "_4RisultatoTextBox"
-        Me._4RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._4RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._4RisultatoTextBox.TabIndex = 19
         '
         '_5VotazioneTextBox
         '
         Me._5VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "5Votazione", True))
-        Me._5VotazioneTextBox.Location = New System.Drawing.Point(15, 225)
+        Me._5VotazioneTextBox.Location = New System.Drawing.Point(15, 506)
         Me._5VotazioneTextBox.Name = "_5VotazioneTextBox"
         Me._5VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._5VotazioneTextBox.TabIndex = 20
@@ -445,15 +441,15 @@ Partial Class Assemblea
         '_5RisultatoTextBox
         '
         Me._5RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "5Risultato", True))
-        Me._5RisultatoTextBox.Location = New System.Drawing.Point(209, 225)
+        Me._5RisultatoTextBox.Location = New System.Drawing.Point(209, 506)
         Me._5RisultatoTextBox.Name = "_5RisultatoTextBox"
-        Me._5RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._5RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._5RisultatoTextBox.TabIndex = 21
         '
         '_6VotazioneTextBox
         '
         Me._6VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "6Votazione", True))
-        Me._6VotazioneTextBox.Location = New System.Drawing.Point(15, 251)
+        Me._6VotazioneTextBox.Location = New System.Drawing.Point(15, 532)
         Me._6VotazioneTextBox.Name = "_6VotazioneTextBox"
         Me._6VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._6VotazioneTextBox.TabIndex = 22
@@ -461,15 +457,15 @@ Partial Class Assemblea
         '_6RisultatoTextBox
         '
         Me._6RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "6Risultato", True))
-        Me._6RisultatoTextBox.Location = New System.Drawing.Point(209, 251)
+        Me._6RisultatoTextBox.Location = New System.Drawing.Point(209, 532)
         Me._6RisultatoTextBox.Name = "_6RisultatoTextBox"
-        Me._6RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._6RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._6RisultatoTextBox.TabIndex = 23
         '
         '_7VotazioneTextBox
         '
         Me._7VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "7Votazione", True))
-        Me._7VotazioneTextBox.Location = New System.Drawing.Point(15, 277)
+        Me._7VotazioneTextBox.Location = New System.Drawing.Point(15, 558)
         Me._7VotazioneTextBox.Name = "_7VotazioneTextBox"
         Me._7VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._7VotazioneTextBox.TabIndex = 24
@@ -477,15 +473,15 @@ Partial Class Assemblea
         '_7RisultatoTextBox
         '
         Me._7RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "7Risultato", True))
-        Me._7RisultatoTextBox.Location = New System.Drawing.Point(209, 277)
+        Me._7RisultatoTextBox.Location = New System.Drawing.Point(209, 558)
         Me._7RisultatoTextBox.Name = "_7RisultatoTextBox"
-        Me._7RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._7RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._7RisultatoTextBox.TabIndex = 25
         '
         '_8VotazioneTextBox
         '
         Me._8VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "8Votazione", True))
-        Me._8VotazioneTextBox.Location = New System.Drawing.Point(15, 303)
+        Me._8VotazioneTextBox.Location = New System.Drawing.Point(15, 584)
         Me._8VotazioneTextBox.Name = "_8VotazioneTextBox"
         Me._8VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._8VotazioneTextBox.TabIndex = 26
@@ -493,15 +489,15 @@ Partial Class Assemblea
         '_8RisultatoTextBox
         '
         Me._8RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "8Risultato", True))
-        Me._8RisultatoTextBox.Location = New System.Drawing.Point(209, 303)
+        Me._8RisultatoTextBox.Location = New System.Drawing.Point(209, 584)
         Me._8RisultatoTextBox.Name = "_8RisultatoTextBox"
-        Me._8RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._8RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._8RisultatoTextBox.TabIndex = 27
         '
         '_9VotazioneTextBox
         '
         Me._9VotazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "9Votazione", True))
-        Me._9VotazioneTextBox.Location = New System.Drawing.Point(15, 329)
+        Me._9VotazioneTextBox.Location = New System.Drawing.Point(15, 610)
         Me._9VotazioneTextBox.Name = "_9VotazioneTextBox"
         Me._9VotazioneTextBox.Size = New System.Drawing.Size(182, 20)
         Me._9VotazioneTextBox.TabIndex = 28
@@ -509,25 +505,29 @@ Partial Class Assemblea
         '_9RisultatoTextBox
         '
         Me._9RisultatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AssembleaBindingSource, "9Risultato", True))
-        Me._9RisultatoTextBox.Location = New System.Drawing.Point(209, 329)
+        Me._9RisultatoTextBox.Location = New System.Drawing.Point(209, 610)
         Me._9RisultatoTextBox.Name = "_9RisultatoTextBox"
-        Me._9RisultatoTextBox.Size = New System.Drawing.Size(281, 20)
+        Me._9RisultatoTextBox.Size = New System.Drawing.Size(381, 20)
         Me._9RisultatoTextBox.TabIndex = 29
         '
-        'AssembleaDettaglioBindingSource
+        'AssembleaDettaglioTableAdapter
         '
-        Me.AssembleaDettaglioBindingSource.DataMember = "AssembleaDettaglio"
-        Me.AssembleaDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
+        Me.AssembleaDettaglioTableAdapter.ClearBeforeFill = True
+        '
+        'AssembleaDettaglioBindingSource1
+        '
+        Me.AssembleaDettaglioBindingSource1.DataMember = "AssembleaAssembleaDettaglio"
+        Me.AssembleaDettaglioBindingSource1.DataSource = Me.AssembleaBindingSource
         '
         'AssembleaDettaglioDataGridView
         '
         Me.AssembleaDettaglioDataGridView.AutoGenerateColumns = False
         Me.AssembleaDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AssembleaDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17})
-        Me.AssembleaDettaglioDataGridView.DataSource = Me.AssembleaDettaglioBindingSource
-        Me.AssembleaDettaglioDataGridView.Location = New System.Drawing.Point(15, 365)
+        Me.AssembleaDettaglioDataGridView.DataSource = Me.AssembleaDettaglioBindingSource1
+        Me.AssembleaDettaglioDataGridView.Location = New System.Drawing.Point(17, 105)
         Me.AssembleaDettaglioDataGridView.Name = "AssembleaDettaglioDataGridView"
-        Me.AssembleaDettaglioDataGridView.Size = New System.Drawing.Size(767, 220)
+        Me.AssembleaDettaglioDataGridView.Size = New System.Drawing.Size(816, 220)
         Me.AssembleaDettaglioDataGridView.TabIndex = 29
         '
         'DataGridViewTextBoxColumn3
@@ -570,7 +570,6 @@ Partial Class Assemblea
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "Delega"
         Me.DataGridViewTextBoxColumn8.HeaderText = "Delega"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.Width = 150
         '
         'DataGridViewTextBoxColumn9
         '
@@ -639,7 +638,7 @@ Partial Class Assemblea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(920, 624)
+        Me.ClientSize = New System.Drawing.Size(920, 650)
         Me.Controls.Add(Me.AssembleaDettaglioDataGridView)
         Me.Controls.Add(Me._9RisultatoTextBox)
         Me.Controls.Add(Me._9VotazioneTextBox)
@@ -677,7 +676,7 @@ Partial Class Assemblea
         CType(Me.AssembleaBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AssembleaBindingNavigator.ResumeLayout(False)
         Me.AssembleaBindingNavigator.PerformLayout()
-        CType(Me.AssembleaDettaglioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AssembleaDettaglioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AssembleaDettaglioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -700,7 +699,6 @@ Partial Class Assemblea
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AssembleaBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
-    Friend WithEvents AssembleaDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaDettaglioTableAdapter
     Friend WithEvents ImmobileComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents GestioneComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents TotaleMillesimiTextBox As System.Windows.Forms.TextBox
@@ -723,7 +721,8 @@ Partial Class Assemblea
     Friend WithEvents _8RisultatoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents _9VotazioneTextBox As System.Windows.Forms.TextBox
     Friend WithEvents _9RisultatoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents AssembleaDettaglioBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AssembleaDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.AssembleaDettaglioTableAdapter
+    Friend WithEvents AssembleaDettaglioBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents AssembleaDettaglioDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
