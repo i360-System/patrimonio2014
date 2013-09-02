@@ -332,11 +332,11 @@
     <EmbeddedResource Include="FormMenu\Costanti.resx">
       <DependentUpon>Costanti.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu\Fabbricati.resx">
-      <DependentUpon>Fabbricati.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fondi.resx">
       <DependentUpon>Fondi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Fabbricati.resx">
+      <DependentUpon>Fabbricati.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\Fornitori.resx">
       <DependentUpon>Fornitori.vb</DependentUpon>

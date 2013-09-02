@@ -7,15 +7,9 @@
 
     End Sub
 
-    Private Sub Fabbricati_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.FabbricatiScale'. È possibile spostarla o rimuoverla se necessario.
-        'Me.FabbricatiScaleTableAdapter.Fill(Me.IMMOBILIDataSet2.FabbricatiScale)
-        'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.Fabbricati'. È possibile spostarla o rimuoverla se necessario.
-        'Me.FabbricatiTableAdapter.Fill(Me.IMMOBILIDataSet2.Fabbricati)
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.FabbricatiDettaglio'. È possibile spostarla o rimuoverla se necessario.
         Me.FabbricatiDettaglioTableAdapter.Fill(Me.IMMOBILIDataSet2.FabbricatiDettaglio)
-        'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.FabbricatiScale'. È possibile spostarla o rimuoverla se necessario.
-        'Me.FabbricatiDettaglioTableAdapter.Fill(Me.IMMOBILIDataSet2.FabbricatiScale)
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.Fabbricati'. È possibile spostarla o rimuoverla se necessario.
         Me.FabbricatiTableAdapter.Fill(Me.IMMOBILIDataSet2.Fabbricati)
 

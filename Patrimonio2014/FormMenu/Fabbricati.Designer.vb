@@ -23,34 +23,32 @@ Partial Class Fabbricati
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fabbricati))
         Dim ImmobileLabel As System.Windows.Forms.Label
         Dim FabbricatoLabel As System.Windows.Forms.Label
         Dim DescrizioneLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fabbricati))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.FabbricatiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FabbricatiTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
         Me.FabbricatiBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.FabbricatiBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.FabbricatoTextBox = New System.Windows.Forms.TextBox()
         Me.DescrizioneTextBox = New System.Windows.Forms.TextBox()
         Me.FabbricatiDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FabbricatiDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter()
-        Me.FabbricatiScaleTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiScaleTableAdapter()
-        Me.FabbricatiDettaglioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.FabbricatiDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,36 +60,8 @@ Partial Class Fabbricati
         CType(Me.FabbricatiBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FabbricatiBindingNavigator.SuspendLayout()
         CType(Me.FabbricatiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FabbricatiDettaglioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FabbricatiDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(12, 42)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 1
-        ImmobileLabel.Text = "Immobile:"
-        '
-        'FabbricatoLabel
-        '
-        FabbricatoLabel.AutoSize = True
-        FabbricatoLabel.Location = New System.Drawing.Point(279, 42)
-        FabbricatoLabel.Name = "FabbricatoLabel"
-        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
-        FabbricatoLabel.TabIndex = 3
-        FabbricatoLabel.Text = "Fabbricato:"
-        '
-        'DescrizioneLabel
-        '
-        DescrizioneLabel.AutoSize = True
-        DescrizioneLabel.Location = New System.Drawing.Point(12, 82)
-        DescrizioneLabel.Name = "DescrizioneLabel"
-        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
-        DescrizioneLabel.TabIndex = 5
-        DescrizioneLabel.Text = "Descrizione:"
         '
         'IMMOBILIDataSet2
         '
@@ -117,8 +87,7 @@ Partial Class Fabbricati
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Me.FabbricatiDettaglioTableAdapter
         Me.TableAdapterManager.FabbricatiTableAdapter = Me.FabbricatiTableAdapter
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -173,34 +142,9 @@ Partial Class Fabbricati
         Me.FabbricatiBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.FabbricatiBindingNavigator.Name = "FabbricatiBindingNavigator"
         Me.FabbricatiBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.FabbricatiBindingNavigator.Size = New System.Drawing.Size(497, 25)
+        Me.FabbricatiBindingNavigator.Size = New System.Drawing.Size(641, 25)
         Me.FabbricatiBindingNavigator.TabIndex = 0
         Me.FabbricatiBindingNavigator.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -234,10 +178,17 @@ Partial Class Fabbricati
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 13)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -245,7 +196,7 @@ Partial Class Fabbricati
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -254,74 +205,110 @@ Partial Class Fabbricati
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'FabbricatiBindingNavigatorSaveItem
         '
         Me.FabbricatiBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.FabbricatiBindingNavigatorSaveItem.Image = CType(resources.GetObject("FabbricatiBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.FabbricatiBindingNavigatorSaveItem.Name = "FabbricatiBindingNavigatorSaveItem"
-        Me.FabbricatiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.FabbricatiBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
         Me.FabbricatiBindingNavigatorSaveItem.Text = "Salva dati"
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(12, 47)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 1
+        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
         Me.ImmobileComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FabbricatiBindingSource, "Immobile", True))
         Me.ImmobileComboBox.FormattingEnabled = True
-        Me.ImmobileComboBox.Location = New System.Drawing.Point(15, 58)
+        Me.ImmobileComboBox.Location = New System.Drawing.Point(15, 63)
         Me.ImmobileComboBox.Name = "ImmobileComboBox"
-        Me.ImmobileComboBox.Size = New System.Drawing.Size(254, 21)
+        Me.ImmobileComboBox.Size = New System.Drawing.Size(312, 21)
         Me.ImmobileComboBox.TabIndex = 2
+        '
+        'FabbricatoLabel
+        '
+        FabbricatoLabel.AutoSize = True
+        FabbricatoLabel.Location = New System.Drawing.Point(337, 47)
+        FabbricatoLabel.Name = "FabbricatoLabel"
+        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
+        FabbricatoLabel.TabIndex = 3
+        FabbricatoLabel.Text = "Fabbricato:"
         '
         'FabbricatoTextBox
         '
         Me.FabbricatoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FabbricatiBindingSource, "Fabbricato", True))
-        Me.FabbricatoTextBox.Location = New System.Drawing.Point(282, 58)
+        Me.FabbricatoTextBox.Location = New System.Drawing.Point(340, 64)
         Me.FabbricatoTextBox.Name = "FabbricatoTextBox"
         Me.FabbricatoTextBox.Size = New System.Drawing.Size(57, 20)
         Me.FabbricatoTextBox.TabIndex = 4
         '
+        'DescrizioneLabel
+        '
+        DescrizioneLabel.AutoSize = True
+        DescrizioneLabel.Location = New System.Drawing.Point(12, 87)
+        DescrizioneLabel.Name = "DescrizioneLabel"
+        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
+        DescrizioneLabel.TabIndex = 5
+        DescrizioneLabel.Text = "Descrizione:"
+        '
         'DescrizioneTextBox
         '
         Me.DescrizioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FabbricatiBindingSource, "Descrizione", True))
-        Me.DescrizioneTextBox.Location = New System.Drawing.Point(15, 98)
+        Me.DescrizioneTextBox.Location = New System.Drawing.Point(15, 103)
         Me.DescrizioneTextBox.Name = "DescrizioneTextBox"
-        Me.DescrizioneTextBox.Size = New System.Drawing.Size(324, 20)
+        Me.DescrizioneTextBox.Size = New System.Drawing.Size(382, 20)
         Me.DescrizioneTextBox.TabIndex = 6
         '
         'FabbricatiDettaglioBindingSource
         '
-        Me.FabbricatiDettaglioBindingSource.DataMember = "FabbricatiScale"
+        Me.FabbricatiDettaglioBindingSource.DataMember = "FabbricatiScale1"
         Me.FabbricatiDettaglioBindingSource.DataSource = Me.FabbricatiBindingSource
         '
         'FabbricatiDettaglioTableAdapter
         '
         Me.FabbricatiDettaglioTableAdapter.ClearBeforeFill = True
         '
-        'FabbricatiScaleTableAdapter
-        '
-        Me.FabbricatiScaleTableAdapter.ClearBeforeFill = True
-        '
-        'FabbricatiDettaglioBindingSource1
-        '
-        Me.FabbricatiDettaglioBindingSource1.DataMember = "FabbricatiDettaglio"
-        Me.FabbricatiDettaglioBindingSource1.DataSource = Me.IMMOBILIDataSet2
-        '
         'FabbricatiDettaglioDataGridView
         '
         Me.FabbricatiDettaglioDataGridView.AutoGenerateColumns = False
         Me.FabbricatiDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.FabbricatiDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.FabbricatiDettaglioDataGridView.DataSource = Me.FabbricatiDettaglioBindingSource1
-        Me.FabbricatiDettaglioDataGridView.Location = New System.Drawing.Point(26, 162)
+        Me.FabbricatiDettaglioDataGridView.DataSource = Me.FabbricatiDettaglioBindingSource
+        Me.FabbricatiDettaglioDataGridView.Location = New System.Drawing.Point(26, 168)
         Me.FabbricatiDettaglioDataGridView.Name = "FabbricatiDettaglioDataGridView"
-        Me.FabbricatiDettaglioDataGridView.Size = New System.Drawing.Size(459, 220)
+        Me.FabbricatiDettaglioDataGridView.Size = New System.Drawing.Size(546, 220)
         Me.FabbricatiDettaglioDataGridView.TabIndex = 7
         '
         'DataGridViewTextBoxColumn3
@@ -335,13 +322,12 @@ Partial Class Fabbricati
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Descrizione"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Descrizione"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 200
         '
-        'Fabbricati
+        'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(497, 416)
+        Me.ClientSize = New System.Drawing.Size(641, 408)
         Me.Controls.Add(Me.FabbricatiDettaglioDataGridView)
         Me.Controls.Add(DescrizioneLabel)
         Me.Controls.Add(Me.DescrizioneTextBox)
@@ -350,15 +336,14 @@ Partial Class Fabbricati
         Me.Controls.Add(ImmobileLabel)
         Me.Controls.Add(Me.ImmobileComboBox)
         Me.Controls.Add(Me.FabbricatiBindingNavigator)
-        Me.Name = "Fabbricati"
-        Me.Text = "Struttura del Fabbricato"
+        Me.Name = "Form1"
+        Me.Text = "Struttura Fabbricati"
         CType(Me.IMMOBILIDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FabbricatiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FabbricatiBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FabbricatiBindingNavigator.ResumeLayout(False)
         Me.FabbricatiBindingNavigator.PerformLayout()
         CType(Me.FabbricatiDettaglioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FabbricatiDettaglioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FabbricatiDettaglioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -381,13 +366,11 @@ Partial Class Fabbricati
     Friend WithEvents BindingNavigatorMoveLastItem As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents FabbricatiBindingNavigatorSaveItem As System.Windows.Forms.ToolStripButton
+    Friend WithEvents FabbricatiDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter
     Friend WithEvents ImmobileComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents FabbricatoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DescrizioneTextBox As System.Windows.Forms.TextBox
     Friend WithEvents FabbricatiDettaglioBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents FabbricatiDettaglioTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiDettaglioTableAdapter
-    Friend WithEvents FabbricatiScaleTableAdapter As Patrimonio2014.IMMOBILIDataSet2TableAdapters.FabbricatiScaleTableAdapter
-    Friend WithEvents FabbricatiDettaglioBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents FabbricatiDettaglioDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
