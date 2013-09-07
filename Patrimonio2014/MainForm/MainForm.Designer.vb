@@ -111,9 +111,11 @@ Partial Class MainForm
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TerminaToolStripMenuItem, Me.OpzioniToolStripMenuItem})
+        Me.FileToolStripMenuItem.Image = Global.Patrimonio2014.My.Resources.Resources.ric
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(114, 20)
         Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
         'TerminaToolStripMenuItem
         '
@@ -133,6 +135,7 @@ Partial Class MainForm
         Me.MovimentazioneToolStripMenuItem.Name = "MovimentazioneToolStripMenuItem"
         Me.MovimentazioneToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.MovimentazioneToolStripMenuItem.Text = "Movimentazione"
+        Me.MovimentazioneToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
         'SpeseToolStripMenuItem
         '
@@ -246,6 +249,7 @@ Partial Class MainForm
         Me.PreventiviToolStripMenuItem.Name = "PreventiviToolStripMenuItem"
         Me.PreventiviToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.PreventiviToolStripMenuItem.Text = "Preventivi"
+        Me.PreventiviToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
         'GestioniToolStripMenuItem
         '
@@ -297,6 +301,7 @@ Partial Class MainForm
         Me.AvvisiToolStripMenuItem.Name = "AvvisiToolStripMenuItem"
         Me.AvvisiToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.AvvisiToolStripMenuItem.Text = "Avvisi"
+        Me.AvvisiToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
         'ArchivioDegliAvvisiToolStripMenuItem
         '
@@ -334,12 +339,13 @@ Partial Class MainForm
         Me.ConvocazioniToolStripMenuItem.Name = "ConvocazioniToolStripMenuItem"
         Me.ConvocazioniToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.ConvocazioniToolStripMenuItem.Text = "Convocazioni"
+        Me.ConvocazioniToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
         'AssembleaToolStripMenuItem
         '
         Me.AssembleaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenerazioneElencoConvocatiToolStripMenuItem, Me.ArchivioDelleConvocazioniToolStripMenuItem})
         Me.AssembleaToolStripMenuItem.Name = "AssembleaToolStripMenuItem"
-        Me.AssembleaToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.AssembleaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AssembleaToolStripMenuItem.Text = "Assemblea"
         '
         'GenerazioneElencoConvocatiToolStripMenuItem
@@ -358,7 +364,7 @@ Partial Class MainForm
         '
         Me.FormatoWordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GeneraConvocazioniEStampaToolStripMenuItem})
         Me.FormatoWordToolStripMenuItem.Name = "FormatoWordToolStripMenuItem"
-        Me.FormatoWordToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.FormatoWordToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FormatoWordToolStripMenuItem.Text = "Formato Word"
         '
         'GeneraConvocazioniEStampaToolStripMenuItem
@@ -373,6 +379,7 @@ Partial Class MainForm
         Me.RitenuteDAccontoToolStripMenuItem.Name = "RitenuteDAccontoToolStripMenuItem"
         Me.RitenuteDAccontoToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.RitenuteDAccontoToolStripMenuItem.Text = "Consuntivi"
+        Me.RitenuteDAccontoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
         'TotaliDelConsuntivoEStampeToolStripMenuItem
         '
@@ -398,6 +405,7 @@ Partial Class MainForm
         Me.ArchiviToolStripMenuItem.Name = "ArchiviToolStripMenuItem"
         Me.ArchiviToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.ArchiviToolStripMenuItem.Text = "Archivi"
+        Me.ArchiviToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'SsToolStripMenuItem
         '
@@ -515,6 +523,7 @@ Partial Class MainForm
         Me.RiToolStripMenuItem.Name = "RiToolStripMenuItem"
         Me.RiToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.RiToolStripMenuItem.Text = "Ritenute d'Acconto"
+        Me.RiToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TabelleCodiciTributoToolStripMenuItem
         '
@@ -540,6 +549,7 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
         Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(114, 19)
         Me.InfoToolStripMenuItem.Text = "Info"
+        Me.InfoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.InfoToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
         '
         'InformazioniSulSoftwareToolStripMenuItem
