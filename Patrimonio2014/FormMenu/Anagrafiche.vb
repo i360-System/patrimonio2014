@@ -20,7 +20,7 @@
 
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByVal combo As ComboBox)
 
-        Dim cn As New OleDbConnection(strconn)
+        Dim cn As New OleDbConnection(strconn)  ' ???????
         cn.Open()
 
         Dim command As New OleDbCommand(query, cn)
