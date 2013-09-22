@@ -114,7 +114,6 @@ Partial Class Fabbricati
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        ' Me.TableAdapterManager.FabbricatiDettaglioScaleTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Me.FabbricatiDettaglioTableAdapter
         Me.TableAdapterManager.FabbricatiTableAdapter = Me.FabbricatiTableAdapter
         Me.TableAdapterManager.FondiTableAdapter = Nothing

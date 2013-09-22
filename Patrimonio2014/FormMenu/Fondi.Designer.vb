@@ -24,9 +24,9 @@ Partial Class Fondi
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ImmobileLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fondi))
         Dim FondoLabel As System.Windows.Forms.Label
         Dim DenominazioneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fondi))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.FondiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FondiTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.FondiTableAdapter()
@@ -65,6 +65,24 @@ Partial Class Fondi
         ImmobileLabel.TabIndex = 1
         ImmobileLabel.Text = "Immobile:"
         '
+        'FondoLabel
+        '
+        FondoLabel.AutoSize = True
+        FondoLabel.Location = New System.Drawing.Point(332, 46)
+        FondoLabel.Name = "FondoLabel"
+        FondoLabel.Size = New System.Drawing.Size(40, 13)
+        FondoLabel.TabIndex = 3
+        FondoLabel.Text = "Fondo:"
+        '
+        'DenominazioneLabel
+        '
+        DenominazioneLabel.AutoSize = True
+        DenominazioneLabel.Location = New System.Drawing.Point(12, 97)
+        DenominazioneLabel.Name = "DenominazioneLabel"
+        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
+        DenominazioneLabel.TabIndex = 5
+        DenominazioneLabel.Text = "Denominazione:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -88,9 +106,8 @@ Partial Class Fondi
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Me.FondiTableAdapter
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -251,15 +268,6 @@ Partial Class Fondi
         Me.ImmobileComboBox.Size = New System.Drawing.Size(311, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'FondoLabel
-        '
-        FondoLabel.AutoSize = True
-        FondoLabel.Location = New System.Drawing.Point(332, 46)
-        FondoLabel.Name = "FondoLabel"
-        FondoLabel.Size = New System.Drawing.Size(40, 13)
-        FondoLabel.TabIndex = 3
-        FondoLabel.Text = "Fondo:"
-        '
         'FondoTextBox
         '
         Me.FondoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.FondiBindingSource, "Fondo", True))
@@ -267,15 +275,6 @@ Partial Class Fondi
         Me.FondoTextBox.Name = "FondoTextBox"
         Me.FondoTextBox.Size = New System.Drawing.Size(50, 20)
         Me.FondoTextBox.TabIndex = 4
-        '
-        'DenominazioneLabel
-        '
-        DenominazioneLabel.AutoSize = True
-        DenominazioneLabel.Location = New System.Drawing.Point(12, 97)
-        DenominazioneLabel.Name = "DenominazioneLabel"
-        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
-        DenominazioneLabel.TabIndex = 5
-        DenominazioneLabel.Text = "Denominazione:"
         '
         'DenominazioneTextBox
         '

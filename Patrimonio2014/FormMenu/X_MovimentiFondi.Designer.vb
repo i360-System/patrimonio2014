@@ -24,13 +24,13 @@ Partial Class X_MovimentiFondi
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ProgressivoLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(X_MovimentiFondi))
         Dim ImmobileLabel As System.Windows.Forms.Label
         Dim FondoLabel As System.Windows.Forms.Label
         Dim DataMovimentoLabel As System.Windows.Forms.Label
         Dim OperazioneLabel As System.Windows.Forms.Label
         Dim ImportoLabel As System.Windows.Forms.Label
         Dim DescrizioneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(X_MovimentiFondi))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.X_MovimentiFondiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.X_MovimentiFondiTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_MovimentiFondiTableAdapter()
@@ -77,6 +77,60 @@ Partial Class X_MovimentiFondi
         ProgressivoLabel.TabIndex = 1
         ProgressivoLabel.Text = "Progressivo:"
         '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(92, 34)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 3
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'FondoLabel
+        '
+        FondoLabel.AutoSize = True
+        FondoLabel.Location = New System.Drawing.Point(330, 34)
+        FondoLabel.Name = "FondoLabel"
+        FondoLabel.Size = New System.Drawing.Size(40, 13)
+        FondoLabel.TabIndex = 5
+        FondoLabel.Text = "Fondo:"
+        '
+        'DataMovimentoLabel
+        '
+        DataMovimentoLabel.AutoSize = True
+        DataMovimentoLabel.Location = New System.Drawing.Point(12, 74)
+        DataMovimentoLabel.Name = "DataMovimentoLabel"
+        DataMovimentoLabel.Size = New System.Drawing.Size(88, 13)
+        DataMovimentoLabel.TabIndex = 7
+        DataMovimentoLabel.Text = "Data Movimento:"
+        '
+        'OperazioneLabel
+        '
+        OperazioneLabel.AutoSize = True
+        OperazioneLabel.Location = New System.Drawing.Point(109, 74)
+        OperazioneLabel.Name = "OperazioneLabel"
+        OperazioneLabel.Size = New System.Drawing.Size(64, 13)
+        OperazioneLabel.TabIndex = 9
+        OperazioneLabel.Text = "Operazione:"
+        '
+        'ImportoLabel
+        '
+        ImportoLabel.AutoSize = True
+        ImportoLabel.Location = New System.Drawing.Point(179, 74)
+        ImportoLabel.Name = "ImportoLabel"
+        ImportoLabel.Size = New System.Drawing.Size(45, 13)
+        ImportoLabel.TabIndex = 11
+        ImportoLabel.Text = "Importo:"
+        '
+        'DescrizioneLabel
+        '
+        DescrizioneLabel.AutoSize = True
+        DescrizioneLabel.Location = New System.Drawing.Point(288, 74)
+        DescrizioneLabel.Name = "DescrizioneLabel"
+        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
+        DescrizioneLabel.TabIndex = 13
+        DescrizioneLabel.Text = "Descrizione:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -100,9 +154,8 @@ Partial Class X_MovimentiFondi
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -262,15 +315,6 @@ Partial Class X_MovimentiFondi
         Me.ProgressivoTextBox.Size = New System.Drawing.Size(71, 20)
         Me.ProgressivoTextBox.TabIndex = 2
         '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(92, 34)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 3
-        ImmobileLabel.Text = "Immobile:"
-        '
         'ImmobileComboBox
         '
         Me.ImmobileComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiFondiBindingSource, "Immobile", True))
@@ -279,15 +323,6 @@ Partial Class X_MovimentiFondi
         Me.ImmobileComboBox.Name = "ImmobileComboBox"
         Me.ImmobileComboBox.Size = New System.Drawing.Size(229, 21)
         Me.ImmobileComboBox.TabIndex = 4
-        '
-        'FondoLabel
-        '
-        FondoLabel.AutoSize = True
-        FondoLabel.Location = New System.Drawing.Point(330, 34)
-        FondoLabel.Name = "FondoLabel"
-        FondoLabel.Size = New System.Drawing.Size(40, 13)
-        FondoLabel.TabIndex = 5
-        FondoLabel.Text = "Fondo:"
         '
         'FondoComboBox
         '
@@ -298,15 +333,6 @@ Partial Class X_MovimentiFondi
         Me.FondoComboBox.Size = New System.Drawing.Size(227, 21)
         Me.FondoComboBox.TabIndex = 6
         '
-        'DataMovimentoLabel
-        '
-        DataMovimentoLabel.AutoSize = True
-        DataMovimentoLabel.Location = New System.Drawing.Point(12, 74)
-        DataMovimentoLabel.Name = "DataMovimentoLabel"
-        DataMovimentoLabel.Size = New System.Drawing.Size(88, 13)
-        DataMovimentoLabel.TabIndex = 7
-        DataMovimentoLabel.Text = "Data Movimento:"
-        '
         'DataMovimentoDateTimePicker
         '
         Me.DataMovimentoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.X_MovimentiFondiBindingSource, "DataMovimento", True))
@@ -316,15 +342,6 @@ Partial Class X_MovimentiFondi
         Me.DataMovimentoDateTimePicker.Size = New System.Drawing.Size(88, 20)
         Me.DataMovimentoDateTimePicker.TabIndex = 8
         '
-        'OperazioneLabel
-        '
-        OperazioneLabel.AutoSize = True
-        OperazioneLabel.Location = New System.Drawing.Point(109, 74)
-        OperazioneLabel.Name = "OperazioneLabel"
-        OperazioneLabel.Size = New System.Drawing.Size(64, 13)
-        OperazioneLabel.TabIndex = 9
-        OperazioneLabel.Text = "Operazione:"
-        '
         'OperazioneTextBox
         '
         Me.OperazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiFondiBindingSource, "Operazione", True))
@@ -333,15 +350,6 @@ Partial Class X_MovimentiFondi
         Me.OperazioneTextBox.Size = New System.Drawing.Size(61, 20)
         Me.OperazioneTextBox.TabIndex = 10
         '
-        'ImportoLabel
-        '
-        ImportoLabel.AutoSize = True
-        ImportoLabel.Location = New System.Drawing.Point(179, 74)
-        ImportoLabel.Name = "ImportoLabel"
-        ImportoLabel.Size = New System.Drawing.Size(45, 13)
-        ImportoLabel.TabIndex = 11
-        ImportoLabel.Text = "Importo:"
-        '
         'ImportoTextBox
         '
         Me.ImportoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_MovimentiFondiBindingSource, "Importo", True))
@@ -349,15 +357,6 @@ Partial Class X_MovimentiFondi
         Me.ImportoTextBox.Name = "ImportoTextBox"
         Me.ImportoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImportoTextBox.TabIndex = 12
-        '
-        'DescrizioneLabel
-        '
-        DescrizioneLabel.AutoSize = True
-        DescrizioneLabel.Location = New System.Drawing.Point(288, 74)
-        DescrizioneLabel.Name = "DescrizioneLabel"
-        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
-        DescrizioneLabel.TabIndex = 13
-        DescrizioneLabel.Text = "Descrizione:"
         '
         'DescrizioneTextBox
         '

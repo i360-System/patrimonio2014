@@ -24,7 +24,6 @@ Partial Class ContiFinanziari
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ImmobileLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ContiFinanziari))
         Dim ContoLabel As System.Windows.Forms.Label
         Dim BancaLabel As System.Windows.Forms.Label
         Dim AgenziaLabel As System.Windows.Forms.Label
@@ -33,6 +32,7 @@ Partial Class ContiFinanziari
         Dim Intestatario1Label As System.Windows.Forms.Label
         Dim ContoCorrenteLabel As System.Windows.Forms.Label
         Dim IBANLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ContiFinanziari))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.ContiFinanziariBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ContiFinanziariTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.ContiFinanziariTableAdapter()
@@ -84,6 +84,78 @@ Partial Class ContiFinanziari
         ImmobileLabel.TabIndex = 1
         ImmobileLabel.Text = "Immobile:"
         '
+        'ContoLabel
+        '
+        ContoLabel.AutoSize = True
+        ContoLabel.Location = New System.Drawing.Point(346, 45)
+        ContoLabel.Name = "ContoLabel"
+        ContoLabel.Size = New System.Drawing.Size(38, 13)
+        ContoLabel.TabIndex = 3
+        ContoLabel.Text = "Conto:"
+        '
+        'BancaLabel
+        '
+        BancaLabel.AutoSize = True
+        BancaLabel.Location = New System.Drawing.Point(12, 85)
+        BancaLabel.Name = "BancaLabel"
+        BancaLabel.Size = New System.Drawing.Size(41, 13)
+        BancaLabel.TabIndex = 5
+        BancaLabel.Text = "Banca:"
+        '
+        'AgenziaLabel
+        '
+        AgenziaLabel.AutoSize = True
+        AgenziaLabel.Location = New System.Drawing.Point(351, 85)
+        AgenziaLabel.Name = "AgenziaLabel"
+        AgenziaLabel.Size = New System.Drawing.Size(48, 13)
+        AgenziaLabel.TabIndex = 7
+        AgenziaLabel.Text = "Agenzia:"
+        '
+        'IndirizzoLabel
+        '
+        IndirizzoLabel.AutoSize = True
+        IndirizzoLabel.Location = New System.Drawing.Point(15, 124)
+        IndirizzoLabel.Name = "IndirizzoLabel"
+        IndirizzoLabel.Size = New System.Drawing.Size(48, 13)
+        IndirizzoLabel.TabIndex = 9
+        IndirizzoLabel.Text = "Indirizzo:"
+        '
+        'LocalitaLabel
+        '
+        LocalitaLabel.AutoSize = True
+        LocalitaLabel.Location = New System.Drawing.Point(16, 163)
+        LocalitaLabel.Name = "LocalitaLabel"
+        LocalitaLabel.Size = New System.Drawing.Size(47, 13)
+        LocalitaLabel.TabIndex = 11
+        LocalitaLabel.Text = "Localita:"
+        '
+        'Intestatario1Label
+        '
+        Intestatario1Label.AutoSize = True
+        Intestatario1Label.Location = New System.Drawing.Point(15, 202)
+        Intestatario1Label.Name = "Intestatario1Label"
+        Intestatario1Label.Size = New System.Drawing.Size(62, 13)
+        Intestatario1Label.TabIndex = 13
+        Intestatario1Label.Text = "Intestatario:"
+        '
+        'ContoCorrenteLabel
+        '
+        ContoCorrenteLabel.AutoSize = True
+        ContoCorrenteLabel.Location = New System.Drawing.Point(351, 225)
+        ContoCorrenteLabel.Name = "ContoCorrenteLabel"
+        ContoCorrenteLabel.Size = New System.Drawing.Size(81, 13)
+        ContoCorrenteLabel.TabIndex = 16
+        ContoCorrenteLabel.Text = "Conto Corrente:"
+        '
+        'IBANLabel
+        '
+        IBANLabel.AutoSize = True
+        IBANLabel.Location = New System.Drawing.Point(530, 225)
+        IBANLabel.Name = "IBANLabel"
+        IBANLabel.Size = New System.Drawing.Size(35, 13)
+        IBANLabel.TabIndex = 18
+        IBANLabel.Text = "IBAN:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -107,9 +179,8 @@ Partial Class ContiFinanziari
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Me.ContiFinanziariTableAdapter
-        ' Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -270,15 +341,6 @@ Partial Class ContiFinanziari
         Me.ImmobileComboBox.Size = New System.Drawing.Size(325, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
-        'ContoLabel
-        '
-        ContoLabel.AutoSize = True
-        ContoLabel.Location = New System.Drawing.Point(346, 45)
-        ContoLabel.Name = "ContoLabel"
-        ContoLabel.Size = New System.Drawing.Size(38, 13)
-        ContoLabel.TabIndex = 3
-        ContoLabel.Text = "Conto:"
-        '
         'ContoTextBox
         '
         Me.ContoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Conto", True))
@@ -286,15 +348,6 @@ Partial Class ContiFinanziari
         Me.ContoTextBox.Name = "ContoTextBox"
         Me.ContoTextBox.Size = New System.Drawing.Size(50, 20)
         Me.ContoTextBox.TabIndex = 4
-        '
-        'BancaLabel
-        '
-        BancaLabel.AutoSize = True
-        BancaLabel.Location = New System.Drawing.Point(12, 85)
-        BancaLabel.Name = "BancaLabel"
-        BancaLabel.Size = New System.Drawing.Size(41, 13)
-        BancaLabel.TabIndex = 5
-        BancaLabel.Text = "Banca:"
         '
         'BancaTextBox
         '
@@ -304,15 +357,6 @@ Partial Class ContiFinanziari
         Me.BancaTextBox.Size = New System.Drawing.Size(325, 20)
         Me.BancaTextBox.TabIndex = 6
         '
-        'AgenziaLabel
-        '
-        AgenziaLabel.AutoSize = True
-        AgenziaLabel.Location = New System.Drawing.Point(351, 85)
-        AgenziaLabel.Name = "AgenziaLabel"
-        AgenziaLabel.Size = New System.Drawing.Size(48, 13)
-        AgenziaLabel.TabIndex = 7
-        AgenziaLabel.Text = "Agenzia:"
-        '
         'AgenziaTextBox
         '
         Me.AgenziaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Agenzia", True))
@@ -320,15 +364,6 @@ Partial Class ContiFinanziari
         Me.AgenziaTextBox.Name = "AgenziaTextBox"
         Me.AgenziaTextBox.Size = New System.Drawing.Size(270, 20)
         Me.AgenziaTextBox.TabIndex = 8
-        '
-        'IndirizzoLabel
-        '
-        IndirizzoLabel.AutoSize = True
-        IndirizzoLabel.Location = New System.Drawing.Point(15, 124)
-        IndirizzoLabel.Name = "IndirizzoLabel"
-        IndirizzoLabel.Size = New System.Drawing.Size(48, 13)
-        IndirizzoLabel.TabIndex = 9
-        IndirizzoLabel.Text = "Indirizzo:"
         '
         'IndirizzoTextBox
         '
@@ -338,15 +373,6 @@ Partial Class ContiFinanziari
         Me.IndirizzoTextBox.Size = New System.Drawing.Size(322, 20)
         Me.IndirizzoTextBox.TabIndex = 10
         '
-        'LocalitaLabel
-        '
-        LocalitaLabel.AutoSize = True
-        LocalitaLabel.Location = New System.Drawing.Point(16, 163)
-        LocalitaLabel.Name = "LocalitaLabel"
-        LocalitaLabel.Size = New System.Drawing.Size(47, 13)
-        LocalitaLabel.TabIndex = 11
-        LocalitaLabel.Text = "Localita:"
-        '
         'LocalitaTextBox
         '
         Me.LocalitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "Localita", True))
@@ -354,15 +380,6 @@ Partial Class ContiFinanziari
         Me.LocalitaTextBox.Name = "LocalitaTextBox"
         Me.LocalitaTextBox.Size = New System.Drawing.Size(321, 20)
         Me.LocalitaTextBox.TabIndex = 12
-        '
-        'Intestatario1Label
-        '
-        Intestatario1Label.AutoSize = True
-        Intestatario1Label.Location = New System.Drawing.Point(15, 202)
-        Intestatario1Label.Name = "Intestatario1Label"
-        Intestatario1Label.Size = New System.Drawing.Size(62, 13)
-        Intestatario1Label.TabIndex = 13
-        Intestatario1Label.Text = "Intestatario:"
         '
         'Intestatario1TextBox
         '
@@ -380,15 +397,6 @@ Partial Class ContiFinanziari
         Me.Intestatario2TextBox.Size = New System.Drawing.Size(321, 20)
         Me.Intestatario2TextBox.TabIndex = 16
         '
-        'ContoCorrenteLabel
-        '
-        ContoCorrenteLabel.AutoSize = True
-        ContoCorrenteLabel.Location = New System.Drawing.Point(351, 225)
-        ContoCorrenteLabel.Name = "ContoCorrenteLabel"
-        ContoCorrenteLabel.Size = New System.Drawing.Size(81, 13)
-        ContoCorrenteLabel.TabIndex = 16
-        ContoCorrenteLabel.Text = "Conto Corrente:"
-        '
         'ContoCorrenteTextBox
         '
         Me.ContoCorrenteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ContiFinanziariBindingSource, "ContoCorrente", True))
@@ -396,15 +404,6 @@ Partial Class ContiFinanziari
         Me.ContoCorrenteTextBox.Name = "ContoCorrenteTextBox"
         Me.ContoCorrenteTextBox.Size = New System.Drawing.Size(171, 20)
         Me.ContoCorrenteTextBox.TabIndex = 17
-        '
-        'IBANLabel
-        '
-        IBANLabel.AutoSize = True
-        IBANLabel.Location = New System.Drawing.Point(530, 225)
-        IBANLabel.Name = "IBANLabel"
-        IBANLabel.Size = New System.Drawing.Size(35, 13)
-        IBANLabel.TabIndex = 18
-        IBANLabel.Text = "IBAN:"
         '
         'IBANTextBox
         '

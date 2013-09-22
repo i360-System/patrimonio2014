@@ -23,34 +23,34 @@ Partial Class X_Fatture
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(X_Fatture))
         Dim DocumentoLabel As System.Windows.Forms.Label
         Dim FornitoreLabel As System.Windows.Forms.Label
         Dim QuantitaLabel As System.Windows.Forms.Label
         Dim ImmobileLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(X_Fatture))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.X_FattureBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.X_FattureTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_FattureTableAdapter()
         Me.TableAdapterManager = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.TableAdapterManager()
+        Me.X_FattureDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_FattureDettaglioTableAdapter()
         Me.X_FattureBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.X_FattureBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.DocumentoTextBox = New System.Windows.Forms.TextBox()
         Me.FornitoreComboBox = New System.Windows.Forms.ComboBox()
         Me.QuantitaTextBox = New System.Windows.Forms.TextBox()
         Me.ImmobileComboBox = New System.Windows.Forms.ComboBox()
         Me.X_FattureDettaglioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.X_FattureDettaglioTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.X_FattureDettaglioTableAdapter()
         Me.X_FattureDettaglioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,6 +70,42 @@ Partial Class X_Fatture
         CType(Me.X_FattureDettaglioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.X_FattureDettaglioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DocumentoLabel
+        '
+        DocumentoLabel.AutoSize = True
+        DocumentoLabel.Location = New System.Drawing.Point(12, 35)
+        DocumentoLabel.Name = "DocumentoLabel"
+        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
+        DocumentoLabel.TabIndex = 1
+        DocumentoLabel.Text = "Documento:"
+        '
+        'FornitoreLabel
+        '
+        FornitoreLabel.AutoSize = True
+        FornitoreLabel.Location = New System.Drawing.Point(157, 35)
+        FornitoreLabel.Name = "FornitoreLabel"
+        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
+        FornitoreLabel.TabIndex = 3
+        FornitoreLabel.Text = "Fornitore:"
+        '
+        'QuantitaLabel
+        '
+        QuantitaLabel.AutoSize = True
+        QuantitaLabel.Location = New System.Drawing.Point(12, 74)
+        QuantitaLabel.Name = "QuantitaLabel"
+        QuantitaLabel.Size = New System.Drawing.Size(50, 13)
+        QuantitaLabel.TabIndex = 5
+        QuantitaLabel.Text = "Quantita:"
+        '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(162, 75)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 7
+        ImmobileLabel.Text = "Immobile:"
         '
         'IMMOBILIDataSet2
         '
@@ -94,9 +130,8 @@ Partial Class X_Fatture
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -137,6 +172,10 @@ Partial Class X_Fatture
         Me.TableAdapterManager.Z_ConsuntivoTableAdapter = Nothing
         Me.TableAdapterManager.Z_TestoSollecitoTableAdapter = Nothing
         '
+        'X_FattureDettaglioTableAdapter
+        '
+        Me.X_FattureDettaglioTableAdapter.ClearBeforeFill = True
+        '
         'X_FattureBindingNavigator
         '
         Me.X_FattureBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -154,6 +193,31 @@ Partial Class X_Fatture
         Me.X_FattureBindingNavigator.Size = New System.Drawing.Size(752, 25)
         Me.X_FattureBindingNavigator.TabIndex = 0
         Me.X_FattureBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 22)
+        Me.BindingNavigatorCountItem.Text = "di {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Elimina"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -187,17 +251,10 @@ Partial Class X_Fatture
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Posizione corrente"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(34, 13)
-        Me.BindingNavigatorCountItem.Text = "di {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Numero totale di elementi"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -205,7 +262,7 @@ Partial Class X_Fatture
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Sposta avanti"
         '
         'BindingNavigatorMoveLastItem
@@ -214,48 +271,21 @@ Partial Class X_Fatture
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Sposta in ultima posizione"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Aggiungi nuovo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Elimina"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'X_FattureBindingNavigatorSaveItem
         '
         Me.X_FattureBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.X_FattureBindingNavigatorSaveItem.Image = CType(resources.GetObject("X_FattureBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.X_FattureBindingNavigatorSaveItem.Name = "X_FattureBindingNavigatorSaveItem"
-        Me.X_FattureBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.X_FattureBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.X_FattureBindingNavigatorSaveItem.Text = "Salva dati"
-        '
-        'DocumentoLabel
-        '
-        DocumentoLabel.AutoSize = True
-        DocumentoLabel.Location = New System.Drawing.Point(12, 35)
-        DocumentoLabel.Name = "DocumentoLabel"
-        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
-        DocumentoLabel.TabIndex = 1
-        DocumentoLabel.Text = "Documento:"
         '
         'DocumentoTextBox
         '
@@ -264,15 +294,6 @@ Partial Class X_Fatture
         Me.DocumentoTextBox.Name = "DocumentoTextBox"
         Me.DocumentoTextBox.Size = New System.Drawing.Size(136, 20)
         Me.DocumentoTextBox.TabIndex = 2
-        '
-        'FornitoreLabel
-        '
-        FornitoreLabel.AutoSize = True
-        FornitoreLabel.Location = New System.Drawing.Point(157, 35)
-        FornitoreLabel.Name = "FornitoreLabel"
-        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
-        FornitoreLabel.TabIndex = 3
-        FornitoreLabel.Text = "Fornitore:"
         '
         'FornitoreComboBox
         '
@@ -283,15 +304,6 @@ Partial Class X_Fatture
         Me.FornitoreComboBox.Size = New System.Drawing.Size(252, 21)
         Me.FornitoreComboBox.TabIndex = 4
         '
-        'QuantitaLabel
-        '
-        QuantitaLabel.AutoSize = True
-        QuantitaLabel.Location = New System.Drawing.Point(12, 74)
-        QuantitaLabel.Name = "QuantitaLabel"
-        QuantitaLabel.Size = New System.Drawing.Size(50, 13)
-        QuantitaLabel.TabIndex = 5
-        QuantitaLabel.Text = "Quantita:"
-        '
         'QuantitaTextBox
         '
         Me.QuantitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.X_FattureBindingSource, "Quantita", True))
@@ -299,15 +311,6 @@ Partial Class X_Fatture
         Me.QuantitaTextBox.Name = "QuantitaTextBox"
         Me.QuantitaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.QuantitaTextBox.TabIndex = 6
-        '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(162, 75)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 7
-        ImmobileLabel.Text = "Immobile:"
         '
         'ImmobileComboBox
         '
@@ -322,10 +325,6 @@ Partial Class X_Fatture
         '
         Me.X_FattureDettaglioBindingSource.DataMember = "X_FattureX_FattureDettaglio"
         Me.X_FattureDettaglioBindingSource.DataSource = Me.X_FattureBindingSource
-        '
-        'X_FattureDettaglioTableAdapter
-        '
-        Me.X_FattureDettaglioTableAdapter.ClearBeforeFill = True
         '
         'X_FattureDettaglioDataGridView
         '

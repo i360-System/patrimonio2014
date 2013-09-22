@@ -24,7 +24,6 @@ Partial Class W_Ritenute
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ProgressivoLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(W_Ritenute))
         Dim ImmobileLabel As System.Windows.Forms.Label
         Dim DocumentoLabel As System.Windows.Forms.Label
         Dim DataDocumentoLabel As System.Windows.Forms.Label
@@ -41,6 +40,7 @@ Partial Class W_Ritenute
         Dim NettoLabel As System.Windows.Forms.Label
         Dim DataPagamentoLabel As System.Windows.Forms.Label
         Dim AnnoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(W_Ritenute))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.W_RitenuteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.W_RitenuteTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.W_RitenuteTableAdapter()
@@ -107,6 +107,150 @@ Partial Class W_Ritenute
         ProgressivoLabel.TabIndex = 1
         ProgressivoLabel.Text = "Progressivo:"
         '
+        'ImmobileLabel
+        '
+        ImmobileLabel.AutoSize = True
+        ImmobileLabel.Location = New System.Drawing.Point(104, 40)
+        ImmobileLabel.Name = "ImmobileLabel"
+        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
+        ImmobileLabel.TabIndex = 3
+        ImmobileLabel.Text = "Immobile:"
+        '
+        'DocumentoLabel
+        '
+        DocumentoLabel.AutoSize = True
+        DocumentoLabel.Location = New System.Drawing.Point(387, 40)
+        DocumentoLabel.Name = "DocumentoLabel"
+        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
+        DocumentoLabel.TabIndex = 5
+        DocumentoLabel.Text = "Documento:"
+        '
+        'DataDocumentoLabel
+        '
+        DataDocumentoLabel.AutoSize = True
+        DataDocumentoLabel.Location = New System.Drawing.Point(535, 40)
+        DataDocumentoLabel.Name = "DataDocumentoLabel"
+        DataDocumentoLabel.Size = New System.Drawing.Size(91, 13)
+        DataDocumentoLabel.TabIndex = 7
+        DataDocumentoLabel.Text = "Data Documento:"
+        '
+        'FornitoreLabel
+        '
+        FornitoreLabel.AutoSize = True
+        FornitoreLabel.Location = New System.Drawing.Point(12, 79)
+        FornitoreLabel.Name = "FornitoreLabel"
+        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
+        FornitoreLabel.TabIndex = 9
+        FornitoreLabel.Text = "Fornitore:"
+        '
+        'TrattamentoLabel
+        '
+        TrattamentoLabel.AutoSize = True
+        TrattamentoLabel.Location = New System.Drawing.Point(390, 80)
+        TrattamentoLabel.Name = "TrattamentoLabel"
+        TrattamentoLabel.Size = New System.Drawing.Size(67, 13)
+        TrattamentoLabel.TabIndex = 11
+        TrattamentoLabel.Text = "Trattamento:"
+        '
+        'TributoLabel
+        '
+        TributoLabel.AutoSize = True
+        TributoLabel.Location = New System.Drawing.Point(12, 119)
+        TributoLabel.Name = "TributoLabel"
+        TributoLabel.Size = New System.Drawing.Size(43, 13)
+        TributoLabel.TabIndex = 13
+        TributoLabel.Text = "Tributo:"
+        '
+        'CausaleLabel
+        '
+        CausaleLabel.AutoSize = True
+        CausaleLabel.Location = New System.Drawing.Point(82, 119)
+        CausaleLabel.Name = "CausaleLabel"
+        CausaleLabel.Size = New System.Drawing.Size(48, 13)
+        CausaleLabel.TabIndex = 15
+        CausaleLabel.Text = "Causale:"
+        '
+        'CompensoLabel
+        '
+        CompensoLabel.AutoSize = True
+        CompensoLabel.Location = New System.Drawing.Point(272, 119)
+        CompensoLabel.Name = "CompensoLabel"
+        CompensoLabel.Size = New System.Drawing.Size(60, 13)
+        CompensoLabel.TabIndex = 17
+        CompensoLabel.Text = "Compenso:"
+        '
+        'EsenteLabel
+        '
+        EsenteLabel.AutoSize = True
+        EsenteLabel.Location = New System.Drawing.Point(381, 119)
+        EsenteLabel.Name = "EsenteLabel"
+        EsenteLabel.Size = New System.Drawing.Size(43, 13)
+        EsenteLabel.TabIndex = 19
+        EsenteLabel.Text = "Esente:"
+        '
+        'PrevidenzaLabel
+        '
+        PrevidenzaLabel.AutoSize = True
+        PrevidenzaLabel.Location = New System.Drawing.Point(490, 119)
+        PrevidenzaLabel.Name = "PrevidenzaLabel"
+        PrevidenzaLabel.Size = New System.Drawing.Size(63, 13)
+        PrevidenzaLabel.TabIndex = 21
+        PrevidenzaLabel.Text = "Previdenza:"
+        '
+        'IvaLabel
+        '
+        IvaLabel.AutoSize = True
+        IvaLabel.Location = New System.Drawing.Point(601, 119)
+        IvaLabel.Name = "IvaLabel"
+        IvaLabel.Size = New System.Drawing.Size(25, 13)
+        IvaLabel.TabIndex = 23
+        IvaLabel.Text = "Iva:"
+        '
+        'ImponibileLabel
+        '
+        ImponibileLabel.AutoSize = True
+        ImponibileLabel.Location = New System.Drawing.Point(710, 119)
+        ImponibileLabel.Name = "ImponibileLabel"
+        ImponibileLabel.Size = New System.Drawing.Size(57, 13)
+        ImponibileLabel.TabIndex = 25
+        ImponibileLabel.Text = "Imponibile:"
+        '
+        'RitenutaLabel
+        '
+        RitenutaLabel.AutoSize = True
+        RitenutaLabel.Location = New System.Drawing.Point(601, 158)
+        RitenutaLabel.Name = "RitenutaLabel"
+        RitenutaLabel.Size = New System.Drawing.Size(50, 13)
+        RitenutaLabel.TabIndex = 27
+        RitenutaLabel.Text = "Ritenuta:"
+        '
+        'NettoLabel
+        '
+        NettoLabel.AutoSize = True
+        NettoLabel.Location = New System.Drawing.Point(710, 158)
+        NettoLabel.Name = "NettoLabel"
+        NettoLabel.Size = New System.Drawing.Size(36, 13)
+        NettoLabel.TabIndex = 29
+        NettoLabel.Text = "Netto:"
+        '
+        'DataPagamentoLabel
+        '
+        DataPagamentoLabel.AutoSize = True
+        DataPagamentoLabel.Location = New System.Drawing.Point(601, 197)
+        DataPagamentoLabel.Name = "DataPagamentoLabel"
+        DataPagamentoLabel.Size = New System.Drawing.Size(90, 13)
+        DataPagamentoLabel.TabIndex = 31
+        DataPagamentoLabel.Text = "Data Pagamento:"
+        '
+        'AnnoLabel
+        '
+        AnnoLabel.AutoSize = True
+        AnnoLabel.Location = New System.Drawing.Point(711, 197)
+        AnnoLabel.Name = "AnnoLabel"
+        AnnoLabel.Size = New System.Drawing.Size(35, 13)
+        AnnoLabel.TabIndex = 33
+        AnnoLabel.Text = "Anno:"
+        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -130,9 +274,8 @@ Partial Class W_Ritenute
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -292,15 +435,6 @@ Partial Class W_Ritenute
         Me.ProgressivoTextBox.Size = New System.Drawing.Size(83, 20)
         Me.ProgressivoTextBox.TabIndex = 2
         '
-        'ImmobileLabel
-        '
-        ImmobileLabel.AutoSize = True
-        ImmobileLabel.Location = New System.Drawing.Point(104, 40)
-        ImmobileLabel.Name = "ImmobileLabel"
-        ImmobileLabel.Size = New System.Drawing.Size(51, 13)
-        ImmobileLabel.TabIndex = 3
-        ImmobileLabel.Text = "Immobile:"
-        '
         'ImmobileComboBox
         '
         Me.ImmobileComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Immobile", True))
@@ -310,15 +444,6 @@ Partial Class W_Ritenute
         Me.ImmobileComboBox.Size = New System.Drawing.Size(274, 21)
         Me.ImmobileComboBox.TabIndex = 4
         '
-        'DocumentoLabel
-        '
-        DocumentoLabel.AutoSize = True
-        DocumentoLabel.Location = New System.Drawing.Point(387, 40)
-        DocumentoLabel.Name = "DocumentoLabel"
-        DocumentoLabel.Size = New System.Drawing.Size(65, 13)
-        DocumentoLabel.TabIndex = 5
-        DocumentoLabel.Text = "Documento:"
-        '
         'DocumentoTextBox
         '
         Me.DocumentoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Documento", True))
@@ -326,15 +451,6 @@ Partial Class W_Ritenute
         Me.DocumentoTextBox.Name = "DocumentoTextBox"
         Me.DocumentoTextBox.Size = New System.Drawing.Size(142, 20)
         Me.DocumentoTextBox.TabIndex = 6
-        '
-        'DataDocumentoLabel
-        '
-        DataDocumentoLabel.AutoSize = True
-        DataDocumentoLabel.Location = New System.Drawing.Point(535, 40)
-        DataDocumentoLabel.Name = "DataDocumentoLabel"
-        DataDocumentoLabel.Size = New System.Drawing.Size(91, 13)
-        DataDocumentoLabel.TabIndex = 7
-        DataDocumentoLabel.Text = "Data Documento:"
         '
         'DataDocumentoDateTimePicker
         '
@@ -345,15 +461,6 @@ Partial Class W_Ritenute
         Me.DataDocumentoDateTimePicker.Size = New System.Drawing.Size(96, 20)
         Me.DataDocumentoDateTimePicker.TabIndex = 8
         '
-        'FornitoreLabel
-        '
-        FornitoreLabel.AutoSize = True
-        FornitoreLabel.Location = New System.Drawing.Point(12, 79)
-        FornitoreLabel.Name = "FornitoreLabel"
-        FornitoreLabel.Size = New System.Drawing.Size(51, 13)
-        FornitoreLabel.TabIndex = 9
-        FornitoreLabel.Text = "Fornitore:"
-        '
         'FornitoreComboBox
         '
         Me.FornitoreComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Fornitore", True))
@@ -362,15 +469,6 @@ Partial Class W_Ritenute
         Me.FornitoreComboBox.Name = "FornitoreComboBox"
         Me.FornitoreComboBox.Size = New System.Drawing.Size(366, 21)
         Me.FornitoreComboBox.TabIndex = 10
-        '
-        'TrattamentoLabel
-        '
-        TrattamentoLabel.AutoSize = True
-        TrattamentoLabel.Location = New System.Drawing.Point(390, 80)
-        TrattamentoLabel.Name = "TrattamentoLabel"
-        TrattamentoLabel.Size = New System.Drawing.Size(67, 13)
-        TrattamentoLabel.TabIndex = 11
-        TrattamentoLabel.Text = "Trattamento:"
         '
         'TrattamentoComboBox
         '
@@ -381,15 +479,6 @@ Partial Class W_Ritenute
         Me.TrattamentoComboBox.Size = New System.Drawing.Size(244, 21)
         Me.TrattamentoComboBox.TabIndex = 12
         '
-        'TributoLabel
-        '
-        TributoLabel.AutoSize = True
-        TributoLabel.Location = New System.Drawing.Point(12, 119)
-        TributoLabel.Name = "TributoLabel"
-        TributoLabel.Size = New System.Drawing.Size(43, 13)
-        TributoLabel.TabIndex = 13
-        TributoLabel.Text = "Tributo:"
-        '
         'TributoTextBox
         '
         Me.TributoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Tributo", True))
@@ -397,15 +486,6 @@ Partial Class W_Ritenute
         Me.TributoTextBox.Name = "TributoTextBox"
         Me.TributoTextBox.Size = New System.Drawing.Size(62, 20)
         Me.TributoTextBox.TabIndex = 14
-        '
-        'CausaleLabel
-        '
-        CausaleLabel.AutoSize = True
-        CausaleLabel.Location = New System.Drawing.Point(82, 119)
-        CausaleLabel.Name = "CausaleLabel"
-        CausaleLabel.Size = New System.Drawing.Size(48, 13)
-        CausaleLabel.TabIndex = 15
-        CausaleLabel.Text = "Causale:"
         '
         'CausaleTextBox
         '
@@ -415,15 +495,6 @@ Partial Class W_Ritenute
         Me.CausaleTextBox.Size = New System.Drawing.Size(181, 20)
         Me.CausaleTextBox.TabIndex = 16
         '
-        'CompensoLabel
-        '
-        CompensoLabel.AutoSize = True
-        CompensoLabel.Location = New System.Drawing.Point(272, 119)
-        CompensoLabel.Name = "CompensoLabel"
-        CompensoLabel.Size = New System.Drawing.Size(60, 13)
-        CompensoLabel.TabIndex = 17
-        CompensoLabel.Text = "Compenso:"
-        '
         'CompensoTextBox
         '
         Me.CompensoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Compenso", True))
@@ -431,15 +502,6 @@ Partial Class W_Ritenute
         Me.CompensoTextBox.Name = "CompensoTextBox"
         Me.CompensoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CompensoTextBox.TabIndex = 18
-        '
-        'EsenteLabel
-        '
-        EsenteLabel.AutoSize = True
-        EsenteLabel.Location = New System.Drawing.Point(381, 119)
-        EsenteLabel.Name = "EsenteLabel"
-        EsenteLabel.Size = New System.Drawing.Size(43, 13)
-        EsenteLabel.TabIndex = 19
-        EsenteLabel.Text = "Esente:"
         '
         'EsenteTextBox
         '
@@ -449,15 +511,6 @@ Partial Class W_Ritenute
         Me.EsenteTextBox.Size = New System.Drawing.Size(100, 20)
         Me.EsenteTextBox.TabIndex = 20
         '
-        'PrevidenzaLabel
-        '
-        PrevidenzaLabel.AutoSize = True
-        PrevidenzaLabel.Location = New System.Drawing.Point(490, 119)
-        PrevidenzaLabel.Name = "PrevidenzaLabel"
-        PrevidenzaLabel.Size = New System.Drawing.Size(63, 13)
-        PrevidenzaLabel.TabIndex = 21
-        PrevidenzaLabel.Text = "Previdenza:"
-        '
         'PrevidenzaTextBox
         '
         Me.PrevidenzaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Previdenza", True))
@@ -465,15 +518,6 @@ Partial Class W_Ritenute
         Me.PrevidenzaTextBox.Name = "PrevidenzaTextBox"
         Me.PrevidenzaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PrevidenzaTextBox.TabIndex = 22
-        '
-        'IvaLabel
-        '
-        IvaLabel.AutoSize = True
-        IvaLabel.Location = New System.Drawing.Point(601, 119)
-        IvaLabel.Name = "IvaLabel"
-        IvaLabel.Size = New System.Drawing.Size(25, 13)
-        IvaLabel.TabIndex = 23
-        IvaLabel.Text = "Iva:"
         '
         'IvaTextBox
         '
@@ -483,15 +527,6 @@ Partial Class W_Ritenute
         Me.IvaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IvaTextBox.TabIndex = 24
         '
-        'ImponibileLabel
-        '
-        ImponibileLabel.AutoSize = True
-        ImponibileLabel.Location = New System.Drawing.Point(710, 119)
-        ImponibileLabel.Name = "ImponibileLabel"
-        ImponibileLabel.Size = New System.Drawing.Size(57, 13)
-        ImponibileLabel.TabIndex = 25
-        ImponibileLabel.Text = "Imponibile:"
-        '
         'ImponibileTextBox
         '
         Me.ImponibileTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Imponibile", True))
@@ -499,15 +534,6 @@ Partial Class W_Ritenute
         Me.ImponibileTextBox.Name = "ImponibileTextBox"
         Me.ImponibileTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ImponibileTextBox.TabIndex = 26
-        '
-        'RitenutaLabel
-        '
-        RitenutaLabel.AutoSize = True
-        RitenutaLabel.Location = New System.Drawing.Point(601, 158)
-        RitenutaLabel.Name = "RitenutaLabel"
-        RitenutaLabel.Size = New System.Drawing.Size(50, 13)
-        RitenutaLabel.TabIndex = 27
-        RitenutaLabel.Text = "Ritenuta:"
         '
         'RitenutaTextBox
         '
@@ -517,15 +543,6 @@ Partial Class W_Ritenute
         Me.RitenutaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.RitenutaTextBox.TabIndex = 28
         '
-        'NettoLabel
-        '
-        NettoLabel.AutoSize = True
-        NettoLabel.Location = New System.Drawing.Point(710, 158)
-        NettoLabel.Name = "NettoLabel"
-        NettoLabel.Size = New System.Drawing.Size(36, 13)
-        NettoLabel.TabIndex = 29
-        NettoLabel.Text = "Netto:"
-        '
         'NettoTextBox
         '
         Me.NettoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.W_RitenuteBindingSource, "Netto", True))
@@ -533,15 +550,6 @@ Partial Class W_Ritenute
         Me.NettoTextBox.Name = "NettoTextBox"
         Me.NettoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NettoTextBox.TabIndex = 30
-        '
-        'DataPagamentoLabel
-        '
-        DataPagamentoLabel.AutoSize = True
-        DataPagamentoLabel.Location = New System.Drawing.Point(601, 197)
-        DataPagamentoLabel.Name = "DataPagamentoLabel"
-        DataPagamentoLabel.Size = New System.Drawing.Size(90, 13)
-        DataPagamentoLabel.TabIndex = 31
-        DataPagamentoLabel.Text = "Data Pagamento:"
         '
         'DataPagamentoDateTimePicker
         '
@@ -551,15 +559,6 @@ Partial Class W_Ritenute
         Me.DataPagamentoDateTimePicker.Name = "DataPagamentoDateTimePicker"
         Me.DataPagamentoDateTimePicker.Size = New System.Drawing.Size(100, 20)
         Me.DataPagamentoDateTimePicker.TabIndex = 32
-        '
-        'AnnoLabel
-        '
-        AnnoLabel.AutoSize = True
-        AnnoLabel.Location = New System.Drawing.Point(711, 197)
-        AnnoLabel.Name = "AnnoLabel"
-        AnnoLabel.Size = New System.Drawing.Size(35, 13)
-        AnnoLabel.TabIndex = 33
-        AnnoLabel.Text = "Anno:"
         '
         'AnnoTextBox
         '
