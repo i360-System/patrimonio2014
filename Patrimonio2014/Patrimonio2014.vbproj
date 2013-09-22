@@ -49,6 +49,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CodeSamples">
+      <HintPath>..\..\..\..\..\..\Desktop\MultiColumn_ComboBox\bin\compilato\CodeSamples.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -60,6 +63,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="CodeSamples" />
+    <Import Include="CodeSamples.Controls" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -134,6 +139,12 @@
     </Compile>
     <Compile Include="FormMenu\Fabbricati.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu\UserControl1.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormMenu\Z_TestoSollecito.Designer.vb">
       <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
@@ -445,6 +456,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Immagini\ric.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
