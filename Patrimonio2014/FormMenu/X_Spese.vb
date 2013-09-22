@@ -14,10 +14,10 @@ Public Class X_Spese
         Me.X_SpeseDescrizioniTableAdapter.Fill(Me.IMMOBILIDataSet2.X_SpeseDescrizioni)
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.X_Spese'. È possibile spostarla o rimuoverla se necessario.
         Me.X_SpeseTableAdapter.Fill(Me.IMMOBILIDataSet2.X_Spese)
-        CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox)
+        CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
 
     End Sub
-    Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox)
+    Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)
         Dim cn As New OleDbConnection(My.Settings.IMMOBILIConnectionString.ToString)
         cn.Open()
 
@@ -29,8 +29,8 @@ Public Class X_Spese
         ds.Clear()
         da.Fill(ds, NomeTab)
 
-        combo.DisplayMember = "DescrizioneImmobile"
-        combo.ValueMember = "Immobile"
+        combo.DisplayMember = DisplayMember
+        combo.ValueMember = ValueMember
         combo.DataSource = ds.Tables(NomeTab)
         cn.Close()
     End Sub
