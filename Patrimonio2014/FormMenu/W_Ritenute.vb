@@ -22,14 +22,18 @@ Public Class W_Ritenute
         Dim command As New OleDbCommand(query, cn)
         Dim da As New OleDbDataAdapter
         da.SelectCommand = command
+        Try
+            Dim ds As New DataSet(NomeTab)
+            ds.Clear()
+            ds.Tables.Add(NomeTab)
+            da.Fill(ds, NomeTab)
 
-        Dim ds As New DataSet(NomeTab)
-        ds.Clear()
-        da.Fill(ds, NomeTab)
-
-        combo.DisplayMember = DisplayMember
-        combo.ValueMember = ValueMember
-        combo.DataSource = ds.Tables(NomeTab)
+            combo.DisplayMember = DisplayMember
+            combo.ValueMember = ValueMember
+            combo.DataSource = ds.Tables(NomeTab)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
         cn.Close()
     End Sub
 
