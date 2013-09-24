@@ -13,7 +13,7 @@ Public Class X_MovimentiFinanziari
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.X_MovimentiFinanziari'. È possibile spostarla o rimuoverla se necessario.
         Me.X_MovimentiFinanziariTableAdapter.Fill(Me.IMMOBILIDataSet2.X_MovimentiFinanziari)
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
-        CreaCombo("ContiFinanziari", "SELECT Conto, (Conto + ' - ' + Banca) AS DescrizioneConto FROM ContiFinanziari", ContoComboBox, "DescrizioneConto", "Conto")
+        CreaCombo("ContiFinanziari", "SELECT Conto, (Conto + ' - ' + Banca) AS DescrizioneConto FROM ContiFinanziari WHERE Immobile='" & ImmobileComboBox.Text & "'", ContoComboBox, "DescrizioneConto", "Conto")
 
     End Sub
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)
