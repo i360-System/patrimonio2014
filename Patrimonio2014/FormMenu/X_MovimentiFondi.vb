@@ -13,6 +13,7 @@ Public Class X_MovimentiFondi
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.X_MovimentiFondi'. È possibile spostarla o rimuoverla se necessario.
         Me.X_MovimentiFondiTableAdapter.Fill(Me.IMMOBILIDataSet2.X_MovimentiFondi)
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
+        CreaCombo("Fondi", "SELECT Fondo, (Fondo + ' - ' + Denominazione) AS DescrizioneFondo FROM Fondi", FondoComboBox, "DescrizioneFondo", "Fondo")
 
     End Sub
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)

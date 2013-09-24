@@ -238,14 +238,14 @@ Partial Class Unita
         TrasmissioneConvocazioneLabel.AutoSize = True
         TrasmissioneConvocazioneLabel.Location = New System.Drawing.Point(166, 177)
         TrasmissioneConvocazioneLabel.Name = "TrasmissioneConvocazioneLabel"
-        TrasmissioneConvocazioneLabel.Size = New System.Drawing.Size(94, 13)
+        TrasmissioneConvocazioneLabel.Size = New System.Drawing.Size(54, 13)
         TrasmissioneConvocazioneLabel.TabIndex = 21
-        TrasmissioneConvocazioneLabel.Text = "Tr. Convocazione:"
+        TrasmissioneConvocazioneLabel.Text = "Tr. Conv.:"
         '
         'TrasmissioneAvvisiLabel
         '
         TrasmissioneAvvisiLabel.AutoSize = True
-        TrasmissioneAvvisiLabel.Location = New System.Drawing.Point(266, 177)
+        TrasmissioneAvvisiLabel.Location = New System.Drawing.Point(218, 177)
         TrasmissioneAvvisiLabel.Name = "TrasmissioneAvvisiLabel"
         TrasmissioneAvvisiLabel.Size = New System.Drawing.Size(54, 13)
         TrasmissioneAvvisiLabel.TabIndex = 23
@@ -525,7 +525,7 @@ Partial Class Unita
         'TrasmissioneSpeseTextBox
         '
         Me.TrasmissioneSpeseTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "TrasmissioneSpese", True))
-        Me.TrasmissioneSpeseTextBox.Location = New System.Drawing.Point(107, 193)
+        Me.TrasmissioneSpeseTextBox.Location = New System.Drawing.Point(104, 193)
         Me.TrasmissioneSpeseTextBox.Name = "TrasmissioneSpeseTextBox"
         Me.TrasmissioneSpeseTextBox.Size = New System.Drawing.Size(53, 20)
         Me.TrasmissioneSpeseTextBox.TabIndex = 20
@@ -533,15 +533,15 @@ Partial Class Unita
         'TrasmissioneConvocazioneTextBox
         '
         Me.TrasmissioneConvocazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "TrasmissioneConvocazione", True))
-        Me.TrasmissioneConvocazioneTextBox.Location = New System.Drawing.Point(171, 193)
+        Me.TrasmissioneConvocazioneTextBox.Location = New System.Drawing.Point(163, 193)
         Me.TrasmissioneConvocazioneTextBox.Name = "TrasmissioneConvocazioneTextBox"
-        Me.TrasmissioneConvocazioneTextBox.Size = New System.Drawing.Size(89, 20)
+        Me.TrasmissioneConvocazioneTextBox.Size = New System.Drawing.Size(49, 20)
         Me.TrasmissioneConvocazioneTextBox.TabIndex = 22
         '
         'TrasmissioneAvvisiTextBox
         '
         Me.TrasmissioneAvvisiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "TrasmissioneAvvisi", True))
-        Me.TrasmissioneAvvisiTextBox.Location = New System.Drawing.Point(269, 193)
+        Me.TrasmissioneAvvisiTextBox.Location = New System.Drawing.Point(220, 193)
         Me.TrasmissioneAvvisiTextBox.Name = "TrasmissioneAvvisiTextBox"
         Me.TrasmissioneAvvisiTextBox.Size = New System.Drawing.Size(51, 20)
         Me.TrasmissioneAvvisiTextBox.TabIndex = 24

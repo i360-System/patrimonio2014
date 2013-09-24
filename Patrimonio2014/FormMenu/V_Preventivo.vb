@@ -15,8 +15,7 @@ Public Class V_Preventivo
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.V_Preventivo'. È possibile spostarla o rimuoverla se necessario.
         Me.V_PreventivoTableAdapter.Fill(Me.IMMOBILIDataSet2.V_Preventivo)
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
-        CreaCombo("Y_Gestioni", "SELECT Gestione, (CStr(Gestione) + ' - ' + Descrizione1) AS DescrizioneGestione FROM Y_Gestioni WHERE Immobile='" _
-                  & ImmobileComboBox.Text & "'", GestioneComboBox, "DescrizioneGestione", "Gestione")
+        CreaCombo("Y_Gestioni", "SELECT Gestione, (CStr(Gestione) + ' - ' + Descrizione1) AS DescrizioneGestione FROM Y_Gestioni WHERE Immobile='" & ImmobileComboBox.Text & "'", GestioneComboBox, "DescrizioneGestione", "Gestione")
 
     End Sub
 

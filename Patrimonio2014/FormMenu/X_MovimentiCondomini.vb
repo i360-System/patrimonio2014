@@ -13,8 +13,9 @@ Public Class X_MovimentiCondomini
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.X_MovimentiCondomini'. È possibile spostarla o rimuoverla se necessario.
         Me.X_MovimentiCondominiTableAdapter.Fill(Me.IMMOBILIDataSet2.X_MovimentiCondomini)
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
-        CreaCombo("Y_Gestioni", "SELECT Gestione, (CStr(Gestione) + ' - ' + Descrizione1) AS DescrizioneGestione FROM Y_Gestioni WHERE Immobile='" _
-                  & ImmobileComboBox.Text & "'", GestioneComboBox, "DescrizioneGestione", "Gestione")
+        CreaCombo("Y_Gestioni", "SELECT Gestione, (CStr(Gestione) + ' - ' + Descrizione1) AS DescrizioneGestione FROM Y_Gestioni WHERE Immobile='" & ImmobileComboBox.Text & "'", GestioneComboBox, "DescrizioneGestione", "Gestione")
+        CreaCombo("Anagrafiche", "SELECT Anagrafica, (Anagrafica + ' - ' + Nominativo1) AS DescrizioneProprietario FROM Anagrafiche WHERE Immobile='" & ImmobileComboBox.Text & "'", AnagraficaComboBox, "DescrizioneProprietario", "Anagrafica")
+        CreaCombo("Unita", "SELECT Unita, (Unita + ' - ' + Nominativo1) AS DescrizioneUnita FROM Unita WHERE Immobile='" & ImmobileComboBox.Text & "'", AnagraficaComboBox, "DescrizioneUnita", "Unita")
 
     End Sub
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)
@@ -46,6 +47,16 @@ Public Class X_MovimentiCondomini
 
     Private Sub GestioneComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles GestioneComboBox.SelectedIndexChanged
         GestioneComboBox.Text = GestioneComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub UnitaComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles UnitaComboBox.SelectedIndexChanged
+        UnitaComboBox.Text = UnitaComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub AnagraficaComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles AnagraficaComboBox.SelectedIndexChanged
+        AnagraficaComboBox.Text = AnagraficaComboBox.SelectedValue
 
     End Sub
 End Class

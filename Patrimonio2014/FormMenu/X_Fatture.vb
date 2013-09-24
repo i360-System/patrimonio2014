@@ -14,6 +14,7 @@ Public Class X_Fatture
         Me.X_FattureDettaglioTableAdapter.Fill(Me.IMMOBILIDataSet2.X_FattureDettaglio)
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.X_Fatture'. È possibile spostarla o rimuoverla se necessario.
         Me.X_FattureTableAdapter.Fill(Me.IMMOBILIDataSet2.X_Fatture)
+        CreaCombo("Fornitori", "SELECT Fornitore, (Fornitore + ' - ' + Denominazione) AS DescrizioneFornitore FROM Fornitori", FornitoreComboBox, "DescrizioneFornitore", "Fornitore")
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
 
     End Sub
@@ -41,6 +42,11 @@ Public Class X_Fatture
 
     Private Sub ImmobileComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ImmobileComboBox.SelectedIndexChanged
         ImmobileComboBox.Text = ImmobileComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub FornitoreComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles FornitoreComboBox.SelectedIndexChanged
+        FornitoreComboBox.Text = FornitoreComboBox.SelectedValue
 
     End Sub
 End Class

@@ -13,6 +13,8 @@ Public Class W_Ritenute
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.W_Ritenute'. È possibile spostarla o rimuoverla se necessario.
         Me.W_RitenuteTableAdapter.Fill(Me.IMMOBILIDataSet2.W_Ritenute)
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
+        CreaCombo("Fornitori", "SELECT Fornitore, (Fornitore + ' - ' + Denominazione) AS DescrizioneFornitore FROM Fornitori", FornitoreComboBox, "DescrizioneFornitore", "Fornitore")
+        CreaCombo("W_Tributi", "SELECT Tributo, (CStr(Tributo) + ' - ' + Descrizione) AS DescrizioneTributo FROM W_Tributi", TrattamentoComboBox, "DescrizioneTributo", "Tributo")
 
     End Sub
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)
@@ -39,6 +41,16 @@ Public Class W_Ritenute
 
     Private Sub ImmobileComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ImmobileComboBox.SelectedIndexChanged
         ImmobileComboBox.Text = ImmobileComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub FornitoreComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles FornitoreComboBox.SelectedIndexChanged
+        FornitoreComboBox.Text = FornitoreComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub TrattamentoComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles TrattamentoComboBox.SelectedIndexChanged
+        TrattamentoComboBox.Text = TrattamentoComboBox.SelectedValue
 
     End Sub
 End Class

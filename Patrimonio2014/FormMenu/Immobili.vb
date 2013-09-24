@@ -16,9 +16,9 @@ Public Class Immobili
         CreaCombo("Gruppi", "SELECT Studio, (Tabella + ' - ' + Denominazione) AS DescrizioneGruppo FROM Gruppi", StudioComboBox, "DescrizioneGruppo", "Tabella")
         CreaCombo("PianoContiPreventivo", "SELECT PianoConti, (CStr(PianoConti) + ' - ' + Denominazione) AS DescrizionePreventivo FROM PianoContiPreventivo", PdcPreventivoComboBox, "DescrizionePreventivo", "PianoConti")
         CreaCombo("PianoContiConsuntivo", "SELECT PianoConti, (CStr(PianoConti) + ' - ' + Denominazione) AS DescrizioneConsuntivo FROM PianoContiConsuntivo", PdcConsuntivoComboBox, "DescrizioneConsuntivo", "PianoConti")
-        CreaCombo("ContiFinanziari", "SELECT Conto, (CStr(Conto + ' - ' + Banca) AS DescrizioneBanca FROM ContiFinanziari WHERE Conto='" & ContoBancaComboBox.Text & "'", ContoBancaComboBox, "DescrizioneBanca", "Conto")
-        CreaCombo("ContiFinanziari", "SELECT Conto, (CStr(Conto + ' - ' + Banca) AS DescrizioneCassa FROM ContiFinanziari WHERE Conto='" & ContoCassaComboBox.Text & "'", ContoCassaComboBox, "DescrizioneCassa", "Conto")
-        CreaCombo("ContiFinanziari", "SELECT Conto, (CStr(Conto + ' - ' + Banca) AS DescrizioneAnticipi FROM ContiFinanziari WHERE Conto='" & ContoAnticipiComboBox.Text & "'", ContoAnticipiComboBox, "Descrizioneanticipi", "Conto")
+        CreaCombo("ContiFinanziari", "SELECT Conto, (Conto + ' - ' + Banca) AS DescrizioneBanca FROM ContiFinanziari WHERE Conto='" & ContoBancaComboBox.Text & "'", ContoBancaComboBox, "DescrizioneBanca", "Conto")
+        CreaCombo("ContiFinanziari", "SELECT Conto, (Conto + ' - ' + Banca) AS DescrizioneCassa FROM ContiFinanziari WHERE Conto='" & ContoCassaComboBox.Text & "'", ContoCassaComboBox, "DescrizioneCassa", "Conto")
+        CreaCombo("ContiFinanziari", "SELECT Conto, (Conto + ' - ' + Banca) AS DescrizioneAnticipi FROM ContiFinanziari WHERE Conto='" & ContoAnticipiComboBox.Text & "'", ContoAnticipiComboBox, "Descrizioneanticipi", "Conto")
 
     End Sub
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)
