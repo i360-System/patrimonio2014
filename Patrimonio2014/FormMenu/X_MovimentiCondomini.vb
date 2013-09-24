@@ -59,4 +59,8 @@ Public Class X_MovimentiCondomini
         AnagraficaComboBox.Text = AnagraficaComboBox.SelectedValue
 
     End Sub
+
+    Private Sub X_MovimentiCondominiBindingNavigator_RefreshItems(sender As System.Object, e As System.EventArgs) Handles X_MovimentiCondominiBindingNavigator.RefreshItems
+
+    End Sub
 End Class

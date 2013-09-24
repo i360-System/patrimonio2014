@@ -15,6 +15,8 @@ Public Class Y_Gestioni
         'TODO: questa riga di codice carica i dati nella tabella 'IMMOBILIDataSet2.Y_Gestioni'. È possibile spostarla o rimuoverla se necessario.
         Me.Y_GestioniTableAdapter.Fill(Me.IMMOBILIDataSet2.Y_Gestioni)
         CreaCombo("Immobili", "SELECT Immobile, (Immobile + ' - ' + Denominazione) AS DescrizioneImmobile FROM Immobili", ImmobileComboBox, "DescrizioneImmobile", "Immobile")
+        CreaCombo("Y_Gestioni", "SELECT Gestione, (CStr(Gestione) + ' - ' + Descrizione1) AS DescrizioneGestione FROM Y_Gestioni WHERE Immobile='" & ImmobileComboBox.Text & "'", GestioneComboBox, "DescrizioneGestione", "Gestione")
+        CreaCombo("Costanti", "SELECT Tabella, Tabella + ' - ' + Ordinante) AS DescrizioneCostanti FROM Costanti WHERE Immobile='" & ImmobileComboBox.Text & "'", TabellaComboBox, "DescrizioneCostanti", "Tabella")
 
     End Sub
     Private Sub CreaCombo(ByVal NomeTab As String, ByVal query As String, ByRef combo As ComboBox, DisplayMember As String, ValueMember As String)
@@ -41,6 +43,16 @@ Public Class Y_Gestioni
 
     Private Sub ImmobileComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ImmobileComboBox.SelectedIndexChanged
         ImmobileComboBox.Text = ImmobileComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub GestioneComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles GestioneComboBox.SelectedIndexChanged
+        GestioneComboBox.Text = GestioneComboBox.SelectedValue
+
+    End Sub
+
+    Private Sub TabellaComboBox_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles TabellaComboBox.SelectedIndexChanged
+        TabellaComboBox.Text = TabellaComboBox.SelectedValue
 
     End Sub
 End Class
