@@ -24,6 +24,7 @@ Partial Class Unita
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ImmobileLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Unita))
         Dim UnitaLabel As System.Windows.Forms.Label
         Dim DescrizioneLabel As System.Windows.Forms.Label
         Dim FabbricatoLabel As System.Windows.Forms.Label
@@ -37,7 +38,6 @@ Partial Class Unita
         Dim TrasmissioneAvvisiLabel As System.Windows.Forms.Label
         Dim CollegamentoLabel As System.Windows.Forms.Label
         Dim UnitaCollegataLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Unita))
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.UnitaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UnitaTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.UnitaTableAdapter()
@@ -152,123 +152,6 @@ Partial Class Unita
         ImmobileLabel.TabIndex = 1
         ImmobileLabel.Text = "Immobile:"
         '
-        'UnitaLabel
-        '
-        UnitaLabel.AutoSize = True
-        UnitaLabel.Location = New System.Drawing.Point(277, 47)
-        UnitaLabel.Name = "UnitaLabel"
-        UnitaLabel.Size = New System.Drawing.Size(35, 13)
-        UnitaLabel.TabIndex = 3
-        UnitaLabel.Text = "Unita:"
-        '
-        'DescrizioneLabel
-        '
-        DescrizioneLabel.AutoSize = True
-        DescrizioneLabel.Location = New System.Drawing.Point(330, 47)
-        DescrizioneLabel.Name = "DescrizioneLabel"
-        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
-        DescrizioneLabel.TabIndex = 5
-        DescrizioneLabel.Text = "Descrizione:"
-        '
-        'FabbricatoLabel
-        '
-        FabbricatoLabel.AutoSize = True
-        FabbricatoLabel.Location = New System.Drawing.Point(12, 87)
-        FabbricatoLabel.Name = "FabbricatoLabel"
-        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
-        FabbricatoLabel.TabIndex = 7
-        FabbricatoLabel.Text = "Fabbricato:"
-        '
-        'ScalaLabel
-        '
-        ScalaLabel.AutoSize = True
-        ScalaLabel.Location = New System.Drawing.Point(330, 87)
-        ScalaLabel.Name = "ScalaLabel"
-        ScalaLabel.Size = New System.Drawing.Size(37, 13)
-        ScalaLabel.TabIndex = 9
-        ScalaLabel.Text = "Scala:"
-        '
-        'ProprietarioLabel
-        '
-        ProprietarioLabel.AutoSize = True
-        ProprietarioLabel.Location = New System.Drawing.Point(12, 127)
-        ProprietarioLabel.Name = "ProprietarioLabel"
-        ProprietarioLabel.Size = New System.Drawing.Size(63, 13)
-        ProprietarioLabel.TabIndex = 11
-        ProprietarioLabel.Text = "Proprietario:"
-        '
-        'InquilinoLabel
-        '
-        InquilinoLabel.AutoSize = True
-        InquilinoLabel.Location = New System.Drawing.Point(330, 127)
-        InquilinoLabel.Name = "InquilinoLabel"
-        InquilinoLabel.Size = New System.Drawing.Size(49, 13)
-        InquilinoLabel.TabIndex = 13
-        InquilinoLabel.Text = "Inquilino:"
-        '
-        'InternoLabel
-        '
-        InternoLabel.AutoSize = True
-        InternoLabel.Location = New System.Drawing.Point(12, 177)
-        InternoLabel.Name = "InternoLabel"
-        InternoLabel.Size = New System.Drawing.Size(43, 13)
-        InternoLabel.TabIndex = 15
-        InternoLabel.Text = "Interno:"
-        '
-        'PianoLabel
-        '
-        PianoLabel.AutoSize = True
-        PianoLabel.Location = New System.Drawing.Point(61, 177)
-        PianoLabel.Name = "PianoLabel"
-        PianoLabel.Size = New System.Drawing.Size(37, 13)
-        PianoLabel.TabIndex = 17
-        PianoLabel.Text = "Piano:"
-        '
-        'TrasmissioneSpeseLabel
-        '
-        TrasmissioneSpeseLabel.AutoSize = True
-        TrasmissioneSpeseLabel.Location = New System.Drawing.Point(104, 177)
-        TrasmissioneSpeseLabel.Name = "TrasmissioneSpeseLabel"
-        TrasmissioneSpeseLabel.Size = New System.Drawing.Size(56, 13)
-        TrasmissioneSpeseLabel.TabIndex = 19
-        TrasmissioneSpeseLabel.Text = "Tr. Spese:"
-        '
-        'TrasmissioneConvocazioneLabel
-        '
-        TrasmissioneConvocazioneLabel.AutoSize = True
-        TrasmissioneConvocazioneLabel.Location = New System.Drawing.Point(166, 177)
-        TrasmissioneConvocazioneLabel.Name = "TrasmissioneConvocazioneLabel"
-        TrasmissioneConvocazioneLabel.Size = New System.Drawing.Size(54, 13)
-        TrasmissioneConvocazioneLabel.TabIndex = 21
-        TrasmissioneConvocazioneLabel.Text = "Tr. Conv.:"
-        '
-        'TrasmissioneAvvisiLabel
-        '
-        TrasmissioneAvvisiLabel.AutoSize = True
-        TrasmissioneAvvisiLabel.Location = New System.Drawing.Point(218, 177)
-        TrasmissioneAvvisiLabel.Name = "TrasmissioneAvvisiLabel"
-        TrasmissioneAvvisiLabel.Size = New System.Drawing.Size(54, 13)
-        TrasmissioneAvvisiLabel.TabIndex = 23
-        TrasmissioneAvvisiLabel.Text = "Tr. Avvisi:"
-        '
-        'CollegamentoLabel
-        '
-        CollegamentoLabel.AutoSize = True
-        CollegamentoLabel.Location = New System.Drawing.Point(330, 177)
-        CollegamentoLabel.Name = "CollegamentoLabel"
-        CollegamentoLabel.Size = New System.Drawing.Size(74, 13)
-        CollegamentoLabel.TabIndex = 25
-        CollegamentoLabel.Text = "Collegamento:"
-        '
-        'UnitaCollegataLabel
-        '
-        UnitaCollegataLabel.AutoSize = True
-        UnitaCollegataLabel.Location = New System.Drawing.Point(410, 177)
-        UnitaCollegataLabel.Name = "UnitaCollegataLabel"
-        UnitaCollegataLabel.Size = New System.Drawing.Size(82, 13)
-        UnitaCollegataLabel.TabIndex = 27
-        UnitaCollegataLabel.Text = "Unita Collegata:"
-        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -292,8 +175,9 @@ Partial Class Unita
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
+        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        Me.TableAdapterManager.FabbricatiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -454,6 +338,15 @@ Partial Class Unita
         Me.ImmobileComboBox.Size = New System.Drawing.Size(256, 21)
         Me.ImmobileComboBox.TabIndex = 2
         '
+        'UnitaLabel
+        '
+        UnitaLabel.AutoSize = True
+        UnitaLabel.Location = New System.Drawing.Point(277, 47)
+        UnitaLabel.Name = "UnitaLabel"
+        UnitaLabel.Size = New System.Drawing.Size(35, 13)
+        UnitaLabel.TabIndex = 3
+        UnitaLabel.Text = "Unita:"
+        '
         'UnitaTextBox
         '
         Me.UnitaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "Unita", True))
@@ -462,6 +355,15 @@ Partial Class Unita
         Me.UnitaTextBox.Size = New System.Drawing.Size(47, 20)
         Me.UnitaTextBox.TabIndex = 4
         '
+        'DescrizioneLabel
+        '
+        DescrizioneLabel.AutoSize = True
+        DescrizioneLabel.Location = New System.Drawing.Point(330, 47)
+        DescrizioneLabel.Name = "DescrizioneLabel"
+        DescrizioneLabel.Size = New System.Drawing.Size(65, 13)
+        DescrizioneLabel.TabIndex = 5
+        DescrizioneLabel.Text = "Descrizione:"
+        '
         'DescrizioneTextBox
         '
         Me.DescrizioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "Descrizione", True))
@@ -469,6 +371,15 @@ Partial Class Unita
         Me.DescrizioneTextBox.Name = "DescrizioneTextBox"
         Me.DescrizioneTextBox.Size = New System.Drawing.Size(254, 20)
         Me.DescrizioneTextBox.TabIndex = 6
+        '
+        'FabbricatoLabel
+        '
+        FabbricatoLabel.AutoSize = True
+        FabbricatoLabel.Location = New System.Drawing.Point(12, 87)
+        FabbricatoLabel.Name = "FabbricatoLabel"
+        FabbricatoLabel.Size = New System.Drawing.Size(60, 13)
+        FabbricatoLabel.TabIndex = 7
+        FabbricatoLabel.Text = "Fabbricato:"
         '
         'FabbricatoComboBox
         '
@@ -479,6 +390,15 @@ Partial Class Unita
         Me.FabbricatoComboBox.Size = New System.Drawing.Size(256, 21)
         Me.FabbricatoComboBox.TabIndex = 8
         '
+        'ScalaLabel
+        '
+        ScalaLabel.AutoSize = True
+        ScalaLabel.Location = New System.Drawing.Point(330, 87)
+        ScalaLabel.Name = "ScalaLabel"
+        ScalaLabel.Size = New System.Drawing.Size(37, 13)
+        ScalaLabel.TabIndex = 9
+        ScalaLabel.Text = "Scala:"
+        '
         'ScalaComboBox
         '
         Me.ScalaComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "Scala", True))
@@ -487,6 +407,15 @@ Partial Class Unita
         Me.ScalaComboBox.Name = "ScalaComboBox"
         Me.ScalaComboBox.Size = New System.Drawing.Size(254, 21)
         Me.ScalaComboBox.TabIndex = 10
+        '
+        'ProprietarioLabel
+        '
+        ProprietarioLabel.AutoSize = True
+        ProprietarioLabel.Location = New System.Drawing.Point(12, 127)
+        ProprietarioLabel.Name = "ProprietarioLabel"
+        ProprietarioLabel.Size = New System.Drawing.Size(63, 13)
+        ProprietarioLabel.TabIndex = 11
+        ProprietarioLabel.Text = "Proprietario:"
         '
         'ProprietarioComboBox
         '
@@ -497,6 +426,15 @@ Partial Class Unita
         Me.ProprietarioComboBox.Size = New System.Drawing.Size(256, 21)
         Me.ProprietarioComboBox.TabIndex = 12
         '
+        'InquilinoLabel
+        '
+        InquilinoLabel.AutoSize = True
+        InquilinoLabel.Location = New System.Drawing.Point(330, 127)
+        InquilinoLabel.Name = "InquilinoLabel"
+        InquilinoLabel.Size = New System.Drawing.Size(49, 13)
+        InquilinoLabel.TabIndex = 13
+        InquilinoLabel.Text = "Inquilino:"
+        '
         'InquilinoComboBox
         '
         Me.InquilinoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "Inquilino", True))
@@ -506,6 +444,15 @@ Partial Class Unita
         Me.InquilinoComboBox.Size = New System.Drawing.Size(254, 21)
         Me.InquilinoComboBox.TabIndex = 14
         '
+        'InternoLabel
+        '
+        InternoLabel.AutoSize = True
+        InternoLabel.Location = New System.Drawing.Point(12, 177)
+        InternoLabel.Name = "InternoLabel"
+        InternoLabel.Size = New System.Drawing.Size(43, 13)
+        InternoLabel.TabIndex = 15
+        InternoLabel.Text = "Interno:"
+        '
         'InternoTextBox
         '
         Me.InternoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "Interno", True))
@@ -513,6 +460,15 @@ Partial Class Unita
         Me.InternoTextBox.Name = "InternoTextBox"
         Me.InternoTextBox.Size = New System.Drawing.Size(40, 20)
         Me.InternoTextBox.TabIndex = 16
+        '
+        'PianoLabel
+        '
+        PianoLabel.AutoSize = True
+        PianoLabel.Location = New System.Drawing.Point(61, 177)
+        PianoLabel.Name = "PianoLabel"
+        PianoLabel.Size = New System.Drawing.Size(37, 13)
+        PianoLabel.TabIndex = 17
+        PianoLabel.Text = "Piano:"
         '
         'PianoTextBox
         '
@@ -522,29 +478,65 @@ Partial Class Unita
         Me.PianoTextBox.Size = New System.Drawing.Size(37, 20)
         Me.PianoTextBox.TabIndex = 18
         '
+        'TrasmissioneSpeseLabel
+        '
+        TrasmissioneSpeseLabel.AutoSize = True
+        TrasmissioneSpeseLabel.Location = New System.Drawing.Point(104, 177)
+        TrasmissioneSpeseLabel.Name = "TrasmissioneSpeseLabel"
+        TrasmissioneSpeseLabel.Size = New System.Drawing.Size(56, 13)
+        TrasmissioneSpeseLabel.TabIndex = 19
+        TrasmissioneSpeseLabel.Text = "Tr. Spese:"
+        '
         'TrasmissioneSpeseTextBox
         '
         Me.TrasmissioneSpeseTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "TrasmissioneSpese", True))
-        Me.TrasmissioneSpeseTextBox.Location = New System.Drawing.Point(104, 193)
+        Me.TrasmissioneSpeseTextBox.Location = New System.Drawing.Point(107, 193)
         Me.TrasmissioneSpeseTextBox.Name = "TrasmissioneSpeseTextBox"
         Me.TrasmissioneSpeseTextBox.Size = New System.Drawing.Size(53, 20)
         Me.TrasmissioneSpeseTextBox.TabIndex = 20
         '
+        'TrasmissioneConvocazioneLabel
+        '
+        TrasmissioneConvocazioneLabel.AutoSize = True
+        TrasmissioneConvocazioneLabel.Location = New System.Drawing.Point(166, 177)
+        TrasmissioneConvocazioneLabel.Name = "TrasmissioneConvocazioneLabel"
+        TrasmissioneConvocazioneLabel.Size = New System.Drawing.Size(94, 13)
+        TrasmissioneConvocazioneLabel.TabIndex = 21
+        TrasmissioneConvocazioneLabel.Text = "Tr. Convocazione:"
+        '
         'TrasmissioneConvocazioneTextBox
         '
         Me.TrasmissioneConvocazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "TrasmissioneConvocazione", True))
-        Me.TrasmissioneConvocazioneTextBox.Location = New System.Drawing.Point(163, 193)
+        Me.TrasmissioneConvocazioneTextBox.Location = New System.Drawing.Point(171, 193)
         Me.TrasmissioneConvocazioneTextBox.Name = "TrasmissioneConvocazioneTextBox"
-        Me.TrasmissioneConvocazioneTextBox.Size = New System.Drawing.Size(49, 20)
+        Me.TrasmissioneConvocazioneTextBox.Size = New System.Drawing.Size(89, 20)
         Me.TrasmissioneConvocazioneTextBox.TabIndex = 22
+        '
+        'TrasmissioneAvvisiLabel
+        '
+        TrasmissioneAvvisiLabel.AutoSize = True
+        TrasmissioneAvvisiLabel.Location = New System.Drawing.Point(266, 177)
+        TrasmissioneAvvisiLabel.Name = "TrasmissioneAvvisiLabel"
+        TrasmissioneAvvisiLabel.Size = New System.Drawing.Size(54, 13)
+        TrasmissioneAvvisiLabel.TabIndex = 23
+        TrasmissioneAvvisiLabel.Text = "Tr. Avvisi:"
         '
         'TrasmissioneAvvisiTextBox
         '
         Me.TrasmissioneAvvisiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitaBindingSource, "TrasmissioneAvvisi", True))
-        Me.TrasmissioneAvvisiTextBox.Location = New System.Drawing.Point(220, 193)
+        Me.TrasmissioneAvvisiTextBox.Location = New System.Drawing.Point(269, 193)
         Me.TrasmissioneAvvisiTextBox.Name = "TrasmissioneAvvisiTextBox"
         Me.TrasmissioneAvvisiTextBox.Size = New System.Drawing.Size(51, 20)
         Me.TrasmissioneAvvisiTextBox.TabIndex = 24
+        '
+        'CollegamentoLabel
+        '
+        CollegamentoLabel.AutoSize = True
+        CollegamentoLabel.Location = New System.Drawing.Point(330, 177)
+        CollegamentoLabel.Name = "CollegamentoLabel"
+        CollegamentoLabel.Size = New System.Drawing.Size(74, 13)
+        CollegamentoLabel.TabIndex = 25
+        CollegamentoLabel.Text = "Collegamento:"
         '
         'CollegamentoTextBox
         '
@@ -553,6 +545,15 @@ Partial Class Unita
         Me.CollegamentoTextBox.Name = "CollegamentoTextBox"
         Me.CollegamentoTextBox.Size = New System.Drawing.Size(71, 20)
         Me.CollegamentoTextBox.TabIndex = 26
+        '
+        'UnitaCollegataLabel
+        '
+        UnitaCollegataLabel.AutoSize = True
+        UnitaCollegataLabel.Location = New System.Drawing.Point(410, 177)
+        UnitaCollegataLabel.Name = "UnitaCollegataLabel"
+        UnitaCollegataLabel.Size = New System.Drawing.Size(82, 13)
+        UnitaCollegataLabel.TabIndex = 27
+        UnitaCollegataLabel.Text = "Unita Collegata:"
         '
         'UnitaCollegataTextBox
         '

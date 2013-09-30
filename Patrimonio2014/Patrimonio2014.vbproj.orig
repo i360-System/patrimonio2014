@@ -328,6 +328,19 @@
     <EmbeddedResource Include="FormMenu\Opzioni.resx">
       <DependentUpon>Opzioni.vb</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="FormMenu\PianoContiConsuntivo.resx">
+      <DependentUpon>PianoContiConsuntivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\PianoContiPreventivo.resx">
+      <DependentUpon>PianoContiPreventivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Tabella.resx">
+      <DependentUpon>Tabella.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu\Unita.resx">
+      <DependentUpon>Unita.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu\V_Preventivo.resx">
       <DependentUpon>V_Preventivo.vb</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +383,8 @@
     <EmbeddedResource Include="FormMenu\Z_TestoSollecito.resx">
       <DependentUpon>Z_TestoSollecito.vb</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> parent of 5a97f16... ..
     <EmbeddedResource Include="MainForm\LoginForm1.resx">
       <DependentUpon>LoginForm1.vb</DependentUpon>
     </EmbeddedResource>

@@ -241,6 +241,39 @@
         NewMDIChild.Show()
 
     End Sub
+<<<<<<< HEAD
+
+
+    Private Sub VociDelConsuntivoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VociDelConsuntivoToolStripMenuItem.Click
+        Dim NewMDIChild As New PianoContiConsuntivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub VociDelPreventivoToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles VociDelPreventivoToolStripMenuItem.Click
+        Dim NewMDIChild As New PianoContiPreventivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+    Private Sub TabelleMillesimaliToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TabelleMillesimaliToolStripMenuItem.Click
+        Dim NewMDIChild As New Tabella
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+
+
+    Private Sub UnitaImmobiliariToolStripMenuItem1_Click(sender As System.Object, e As System.EventArgs) Handles UnitaImmobiliariToolStripMenuItem1.Click
+        Dim NewMDIChild As New Unita
         ''Set the Parent Form of the Child window.
         NewMDIChild.MdiParent = Me
         ''Display the new form.
@@ -313,4 +346,12 @@
 
     Private Sub TotaliDelConsuntivoEStampeToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles TotaliDelConsuntivoEStampeToolStripMenuItem.Click
         Dim NewMDIChild As New Z_Consuntivo
+        ''Set the Parent Form of the Child window.
+        NewMDIChild.MdiParent = Me
+        ''Display the new form.
+        NewMDIChild.Show()
+
+    End Sub
+=======
+>>>>>>> parent of 5a97f16... ..
 End Class

@@ -24,8 +24,8 @@ Partial Class PianoContiConsuntivo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim PianoContiLabel As System.Windows.Forms.Label
-        Dim DenominazioneLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PianoContiConsuntivo))
+        Dim DenominazioneLabel As System.Windows.Forms.Label
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.PianoContiConsuntivoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PianoContiConsuntivoTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.PianoContiConsuntivoTableAdapter()
@@ -74,15 +74,6 @@ Partial Class PianoContiConsuntivo
         PianoContiLabel.TabIndex = 1
         PianoContiLabel.Text = "Piano Conti:"
         '
-        'DenominazioneLabel
-        '
-        DenominazioneLabel.AutoSize = True
-        DenominazioneLabel.Location = New System.Drawing.Point(82, 43)
-        DenominazioneLabel.Name = "DenominazioneLabel"
-        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
-        DenominazioneLabel.TabIndex = 3
-        DenominazioneLabel.Text = "Denominazione:"
-        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -106,9 +97,9 @@ Partial Class PianoContiConsuntivo
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -268,6 +259,15 @@ Partial Class PianoContiConsuntivo
         Me.PianoContiTextBox.Size = New System.Drawing.Size(61, 20)
         Me.PianoContiTextBox.TabIndex = 2
         '
+        'DenominazioneLabel
+        '
+        DenominazioneLabel.AutoSize = True
+        DenominazioneLabel.Location = New System.Drawing.Point(82, 43)
+        DenominazioneLabel.Name = "DenominazioneLabel"
+        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
+        DenominazioneLabel.TabIndex = 3
+        DenominazioneLabel.Text = "Denominazione:"
+        '
         'DenominazioneTextBox
         '
         Me.DenominazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PianoContiConsuntivoBindingSource, "Denominazione", True))
@@ -278,8 +278,8 @@ Partial Class PianoContiConsuntivo
         '
         'PianoContiConsuntivoDettaglioBindingSource
         '
-        Me.PianoContiConsuntivoDettaglioBindingSource.DataMember = "PianoContiConsuntivoPianoContiConsuntivoDettaglio"
-        Me.PianoContiConsuntivoDettaglioBindingSource.DataSource = Me.PianoContiConsuntivoBindingSource
+        Me.PianoContiConsuntivoDettaglioBindingSource.DataMember = "PianoContiConsuntivoDettaglio"
+        Me.PianoContiConsuntivoDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
         '
         'PianoContiConsuntivoDettaglioTableAdapter
         '
@@ -291,9 +291,9 @@ Partial Class PianoContiConsuntivo
         Me.PianoContiConsuntivoDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PianoContiConsuntivoDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.PianoContiConsuntivoDettaglioDataGridView.DataSource = Me.PianoContiConsuntivoDettaglioBindingSource
-        Me.PianoContiConsuntivoDettaglioDataGridView.Location = New System.Drawing.Point(18, 96)
+        Me.PianoContiConsuntivoDettaglioDataGridView.Location = New System.Drawing.Point(22, 101)
         Me.PianoContiConsuntivoDettaglioDataGridView.Name = "PianoContiConsuntivoDettaglioDataGridView"
-        Me.PianoContiConsuntivoDettaglioDataGridView.Size = New System.Drawing.Size(685, 516)
+        Me.PianoContiConsuntivoDettaglioDataGridView.Size = New System.Drawing.Size(762, 220)
         Me.PianoContiConsuntivoDettaglioDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn2
@@ -315,7 +315,7 @@ Partial Class PianoContiConsuntivo
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Descrizione"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Descrizione"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 200
+        Me.DataGridViewTextBoxColumn4.Width = 250
         '
         'DataGridViewTextBoxColumn5
         '
@@ -327,9 +327,8 @@ Partial Class PianoContiConsuntivo
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "PercentoSpettanza"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "% Spettanza"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "PercentoSpettanza"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 70
         '
         'DataGridViewTextBoxColumn7
         '
@@ -347,7 +346,7 @@ Partial Class PianoContiConsuntivo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(796, 624)
+        Me.ClientSize = New System.Drawing.Size(796, 341)
         Me.Controls.Add(Me.PianoContiConsuntivoDettaglioDataGridView)
         Me.Controls.Add(DenominazioneLabel)
         Me.Controls.Add(Me.DenominazioneTextBox)

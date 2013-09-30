@@ -94,6 +94,10 @@ Partial Class MainForm
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSulSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformazioniSullaLicenzaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+<<<<<<< HEAD
+=======
+        Me.MenuStrip1.SuspendLayout()
+>>>>>>> parent of 5a97f16... ..
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -408,20 +412,32 @@ Partial Class MainForm
         'SsToolStripMenuItem
         '
         Me.SsToolStripMenuItem.Name = "SsToolStripMenuItem"
+<<<<<<< HEAD
+        Me.SsToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+=======
         Me.SsToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+>>>>>>> parent of 5a97f16... ..
         Me.SsToolStripMenuItem.Text = "Studio"
         '
         'FornitoriToolStripMenuItem
         '
         Me.FornitoriToolStripMenuItem.Name = "FornitoriToolStripMenuItem"
+<<<<<<< HEAD
+        Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+=======
         Me.FornitoriToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+>>>>>>> parent of 5a97f16... ..
         Me.FornitoriToolStripMenuItem.Text = "Fornitori"
         '
         'ImmobiliToolStripMenuItem
         '
         Me.ImmobiliToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TabelleMillesimaliToolStripMenuItem, Me.GruppiDiSpesaToolStripMenuItem, Me.VociDelConsuntivoToolStripMenuItem, Me.VociDelPreventivoToolStripMenuItem, Me.ContiFinanziariToolStripMenuItem, Me.AnagraficaCondominioToolStripMenuItem, Me.StrutturaDelCondominioToolStripMenuItem, Me.FondiAmmortamentoToolStripMenuItem, Me.AnagrafeDeiCondominiToolStripMenuItem, Me.UnitaImmobiliariToolStripMenuItem, Me.DuplicazioneDatiAnagraficiImmobiliToolStripMenuItem})
         Me.ImmobiliToolStripMenuItem.Name = "ImmobiliToolStripMenuItem"
+<<<<<<< HEAD
+        Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+=======
         Me.ImmobiliToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+>>>>>>> parent of 5a97f16... ..
         Me.ImmobiliToolStripMenuItem.Text = "Immobili"
         '
         'TabelleMillesimaliToolStripMenuItem

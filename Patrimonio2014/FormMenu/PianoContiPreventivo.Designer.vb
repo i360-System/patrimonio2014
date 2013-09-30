@@ -24,8 +24,8 @@ Partial Class PianoContiPreventivo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim PianoContiLabel As System.Windows.Forms.Label
-        Dim DenominazioneLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PianoContiPreventivo))
+        Dim DenominazioneLabel As System.Windows.Forms.Label
         Me.IMMOBILIDataSet2 = New Patrimonio2014.IMMOBILIDataSet2()
         Me.PianoContiPreventivoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PianoContiPreventivoTableAdapter = New Patrimonio2014.IMMOBILIDataSet2TableAdapters.PianoContiPreventivoTableAdapter()
@@ -70,15 +70,6 @@ Partial Class PianoContiPreventivo
         PianoContiLabel.TabIndex = 1
         PianoContiLabel.Text = "Piano Conti:"
         '
-        'DenominazioneLabel
-        '
-        DenominazioneLabel.AutoSize = True
-        DenominazioneLabel.Location = New System.Drawing.Point(82, 46)
-        DenominazioneLabel.Name = "DenominazioneLabel"
-        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
-        DenominazioneLabel.TabIndex = 3
-        DenominazioneLabel.Text = "Denominazione:"
-        '
         'IMMOBILIDataSet2
         '
         Me.IMMOBILIDataSet2.DataSetName = "IMMOBILIDataSet2"
@@ -102,9 +93,9 @@ Partial Class PianoContiPreventivo
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CassaTableAdapter = Nothing
         Me.TableAdapterManager.ContiFinanziariTableAdapter = Nothing
-        'Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
+        Me.TableAdapterManager.CostantiDettaglioTableAdapter = Nothing
         Me.TableAdapterManager.CostantiTableAdapter = Nothing
-        'Me.TableAdapterManager.FabbricatiScaleTableAdapter = Nothing
+        Me.TableAdapterManager.FabbricatiDettaglio1TableAdapter = Nothing
         Me.TableAdapterManager.FabbricatiTableAdapter = Nothing
         Me.TableAdapterManager.FondiTableAdapter = Nothing
         Me.TableAdapterManager.FornitoriTableAdapter = Nothing
@@ -264,6 +255,15 @@ Partial Class PianoContiPreventivo
         Me.PianoContiTextBox.Size = New System.Drawing.Size(61, 20)
         Me.PianoContiTextBox.TabIndex = 2
         '
+        'DenominazioneLabel
+        '
+        DenominazioneLabel.AutoSize = True
+        DenominazioneLabel.Location = New System.Drawing.Point(82, 46)
+        DenominazioneLabel.Name = "DenominazioneLabel"
+        DenominazioneLabel.Size = New System.Drawing.Size(83, 13)
+        DenominazioneLabel.TabIndex = 3
+        DenominazioneLabel.Text = "Denominazione:"
+        '
         'DenominazioneTextBox
         '
         Me.DenominazioneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PianoContiPreventivoBindingSource, "Denominazione", True))
@@ -274,8 +274,8 @@ Partial Class PianoContiPreventivo
         '
         'PianoContiPreventivoDettaglioBindingSource
         '
-        Me.PianoContiPreventivoDettaglioBindingSource.DataMember = "PianoContiPreventivoPianoContiPreventivoDettaglio"
-        Me.PianoContiPreventivoDettaglioBindingSource.DataSource = Me.PianoContiPreventivoBindingSource
+        Me.PianoContiPreventivoDettaglioBindingSource.DataMember = "PianoContiPreventivoDettaglio"
+        Me.PianoContiPreventivoDettaglioBindingSource.DataSource = Me.IMMOBILIDataSet2
         '
         'PianoContiPreventivoDettaglioTableAdapter
         '
@@ -287,9 +287,9 @@ Partial Class PianoContiPreventivo
         Me.PianoContiPreventivoDettaglioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PianoContiPreventivoDettaglioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.PianoContiPreventivoDettaglioDataGridView.DataSource = Me.PianoContiPreventivoDettaglioBindingSource
-        Me.PianoContiPreventivoDettaglioDataGridView.Location = New System.Drawing.Point(18, 99)
+        Me.PianoContiPreventivoDettaglioDataGridView.Location = New System.Drawing.Point(15, 106)
         Me.PianoContiPreventivoDettaglioDataGridView.Name = "PianoContiPreventivoDettaglioDataGridView"
-        Me.PianoContiPreventivoDettaglioDataGridView.Size = New System.Drawing.Size(517, 594)
+        Me.PianoContiPreventivoDettaglioDataGridView.Size = New System.Drawing.Size(528, 220)
         Me.PianoContiPreventivoDettaglioDataGridView.TabIndex = 5
         '
         'DataGridViewTextBoxColumn2
@@ -297,27 +297,26 @@ Partial Class PianoContiPreventivo
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "Gruppo"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Gruppo"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 50
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Spesa"
         Me.DataGridViewTextBoxColumn3.HeaderText = "Spesa"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 50
+        Me.DataGridViewTextBoxColumn3.Width = 70
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Descrizione"
         Me.DataGridViewTextBoxColumn4.HeaderText = "Descrizione"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 200
+        Me.DataGridViewTextBoxColumn4.Width = 250
         '
         'PianoContiPreventivo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(605, 719)
+        Me.ClientSize = New System.Drawing.Size(605, 349)
         Me.Controls.Add(Me.PianoContiPreventivoDettaglioDataGridView)
         Me.Controls.Add(DenominazioneLabel)
         Me.Controls.Add(Me.DenominazioneTextBox)
